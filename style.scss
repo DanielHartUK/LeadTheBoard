@@ -14,6 +14,12 @@ html, body {
     background-color: #f4f4f4;
     color: #555555;
 }
+h3 {
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
 .wrapper {
 	width: 100%;
 	position: relative;
@@ -22,6 +28,7 @@ html, body {
 	width: 100%;
 	max-width: 1400px;
     padding: 0.5%;
+    box-sizing: border-box;
 }
 
 /* Navigation */
@@ -31,6 +38,8 @@ html, body {
     height: 50px;
     border-bottom: 1px solid #0d5b4c;
     background-color: #138972;
+    position: relative;
+    z-index: 9999;
 }
 #logo {
     font-weight: 700;
@@ -38,6 +47,80 @@ html, body {
     color: #FFF;
     line-height: 50px;
     padding: 0 0.5%;
+    float: left;
+}
+.user {
+    float: right;
+    color: #fff;
+    line-height: 50px;
+    padding: 0 0.5%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.downArrow {
+    font-size: 0.7em;
+    margin-left: 0.5em;
+}
+
+/* Login/Register Forms */
+
+.loginContainers {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+}
+.loginForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 350px;
+    @include transform(translate(-50%, -50%));
+}
+.loginDiv {
+    background-color: #fff;
+    padding: 5%;
+    box-sizing: border-box;
+}
+.field {
+    width: 100%;
+    font: inherit;
+    font-weight: 400;
+    padding: 3%;
+    box-sizing: border-box;
+    margin: 1% 0;
+}
+.field:focus {
+    outline: none;
+}
+.formSubmit p {
+    float: left;
+}
+.submit, .register {
+    background-color: #138972;
+    border: none;
+    color: #FFF;
+    padding: 10px 25px;
+    font-size: 1em;
+    font: inherit;
+    float: right;
+}
+.submit {
+    margin: 2% 0 0 0;
+}
+.register {
+    margin: 2% 0;
+}
+.formBottom {
+    display: block;
+    overflow: auto;
+    margin-top: 1px;
+    background-color: #F0F0F0;
+}
+.formBottom p {
+    float: left;
 }
 
 @media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
