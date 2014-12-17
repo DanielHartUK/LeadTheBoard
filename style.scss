@@ -1,0 +1,367 @@
+@-webkit-viewport {width: device-width;}@-moz-viewport {width: device-width;}@-ms-viewport {width: device-width;}@-o-viewport {width: device-width;}@viewport {width: device-width;}
+@mixin transform($x) { -webkit-transform: $x; -moz-transform: $x; -ms-transform: $x; transform: $x; }
+@mixin transform-origin($x) { -webkit-transform-origin: $x; -moz-transform-origin: $x; -ms-transform-origin: $x; transform-origin: $x; }
+@mixin transition($x) { -webkit-transition: $x; -moz-transition: $x; -ms-transition: $x; transition: $x; }
+@mixin display-flex { display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: flex; display: -o-flex; }
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    background-color: #f4f4f2;
+    color: #1D439B;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 100px;
+}
+.content {
+	width: 100%;
+	max-width: 1400px;
+}
+
+/* Navigation */
+
+.navBar {
+	width: 100%;
+	height: 80px;
+	background: #fff;
+	border-bottom: 1px solid #A1A1A1;
+	position: relative;
+	z-index: 9999;
+}
+#logo {
+	width: 200px;
+	background-image: url(/assets/CRUKLogo.svg);
+	height: 100%;
+	display: inline-block;
+	float: left;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center left;
+    margin-left: 10px;
+
+}
+.nav {
+	list-style: none;
+    overflow: auto;
+    padding: 0 10px 0 0;
+    line-height: 80px;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+.desktopNavigation {
+	display: inline-block;
+}
+.navRight {
+    float: right;
+    height: 100%
+}
+.rightOption {
+    text-align: right;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 80px;
+    padding: 0 10px;
+    vertical-align: top;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #1D439B;
+}
+#toggleMenu {
+	display: none;
+    background-color: #CF5DAB;
+    color: #FFF;
+}
+.nav li {
+	display: inline-block;
+	margin: 0 10px;
+}
+.nav li a {
+	color: #1D439B;
+	text-decoration: none;
+    padding: 3px 0;
+    border-bottom: 2px solid transparent;
+
+}
+.nav li a:hover {
+    @include transition(0.5s);
+    border-bottom: 2px solid #1D439B;
+    padding: 0;
+}
+
+.menu {
+    @include transition(0.5s);
+    overflow: auto;
+    border-bottom: 0px solid  transparent;
+}
+.mNav {
+    display: none;
+}
+.mNav li {
+    @include transition(0.5s);
+    position: relative;
+    margin-top: -70px;
+    opacity: 0;
+    text-align: center;
+}
+#mobileSignIn {
+	background-color: #CF5DAB;
+	color: #fff;
+}
+
+/* Footer */
+.footer {
+	width: 100%;
+	min-height: 100px;
+	background-color: grey;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+/* Slider */
+.slider {
+     @include transition(0.5s);
+    right: 0;
+    width: 300%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 33.3333%;
+    height: 100%;
+    float: left;
+    background-image: url(/assets/sliderPlace.jpg);
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+#slide1 {
+    background-color: black;
+}
+#slide2 {
+    background-color: red;
+}
+#slide3 {
+    background-color: white;
+}
+
+$slide-opacity: 0.5;
+
+.slideOverlay {
+    height: 100%;
+    width: 70%;
+    float: left;
+    display: table;
+}
+.sliderOverlayContent {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    padding: 5%;
+    color: #FFF;
+}
+.slideOverlay.diagonal {
+    position: relative;
+    height: 100%;
+    z-index: 3;
+}
+.slideOverlay.diagonal h1 {
+    font-size: 4em;
+    margin: 0;
+}
+.sliderOverlayContent p {
+    font-size: 2em;
+    margin: 0;
+}
+
+.slideOverlay.diagonal::after {
+    content: "";
+    background-image: url(/assets/diagonal.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    opacity: $slide-opacity;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+/* Home */
+
+.spotlight {
+	width: 100%;
+	height: 500px;
+	background-color: #B7CCD0;
+	margin: 0;
+    overflow: hidden;
+}
+.infoBar {
+	width: 100%;
+	background-color: #DBDBDB;
+	margin: 0 0 20px 0;
+	padding: 2%;
+	text-align: center;
+	font-size: 1.5em;
+	box-sizing: border-box;
+}
+.infoBox {
+    vertical-align: top;
+	width: 25.33%;
+	display: inline-block;
+	text-align: center;
+	margin: 4%;
+	box-sizing: border-box;
+}	
+.infoBar a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+span.icon-arrow-right {
+    font-size: 0.7em;
+}
+.infoImage {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	background-color: #DFDFDF;
+	margin: 0 auto;
+}
+.boxTitle {
+    background: repeating-linear-gradient( 45deg, #606DBC, #606DBC 10px, #465298 10px, #465298 20px );
+    overflow: auto;
+    color: #FFF;
+    width: 100%;
+}
+.boxTitle h3 {
+    float: left;
+    margin: 5%;
+    font-size: 1.33em;
+}
+.calendarIcon {
+    height: 25px;
+    width: 25px;
+    margin: 5%;
+    float: left;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-image: url(/assets/calendar.png);
+}
+.eventsContainer {
+    border-left: 1px solid #C8C8C8;
+    border-right: 1px solid #C8C8C8;
+    border-bottom: 1px solid #C8C8C8;
+}
+.event {
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    text-align: left;
+    padding: 3%;
+}
+.event:nth-child(even) {
+    background-color: #F9F9F9;
+}
+.event:last-child {
+    border-bottom: none;
+}
+span.icon-calendar, span.icon-location {
+    margin-right: 5px;
+    font-size: 0.8em;
+}
+.event h4 {
+    font-size: 1.3em;
+    margin: 0 0 0.5em 0;
+}
+.event p {
+    margin: 0;
+}
+.viewAll {
+    padding: 2%;
+    background: #D5D5D5;
+    color: #000;
+    text-align: right;
+}
+
+.slide video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+@media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .calendarIcon {
+        background-image: url(/assets/calendar2x.png);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 40px;
+        box-sizing: border-box;
+    }
+    .navBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 40px;
+    }
+
+    .desktopNavigation {
+        display: none;
+    }
+    #signIn {
+		display: none;
+	}	
+    #toggleMenu {
+        display: inline-block;
+        cursor: pointer;
+        float: right;
+}
+    .menu.visible {
+
+        display: block;
+        margin-top: -1px;
+        border-bottom: 1px solid #9f9f9e;
+    }
+    .rightOption {
+        line-height: 40px;
+    }
+    .mNav {
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+        position: fixed;
+		width: 100%;
+		z-index: 9998;
+
+    }
+    .mNav li.open {
+        margin-top: 0px;
+        opacity: 1;
+    }
+    .mNav li a {
+        padding: 25px;
+        display: block;
+        border-top: 1px solid #F2F2F2;
+        @include transition(0.5s);
+        text-decoration: none;
+		color: inherit;
+    }  
+
+}
