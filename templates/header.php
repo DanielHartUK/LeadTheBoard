@@ -14,29 +14,45 @@
 <div class="wrapper">
 	<div class="nav">
 		<div id="logo">LeadTheBoard!</div>
-		<div class="user" id="login" onClick="toggleLogin"> Login/Register </div>
+		<div class="user" id="loggedOut" onClick="loginClick()"> Login/Register </div>
 		<div class="user" id="loggedIn" style="display:none;"> Hello, Name <span class="downArrow">&#9660;</span></div>
 	</div>
 	<div class="loginContainers">
-		<div class="loginForm">
+		<div class="entryForm" id="login">
 			<div class="loginDiv">
-			<h3> Login to LeadTheBoard! </h3>
+			<div class="icon-cross" onclick="closeEntry()"></div>
+			<h3> Login to LeadTheBoard!</h3>
 			<form style="overflow: auto;">
-				<input class="field" type="email" placeholder="Email Address">
-				<input class="field" type="password" placeholder="Password">
+				<input class="field loginEmail" type="email" placeholder="Email Address">
+				<input class="field loginPassword" type="password" placeholder="Password">
 				<div class="formSubmit">
 					<p> Forgot password? </p>
-					<input type="submit" class="submit" value="Login">
+					<input type="submit" class="submit loginSubmit" value="Login">
 				</div>
 			</form>
 			</div>
 			<div class="loginDiv formBottom">
-				<p>Get a free account</p> <button class="register"> Register </button>
+				<p>Get a free account</p> <button class="register" onclick="registerClick()"> Register </button>
 			</div>
 		</div>
-		<div class="registerForm" style="display:none;">
-
-		</div>
+		<div class="entryForm" id="register">
+			<div class="loginDiv">
+			<div class="icon-cross" onclick="closeEntry()"></div>
+				<h3> Register </h3>
+				<form style="overflow: auto;">
+					<input class="field registerFirstName" type="text" placeholder="First Name">
+					<input class="field registersurname" type="text" placeholder="Second Name">
+					<input class="field registerEmail" type="email" placeholder="Email Address">
+					<input class="field registerPassword" type="password" placeholder="Password">
+					<div class="formSubmit">
+						<input type="submit" class="submit registerSubmit" value="Register">
+					</div>
+				</form>
+			</div>
+			<div class="loginDiv formBottom">
+				<p>Already got an account?</p> <button class="register" onclick="registerLoginClick()"> Login </button>
+			</div>
+		</div>	
 	</div>
 
 	<div class="contentContainer">

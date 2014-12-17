@@ -88,3 +88,33 @@
     font-style: italic;
 
 }
+
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('icomoon.eot?-9gzm7');
+    src:url('icomoon.eot?#iefix-9gzm7') format('embedded-opentype'),
+        url('icomoon.woff?-9gzm7') format('woff'),
+        url('icomoon.ttf?-9gzm7') format('truetype'),
+        url('icomoon.svg?-9gzm7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cross:before {
+    content: "\ea0f";
+}

@@ -58,6 +58,7 @@ h3 {
     line-height: 50px;
     padding: 0 0.5%;
     background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 .downArrow {
     font-size: 0.7em;
@@ -74,18 +75,30 @@ h3 {
     top: 0;
     left: 0;
     padding-top: 50px;
+    display: none;
 }
-.loginForm {
+.loginContainers.visible {
+    display: block;
+}
+.entryForm {
     position: absolute;
     top: 50%;
     left: 50%;
     max-width: 350px;
     @include transform(translate(-50%, -50%));
+    display: none;
+}
+.entryForm.visible {
+    display: block;
 }
 .loginDiv {
     background-color: #fff;
     padding: 5%;
     box-sizing: border-box;
+}
+.icon-cross {
+    float: right;
+    font-size: 0.8em;
 }
 .field {
     width: 100%;
@@ -113,6 +126,7 @@ h3 {
     float: right;
     border-bottom: 2px solid #0E6151;
     position: relative;
+    cursor: pointer;
 }
 .submit {
     margin: 2% 0 0 0;
@@ -140,9 +154,7 @@ h3 {
 }
 
 @media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-    .calendarIcon {
-        background-image: url(/assets/calendar2x.png);
-    }
+
 }
 
 @media screen and (max-width: 768px) {
