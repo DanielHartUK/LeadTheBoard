@@ -28,19 +28,36 @@ html, body {
 /* line 17, style.scss */
 .wrapper {
   width: 100%;
-  min-height: 100%;
   position: relative;
-  padding-bottom: 100px;
 }
 
-/* line 23, style.scss */
+/* line 21, style.scss */
 .content {
   width: 100%;
   max-width: 1400px;
+  padding: 0.5%;
+}
+
+/* Navigation */
+/* line 29, style.scss */
+.nav {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #0d5b4c;
+  background-color: #138972;
+}
+
+/* line 35, style.scss */
+#logo {
+  font-weight: 700;
+  font-size: 1.6em;
+  color: #FFF;
+  line-height: 50px;
+  padding: 0 0.5%;
 }
 
 @media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  /* line 29, style.scss */
+  /* line 44, style.scss */
   .calendarIcon {
     background-image: url(/assets/calendar2x.png);
   }

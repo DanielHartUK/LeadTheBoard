@@ -6,9 +6,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <meta name="viewport" content="initial-scale=1.0">
-    <title>Relay for Life - Cancer Research UK</title>
+    <title>LeadTheBoard!</title>
     <meta name="description" content="">
     <link rel="icon" href="/favicon.png" type="image/png">
 </head>
 <body>
 <div class="wrapper">
+	<div class="nav">
+		<div id="logo">LeadTheBoard!</div>
+	</div>
