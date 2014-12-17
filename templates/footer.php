@@ -1,4 +1,4 @@
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
 
     <div class="footer">
 

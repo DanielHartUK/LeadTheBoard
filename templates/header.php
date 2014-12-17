@@ -2,8 +2,8 @@
 <HTML>
 <head>
     <meta charset="UTF-8">
-    <script src="jquery-2.1.1.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <meta name="viewport" content="initial-scale=1.0">
     <title>LeadTheBoard!</title>
