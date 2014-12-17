@@ -24,6 +24,9 @@ h3 {
 	width: 100%;
 	position: relative;
 }
+.contentContainer.noScroll {
+    overflow: hidden;
+}
 .content {
 	width: 100%;
 	max-width: 1400px;
@@ -91,9 +94,11 @@ h3 {
     padding: 3%;
     box-sizing: border-box;
     margin: 1% 0;
+    border: 1px solid #A5A5A5;
 }
 .field:focus {
     outline: none;
+    border-color: #F00;
 }
 .formSubmit p {
     float: left;
@@ -106,9 +111,20 @@ h3 {
     font-size: 1em;
     font: inherit;
     float: right;
+    border-bottom: 2px solid #0E6151;
+    position: relative;
 }
 .submit {
     margin: 2% 0 0 0;
+}
+.submit:focus, .register:focus {
+    background-color: #146E5C;
+    outline: none;
+}
+.submit:active, .register:active {
+    background-color: #147B67;
+    border-bottom: 2px solid transparent;
+    top: 2px;
 }
 .register {
     margin: 2% 0;

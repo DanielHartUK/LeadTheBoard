@@ -40,6 +40,11 @@ h3 {
 }
 
 /* line 27, style.scss */
+.contentContainer.noScroll {
+  overflow: hidden;
+}
+
+/* line 30, style.scss */
 .content {
   width: 100%;
   max-width: 1400px;
@@ -48,7 +53,7 @@ h3 {
 }
 
 /* Navigation */
-/* line 36, style.scss */
+/* line 39, style.scss */
 .nav {
   width: 100%;
   height: 50px;
@@ -58,7 +63,7 @@ h3 {
   z-index: 9999;
 }
 
-/* line 44, style.scss */
+/* line 47, style.scss */
 #logo {
   font-weight: 700;
   font-size: 1.6em;
@@ -68,7 +73,7 @@ h3 {
   float: left;
 }
 
-/* line 52, style.scss */
+/* line 55, style.scss */
 .user {
   float: right;
   color: #fff;
@@ -77,14 +82,14 @@ h3 {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* line 59, style.scss */
+/* line 62, style.scss */
 .downArrow {
   font-size: 0.7em;
   margin-left: 0.5em;
 }
 
 /* Login/Register Forms */
-/* line 66, style.scss */
+/* line 69, style.scss */
 .loginContainers {
   width: 100%;
   height: 100%;
@@ -95,7 +100,7 @@ h3 {
   padding-top: 50px;
 }
 
-/* line 75, style.scss */
+/* line 78, style.scss */
 .loginForm {
   position: absolute;
   top: 50%;
@@ -107,14 +112,14 @@ h3 {
   transform: translate(-50%, -50%);
 }
 
-/* line 82, style.scss */
+/* line 85, style.scss */
 .loginDiv {
   background-color: #fff;
   padding: 5%;
   box-sizing: border-box;
 }
 
-/* line 87, style.scss */
+/* line 90, style.scss */
 .field {
   width: 100%;
   font: inherit;
@@ -122,19 +127,21 @@ h3 {
   padding: 3%;
   box-sizing: border-box;
   margin: 1% 0;
+  border: 1px solid #A5A5A5;
 }
 
-/* line 95, style.scss */
+/* line 99, style.scss */
 .field:focus {
   outline: none;
+  border-color: #F00;
 }
 
-/* line 98, style.scss */
+/* line 103, style.scss */
 .formSubmit p {
   float: left;
 }
 
-/* line 101, style.scss */
+/* line 106, style.scss */
 .submit, .register {
   background-color: #138972;
   border: none;
@@ -143,19 +150,34 @@ h3 {
   font-size: 1em;
   font: inherit;
   float: right;
+  border-bottom: 2px solid #0E6151;
+  position: relative;
 }
 
-/* line 110, style.scss */
+/* line 117, style.scss */
 .submit {
   margin: 2% 0 0 0;
 }
 
-/* line 113, style.scss */
+/* line 120, style.scss */
+.submit:focus, .register:focus {
+  background-color: #146E5C;
+  outline: none;
+}
+
+/* line 124, style.scss */
+.submit:active, .register:active {
+  background-color: #147B67;
+  border-bottom: 2px solid transparent;
+  top: 2px;
+}
+
+/* line 129, style.scss */
 .register {
   margin: 2% 0;
 }
 
-/* line 116, style.scss */
+/* line 132, style.scss */
 .formBottom {
   display: block;
   overflow: auto;
@@ -163,13 +185,13 @@ h3 {
   background-color: #F0F0F0;
 }
 
-/* line 122, style.scss */
+/* line 138, style.scss */
 .formBottom p {
   float: left;
 }
 
 @media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  /* line 127, style.scss */
+  /* line 143, style.scss */
   .calendarIcon {
     background-image: url(/assets/calendar2x.png);
   }
