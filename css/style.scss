@@ -14,6 +14,11 @@ html, body {
     background-color: #f4f4f4;
     color: #555555;
 }
+h1 {
+    margin: 0;
+    font-size: 2.6em;
+    font-weight: 400;
+}
 h3 {
     font-weight: 400;
     text-align: center;
@@ -164,8 +169,114 @@ h3 {
     float: left;
 }
 
-@media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+/* Main */
+.mainBlock {
+    display: inline-block; 
+    vertical-align: top;
+    width: 80%;
+}
+.sideBlock {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    height: 400px;
+    background: #E5E5E5;
+}
+.sectionNavigation {
+    padding: 1% 0;
+}
+.sectionNavigation ul {
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #808080;
+}
 
+.sectionNavigation ul li {
+    display: inline-block;
+    margin: 0 2% -2px 0;
+    padding: 0 0 4px 0;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+/* Leaderboard */
+.mainBoard {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    border: 0;
+    border-spacing: 0;
+}
+.headerBoard {
+    background-color: #16a085;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1em;   
+}
+.headerBoard th {
+    margin: 0;
+    padding: 1.3% 1%;
+    border: 0;
+}
+.boardEntry {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.boardEntry td {
+    padding: 1%;
+}
+.boardEntry:nth-child(even) {
+    background: #ececec;
+}
+.boardEntry:first-child {
+    background: #f9f9f9;
+}
+.boardIcon {
+    height: 20px;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    float: left;
+        margin-right: 5%;
+}
+.personIcon {
+    background-image: url(../assets/personIconM.png);
+}  
+.achievementsIcon {
+    background-image: url(../assets/trophyIcon.png);
+}  
+.questsIcon {
+    background-image: url(../assets/pencilIcon.png);
+}  
+.xpIcon {
+    background-image: url(../assets/xpIcon.png);
+}  
+img.avatarBoard {
+    height: 40px;
+    width: 40px;
+    background: gray;
+}
+
+.sectionNavigation ul li.current, .sectionNavigation ul li:hover {
+    border-bottom: 2px solid #16a085;
+}
+
+@media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+.personIcon {
+    background-image: url(../assets/personIconM2x.png);
+}  
+.achievementsIcon {
+    background-image: url(../assets/trophyIcon2x.png);
+}  
+.questsIcon {
+    background-image: url(../assets/pencilIcon2x.png);
+}  
+.xpIcon {
+    background-image: url(../assets/xpIcon2x.png);
+}  
 }
 
 @media screen and (max-width: 768px) {

@@ -6,18 +6,18 @@
 <HTML>
 <head>
     <meta charset="UTF-8">
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../assets/fonts/fonts.css">
     <meta name="viewport" content="initial-scale=1.0">
     <title>LeadTheBoard!</title>
     <meta name="description" content="">
-    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="icon" href="../favicon.png" type="image/png">
 </head>
 <body>
 <div class="wrapper">
 	<div class="nav">
-		<div id="logo">LeadTheBoard!</div>
+		<a href="/"><div id="logo">LeadTheBoard!</div></a>
 		<div class="user" id="loggedOut" onClick="loginClick()"> Login/Register </div>
 		<div class="user" id="loggedIn" style="display:none;"> Hello, Name <span class="downArrow">&#9660;</span></div>
 	</div>
