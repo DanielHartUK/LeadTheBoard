@@ -1,3 +1,7 @@
+<?php 
+//include_once 'includes/register.inc.php';
+//include_once 'includes/functions.php';
+?> 
 <!DOCTYPE HTML>
 <HTML>
 <head>
@@ -33,7 +37,7 @@
 			</form>
 			</div>
 			<div class="loginDiv formBottom">
-				<p>Get a free account</p> <button class="register" onclick="registerClick()"> Register </button>
+				<p>Get a free account</p> <input type="button" class="register" onclick="registerClick()" value="Register" />
 			</div>
 		</div>
 		<!-- Forgot password form -->
@@ -50,7 +54,7 @@
 			</form>
 			</div>
 			<div class="loginDiv formBottom">
-				<p>Know your password?</p> <button class="register" onclick="registerLoginClick()"> Login </button>
+				<p>Know your password?</p> <input type="button" class="register" onclick="registerLoginClick()" value="Login" />
 			</div>
 		</div>
 		<!-- Register form -->
@@ -58,21 +62,34 @@
 			<div class="loginDiv">
 			<div class="icon-cross" onclick="closeEntry()"></div>
 				<h3> Register for LeadTheBoard!</h3>
-				<form style="overflow: auto;">
-					<input class="field registerFirstName" type="text" placeholder="First Name">
-					<input class="field registersurname" type="text" placeholder="Second Name">
-					<input class="field registerEmail" type="email" placeholder="Email Address">
-					<input class="field registerPassword" type="password" placeholder="Password">
+				<?php 
+				//if (!empty($error_msg)) {
+				//	echo $error_msg;
+				//}
+				?>
+				<form style="overflow: auto;" action="<?php // echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form">
+					<input class="field registerFirstName" type="text" name="firstName" id="firstName" placeholder="First Name">
+					<input class="field registersurname" type="text" name="surname" id="surname"placeholder="Second Name">
+					<input class="field registerEmail" type="email" name="email" id="email"placeholder="Email Address">
+					<input class="field registerPassword" type="password" name="password" id="password"placeholder="Password">
+					<input class="field registerConfirmPassword" type="password" name="confirmpass" id="confirmpass"placeholder="Confirm Password">
 					<p> Note: Only account administrators should register here. Students will be provided with their logins by the admin </p>
 					<div class="formSubmit">
-						<input type="submit" class="submit registerSubmit" value="Register">
+						<input type="button" class="submit registerSubmit" value="Register" onclick="return regformhash(this.form,
+																														this.form.firstName
+																														this.form.surname
+																														this.form.email
+																														this.form.password
+																														this.form.confirmpass);" />
 					</div>
 				</form>
 			</div>
 			<div class="loginDiv formBottom">
-				<p>Already got an account?</p> <button class="register" onclick="registerLoginClick()"> Login </button>
+				<p>Already got an account?</p> <input type="button" class="register" onclick="registerLoginClick()" value="Login" />
 			</div>
 		</div>	
 	</div>
 
 	<div class="contentContainer">
+
+
