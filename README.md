@@ -1,5 +1,4 @@
 #LeadTheBoard!
-========================
 
 LeadTheBoard! is a web site designed to be used in the classroom to improve student's work by providing a competitive incentive in the form of completing Achievements, Quests, and getting XP, with the challenge to reach the top of the central leaderboard of the class.
 
