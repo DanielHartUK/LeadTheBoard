@@ -1,5 +1,5 @@
-LeadTheBoard!
-=========================
+#LeadTheBoard!
+========================
 
 LeadTheBoard! is a web site designed to be used in the classroom to improve student's work by providing a competitive incentive in the form of completing Achievements, Quests, and getting XP, with the challenge to reach the top of the central leaderboard of the class.
 
@@ -16,3 +16,4 @@ The leaderboard will display each student's position on the board, avatar, name,
 Each student will have a profile that allows them to upload an avatar (profile picture), set their accent colour which will be reflected across the site when they are logged in, and join a clan.
 
 ====
+## Intended Fuctionality 
