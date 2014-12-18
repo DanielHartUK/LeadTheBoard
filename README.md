@@ -17,3 +17,22 @@ Each student will have a profile that allows them to upload an avatar (profile p
 
 ====
 ## Intended Fuctionality 
+
+###### Teacher Functionality
+- Create account
+- Edit personal login details
+- Create new, edit, delete classes
+- Add students manually or from a Google Sheet (Possibly upload spreadsheet in future), edit (avatar, clan, etc.), or delete students
+- Import other data from a Google Sheet (Possibly upload spreadsheet in future)
+- Create, edit, delete custom achievements
+- Edit preset achievements (XP Value, availability)
+- Create, edit, delete Quests
+- Add XP to a student (including negative values)
+- Change what leaderboard positioning is based on (XP, achievements unlocked, quests completed)
+- View leaderboard, activity feed, available Quests and Achievemetns
+
+###### Student Functionality
+- Upload avatar
+- Join a clan
+- View leaderboard, activity feed, available Quests and Achievements
+- Edit personal login details
