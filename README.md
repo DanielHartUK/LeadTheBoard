@@ -15,7 +15,7 @@ The leaderboard will display each student's position on the board, avatar, name,
 
 Each student will have a profile that allows them to upload an avatar (profile picture), set their accent colour which will be reflected across the site when they are logged in, and join a clan.
 
-====
+
 ## Intended Fuctionality 
 
 ###### Teacher Functionality
