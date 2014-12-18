@@ -34,17 +34,22 @@ h3 {
 }
 
 /* line 23, style.scss */
+.clickable {
+  cursor: pointer;
+}
+
+/* line 26, style.scss */
 .wrapper {
   width: 100%;
   position: relative;
 }
 
-/* line 27, style.scss */
+/* line 30, style.scss */
 .contentContainer.noScroll {
   overflow: hidden;
 }
 
-/* line 30, style.scss */
+/* line 33, style.scss */
 .content {
   width: 100%;
   max-width: 1400px;
@@ -53,7 +58,7 @@ h3 {
 }
 
 /* Navigation */
-/* line 39, style.scss */
+/* line 42, style.scss */
 .nav {
   width: 100%;
   height: 50px;
@@ -63,7 +68,7 @@ h3 {
   z-index: 9999;
 }
 
-/* line 47, style.scss */
+/* line 50, style.scss */
 #logo {
   font-weight: 700;
   font-size: 1.6em;
@@ -73,7 +78,7 @@ h3 {
   float: left;
 }
 
-/* line 55, style.scss */
+/* line 58, style.scss */
 .user {
   float: right;
   color: #fff;
@@ -83,14 +88,14 @@ h3 {
   cursor: pointer;
 }
 
-/* line 63, style.scss */
+/* line 66, style.scss */
 .downArrow {
   font-size: 0.7em;
   margin-left: 0.5em;
 }
 
 /* Login/Register Forms */
-/* line 70, style.scss */
+/* line 73, style.scss */
 .loginContainers {
   width: 100%;
   height: 100%;
@@ -102,12 +107,12 @@ h3 {
   display: none;
 }
 
-/* line 80, style.scss */
+/* line 83, style.scss */
 .loginContainers.visible {
   display: block;
 }
 
-/* line 83, style.scss */
+/* line 86, style.scss */
 .entryForm {
   position: absolute;
   top: 50%;
@@ -120,25 +125,26 @@ h3 {
   display: none;
 }
 
-/* line 91, style.scss */
+/* line 94, style.scss */
 .entryForm.visible {
   display: block;
 }
 
-/* line 94, style.scss */
+/* line 97, style.scss */
 .loginDiv {
   background-color: #fff;
   padding: 5%;
   box-sizing: border-box;
 }
 
-/* line 99, style.scss */
+/* line 102, style.scss */
 .icon-cross {
   float: right;
   font-size: 0.8em;
+  cursor: pointer;
 }
 
-/* line 103, style.scss */
+/* line 107, style.scss */
 .field {
   width: 100%;
   font: inherit;
@@ -149,18 +155,29 @@ h3 {
   border: 1px solid #A5A5A5;
 }
 
-/* line 112, style.scss */
+/* line 116, style.scss */
 .field:focus {
   outline: none;
   border-color: #F00;
 }
 
-/* line 116, style.scss */
+/* line 120, style.scss */
 .formSubmit p {
   float: left;
 }
 
-/* line 119, style.scss */
+/* line 123, style.scss */
+.formSubmit p.clickable:hover {
+  border-bottom: 1px dashed #A5A5A5;
+}
+
+/* line 126, style.scss */
+.formSubmit p.clickable {
+  border-bottom: 1px dashed transparent;
+  padding-bottom: 1px;
+}
+
+/* line 131, style.scss */
 .submit, .register {
   background-color: #138972;
   border: none;
@@ -174,30 +191,30 @@ h3 {
   cursor: pointer;
 }
 
-/* line 131, style.scss */
+/* line 143, style.scss */
 .submit {
   margin: 2% 0 0 0;
 }
 
-/* line 134, style.scss */
+/* line 146, style.scss */
 .submit:focus, .register:focus {
   background-color: #146E5C;
   outline: none;
 }
 
-/* line 138, style.scss */
+/* line 150, style.scss */
 .submit:active, .register:active {
   background-color: #147B67;
   border-bottom: 2px solid transparent;
   top: 2px;
 }
 
-/* line 143, style.scss */
+/* line 155, style.scss */
 .register {
   margin: 2% 0;
 }
 
-/* line 146, style.scss */
+/* line 158, style.scss */
 .formBottom {
   display: block;
   overflow: auto;
@@ -205,7 +222,7 @@ h3 {
   background-color: #F0F0F0;
 }
 
-/* line 152, style.scss */
+/* line 164, style.scss */
 .formBottom p {
   float: left;
 }

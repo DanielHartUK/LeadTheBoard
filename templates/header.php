@@ -18,6 +18,7 @@
 		<div class="user" id="loggedIn" style="display:none;"> Hello, Name <span class="downArrow">&#9660;</span></div>
 	</div>
 	<div class="loginContainers">
+		<!-- Login form -->
 		<div class="entryForm" id="login">
 			<div class="loginDiv">
 			<div class="icon-cross" onclick="closeEntry()"></div>
@@ -26,7 +27,7 @@
 				<input class="field loginEmail" type="email" placeholder="Email Address">
 				<input class="field loginPassword" type="password" placeholder="Password">
 				<div class="formSubmit">
-					<p> Forgot password? </p>
+					<p class="clickable" onclick="forgotClick()"> Forgot password? </p>
 					<input type="submit" class="submit loginSubmit" value="Login">
 				</div>
 			</form>
@@ -35,6 +36,24 @@
 				<p>Get a free account</p> <button class="register" onclick="registerClick()"> Register </button>
 			</div>
 		</div>
+		<!-- Forgot password form -->
+		<div class="entryForm" id="forgot">
+			<div class="loginDiv">
+			<div class="icon-cross" onclick="closeEntry()"></div>
+			<h3> Reset Password</h3>
+			<p> Enter your registered email below and we'll send you a new password </p>
+			<form style="overflow: auto;">
+				<input class="field forgotEmail" type="email" placeholder="Email Address">
+				<div class="formSubmit">
+					<input type="submit" class="submit loginSubmit" value="Request new password">
+				</div>
+			</form>
+			</div>
+			<div class="loginDiv formBottom">
+				<p>Know your password?</p> <button class="register" onclick="registerLoginClick()"> Login </button>
+			</div>
+		</div>
+		<!-- Register form -->
 		<div class="entryForm" id="register">
 			<div class="loginDiv">
 			<div class="icon-cross" onclick="closeEntry()"></div>

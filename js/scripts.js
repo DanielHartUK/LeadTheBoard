@@ -25,9 +25,15 @@ function registerClick() {
   $("#register").addClass("visible");
   $(".registerFirstName").focus();
 }
+function forgotClick() {
+  $("#login").removeClass("visible");
+  $("#forgot").addClass("visible");
+  $(".forgotEmail").focus();
+}
 function registerLoginClick() {
-  $("#login").addClass("visible");
+  $("#forgot").removeClass("visible");
   $("#register").removeClass("visible");
+  $("#login").addClass("visible");  
   $(".loginEmail").focus();
 }
 function closeEntry () {
@@ -35,7 +41,6 @@ function closeEntry () {
   $(".loginContainers").removeClass("visible");
   $("#register").removeClass("visible");
   $("#login").removeClass("visible");
-
 }
 
 // Smooth Scrolling 

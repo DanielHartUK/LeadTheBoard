@@ -20,6 +20,9 @@ h3 {
     font-size: 1.5em;
     margin: 0.5em 0;
 }
+.clickable {
+    cursor: pointer;
+}
 .wrapper {
 	width: 100%;
 	position: relative;
@@ -99,6 +102,7 @@ h3 {
 .icon-cross {
     float: right;
     font-size: 0.8em;
+    cursor: pointer;
 }
 .field {
     width: 100%;
@@ -116,6 +120,14 @@ h3 {
 .formSubmit p {
     float: left;
 }
+.formSubmit p.clickable:hover {
+    border-bottom: 1px dashed #A5A5A5;
+}
+.formSubmit p.clickable {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0);
+    padding-bottom: 1px;
+}
+
 .submit, .register {
     background-color: #138972;
     border: none;
