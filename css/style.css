@@ -177,7 +177,7 @@ h3 {
   padding-bottom: 1px;
 }
 
-/* line 131, style.scss */
+/* line 130, style.scss */
 .submit, .register {
   background-color: #138972;
   border: none;
@@ -191,30 +191,30 @@ h3 {
   cursor: pointer;
 }
 
-/* line 143, style.scss */
+/* line 142, style.scss */
 .submit {
   margin: 2% 0 0 0;
 }
 
-/* line 146, style.scss */
+/* line 145, style.scss */
 .submit:focus, .register:focus {
   background-color: #146E5C;
   outline: none;
 }
 
-/* line 150, style.scss */
+/* line 149, style.scss */
 .submit:active, .register:active {
   background-color: #147B67;
   border-bottom: 2px solid transparent;
   top: 2px;
 }
 
-/* line 155, style.scss */
+/* line 154, style.scss */
 .register {
   margin: 2% 0;
 }
 
-/* line 158, style.scss */
+/* line 157, style.scss */
 .formBottom {
   display: block;
   overflow: auto;
@@ -222,7 +222,7 @@ h3 {
   background-color: #F0F0F0;
 }
 
-/* line 164, style.scss */
+/* line 163, style.scss */
 .formBottom p {
   float: left;
 }

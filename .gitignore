@@ -1,5 +1,6 @@
 config.php
 *.sublime-project
+*.sublime-workspace
 
 # Compiled source #
 ###################

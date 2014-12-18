@@ -57,12 +57,13 @@
 		<div class="entryForm" id="register">
 			<div class="loginDiv">
 			<div class="icon-cross" onclick="closeEntry()"></div>
-				<h3> Register </h3>
+				<h3> Register for LeadTheBoard!</h3>
 				<form style="overflow: auto;">
 					<input class="field registerFirstName" type="text" placeholder="First Name">
 					<input class="field registersurname" type="text" placeholder="Second Name">
 					<input class="field registerEmail" type="email" placeholder="Email Address">
 					<input class="field registerPassword" type="password" placeholder="Password">
+					<p> Note: Only account administrators should register here. Students will be provided with their logins by the admin </p>
 					<div class="formSubmit">
 						<input type="submit" class="submit registerSubmit" value="Register">
 					</div>
