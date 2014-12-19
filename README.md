@@ -14,6 +14,8 @@ The leaderboard will display each student's position on the board, avatar, name,
 
 Each student will have a profile that allows them to upload an avatar (profile picture), set their accent colour which will be reflected across the site when they are logged in, and join a clan.
 
+Also in the future there is a possibility of adding a Clan Wars feature, in which the teacher can set a task for clans to complete, and the first clan to do so gets a reward.
+
 
 ## Intended Fuctionality 
 
