@@ -303,24 +303,25 @@ h3 {
   border: 0;
   padding: 0;
   margin: 0;
+  background-color: #f7f7f7;
 }
 
-/* line 227, style.scss */
+/* line 228, style.scss */
 .boardEntry td {
   padding: 1%;
 }
 
-/* line 230, style.scss */
+/* line 231, style.scss */
 .boardEntry:nth-child(even) {
   background: #ececec;
 }
 
-/* line 233, style.scss */
+/* line 234, style.scss */
 .boardEntry:first-child {
-  background: #f9f9f9;
+  background: #f7f7f7;
 }
 
-/* line 236, style.scss */
+/* line 237, style.scss */
 .boardIcon {
   height: 20px;
   width: 20px;
@@ -331,56 +332,127 @@ h3 {
   margin-right: 5%;
 }
 
-/* line 245, style.scss */
+/* line 246, style.scss */
 .personIcon {
   background-image: url(../assets/personIconM.png);
 }
 
-/* line 248, style.scss */
+/* line 249, style.scss */
 .achievementsIcon {
   background-image: url(../assets/trophyIcon.png);
 }
 
-/* line 251, style.scss */
+/* line 252, style.scss */
 .questsIcon {
   background-image: url(../assets/pencilIcon.png);
 }
 
-/* line 254, style.scss */
+/* line 255, style.scss */
 .xpIcon {
   background-image: url(../assets/xpIcon.png);
 }
 
-/* line 257, style.scss */
+/* line 258, style.scss */
 img.avatarBoard {
   height: 40px;
   width: 40px;
   background: gray;
 }
 
-/* line 263, style.scss */
+/* line 264, style.scss */
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
   border-bottom: 2px solid #16a085;
 }
 
 @media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  /* line 268, style.scss */
+  /* line 269, style.scss */
   .personIcon {
     background-image: url(../assets/personIconM2x.png);
   }
 
-  /* line 271, style.scss */
+  /* line 272, style.scss */
   .achievementsIcon {
     background-image: url(../assets/trophyIcon2x.png);
   }
 
-  /* line 274, style.scss */
+  /* line 275, style.scss */
   .questsIcon {
     background-image: url(../assets/pencilIcon2x.png);
   }
 
-  /* line 277, style.scss */
+  /* line 278, style.scss */
   .xpIcon {
     background-image: url(../assets/xpIcon2x.png);
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 284, style.scss */
+  .mainBlock {
+    width: 100%;
+  }
+
+  /* line 287, style.scss */
+  .sideBlock {
+    display: none;
+  }
+
+  /* line 290, style.scss */
+  .mainBoard thead {
+    display: none;
+  }
+
+  /* line 293, style.scss */
+  .boardEntry {
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-bottom: 1%;
+    border-radius: 5px;
+  }
+
+  /* line 300, style.scss */
+  .boardEntry td {
+    display: block;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f7f7f7), color-stop(1, #f7f7f7));
+    background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
+    background-image: -moz-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
+    background-image: -webkit-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
+    background-image: -ms-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
+    background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
+  }
+
+  /* line 305, style.scss */
+  .boardEntry:first-child td {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f9f9f9), color-stop(1, #f9f9f9));
+    background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
+    background-image: -moz-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
+    background-image: -webkit-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
+    background-image: -ms-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
+    background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
+  }
+
+  /* line 308, style.scss */
+  .boardEntry:nth-child(even) td {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #ECECEC), color-stop(1, #ECECEC));
+    background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
+    background-image: -moz-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
+    background-image: -webkit-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
+    background-image: -ms-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
+    background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
+  }
+
+  /* line 311, style.scss */
+  .boardEntry td:before {
+    content: attr(data-th) ": ";
+    float: left;
+    width: 36%;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* line 318, style.scss */
+  #boardAvatar {
+    display: none;
   }
 }

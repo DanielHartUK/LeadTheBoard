@@ -25,7 +25,7 @@
 			<tbody>
 				<tr class="boardEntry">
 					<td class="pos" data-th="Position">1</td>
-					<td data-th="avatar"><img class="avatarBoard" src=""></td>
+					<td data-th="avatar" id="boardAvatar"><img class="avatarBoard" src=""></td>
 					<td data-th="Student Name">Lorem Ipsum JR.</td>
 					<td data-th="Achievements">88/88 (100%)</td>
 					<td data-th="Quests">88/88 (100%)</td>
@@ -33,7 +33,7 @@
 				</tr>
 				<tr class="boardEntry">
 					<td class="pos" data-th="Position">2</td>
-					<td data-th="avatar"><img class="avatarBoard" src=""></td>
+					<td data-th="avatar" id="boardAvatar"><img class="avatarBoard" src=""></td>
 					<td data-th="Student Name">Lorem Ipsum JR.</td>
 					<td data-th="Achievements">88/88 (100%)</td>
 					<td data-th="Quests">88/88 (100%)</td>
@@ -41,7 +41,7 @@
 				</tr>
 				<tr class="boardEntry">
 					<td class="pos" data-th="Position">3</td>
-					<td data-th="avatar"><img class="avatarBoard" src=""></td>
+					<td data-th="avatar" id="boardAvatar"><img class="avatarBoard" src=""></td>
 					<td data-th="Student Name">Lorem Ipsum JR.</td>
 					<td data-th="Achievements">88/88 (100%)</td>
 					<td data-th="Quests">88/88 (100%)</td>
@@ -49,7 +49,7 @@
 				</tr>
 				<tr class="boardEntry">
 					<td class="pos" data-th="Position">4</td>
-					<td data-th="avatar"><img class="avatarBoard" src=""></td>
+					<td data-th="avatar" id="boardAvatar"><img class="avatarBoard" src=""></td>
 					<td data-th="Student Name">Lorem Ipsum JR.</td>
 					<td data-th="Achievements">88/88 (100%)</td>
 					<td data-th="Quests">88/88 (100%)</td>
