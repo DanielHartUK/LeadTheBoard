@@ -1,6 +1,8 @@
 <?php 
 //include_once 'includes/register.inc.php';
 //include_once 'includes/functions.php';
+include_once(INCLUDES_PATH . "/demo.php"); 
+
 ?> 
 <!DOCTYPE HTML>
 <HTML>
@@ -17,9 +19,19 @@
 <body>
 <div class="wrapper">
 	<div class="nav">
-		<a href="/"><div id="logo">LeadTheBoard!</div></a>
-		<div class="user" id="loggedOut" onClick="loginClick()"> Login/Register </div>
-		<div class="user" id="loggedIn" style="display:none;"> Hello, Name <span class="downArrow">&#9660;</span></div>
+		
+		<?php if ($loggedIn) : ?>
+			<div class="user" id="loggedIn"><img src="/assets/placeholder/goat.jpg" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9660;</span></div>
+		<?php else : ?>
+			<div class="user" id="loggedOut" onClick="loginClick()"> Login/Register </div>
+		<?php endif; ?>
+		<div id="logo"><a href="/">LeadTheBoard!</a></div>
+		<?php if ($loggedIn) : ?>
+			<div class="notificationIcon"><?php if ($unreadNotifications == 0): echo "&nbsp;"; else : echo $unreadNotifications; endif; ?></div>
+		<?php else: ?>
+			<div><!--Empty Div because of flex--></div>
+		<?php endif; ?>
+
 	</div>
 	<div class="loginContainers">
 		<!-- Login form -->

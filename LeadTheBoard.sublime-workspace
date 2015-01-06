@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"bor",
+				"border"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"main",
+				"mainBlock"
+			],
+			[
+				"po",
+				"pointer"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"login",
+				"loginContainers"
+			],
+			[
 				"max",
 				"max-width"
 			],
@@ -159,15 +187,15 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 230,
+				"buffer_size": 282,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "templates/footer.php",
+			"file": "views/main.php",
 			"settings":
 			{
-				"buffer_size": 157,
+				"buffer_size": 3677,
 				"line_ending": "Unix"
 			}
 		},
@@ -175,15 +203,15 @@
 			"file": "templates/header.php",
 			"settings":
 			{
-				"buffer_size": 1357,
+				"buffer_size": 4035,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "includes/config.php",
+			"file": "templates/footer.php",
 			"settings":
 			{
-				"buffer_size": 267,
+				"buffer_size": 163,
 				"line_ending": "Unix"
 			}
 		},
@@ -191,7 +219,23 @@
 			"file": "css/style.scss",
 			"settings":
 			{
-				"buffer_size": 3281,
+				"buffer_size": 9279,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/scripts.js",
+			"settings":
+			{
+				"buffer_size": 1570,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 3299,
 				"line_ending": "Unix"
 			}
 		}
@@ -286,12 +330,17 @@
 	[
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/templates"
 	],
 	"file_history":
 	[
+		"/New folder/New folder (3).noindex/New folder (0)/New folder (2)/New folder (2)/rp.html",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/avatarIcon.svg",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/.gitignore",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/fonts/fonts.css",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/config.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/db-connect.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/config.rb",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/style.scss",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/reset.css",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/header.php",
@@ -302,7 +351,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -316,6 +365,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"#rgba",
+			"16A084",
+			"50",
+			"#f7f7f7",
+			"#F9F9F9",
+			"#16A084",
+			"<td data-th=\"avatar\">",
+			"22",
+			"64",
+			"data-th=\"Position\"",
 			"/",
 			"fonts",
 			"555555",
@@ -327,11 +386,18 @@
 			"nth"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"35",
+			"#f9f9f9",
+			"#f7f7f7",
+			"#ECECEC",
+			"<td data-th=\"avatar\" id=\"boardAvatar\">",
+			"22",
+			"class=\"pos\" data-th=\"Position\"",
 			"",
 			"1D439B",
 			"@include display-flex;",
@@ -355,15 +421,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 230,
+						"buffer_size": 282,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								180,
-								180
+								282,
+								0
 							]
 						],
 						"settings":
@@ -374,31 +440,32 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "templates/footer.php",
+					"file": "views/main.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 157,
+						"buffer_size": 3677,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								92,
-								92
+								407,
+								407
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": 7.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -411,23 +478,24 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1357,
+						"buffer_size": 4035,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								142,
-								142
+								0,
+								4035
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 14.0,
-						"translation.y": 20.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -435,19 +503,19 @@
 				},
 				{
 					"buffer": 3,
-					"file": "includes/config.php",
+					"file": "templates/footer.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 267,
+						"buffer_size": 163,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								264,
-								264
+								0,
+								163
 							]
 						],
 						"settings":
@@ -458,7 +526,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -473,15 +541,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3281,
+						"buffer_size": 9279,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								674,
-								674
+								4182,
+								4182
 							]
 						],
 						"settings":
@@ -494,7 +562,65 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/scripts.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								882,
+								882
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3299,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								3299
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -528,7 +654,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.507411504425,
 			1.0
 		],
 		"rows":
@@ -549,7 +675,7 @@
 	"project": "LeadTheBoard.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":

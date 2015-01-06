@@ -43,6 +43,7 @@ function closeEntry () {
   $("#login").removeClass("visible");
 }
 
+
 // Smooth Scrolling 
 
 $(function() {

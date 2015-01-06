@@ -1,4 +1,8 @@
-<?php include_once('../templates/header.php'); ?>
+<?php 
+require_once("../config.php");
+include_once(TEMPLATES_PATH . "/header.php"); 
+?>
+
 <div class="content">
 	<h1> Class Name </h1>
 	<div class="mainBlock">
@@ -8,6 +12,7 @@
 				<li> Activity </li>
 				<li> Acheivements </li>
 				<li> Quests </li>
+				<li> Change Class </li>
 			</ul>
 		</div>
 		<div class="leaderboard">
@@ -55,6 +60,42 @@
 					<td data-th="Quests">88/88 (100%)</td>
 					<td data-th="XP">888</td>
 				</tr>
+				</tr>
+				<tr class="boardEntry">
+					<td class="pos" data-th="Position">5</td>
+					<td data-th="avatar" id="boardAvatar"><img class="avatarBoard" src=""></td>
+					<td data-th="Student Name">Lorem Ipsum JR.</td>
+					<td data-th="Achievements">88/88 (100%)</td>
+					<td data-th="Quests">88/88 (100%)</td>
+					<td data-th="XP">888</td>
+				</tr>
+				</tr>
+				<tr class="boardEntry">
+					<td class="pos" data-th="Position">6</td>
+					<td data-th="avatar" id="boardAvatar"><img class="avatarBoard" src=""></td>
+					<td data-th="Student Name">Lorem Ipsum JR.</td>
+					<td data-th="Achievements">88/88 (100%)</td>
+					<td data-th="Quests">88/88 (100%)</td>
+					<td data-th="XP">888</td>
+				</tr>
+				</tr>
+				<tr class="boardEntry">
+					<td class="pos" data-th="Position">7</td>
+					<td data-th="avatar" id="boardAvatar"><img class="avatarBoard" src=""></td>
+					<td data-th="Student Name">Lorem Ipsum JR.</td>
+					<td data-th="Achievements">88/88 (100%)</td>
+					<td data-th="Quests">88/88 (100%)</td>
+					<td data-th="XP">888</td>
+				</tr>
+				</tr>
+				<tr class="boardEntry">
+					<td class="pos" data-th="Position">8</td>
+					<td data-th="avatar" id="boardAvatar"><img class="avatarBoard" src=""></td>
+					<td data-th="Student Name">Lorem Ipsum JR.</td>
+					<td data-th="Achievements">88/88 (100%)</td>
+					<td data-th="Quests">88/88 (100%)</td>
+					<td data-th="XP">888</td>
+				</tr>
 			</tbody>
 			</table>
 		</div>
@@ -63,4 +104,4 @@
 		</div>
 	</div>
 </div>
-<?php include_once('../templates/footer.php'); ?>
+<?php include_once(TEMPLATES_PATH . "/footer.php"); ?>

@@ -1,8 +1,7 @@
 @-webkit-viewport {width: device-width;}@-moz-viewport {width: device-width;}@-ms-viewport {width: device-width;}@-o-viewport {width: device-width;}@viewport {width: device-width;}
-@mixin transform($x) { -webkit-transform: $x; -moz-transform: $x; -ms-transform: $x; transform: $x; }
-@mixin transform-origin($x) { -webkit-transform-origin: $x; -moz-transform-origin: $x; -ms-transform-origin: $x; transform-origin: $x; }
-@mixin transition($x) { -webkit-transition: $x; -moz-transition: $x; -ms-transition: $x; transition: $x; }
-@mixin display-flex { display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: flex; display: -o-flex; }
+@import "bourbon/bourbon";
+
+$navHeight: 50px;
 
 html, body {
     margin: 0;
@@ -31,6 +30,7 @@ h3 {
 .wrapper {
 	width: 100%;
 	position: relative;
+    padding-top: $navHeight;
 }
 .contentContainer.noScroll {
     overflow: hidden;
@@ -45,28 +45,49 @@ h3 {
 /* Navigation */
 
 .nav {
+    @include display(flex);
+    @include justify-content(space-between);
     width: 100%;
-    height: 50px;
-    border-bottom: 1px solid #0d5b4c;
-    background-color: #138972;
-    position: relative;
+    height: $navHeight;
+    background-color: #16a085;
+    position: fixed;
+    top: 0;
     z-index: 9999;
 }
 #logo {
+    text-align: center;
     font-weight: 700;
     font-size: 1.6em;
     color: #FFF;
-    line-height: 50px;
+    line-height: $navHeight;
     padding: 0 0.5%;
+
+    a {
+        text-decoration: none;
+        color: #FFF;
+    }
+}
+.profilePicSmall {
+    width: 30px;
+    margin: 10px 10px 0.5% 0;
     float: left;
 }
 .user {
-    float: right;
     color: #fff;
-    line-height: 50px;
+    line-height: $navHeight;
     padding: 0 0.5%;
-    background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+.notificationIcon {
+    text-align: left;
+    background-image: url(../assets/bell.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 10px;
+    padding-right: calc(20px + 0.5%);
+    padding-left: 0.5%; 
+    color: #FFF;
+    line-height: $navHeight;
 }
 .downArrow {
     font-size: 0.7em;
@@ -180,7 +201,6 @@ h3 {
     vertical-align: top;
     width: 20%;
     height: 400px;
-    background: #E5E5E5;
 }
 .sectionNavigation {
     padding: 1% 0;
@@ -207,12 +227,14 @@ h3 {
     text-align: left;
     border: 0;
     border-spacing: 0;
+    border-collapse: collapse;
 }
 .headerBoard {
     background-color: #16a085;
     color: #fff;
     font-weight: 700;
-    font-size: 1.1em;   
+    font-size: 1.1em;  
+    border-right: 1px solid #16A085;     
 }
 .headerBoard th {
     margin: 0;
@@ -224,9 +246,14 @@ h3 {
     padding: 0;
     margin: 0;
     background-color: #f7f7f7;
+    border-bottom: 1px solid #CCC;
 }
 .boardEntry td {
     padding: 1%;
+    border-left: 1px solid #CCC;
+}
+.boardEntry td:last-child {
+    border-right: 1px solid #CCC;
 }
 .boardEntry:nth-child(even) {
     background: #ececec;
@@ -241,7 +268,7 @@ h3 {
     background-size: contain;
     margin: 0;
     float: left;
-        margin-right: 5%;
+    margin-right: 5%;
 }
 .personIcon {
     background-image: url(../assets/personIconM.png);
@@ -265,7 +292,10 @@ img.avatarBoard {
     border-bottom: 2px solid #16a085;
 }
 
-@media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+@include hidpi(2) {
+.notificationIcon {
+    background-image: url(../assets/bell2x.png);
+}
 .personIcon {
     background-image: url(../assets/personIconM2x.png);
 }  
@@ -296,6 +326,7 @@ $tableBreak: 600px;
         overflow: hidden;
         margin-bottom: 1%;
         border-radius: 5px;
+        border: 0;
     }
     .boardEntry td {
         display: block;
