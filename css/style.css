@@ -128,21 +128,22 @@ h3 {
   background-image: url(../assets/bell.png);
   background-repeat: no-repeat;
   background-size: 15px;
-  background-position: 10px;
+  background-position: 17px;
   padding-right: calc(20px + 0.5%);
   padding-left: 0.5%;
+  min-width: 10px;
   color: #FFF;
   line-height: 50px;
 }
 
-/* line 92, style.scss */
+/* line 93, style.scss */
 .downArrow {
   font-size: 0.7em;
   margin-left: 0.5em;
 }
 
 /* Login/Register Forms */
-/* line 99, style.scss */
+/* line 100, style.scss */
 .loginContainers {
   width: 100%;
   height: 100%;
@@ -154,12 +155,12 @@ h3 {
   display: none;
 }
 
-/* line 109, style.scss */
+/* line 110, style.scss */
 .loginContainers.visible {
   display: block;
 }
 
-/* line 112, style.scss */
+/* line 113, style.scss */
 .entryForm {
   position: absolute;
   top: 50%;
@@ -173,26 +174,26 @@ h3 {
   display: none;
 }
 
-/* line 120, style.scss */
+/* line 121, style.scss */
 .entryForm.visible {
   display: block;
 }
 
-/* line 123, style.scss */
+/* line 124, style.scss */
 .loginDiv {
   background-color: #fff;
   padding: 5%;
   box-sizing: border-box;
 }
 
-/* line 128, style.scss */
+/* line 129, style.scss */
 .icon-cross {
   float: right;
   font-size: 0.8em;
   cursor: pointer;
 }
 
-/* line 133, style.scss */
+/* line 134, style.scss */
 .field {
   width: 100%;
   font: inherit;
@@ -203,29 +204,29 @@ h3 {
   border: 1px solid #A5A5A5;
 }
 
-/* line 142, style.scss */
+/* line 143, style.scss */
 .field:focus {
   outline: none;
   border-color: #F00;
 }
 
-/* line 146, style.scss */
+/* line 147, style.scss */
 .formSubmit p {
   float: left;
 }
 
-/* line 149, style.scss */
+/* line 150, style.scss */
 .formSubmit p.clickable:hover {
   border-bottom: 1px dashed #A5A5A5;
 }
 
-/* line 152, style.scss */
+/* line 153, style.scss */
 .formSubmit p.clickable {
   border-bottom: 1px dashed transparent;
   padding-bottom: 1px;
 }
 
-/* line 156, style.scss */
+/* line 157, style.scss */
 .submit, .register {
   background-color: #138972;
   border: none;
@@ -239,30 +240,30 @@ h3 {
   cursor: pointer;
 }
 
-/* line 168, style.scss */
+/* line 169, style.scss */
 .submit {
   margin: 2% 0 0 0;
 }
 
-/* line 171, style.scss */
+/* line 172, style.scss */
 .submit:focus, .register:focus {
   background-color: #146E5C;
   outline: none;
 }
 
-/* line 175, style.scss */
+/* line 176, style.scss */
 .submit:active, .register:active {
   background-color: #147B67;
   border-bottom: 2px solid transparent;
   top: 2px;
 }
 
-/* line 180, style.scss */
+/* line 181, style.scss */
 .register {
   margin: 2% 0;
 }
 
-/* line 183, style.scss */
+/* line 184, style.scss */
 .formBottom {
   display: block;
   overflow: auto;
@@ -270,20 +271,20 @@ h3 {
   background-color: #F0F0F0;
 }
 
-/* line 189, style.scss */
+/* line 190, style.scss */
 .formBottom p {
   float: left;
 }
 
 /* Main */
-/* line 194, style.scss */
+/* line 195, style.scss */
 .mainBlock {
   display: inline-block;
   vertical-align: top;
   width: 80%;
 }
 
-/* line 199, style.scss */
+/* line 200, style.scss */
 .sideBlock {
   display: inline-block;
   vertical-align: top;
@@ -291,19 +292,19 @@ h3 {
   height: 400px;
 }
 
-/* line 205, style.scss */
+/* line 206, style.scss */
 .sectionNavigation {
   padding: 1% 0;
 }
 
-/* line 208, style.scss */
+/* line 209, style.scss */
 .sectionNavigation ul {
   margin: 0;
   padding: 0;
   border-bottom: 2px solid #808080;
 }
 
-/* line 214, style.scss */
+/* line 215, style.scss */
 .sectionNavigation ul li {
   display: inline-block;
   margin: 0 2% -2px 0;
@@ -313,7 +314,7 @@ h3 {
 }
 
 /* Leaderboard */
-/* line 223, style.scss */
+/* line 224, style.scss */
 .mainBoard {
   width: 100%;
   margin: 0;
@@ -324,7 +325,7 @@ h3 {
   border-collapse: collapse;
 }
 
-/* line 232, style.scss */
+/* line 233, style.scss */
 .headerBoard {
   background-color: #16a085;
   color: #fff;
@@ -333,14 +334,14 @@ h3 {
   border-right: 1px solid #16A085;
 }
 
-/* line 239, style.scss */
+/* line 240, style.scss */
 .headerBoard th {
   margin: 0;
   padding: 1.3% 1%;
   border: 0;
 }
 
-/* line 244, style.scss */
+/* line 245, style.scss */
 .boardEntry {
   border: 0;
   padding: 0;
@@ -349,28 +350,28 @@ h3 {
   border-bottom: 1px solid #CCC;
 }
 
-/* line 251, style.scss */
+/* line 252, style.scss */
 .boardEntry td {
   padding: 1%;
   border-left: 1px solid #CCC;
 }
 
-/* line 255, style.scss */
+/* line 256, style.scss */
 .boardEntry td:last-child {
   border-right: 1px solid #CCC;
 }
 
-/* line 258, style.scss */
+/* line 259, style.scss */
 .boardEntry:nth-child(even) {
   background: #ececec;
 }
 
-/* line 261, style.scss */
+/* line 262, style.scss */
 .boardEntry:first-child {
   background: #f7f7f7;
 }
 
-/* line 264, style.scss */
+/* line 265, style.scss */
 .boardIcon {
   height: 20px;
   width: 20px;
@@ -381,81 +382,81 @@ h3 {
   margin-right: 5%;
 }
 
-/* line 273, style.scss */
+/* line 274, style.scss */
 .personIcon {
   background-image: url(../assets/personIconM.png);
 }
 
-/* line 276, style.scss */
+/* line 277, style.scss */
 .achievementsIcon {
   background-image: url(../assets/trophyIcon.png);
 }
 
-/* line 279, style.scss */
+/* line 280, style.scss */
 .questsIcon {
   background-image: url(../assets/pencilIcon.png);
 }
 
-/* line 282, style.scss */
+/* line 283, style.scss */
 .xpIcon {
   background-image: url(../assets/xpIcon.png);
 }
 
-/* line 285, style.scss */
+/* line 286, style.scss */
 img.avatarBoard {
   height: 40px;
   width: 40px;
   background: gray;
 }
 
-/* line 291, style.scss */
+/* line 292, style.scss */
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
   border-bottom: 2px solid #16a085;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 296, style.scss */
+  /* line 297, style.scss */
   .notificationIcon {
     background-image: url(../assets/bell2x.png);
   }
 
-  /* line 299, style.scss */
+  /* line 300, style.scss */
   .personIcon {
     background-image: url(../assets/personIconM2x.png);
   }
 
-  /* line 302, style.scss */
+  /* line 303, style.scss */
   .achievementsIcon {
     background-image: url(../assets/trophyIcon2x.png);
   }
 
-  /* line 305, style.scss */
+  /* line 306, style.scss */
   .questsIcon {
     background-image: url(../assets/pencilIcon2x.png);
   }
 
-  /* line 308, style.scss */
+  /* line 309, style.scss */
   .xpIcon {
     background-image: url(../assets/xpIcon2x.png);
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 314, style.scss */
+  /* line 315, style.scss */
   .mainBlock {
     width: 100%;
   }
 
-  /* line 317, style.scss */
+  /* line 318, style.scss */
   .sideBlock {
     display: none;
   }
 
-  /* line 320, style.scss */
+  /* line 321, style.scss */
   .mainBoard thead {
     display: none;
   }
 
-  /* line 323, style.scss */
+  /* line 324, style.scss */
   .boardEntry {
     display: block;
     box-sizing: border-box;
@@ -465,7 +466,7 @@ img.avatarBoard {
     border: 0;
   }
 
-  /* line 331, style.scss */
+  /* line 332, style.scss */
   .boardEntry td {
     display: block;
     width: 100%;
@@ -477,7 +478,7 @@ img.avatarBoard {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
   }
 
-  /* line 336, style.scss */
+  /* line 337, style.scss */
   .boardEntry:first-child td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f9f9f9), color-stop(1, #f9f9f9));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
@@ -487,7 +488,7 @@ img.avatarBoard {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
   }
 
-  /* line 339, style.scss */
+  /* line 340, style.scss */
   .boardEntry:nth-child(even) td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #ECECEC), color-stop(1, #ECECEC));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
@@ -497,7 +498,7 @@ img.avatarBoard {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
   }
 
-  /* line 342, style.scss */
+  /* line 343, style.scss */
   .boardEntry td:before {
     content: attr(data-th) ": ";
     float: left;
@@ -506,7 +507,7 @@ img.avatarBoard {
     font-weight: 700;
   }
 
-  /* line 349, style.scss */
+  /* line 350, style.scss */
   #boardAvatar {
     display: none;
   }
