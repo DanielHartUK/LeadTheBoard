@@ -43,6 +43,15 @@ function closeEntry () {
   $("#login").removeClass("visible");
 }
 
+var pageTop = $('.nav').height();
+$('table').floatThead({
+    scrollingTop: pageTop,
+    useAbsolutePositioning: true //the default value
+});
+
+$( document ).ready( function() {
+    $( ".questThumb" ).imageMask( "../assets/hexmask.jpg" );
+} );
 
 // Smooth Scrolling 
 

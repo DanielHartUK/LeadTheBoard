@@ -1,14 +1,14 @@
 <?php 
-//include_once 'includes/register.inc.php';
-//include_once 'includes/functions.php';
 include_once(INCLUDES_PATH . "/demo.php"); 
-
 ?> 
 <!DOCTYPE HTML>
 <HTML>
 <head>
     <meta charset="UTF-8">
     <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jquery.floatThead.min.js"></script>
+    <script src="../js/sorttable.js"></script>
+    <script src="../js/jquery.imageMask.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../assets/fonts/fonts.css">
     <meta name="viewport" content="initial-scale=1.0">
@@ -21,7 +21,7 @@ include_once(INCLUDES_PATH . "/demo.php");
 	<div class="nav">
 		
 		<?php if ($loggedIn) : ?>
-			<div class="user" id="loggedIn"><img src="/assets/placeholder/goat.jpg" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9660;</span></div>
+			<div class="user" id="loggedIn"><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9660;</span></div>
 		<?php else : ?>
 			<div class="user" id="loggedOut" onClick="loginClick()"> Login/Register </div>
 		<?php endif; ?>
@@ -74,11 +74,6 @@ include_once(INCLUDES_PATH . "/demo.php");
 			<div class="loginDiv">
 			<div class="icon-cross" onclick="closeEntry()"></div>
 				<h3> Register for LeadTheBoard!</h3>
-				<?php 
-				//if (!empty($error_msg)) {
-				//	echo $error_msg;
-				//}
-				?>
 				<form style="overflow: auto;" action="<?php // echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form">
 					<input class="field registerFirstName" type="text" name="firstName" id="firstName" placeholder="First Name">
 					<input class="field registersurname" type="text" name="surname" id="surname"placeholder="Second Name">
@@ -87,12 +82,7 @@ include_once(INCLUDES_PATH . "/demo.php");
 					<input class="field registerConfirmPassword" type="password" name="confirmpass" id="confirmpass"placeholder="Confirm Password">
 					<p> Note: Only account administrators should register here. Students will be provided with their logins by the admin </p>
 					<div class="formSubmit">
-						<input type="button" class="submit registerSubmit" value="Register" onclick="return regformhash(this.form,
-																														this.form.firstName
-																														this.form.surname
-																														this.form.email
-																														this.form.password
-																														this.form.confirmpass);" />
+						<input type="button" class="submit registerSubmit" value="Register" />
 					</div>
 				</form>
 			</div>
