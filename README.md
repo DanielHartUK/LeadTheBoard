@@ -8,7 +8,7 @@ What achievements are unlockable can be set by the teacher and can be different 
 
 Quests are similar to achievements but are time based and focused on tasks such as completeing an assignment on time. Because of their limited availablity this gives the incentive to the students to get the task done in the time given. 
 
-XP will be calculated by the XP award given on achievements and quests, and additonal XP can be given by the teacher individually to students or clans as rewards. 
+XP will be calculated by the XP award given on attendance, achievements and quests, and additonal XP can be given by the teacher individually to students or clans as rewards. 
 
 The leaderboard will display each student's position on the board, avatar, name, and the number of achievements and quests they've completed, as well as their XP total. By default, XP will be used to determine the position of a student on a leaderboard, but this can be changed so that number of achievements or quests completed will determine it. 
 
@@ -24,17 +24,17 @@ Also in the future there is a possibility of adding a Clan Wars feature, in whic
 - Edit personal login details
 - Create new, edit, delete classes
 - Add students manually or from a Google Sheet (Possibly upload spreadsheet in future), edit (avatar, clan, etc.), or delete students
-- Import other data from a Google Sheet (Possibly upload spreadsheet in future)
+- Import other data from a Google Sheet automatically (Possibly upload spreadsheet in future)
 - Create, edit, delete custom achievements
 - Edit preset achievements (XP Value, availability)
 - Create, edit, delete Quests
-- Add XP to a student (including negative values)
+- Give XP to a student (+/-)
 - Change what leaderboard positioning is based on (XP, achievements unlocked, quests completed)
 - View leaderboard, activity feed, available Quests and Achievemetns
 
 ###### Student Functionality
 - Upload avatar
-- Join a clan
+- Create, Join, and edit a clan (Including clan avatar)
 - View leaderboard, activity feed, available Quests and Achievements
 - Edit personal login details
 
