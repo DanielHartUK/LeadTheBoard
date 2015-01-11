@@ -1,6 +1,16 @@
 <?php
 include_once 'config.php';
 
+// Get user ID from cookie -> get user class -> get class info
+
+
+
+
+
+
+
+
+/* Login Stuff that can probably be scrapped
 function sec_session_start() {
 	$session_name = 'session_id';
 	$secure = false; //SET TO TRUE IN PRODUCTION
@@ -130,4 +140,5 @@ function esc_url($url) {
 
 
 }
+*/
 

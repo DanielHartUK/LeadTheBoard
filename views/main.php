@@ -3,9 +3,9 @@ require_once("../config.php");
 include_once(TEMPLATES_PATH . "/header.php"); 
 ?>
 
-<div class="content">
+<div class="content <?php if($admin == 1): echo 'admin'; endif; ?>">
 	<h1> <?php echo $class ?> </h1>
-	<div class="sectionNavigation">
+	<div class="sectionNavigation <?php if($admin == 1): echo 'drawerO'; endif; ?>">
 		<ul>
 			<li class="currentPage"> Leaderboard </li>
 			<li> Activity </li>
@@ -13,11 +13,11 @@ include_once(TEMPLATES_PATH . "/header.php");
 			<li> Quests </li>
 		</ul>
 	</div>
-	<div class="mainBlock">
+	<div class="mainBlock <?php if($admin == 1): echo 'drawerO'; endif; ?>">
 		<div class="leaderboard">
 			<table class="mainBoard sortable">
 			<thead>
-				<tr class="headerBoard">
+					<tr class="headerBoard">
 					<th>#</th>
 					<th><div class="personIcon boardIcon"></div></th>
 					<th>Student Name</th>
@@ -27,82 +27,14 @@ include_once(TEMPLATES_PATH . "/header.php");
 				</tr>
 			</thead>
 			<tbody>
-				<tr class="boardEntry">
-					<td class="pos" data-th="Position">1</td>
-					<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src=""></td>
-					<td data-th="Student Name">Lorem Ipsum JR.</td>
-					<td data-th="Achievements">88/88 (100%)</td>
-					<td data-th="Quests">88/88 (100%)</td>
-					<td data-th="XP">888</td>
-				</tr>
-				<tr class="boardEntry">
-					<td class="pos" data-th="Position">2</td>
-					<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src=""></td>
-					<td data-th="Student Name">Lorem Ipsum JR.</td>
-					<td data-th="Achievements">88/88 (100%)</td>
-					<td data-th="Quests">88/88 (100%)</td>
-					<td data-th="XP">888</td>
-				</tr>
-				<tr class="boardEntry">
-					<td class="pos" data-th="Position">3</td>
-					<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src=""></td>
-					<td data-th="Student Name">Lorem Ipsum JR.</td>
-					<td data-th="Achievements">88/88 (100%)</td>
-					<td data-th="Quests">88/88 (100%)</td>
-					<td data-th="XP">888</td>
-				</tr>
-				<tr class="boardEntry">
-					<td class="pos" data-th="Position">4</td>
-					<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src=""></td>
-					<td data-th="Student Name">Lorem Ipsum JR.</td>
-					<td data-th="Achievements">88/88 (100%)</td>
-					<td data-th="Quests">88/88 (100%)</td>
-					<td data-th="XP">888</td>
-				</tr>
-				</tr>
-				<tr class="boardEntry">
-					<td class="pos" data-th="Position">5</td>
-					<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src=""></td>
-					<td data-th="Student Name">Lorem Ipsum JR.</td>
-					<td data-th="Achievements">88/88 (100%)</td>
-					<td data-th="Quests">88/88 (100%)</td>
-					<td data-th="XP">888</td>
-				</tr>
-				</tr>
-				<tr class="boardEntry">
-					<td class="pos" data-th="Position">6</td>
-					<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src=""></td>
-					<td data-th="Student Name">bob Ipsum JR.</td>
-					<td data-th="Achievements">88/88 (100%)</td>
-					<td data-th="Quests">88/88 (100%)</td>
-					<td data-th="XP">888</td>
-				</tr>
-				</tr>
-				<tr class="boardEntry">
-					<td class="pos" data-th="Position">7</td>
-					<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src=""></td>
-					<td data-th="Student Name">Lorem Ipsum JR.</td>
-					<td data-th="Achievements">88/88 (100%)</td>
-					<td data-th="Quests">88/88 (100%)</td>
-					<td data-th="XP">888</td>
-				</tr>
-				</tr>
-				<tr class="boardEntry">
-					<td class="pos" data-th="Position">8</td>
-					<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src=""></td>
-					<td data-th="Student Name">Lorem Ipsum JR.</td>
-					<td data-th="Achievements">88/88 (100%)</td>
-					<td data-th="Quests">88/88 (100%)</td>
-					<td data-th="XP">888</td>
-				</tr>
-
-
+				<?php include(TEMPLATES_PATH . "/tableitems.php"); ?>
+				<?php include(TEMPLATES_PATH . "/tableitems.php"); ?>
 			</tbody>
 			</table>
 		</div>
-	</div><div class="sideBlock">
+	</div><?php if ($admin == 0): ?><div class="sideBlock">
 		<div class="youBox box"> 
-			<div class="boxTitle" style="background-color: <?php echo $userColour ?>;"> You </div>
+			<div class="boxTitle" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;"> You </div>
 			<div class="boxContent">
 				<img src="<?php echo $profilePic ?>" class="profilePicRound">
 				<div class="bannerSmall"> <?php echo $userPosition ?><sup class="superscript"><?php if ($userPosition == 1) : echo 'st'; elseif ($userPosition == 2) : echo 'nd'; elseif ($userPosition == 3) : echo 'rd'; else : echo 'th'; endif;?> </sup></div>
@@ -127,7 +59,6 @@ include_once(TEMPLATES_PATH . "/header.php");
 				</ul>
 			</div>
 		</div>
-
-	</div>
+	</div><?php endif; ?>
 </div>
 <?php include_once(TEMPLATES_PATH . "/footer.php"); ?>

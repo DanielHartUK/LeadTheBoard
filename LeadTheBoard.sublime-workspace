@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"drawe",
+				"drawerSlide"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"page",
+				"pageTop"
+			],
+			[
+				"user",
+				"userPosition"
+			],
+			[
+				"side",
+				"sideBlockPad"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"logged",
+				"loggedIn"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"bac",
+				"background-repeat"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
 				"bor",
 				"border"
 			],
@@ -44,14 +96,6 @@
 				"table"
 			],
 			[
-				"font",
-				"font-weight"
-			],
-			[
-				"back",
-				"background-color"
-			],
-			[
 				"con",
 				"console"
 			],
@@ -62,10 +106,6 @@
 			[
 				"bo",
 				"bottom"
-			],
-			[
-				"bac",
-				"background-size"
 			],
 			[
 				"table",
@@ -98,10 +138,6 @@
 			[
 				"ba",
 				"background-color"
-			],
-			[
-				"tex",
-				"text-stroke"
 			],
 			[
 				"z",
@@ -138,10 +174,6 @@
 			[
 				"dis",
 				"display"
-			],
-			[
-				"in",
-				"inline-block"
 			],
 			[
 				"di",
@@ -184,10 +216,10 @@
 	"buffers":
 	[
 		{
-			"file": "index.php",
+			"file": "views/templates/header.php",
 			"settings":
 			{
-				"buffer_size": 282,
+				"buffer_size": 4739,
 				"line_ending": "Unix"
 			}
 		},
@@ -195,23 +227,23 @@
 			"file": "views/main.php",
 			"settings":
 			{
-				"buffer_size": 3677,
+				"buffer_size": 5088,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "templates/header.php",
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 4035,
+				"buffer_size": 292,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "templates/footer.php",
+			"file": "views/templates/footer.php",
 			"settings":
 			{
-				"buffer_size": 163,
+				"buffer_size": 162,
 				"line_ending": "Unix"
 			}
 		},
@@ -219,7 +251,7 @@
 			"file": "css/style.scss",
 			"settings":
 			{
-				"buffer_size": 9279,
+				"buffer_size": 12011,
 				"line_ending": "Unix"
 			}
 		},
@@ -227,16 +259,25 @@
 			"file": "js/scripts.js",
 			"settings":
 			{
-				"buffer_size": 1570,
+				"buffer_size": 2471,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "README.md",
+			"file": "config.php",
 			"settings":
 			{
-				"buffer_size": 3299,
+				"buffer_size": 556,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "includes/demo.php",
+			"settings":
+			{
+				"buffer_size": 602,
+				"line_ending": "Unix",
+				"name": "<?php"
 			}
 		}
 	],
@@ -248,11 +289,19 @@
 		[
 			[
 				"pac",
-				"Package Control: Remove Package"
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Bookmarks: Select Previous"
 			],
 			[
 				"pacl",
-				"Package Control: List Packages"
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
 			],
 			[
 				"lore",
@@ -261,10 +310,6 @@
 			[
 				"packa",
 				"Package Control: Remove Package"
-			],
-			[
-				"pack",
-				"Package Control: Install Package"
 			],
 			[
 				"lorem",
@@ -303,7 +348,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 443.0
+		"width": 437.0
 	},
 	"console":
 	{
@@ -330,10 +375,24 @@
 	[
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/templates"
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates"
 	],
 	"file_history":
 	[
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/functions.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/footer.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/bell2x.png",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/README.md",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/main.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/config.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/sftp-config.json",
+		"/Users/Daniel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/sorttable.js",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/fixedheadertable.js",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/index.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/templates/footer.php",
 		"/New folder/New folder (3).noindex/New folder (0)/New folder (2)/New folder (2)/rp.html",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/avatarIcon.svg",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/.gitignore",
@@ -365,6 +424,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"section",
+			"id",
+			"profilePic",
+			"define(\"HOST\", \"localhost\");\ndefine(\"USER\", \"user\");\ndefine(\"PASSWORD\", 'v3vFUWMfDcIZ%8Z9*&8u@Am#nOuD*^#E');\ndefine(\"DATABASE\", \"LeadTheBoard\");\n\ndefine(\"CAN_REGISTER\", \"any\");\ndefine(\"DEFAULT_ROLE\", \"member\");\n\n",
+			"define",
+			"define(\"HOST\", \"localhost\");\ndefine(\"USER\", \"user\");\ndefine(\"PASSWORD\", 'v3vFUWMfDcIZ%8Z9*&8u@Am#nOuD*^#E');\ndefine(\"DATABASE\", \"LeadTheBoard\");\n\ndefine(\"CAN_REGISTER\", \"any\");\ndefine(\"DEFAULT_ROLE\", \"member\");\n\ndefine(\"SECURE\", FALSE); // DEVELOPMENT ONLY ",
 			"#rgba",
 			"16A084",
 			"50",
@@ -386,7 +451,7 @@
 			"nth"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -412,35 +477,36 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.php",
+					"file": "views/templates/header.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 282,
+						"buffer_size": 4739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								282,
-								0
+								4336,
+								4336
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 955.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -449,44 +515,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3677,
+						"buffer_size": 5088,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								407,
-								407
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 7.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "templates/header.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4035,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								4035
+								339,
+								339
 							]
 						],
 						"settings":
@@ -498,24 +535,55 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "templates/footer.php",
+					"buffer": 2,
+					"file": "index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 163,
+						"buffer_size": 292,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								163
+								86,
+								109
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/templates/footer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								146,
+								146
 							]
 						],
 						"settings":
@@ -526,13 +594,13 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -541,15 +609,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9279,
+						"buffer_size": 12011,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4182,
-								4182
+								247,
+								247
 							]
 						],
 						"settings":
@@ -562,7 +630,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -571,15 +639,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1570,
+						"buffer_size": 2471,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								882,
-								882
+								1984,
+								1984
 							]
 						],
 						"settings":
@@ -589,38 +657,67 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 835.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "README.md",
+					"file": "config.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3299,
+						"buffer_size": 556,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								3299
+								556,
+								556
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
-						"translation.x": 0.0,
-						"translation.y": 324.0,
+						"translation.x": 3.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "includes/demo.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -672,6 +769,10 @@
 	{
 		"height": 0.0
 	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
 	"project": "LeadTheBoard.sublime-project",
 	"replace":
 	{
@@ -706,7 +807,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

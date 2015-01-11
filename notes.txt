@@ -1,0 +1,9 @@
+User Colour Options
+
+1 - Blue: 
+Primary: #076d91
+Secondary: #064e67
+
+2 - Red:
+Primary: #e74c3c
+Secondary: #b94034

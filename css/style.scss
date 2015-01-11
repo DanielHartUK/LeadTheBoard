@@ -2,6 +2,7 @@
 @import "bourbon/bourbon";
 
 $navHeight: 50px;
+$drawerSlide: 0.3s;
 
 html, body {
     margin: 0;
@@ -28,6 +29,13 @@ h3 {
     font-size: 1.5em;
     margin: 0.5em 0;
 }
+h6 {
+    margin: 2%;
+    padding: 4%;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 .clickable {
     cursor: pointer;
 }
@@ -36,16 +44,26 @@ h3 {
 	position: relative;
     padding-top: $navHeight;
 }
-.contentContainer.noScroll {
-    overflow: hidden;
+.contentContainer {
+    .noScroll {
+        overflow: hidden;
+    }
 }
 .content {
-	width: 100%;
+    @include transition($drawerSlide);
 	max-width: 1800px;
     margin: 0 auto;
     padding: 0.5%;
     box-sizing: border-box;
+
+    &.admin {
+        width: calc(100% - 19.5%);
+        margin: 0;
+        float: right;
+    }
+
 }
+
 
 /* Navigation */
 
@@ -83,6 +101,10 @@ h3 {
     padding: 0 0.5%;
     cursor: pointer;
 }
+.close {
+    float: right;
+    font-size: 2em;
+}
 .notificationIcon {
     text-align: left;
     background-image: url(../assets/bell.png);
@@ -99,6 +121,52 @@ h3 {
     font-size: 0.7em;
     margin-left: 0.5em;
 }
+.drawer {
+    position: fixed;
+    display: block;
+    vertical-align: top;
+    width: 19.5%;
+    min-width: 198px;
+    background: #00F;
+    height: 100%;
+    box-sizing: border-box;
+    top: 0;
+    z-index: 9999;
+    left: 0;
+    @include transition($drawerSlide);
+
+    .user {
+        height: 50px;
+        padding: 0px 2.5%;
+    }
+
+    &.closed {
+        left: -346px;
+    }
+}
+ul.menu {
+    list-style: none;
+    color: #FFF;
+    margin: 0;
+    padding: 0%;
+    font-size: 1.1em;
+
+    li {
+        padding: 4%;
+        margin: 2%;
+        border-radius: 4px;
+        font-weight: 700;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.28);
+        }
+    }
+
+}
+.sideIcon {
+    margin-right: 4%;
+    font-weight: 400;
+}
 
 /* Login/Register Forms */
 
@@ -111,6 +179,7 @@ h3 {
     left: 0;
     padding-top: 50px;
     display: none;
+    z-index: 9998;
 }
 .loginContainers.visible {
     display: block;
@@ -202,10 +271,13 @@ h3 {
     display: inline-block; 
     vertical-align: top;
     width: 80%;
+    @include transition($drawerSlide);
 }
 .sectionNavigation {
     padding: 1% 0;
     width: 80%;
+    @include transition($drawerSlide);
+
 
     ul {
         margin: 0;
@@ -229,7 +301,9 @@ h3 {
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
     border-bottom: 2px solid #16a085;
 }
-
+.drawerO {
+    width: 100%;
+}
 
 /* Leaderboard */
 .mainBoard {
@@ -324,8 +398,11 @@ h3 {
     display: inline-block;
     vertical-align: top;
     width: 19.5%;
-    height: 400px;
     padding-left: 0.5%;
+
+    &.drawerO {
+        display: none;
+    }
 }
 .boxTitle {
     text-align: center;

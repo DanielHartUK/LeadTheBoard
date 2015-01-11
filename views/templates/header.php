@@ -1,10 +1,12 @@
 <?php 
 include_once(INCLUDES_PATH . "/demo.php"); 
+include_once(INCLUDES_PATH . "/customisation.php"); 
 ?> 
 <!DOCTYPE HTML>
 <HTML>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/normalize.css">
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../js/jquery.floatThead.min.js"></script>
     <script src="../js/sorttable.js"></script>
@@ -21,7 +23,7 @@ include_once(INCLUDES_PATH . "/demo.php");
 	<div class="nav">
 		
 		<?php if ($loggedIn) : ?>
-			<div class="user" id="loggedIn"><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9660;</span></div>
+			<div class="user" id="loggedIn" onClick="openDrawer()"><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9660;</span></div>
 		<?php else : ?>
 			<div class="user" id="loggedOut" onClick="loginClick()"> Login/Register </div>
 		<?php endif; ?>
@@ -93,5 +95,27 @@ include_once(INCLUDES_PATH . "/demo.php");
 	</div>
 
 	<div class="contentContainer">
-
-
+		<?php if ($admin == 0): ?>
+			<div class="drawer closed" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;">
+				<div class="user" id="loggedIn" onClick="closeDrawer()" style="background-color: <?php echo $userColourSecondary[$userColourScheme] ?>;"><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> <span class="close">&#215;</span></div>
+				<ul class="menu"> <h6> Menu </h6>
+	 				<li class="classes"><span class="flaticon-multiple25 sideIcon"></span> Classes </li>
+					<li class="profile"><span class="flaticon-profile8 sideIcon"></span> Profile </li>
+					<li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li>
+					<li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li>
+				</ul>
+			<?php else: ?>
+			<div class="drawer" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;">
+				<div class="user" id="loggedIn" style="background-color: #16a085;"><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> </div>
+				<ul class="menu"> <h6> <?php echo $class; ?> </h6>
+	 				<li class="classes"><span class="flaticon-multiple25 sideIcon"></span> Students </li>
+					<li class="profile"><span class="flaticon-trophy56 sideIcon"></span> Achievements </li>
+					<li class="Account"><span class="flaticon-pencil43 sideIcon"></span> Quests </li>
+				</ul>
+				<ul class="menu"> <h6> Admin </h6>
+	 				<li class="classes"><span class="flaticon-multiple25 sideIcon"></span> Classes </li>
+					<li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li>
+					<li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li>
+				</ul>
+			<?php endif; ?>
+		</div>

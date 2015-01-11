@@ -1,13 +1,12 @@
 var login = false
 function loginClick() {
-    if (login) {
-      hideLogin()
-      $(".loginContainers").toggleClass("visible");
-
-    } else {
-      $(".loginContainers").toggleClass("visible");
-      showLogin()
-    }
+  if (login) {
+    hideLogin()
+    $(".loginContainers").toggleClass("visible");
+  } else {
+    $(".loginContainers").toggleClass("visible");
+    showLogin()
+  }
 }
 function showLogin() {
   login = true
@@ -50,8 +49,34 @@ $('table').floatThead({
 });
 
 $( document ).ready( function() {
-    $( ".questThumb" ).imageMask( "../assets/hexmask.jpg" );
+  $( ".questThumb" ).imageMask( "../assets/hexmask.jpg" );
 } );
+
+function layouts () {
+  $('.drawer').width($('.box').width());
+  cPadding = parseFloat($(".content").css("padding-left"));
+}
+$(document).ready(layouts);
+$(window).resize(layouts);
+
+function openDrawer () {
+  content = $(".content");
+  var x = $('.drawer').width() + cPadding;
+  $('.drawer').removeClass("closed");
+  $('.content').css("padding-left", x);
+  $('.mainBlock').addClass("drawerO");
+  $('.sideBlock').addClass("drawerO");
+  $('.sectionNavigation').addClass("drawerO");
+}
+
+function closeDrawer () {
+  var x = cPadding;
+  $('.drawer').addClass("closed");
+  $('.content').css("padding-left", x);
+  $('.mainBlock').removeClass("drawerO");
+  $('.sideBlock').removeClass("drawerO");
+  $('.sectionNavigation').removeClass("drawerO");
+}
 
 // Smooth Scrolling 
 
