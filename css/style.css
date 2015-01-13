@@ -385,6 +385,10 @@ ul.menu li:hover {
   border-bottom: 2px solid #808080;
 }
 /* line 287, style.scss */
+.sectionNavigation ul a {
+  color: inherit;
+}
+/* line 290, style.scss */
 .sectionNavigation ul li {
   display: inline-block;
   margin: 0 2% -2px 0;
@@ -392,23 +396,23 @@ ul.menu li:hover {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
-/* line 294, style.scss */
+/* line 297, style.scss */
 .sectionNavigation ul li.currentPage {
   border-bottom: 2px solid #16a085;
 }
 
-/* line 301, style.scss */
+/* line 304, style.scss */
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
   border-bottom: 2px solid #16a085;
 }
 
-/* line 304, style.scss */
+/* line 307, style.scss */
 .drawerO {
   width: 100%;
 }
 
 /* Leaderboard */
-/* line 309, style.scss */
+/* line 312, style.scss */
 .mainBoard {
   width: 100%;
   margin: 0;
@@ -419,7 +423,7 @@ ul.menu li:hover {
   border-collapse: collapse;
 }
 
-/* line 318, style.scss */
+/* line 321, style.scss */
 .headerBoard {
   background-color: #16a085;
   color: #fff;
@@ -427,14 +431,14 @@ ul.menu li:hover {
   font-size: 1.1em;
   border-right: 1px solid #16A085;
 }
-/* line 325, style.scss */
+/* line 328, style.scss */
 .headerBoard th {
   margin: 0;
   padding: 13px 1%;
   border: 0;
 }
 
-/* line 331, style.scss */
+/* line 334, style.scss */
 .boardEntry {
   border: 0;
   padding: 0;
@@ -442,40 +446,40 @@ ul.menu li:hover {
   background-color: #f7f7f7;
   border-bottom: 1px solid #CCC;
 }
-/* line 338, style.scss */
+/* line 341, style.scss */
 .boardEntry td {
   padding: 1%;
   border-left: 1px solid #CCC;
 }
-/* line 342, style.scss */
+/* line 345, style.scss */
 .boardEntry td:last-child {
   border-right: 1px solid #CCC;
 }
-/* line 346, style.scss */
+/* line 349, style.scss */
 .boardEntry:nth-child(even) {
   background: #ececec;
 }
-/* line 349, style.scss */
+/* line 352, style.scss */
 .boardEntry:first-child {
   background: #f7f7f7;
 }
-/* line 352, style.scss */
+/* line 355, style.scss */
 .boardEntry:hover {
   background-color: #696969;
   color: #FFF;
 }
 
-/* line 357, style.scss */
+/* line 360, style.scss */
 .pos {
   width: 15px;
 }
 
-/* line 360, style.scss */
+/* line 363, style.scss */
 .boardAvatar {
   width: 40px;
 }
 
-/* line 364, style.scss */
+/* line 367, style.scss */
 .boardIcon {
   height: 20px;
   width: 20px;
@@ -486,29 +490,29 @@ ul.menu li:hover {
   margin-right: 5%;
 }
 
-/* line 374, style.scss */
+/* line 377, style.scss */
 .personIcon {
   background-image: url(../assets/personIconM.png);
   float: none;
   margin: 0 auto;
 }
 
-/* line 379, style.scss */
+/* line 382, style.scss */
 .achievementsIcon {
   background-image: url(../assets/trophyIcon.png);
 }
 
-/* line 382, style.scss */
+/* line 385, style.scss */
 .questsIcon {
   background-image: url(../assets/pencilIcon.png);
 }
 
-/* line 385, style.scss */
+/* line 388, style.scss */
 .xpIcon {
   background-image: url(../assets/xpIcon.png);
 }
 
-/* line 388, style.scss */
+/* line 391, style.scss */
 .avatarBoard {
   height: 40px;
   width: 40px;
@@ -516,19 +520,19 @@ ul.menu li:hover {
 }
 
 /* Side Boxes */
-/* line 397, style.scss */
+/* line 400, style.scss */
 .sideBlock {
   display: inline-block;
   vertical-align: top;
   width: 19.5%;
   padding-left: 0.5%;
 }
-/* line 403, style.scss */
+/* line 406, style.scss */
 .sideBlock.drawerO {
   display: none;
 }
 
-/* line 407, style.scss */
+/* line 410, style.scss */
 .boxTitle {
   text-align: center;
   color: #fff;
@@ -537,14 +541,14 @@ ul.menu li:hover {
   padding: 13px 1%;
 }
 
-/* line 414, style.scss */
+/* line 417, style.scss */
 .boxContent {
   border: 1px solid #b9b9b9;
   border-top: none;
   text-align: center;
 }
 
-/* line 419, style.scss */
+/* line 422, style.scss */
 .box {
   width: 100%;
   background: #fff;
@@ -553,23 +557,23 @@ ul.menu li:hover {
   margin-bottom: 3%;
 }
 
-/* line 427, style.scss */
+/* line 430, style.scss */
 .youBox .boxContent {
   padding: 4%;
 }
 
-/* line 432, style.scss */
+/* line 435, style.scss */
 .questsBox .boxTitle {
   background-color: #ab452f;
 }
 
-/* line 436, style.scss */
+/* line 439, style.scss */
 .expiringQuests {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 441, style.scss */
+/* line 444, style.scss */
 .expiringQuests li {
   font-weight: 700;
   font-size: 1.1em;
@@ -577,16 +581,16 @@ ul.menu li:hover {
   text-align: left;
   overflow: auto;
 }
-/* line 448, style.scss */
+/* line 451, style.scss */
 .expiringQuests li:nth-child(odd) {
   background-color: #efeeee;
 }
-/* line 452, style.scss */
+/* line 455, style.scss */
 .expiringQuests li span {
   font-size: 1rem;
 }
 
-/* line 457, style.scss */
+/* line 460, style.scss */
 .questThumb {
   width: 50px;
   height: 50px;
@@ -594,7 +598,7 @@ ul.menu li:hover {
   margin-right: 4%;
 }
 
-/* line 463, style.scss */
+/* line 466, style.scss */
 .profilePicRound {
   height: 100px;
   width: 100px;
@@ -602,7 +606,7 @@ ul.menu li:hover {
   margin-top: 2%;
 }
 
-/* line 469, style.scss */
+/* line 472, style.scss */
 .bannerSmall {
   width: 90%;
   padding: 1% 1% 5% 1%;
@@ -619,54 +623,54 @@ ul.menu li:hover {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 484, style.scss */
+  /* line 487, style.scss */
   .notificationIcon {
     background-image: url(../assets/bell2x.png);
   }
 
-  /* line 487, style.scss */
+  /* line 490, style.scss */
   .personIcon {
     background-image: url(../assets/personIconM2x.png);
   }
 
-  /* line 490, style.scss */
+  /* line 493, style.scss */
   .achievementsIcon {
     background-image: url(../assets/trophyIcon2x.png);
   }
 
-  /* line 493, style.scss */
+  /* line 496, style.scss */
   .questsIcon {
     background-image: url(../assets/pencilIcon2x.png);
   }
 
-  /* line 496, style.scss */
+  /* line 499, style.scss */
   .xpIcon {
     background-image: url(../assets/xpIcon2x.png);
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 502, style.scss */
+  /* line 505, style.scss */
   .mainBlock {
     width: 100%;
   }
 
-  /* line 505, style.scss */
+  /* line 508, style.scss */
   .sideBlock {
     display: none;
   }
 
-  /* line 508, style.scss */
+  /* line 511, style.scss */
   .sectionNavigation {
     width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 514, style.scss */
+  /* line 517, style.scss */
   .mainBoard thead {
     display: none;
   }
 
-  /* line 517, style.scss */
+  /* line 520, style.scss */
   .boardEntry {
     display: block;
     box-sizing: border-box;
@@ -676,7 +680,7 @@ ul.menu li:hover {
     border: 0;
   }
 
-  /* line 525, style.scss */
+  /* line 528, style.scss */
   .boardEntry td {
     display: block;
     width: 100%;
@@ -688,7 +692,7 @@ ul.menu li:hover {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
   }
 
-  /* line 530, style.scss */
+  /* line 533, style.scss */
   .boardEntry:first-child td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f9f9f9), color-stop(1, #f9f9f9));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
@@ -698,7 +702,7 @@ ul.menu li:hover {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
   }
 
-  /* line 533, style.scss */
+  /* line 536, style.scss */
   .boardEntry:nth-child(even) td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #ECECEC), color-stop(1, #ECECEC));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
@@ -708,7 +712,7 @@ ul.menu li:hover {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
   }
 
-  /* line 536, style.scss */
+  /* line 539, style.scss */
   .boardEntry td:before {
     content: attr(data-th) ": ";
     float: left;
@@ -717,7 +721,7 @@ ul.menu li:hover {
     font-weight: 700;
   }
 
-  /* line 543, style.scss */
+  /* line 546, style.scss */
   #boardAvatar {
     display: none;
   }

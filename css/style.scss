@@ -284,6 +284,9 @@ ul.menu {
         padding: 0;
         border-bottom: 2px solid #808080;
 
+        a {
+            color: inherit;
+        }
         li {
             display: inline-block;
             margin: 0 2% -2px 0;
