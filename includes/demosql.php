@@ -3,7 +3,7 @@
 $loggedIn = 1;
 $id = '0';
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname); // Create the connection
 
 // Array Usage
 // $array[ROW NUMBER]['COLUMN NAME'] e.g. $quests[1]['Name'];
@@ -48,7 +48,7 @@ while($row = mysqli_fetch_assoc($clM)) {
    $classM[] = $row;
 }
 
-// Achievements Available
+// Achievements Available to the user
 $selAchievementP = "SELECT * FROM AchievementProgress WHERE UserID='$id' ";
 $acP = mysqli_query($conn, $selAchievementP) or die(mysqli_error());
 $achievementPRowCount = $acP->num_rows;
@@ -58,7 +58,7 @@ while($row = mysqli_fetch_assoc($acP)) {
    $achievementP[] = $row;
 }
 
-// Acheivements Complete
+// Acheivements Completed by the user
 $selAchievementPC = "SELECT * FROM AchievementProgress WHERE UserID='$id' AND AchievementProgress='1'";
 $acPC = mysqli_query($conn, $selAchievementPC) or die(mysqli_error());
 $achievementPCRowCount = $acPC->num_rows;
@@ -68,7 +68,7 @@ while($row = mysqli_fetch_assoc($acPC)) {
    $achievementPC[] = $row;
 }
 
-// Quests Available
+// Quests Available to the user
 $selQuestsP = "SELECT * FROM QuestProgress WHERE UserID='$id' ";
 $qP = mysqli_query($conn, $selQuestsP) or die(mysqli_error());
 $questsPRowCount = $qP->num_rows;
@@ -78,7 +78,7 @@ while($row = mysqli_fetch_assoc($qP)) {
    $questsP[] = $row;
 }
 
-// Quests Complete
+// Quests Completed by the user
 $selQuestsPC = "SELECT * FROM QuestProgress WHERE UserID='$id' AND QuestProgress='1'";
 $qPC = mysqli_query($conn, $selQuestsPC) or die(mysqli_error());
 $questsPCRowCount = $qPC->num_rows;
@@ -140,7 +140,7 @@ while($count < $XPAwardRowCount) {
 	$count++;
 };
 
-mysqli_close($conn);
+mysqli_close($conn); // Close the connection 
 
 $firstName = $users[0]['Name'];
 $surname = $users[0]['Surname'];
@@ -157,21 +157,3 @@ $questsComplete = $questsPCRowCount; // Quests Compelted
 $questsAvailable = $questsPRowCount; // Quests currently available
 $questsAvailableAccumulation = $questsPRowCount; // All Quests that were available for this class
 $userColourScheme = $usersO[0]['ColourScheme'];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
