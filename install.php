@@ -5,75 +5,83 @@ require_once("config.php");
 $conn = mysql_connect($servername, $username, $password);
 
 
-$DBa = "CREATE TABLE `Achievement Progress` (
-  `User ID` int(32) unsigned NOT NULL,
-  `Achievement ID` int(32) unsigned NOT NULL,
-  `Achievement Progress` int(3) unsigned NOT NULL,
+$DBa = "CREATE TABLE `AchievementProgress` (
+  `UserID` int(32) unsigned NOT NULL,
+  `AchievementID` int(32) unsigned NOT NULL,
+  `AchievementProgress` int(3) unsigned NOT NULL,
   `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`User ID`),
-  KEY `Achievement` (`Achievement ID`),
-  CONSTRAINT `Achievements` FOREIGN KEY (`Achievement ID`) REFERENCES `Achievements` (`Achievement ID`) ON DELETE CASCADE ON UPDATE CASCADE
+  PRIMARY KEY (`UserID`),
+  KEY `Achievements` (`AchievementID`),
+  CONSTRAINT `Achievements` FOREIGN KEY (`AchievementID`) REFERENCES `Achievements` (`AchievementID`),
+  CONSTRAINT `Achievement Progress` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`)
 ) ENGINE=InnoDB ";
 
 $DBb = "CREATE TABLE `Achievements` (
-  `Achievement ID` int(32) unsigned NOT NULL,
+  `AchievementID` int(32) unsigned NOT NULL,
   `Name` text NOT NULL,
   `Description` text NOT NULL,
-  `XP Value` int(11) NOT NULL,
-  PRIMARY KEY (`Achievement ID`)
+  `XPValue` int(11) NOT NULL,
+  `Icon` text NOT NULL,
+  PRIMARY KEY (`AchievementID`)
 ) ENGINE=InnoDB ";
 
-$DBc = "CREATE TABLE `Class Members` (
-  `User ID` int(32) unsigned NOT NULL,
-  `Class ID` int(32) unsigned NOT NULL,
-  PRIMARY KEY (`User ID`),
-  KEY `Classes` (`Class ID`),
-  CONSTRAINT `Classes` FOREIGN KEY (`Class ID`) REFERENCES `Classes` (`Class ID`) ON DELETE CASCADE ON UPDATE CASCADE
+$DBc = "CREATE TABLE `ClassMembers` (
+  `UserID` int(32) unsigned NOT NULL,
+  `ClassID` int(32) unsigned DEFAULT NULL,
+  PRIMARY KEY (`UserID`),
+  KEY `Classes` (`ClassID`),
+  CONSTRAINT `Class Members` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`),
+  CONSTRAINT `Classes` FOREIGN KEY (`ClassID`) REFERENCES `Classes` (`ClassID`)
 ) ENGINE=InnoDB ";
 
 $DBd = "CREATE TABLE `Classes` (
-  `Class ID` int(32) unsigned NOT NULL,
-  `Name` text NOT NULL,
-  KEY `Classes` (`Class ID`)
+  `ClassID` int(32) unsigned NOT NULL,
+  `Name` text NOT NULL
 ) ENGINE=InnoDB ";
 
-$DBe = "CREATE TABLE `Quest Progress` (
-  `User ID` int(32) unsigned NOT NULL,
-  `Quest ID` int(32) unsigned NOT NULL,
-  `Quest Progress` int(3) unsigned NOT NULL,
+$DBe = "CREATE TABLE `QuestProgress` (
+  `UserID` int(32) unsigned NOT NULL,
+  `QuestID` int(32) unsigned NOT NULL,
+  `QuestProgress` int(3) unsigned NOT NULL,
   `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`User ID`),
-  KEY `Quests` (`Quest ID`),
-  CONSTRAINT `Quests` FOREIGN KEY (`Quest ID`) REFERENCES `Quests` (`Quests ID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB ";
+  PRIMARY KEY (`UserID`),
+  KEY `Quests` (`QuestID`),
+  CONSTRAINT `Quest Progress` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`),
+  CONSTRAINT `Quests` FOREIGN KEY (`QuestID`) REFERENCES `Quests` (`QuestID`)
+ ) ENGINE=InnoDB ";
 
 $DBf = "CREATE TABLE `Quests` (
-  `Quests ID` int(32) unsigned NOT NULL,
+  `QuestID` int(32) unsigned NOT NULL,
   `Name` text NOT NULL,
   `Description` text NOT NULL,
-  `XP Value` int(11) NOT NULL,
-  PRIMARY KEY (`Quests ID`)
+  `XPValue` int(11) NOT NULL,
+  `Icon` text,
+  PRIMARY KEY (`QuestID`)
 ) ENGINE=InnoDB ";
 
-$DBg = "CREATE TABLE `User Options` (
-  `User ID` int(32) unsigned NOT NULL,
+$DBg = "CREATE TABLE `UserOptions` (
+  `UserID` int(32) unsigned NOT NULL,
   `Admin` tinyint(1) NOT NULL DEFAULT '0',
-  `Colour Scheme` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`User ID`)
+  `ColourScheme` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`UserID`),
+  CONSTRAINT `User Options` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`)
 ) ENGINE=InnoDB ";
 
 $DBh = "CREATE TABLE `Users` (
-  `User ID` int(32) unsigned NOT NULL,
-  `First Name` text NOT NULL,
+  `UserID` int(32) unsigned NOT NULL,
+  `Name` text NOT NULL,
   `Surname` text NOT NULL,
   `Email` text NOT NULL,
-  `XP` bigint(255) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`User ID`),
-  CONSTRAINT `Quest Progress` FOREIGN KEY (`User ID`) REFERENCES `Achievement Progress` (`User ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `Achievement Progress` FOREIGN KEY (`User ID`) REFERENCES `Achievement Progress` (`User ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `User Options` FOREIGN KEY (`User ID`) REFERENCES `User Options` (`User ID`) ON DELETE CASCADE ON UPDATE CASCADE
+  `Avatar` text NOT NULL,
+  PRIMARY KEY (`UserID`)
 ) ENGINE=InnoDB ";
 
+$DBi = "CREATE TABLE `XPAwards` (
+  `UserID` int(32) unsigned NOT NULL,
+  `XP` int(11) NOT NULL,
+  `Description` text NOT NULL,
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB";
 
 
 mysql_select_db($dbname);
@@ -87,10 +95,11 @@ $retval = mysql_query( $DBa, $conn );
 $retval = mysql_query( $DBc, $conn );
 $retval = mysql_query( $DBe, $conn );
 $retval = mysql_query( $DBh, $conn );
+$retval = mysql_query( $DBi, $conn );
 
 if(! $retval )
 {
   die('Could not create table: ' . mysql_error());
 }
-echo "It worked!\n";
+echo 'LeadTheBoard! successfully installed! <a href="/">Continue</a>';
 mysql_close($conn);

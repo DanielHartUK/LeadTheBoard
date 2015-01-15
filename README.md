@@ -38,5 +38,9 @@ Also in the future there is a possibility of adding a Clan Wars feature, in whic
 - View leaderboard, activity feed, available Quests and Achievements
 - Edit personal login details
 
+
+###### Not including
+- 
+
 ## Concept images
 ![alt tag](https://raw.githubusercontent.com/KingDingDan/LeadTheBoard/master/assets/studentMainViewMock.png)

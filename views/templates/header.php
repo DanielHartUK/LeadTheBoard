@@ -1,5 +1,5 @@
 <?php 
-include_once(INCLUDES_PATH . "/demo.php"); 
+include_once(INCLUDES_PATH . "/demosql.php"); 
 include_once(INCLUDES_PATH . "/customisation.php"); 
 ?> 
 <!DOCTYPE HTML>
@@ -108,7 +108,6 @@ include_once(INCLUDES_PATH . "/customisation.php");
 			<div class="drawer" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;">
 				<div class="user" id="loggedIn" style="background-color: #16a085;"><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> </div>
 				<ul class="menu"> <h6> <?php echo $class; ?> </h6>
-	 				<li class="classes"><span class="flaticon-multiple25 sideIcon"></span> Students </li>
 					<li class="profile"><span class="flaticon-trophy56 sideIcon"></span> Achievements </li>
 					<li class="Account"><span class="flaticon-pencil43 sideIcon"></span> Quests </li>
 				</ul>

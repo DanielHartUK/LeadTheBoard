@@ -1,19 +1,18 @@
 <?php 
 require_once("config.php");
-include_once(TEMPLATES_PATH . "/header.php"); 
+include_once(INCLUDES_PATH . "/demosql.php"); 
+
+	if($loggedIn == 1) { 
+	include(VIEWS_PATH . "/leaderboard.php");
+	} else { 
+	include(VIEWS_PATH . "/intro.php");
+	}; 
+
 ?>
 
-	<div class="content">
-		This is a holding page. This is the least of our worries right now.
-
-		<a href="/views/leaderboard.php"> Main view </a>
-	<br />
-
-
-	</div>
 
 
 
 
 
-<?php include_once(TEMPLATES_PATH . "/footer.php");  ?>
+

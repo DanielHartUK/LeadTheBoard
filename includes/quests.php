@@ -1,37 +1,30 @@
 <?php
 require_once("../config.php");
 // Create connection
-$conn = mysql_connect($servername, $username, $password);
-
-// Make the JSON file
-mysql_select_db($dbname, $conn);
-$result = mysql_query("SELECT * from Achievements") or die('Could not query');
-
-$json = array();
-if(mysql_num_rows($result)){	
-	while($row=mysql_fetch_row($result)){
-		$json['Achievements list'][]=$row;
-	}
-} 
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
-mysql_close($conn);
+$sql = "SELECT * FROM QuestProgress";
+$result = mysqli_query($conn, $sql) or die(mysqli_error());
 
+mysqli_close($conn);
 
-// Turn the Achievements table into arrays
-// Use with $achievements[ROW NUMBER]['COLUMN NAME'] e.g. $achievements[1]['Name'];
+	
+// Turn the Quests table into arrays
+// Use with $quests[ROW NUMBER]['COLUMN NAME'] e.g. $quests[1]['Name'];
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$sql = "SELECT * FROM Achievements";
+$sql = "SELECT * FROM Quests";
 $result = mysqli_query($conn, $sql) or die(mysqli_error());
 $row_cnt = $result->num_rows;
 
-$achievements = array();
+$quests = array();
 
 while($row = mysqli_fetch_assoc($result)) {
-   $achievements[] = $row;
+   $quests[] = $row;
 }
+
 mysqli_close($conn);
 
 // DELETE AT SOME POINT

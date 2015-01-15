@@ -393,8 +393,56 @@ ul.menu {
     width: 40px;
     background: gray;
 }
+.achievementCircleCont, .questCircleCont {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;
+    border: 2px dashed #808080;
+    border-radius: 62px;
+    @include transition(0.3s);
+    &.selected {
+        border-color: #9D0000;
+        @include animation(achievementHover 3s infinite);   
+    }
+}
+.achievementCircle, .questCircle {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-size: contain;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+}
+@include keyframes(achievementHover) {
+    0% { @include transform(rotate(-15deg)); }
+    50% { @include transform(rotate(15deg)); }
+    100% { @include transform(rotate(-15deg)); }
 
+}
 
+.achievementDetails, .questDetails {
+    display: inline-block;
+    vertical-align: top;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+.achievementIcon, .questIcon {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: top;
+}
+.achievementInfo, .questInfo {
+    overflow: auto;
+    border-bottom: 1px solid;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+}
 
 /* Side Boxes */
 .sideBlock {

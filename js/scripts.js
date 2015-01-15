@@ -78,6 +78,7 @@ function closeDrawer () {
   $('.sectionNavigation').removeClass("drawerO");
 }
 
+
 // Smooth Scrolling 
 
 $(function() {
