@@ -9,7 +9,7 @@
 				<td class="pos" data-th="Position">
 					<?php
 					$conn = mysqli_connect($servername, $username, $password, $dbname); // 	
-					$a = "SELECT * FROM AchievementProgress WHERE UserID='$idOfUser' AND AchievementProgress='1'";
+					$a = "SELECT * FROM Users WHERE UserID='$idOfUser' AND Admin='0'";
 					$b =  mysqli_query($conn, $a) or die(mysqli_error());
 					$c = $b->num_rows;
 					$d = array();

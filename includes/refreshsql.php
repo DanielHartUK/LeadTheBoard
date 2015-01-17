@@ -72,7 +72,23 @@ while($ai < $usersNo) {
 	$ai++;
 }
 
+$usersNoSQL = "SELECT * FROM Users WHERE Admin='0' ORDER BY XP DESC";
+$usersNoQ =  mysqli_query($conn, $usersNoSQL) or die(mysqli_error());
+$usersNo = $usersNoQ->num_rows;
+$usersNoA = array();
+while($row = mysqli_fetch_assoc($usersNoQ)) {
+   $usersNoA[] = $row;
+}
 
+
+$ai = 0;
+while($ai < $usersNo) {
+	$idOfUserR = $usersNoA[$ai]['UserID'];
+	$pos = $ai + 1;
+	$posUpdateSQL = "UPDATE Users SET Position='$pos' WHERE UserID='$idOfUserR'";
+	$posUpdateSQLQ = mysqli_query($conn, $posUpdateSQL) or die(mysqli_error());
+	$ai++;
+}
 
 
 mysqli_close($conn); 

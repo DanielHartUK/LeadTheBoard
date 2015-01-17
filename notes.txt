@@ -10,5 +10,3 @@ Secondary: #b94034
 
 
 References: 
-
-http://tournasdimitrios1.wordpress.com/2011/11/04/how-to-generate-json-with-php-from-mysql-and-parse-it-with-jquery/
