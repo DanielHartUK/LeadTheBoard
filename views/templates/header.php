@@ -1,4 +1,5 @@
 <?php 
+include_once(INCLUDES_PATH . "/refreshsql.php"); 
 include_once(INCLUDES_PATH . "/demosql.php"); 
 include_once(INCLUDES_PATH . "/customisation.php"); 
 ?> 

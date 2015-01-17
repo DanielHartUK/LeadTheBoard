@@ -2,6 +2,7 @@
 
 $loggedIn = 1;
 $id = '0';
+$classID = '0';
 
 $conn = mysqli_connect($servername, $username, $password, $dbname); // Create the connection
 
@@ -140,15 +141,17 @@ while($count < $XPAwardRowCount) {
 	$count++;
 };
 
+
+
 mysqli_close($conn); // Close the connection 
 
 $firstName = $users[0]['Name'];
 $surname = $users[0]['Surname'];
-$admin = $usersO[0]['Admin'];
+$admin = $users[0]['Admin'];
 $class = $classes[0]['Name'];
 $clan = $users[0]['CLAN'];
 $unreadNotifications = 0;
-$profilePic = '/assets/placeholder/' . $users[0]['Avatar'];
+$profilePic = '/assets/uploads/' . $users[0]['Avatar'];
 $xp = $qXP + $aXP + $XPa; 
 $userPosition = 1; // Leaderboard position
 $achievementsUnlocked = $achievementPCRowCount; // Achievements completed

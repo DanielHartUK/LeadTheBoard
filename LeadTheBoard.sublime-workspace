@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"Ac",
+				"AchievementProgress"
+			],
+			[
+				"Quest",
+				"QuestProgress"
+			],
+			[
+				"bor",
+				"border-color"
+			],
+			[
+				"result",
+				"result_array"
+			],
+			[
+				"back",
+				"background-repeat"
+			],
+			[
+				"achieve",
+				"achievementTitle"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"user",
+				"userAgent"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
 				"drawe",
 				"drawerSlide"
 			],
@@ -12,20 +48,8 @@
 				"include"
 			],
 			[
-				"back",
-				"background-color"
-			],
-			[
-				"font",
-				"font-size"
-			],
-			[
 				"page",
 				"pageTop"
-			],
-			[
-				"user",
-				"userPosition"
 			],
 			[
 				"side",
@@ -54,10 +78,6 @@
 			[
 				"tex",
 				"text-align"
-			],
-			[
-				"bor",
-				"border"
 			],
 			[
 				"fon",
@@ -216,34 +236,48 @@
 	"buffers":
 	[
 		{
-			"file": "views/templates/header.php",
+			"file": "views/leaderboard.php",
 			"settings":
 			{
-				"buffer_size": 4739,
+				"buffer_size": 680,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/main.php",
+			"contents": "\n\n	<?php \n	// Displaying the available quests\n		$ai = 0; \n		while($ai < $leaderboardCount) { ?>\n		<?php $idOfUser = $ai; ?>\n			<tr class=\"boardEntry\">\n				<td class=\"pos\" data-th=\"Position\"><?php echo $ai + 1; ?></td>\n				<td data-th=\"avatar\" class=\"boardAvatar\"><img class=\"avatarBoard\" src=\"../assets/uploads/<?php echo $leaderboarda[$ai]['Avatar']; ?>\"></td>\n				<td data-th=\"Student Name\"><?php echo $leaderboarda[$ai]['Name'] . \" \" . $leaderboarda[$ai]['Surname'];  ?></td>\n				<td data-th=\"Achievements\">\n					<?php\n					$conn = mysqli_connect($servername, $username, $password, $dbname); // 	\n					$a = \"SELECT * FROM AchievementProgress WHERE UserID='$idOfUser' AND AchievementProgress='1'\";\n					$b =  mysqli_query($conn, $a) or die(mysqli_error());\n					$c = $b->num_rows;\n					mysqli_close($conn); // Close the connection \n					echo $c;\n					?>\n				</td>\n				<td data-th=\"Quests\">\n					<?php\n					$conn = mysqli_connect($servername, $username, $password, $dbname); // 	\n					$a = \"SELECT * FROM QuestProgress WHERE UserID='$idOfUser' AND QuestProgress='1'\";\n					$b =  mysqli_query($conn, $a) or die(mysqli_error());\n					$c = $b->num_rows;\n					mysqli_close($conn); // Close the connection \n					echo $c;\n					?>\n				</td>\n				<td data-th=\"XP\">888</td>\n			</tr>\n    		<?php $ai++;\n		} \n	?>\n\n\n",
+			"file": "views/templates/tableitems.php",
+			"file_size": 1301,
+			"file_write_time": 130658948620000000,
 			"settings":
 			{
-				"buffer_size": 5088,
+				"buffer_size": 1304,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "index.php",
+			"contents": "User Colour Options\n\n1 - Blue: \nPrimary: #076d91\nSecondary: #064e67\n\n2 - Red:\nPrimary: #e74c3c\nSecondary: #b94034\n\n\nReferences: \n\nhttp://tournasdimitrios1.wordpress.com/2011/11/04/how-to-generate-json-with-php-from-mysql-and-parse-it-with-jquery/\n\n\n\n\n\n\ny = Get count of number of users != admin\nwhile x < y  \nget something[y][userid]\nselect xp from achievements, quests, awards where userid = id\n",
+			"file": "notes.txt",
+			"file_size": 246,
+			"file_write_time": 130656527610000000,
 			"settings":
 			{
-				"buffer_size": 292,
+				"buffer_size": 396,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/templates/footer.php",
+			"file": "views/achievements.php",
 			"settings":
 			{
-				"buffer_size": 162,
+				"buffer_size": 3522,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/quests.php",
+			"settings":
+			{
+				"buffer_size": 4584,
 				"line_ending": "Unix"
 			}
 		},
@@ -251,33 +285,54 @@
 			"file": "css/style.scss",
 			"settings":
 			{
-				"buffer_size": 12011,
+				"buffer_size": 13611,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/scripts.js",
+			"file": "views/intro.php",
 			"settings":
 			{
-				"buffer_size": 2471,
+				"buffer_size": 277,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config.php",
+			"file": "views/templates/mainTop.php",
 			"settings":
 			{
-				"buffer_size": 556,
+				"buffer_size": 890,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "includes/demo.php",
+			"contents": "<?php \n\n$loggedIn = 1;\n$id = '0';\n$classID = '0';\n\n$conn = mysqli_connect($servername, $username, $password, $dbname); // Create the connection\n\n// Array Usage\n// $array[ROW NUMBER]['COLUMN NAME'] e.g. $quests[1]['Name'];\n\n// Get the User's info into an array\n$selUsers = \"SELECT * FROM Users WHERE UserID='$id'\";\n$ur = mysqli_query($conn, $selUsers) or die(mysqli_error());\n$userRowCount = $ur->num_rows;\n$users = array();\n\nwhile($row = mysqli_fetch_assoc($ur)) {\n   $users[] = $row;\n}\n\n// Get the User's options into an array\n$selUsersO = \"SELECT * FROM UserOptions WHERE UserID='$id'\";\n$urO = mysqli_query($conn, $selUsersO) or die(mysqli_error());\n$userORowCount = $urO->num_rows;\n$usersO = array();\n\nwhile($row = mysqli_fetch_assoc($urO)) {\n   $usersO[] = $row;\n}\n\n// Get the Class info into an array\n$selClasses = \"SELECT * FROM Classes\";\n$cl = mysqli_query($conn, $selClasses) or die(mysqli_error());\n$classesRowCount = $cl->num_rows;\n$classes = array();\n\nwhile($row = mysqli_fetch_assoc($cl)) {\n   $classes[] = $row;\n}\n\n// Get the User's classes into an array\n$selClassM = \"SELECT * FROM ClassMemebers WHERE UserID='$id'\";\n$clM = mysqli_query($conn, $selClasses) or die(mysqli_error());\n$classMRowCount = $clM->num_rows;\n$classM = array();\n\nwhile($row = mysqli_fetch_assoc($clM)) {\n   $classM[] = $row;\n}\n\n// Achievements Available to the user\n$selAchievementP = \"SELECT * FROM AchievementProgress WHERE UserID='$id' \";\n$acP = mysqli_query($conn, $selAchievementP) or die(mysqli_error());\n$achievementPRowCount = $acP->num_rows;\n$achievementP = array();\n\nwhile($row = mysqli_fetch_assoc($acP)) {\n   $achievementP[] = $row;\n}\n\n// Acheivements Completed by the user\n$selAchievementPC = \"SELECT * FROM AchievementProgress WHERE UserID='$id' AND AchievementProgress='1'\";\n$acPC = mysqli_query($conn, $selAchievementPC) or die(mysqli_error());\n$achievementPCRowCount = $acPC->num_rows;\n$achievementPC = array();\n\nwhile($row = mysqli_fetch_assoc($acPC)) {\n   $achievementPC[] = $row;\n}\n\n// Quests Available to the user\n$selQuestsP = \"SELECT * FROM QuestProgress WHERE UserID='$id' \";\n$qP = mysqli_query($conn, $selQuestsP) or die(mysqli_error());\n$questsPRowCount = $qP->num_rows;\n$questsP = array();\n\nwhile($row = mysqli_fetch_assoc($qP)) {\n   $questsP[] = $row;\n}\n\n// Quests Completed by the user\n$selQuestsPC = \"SELECT * FROM QuestProgress WHERE UserID='$id' AND QuestProgress='1'\";\n$qPC = mysqli_query($conn, $selQuestsPC) or die(mysqli_error());\n$questsPCRowCount = $qPC->num_rows;\n$questsPC = array();\n\nwhile($row = mysqli_fetch_assoc($qPC)) {\n   $questsPC[] = $row;\n}\n\n// Calculating XP\n// Quest XP\n$selQuestX = \"SELECT QuestProgress.UserID, Quests.XPValue, QuestProgress.QuestProgress          \nFROM `QuestProgress` \nINNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$id' and QuestProgress.QuestProgress='1';\";\n$qX = mysqli_query($conn, $selQuestX) or die(mysqli_error());\n$questsXCount = $qX->num_rows;\n$questsX = array();\n\nwhile($row = mysqli_fetch_assoc($qX)) {\n   $questsX[] = $row;\n}\n$count = 0;\n$qXP = 0;\nwhile($count < $questsXCount) {\n	$qXP = $qXP + $questsX[$count]['XPValue'];\n	$count++;\n};\n\n// Achievements XP\n$selAchievementsX = \"SELECT AchievementProgress.UserID, Achievements.XPValue, AchievementProgress.AchievementProgress          \nFROM `AchievementProgress` \nINNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.UserID='$id' and AchievementProgress.AchievementProgress='1';\";\n$aX = mysqli_query($conn, $selAchievementsX) or die(mysqli_error());\n$achievementsXCount = $aX->num_rows;\n$achievementsX = array();\n\nwhile($row = mysqli_fetch_assoc($aX)) {\n   $achievementsX[] = $row;\n}\n$count = 0;\n$aXP = 0;\nwhile($count < $achievementsXCount) {\n	$aXP = $aXP + $achievementsX[$count]['XPValue'];\n	$count++;\n};\n\n// Awards XP\n$selXPAwards = \"SELECT * FROM XPAwards WHERE UserID='$id'\";\n$xpA = mysqli_query($conn, $selXPAwards) or die(mysqli_error());\n$XPAwardRowCount = $xpA->num_rows;\n$XPAwards = array();\nwhile($row = mysqli_fetch_assoc($xpA)) {\n   $xpAwards[] = $row;\n}\n$count = 0;\n$XPa = 0;\nwhile($count < $XPAwardRowCount) {\n	$XPa = $XPa + $xpAwards[$count]['XP'];\n	$count++;\n};\n\n\n$selInXP = \"SELECT * FROM Users UserID='\"\n\nmysqli_close($conn); // Close the connection \n\n$firstName = $users[0]['Name'];\n$surname = $users[0]['Surname'];\n$admin = $users[0]['Admin'];\n$class = $classes[0]['Name'];\n$clan = $users[0]['CLAN'];\n$unreadNotifications = 0;\n$profilePic = '/assets/uploads/' . $users[0]['Avatar'];\n$xp = $qXP + $aXP + $XPa; \n$userPosition = 1; // Leaderboard position\n$achievementsUnlocked = $achievementPCRowCount; // Achievements completed\n$achievementsUnlockable = $achievementPRowCount; // Achievements available\n$questsComplete = $questsPCRowCount; // Quests Compelted\n$questsAvailable = $questsPRowCount; // Quests currently available\n$questsAvailableAccumulation = $questsPRowCount; // All Quests that were available for this class\n$userColourScheme = $usersO[0]['ColourScheme'];",
+			"file": "includes/demosql.php",
+			"file_size": 4980,
+			"file_write_time": 130658813480000000,
 			"settings":
 			{
-				"buffer_size": 602,
-				"line_ending": "Unix",
-				"name": "<?php"
+				"buffer_size": 5021,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "includes/unlockablesSQL.php",
+			"settings":
+			{
+				"buffer_size": 3166,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php \n\n$conn = mysqli_connect($servername, $username, $password, $dbname); // \n\n$sql = \"SELECT Users.UserID, Users.Name, Users.Surname, Users.Avatar, ClassMembers.ClassID, Users.Admin\nFROM `Users`\nINNER JOIN `ClassMembers` on ClassMembers.UserID = Users.UserID WHERE ClassMembers.ClassID='$classID' AND Users.Admin='0'\";\n$leaderboardq = mysqli_query($conn, $sql) or die(mysqli_error());\n$leaderboardCount = $leaderboardq->num_rows;\n$leaderboarda = array();\n\nwhile($row = mysqli_fetch_assoc($leaderboardq)) {\n   $leaderboarda[] = $row;\n}\n\nmysqli_close($conn); // Close the connection \n\n\n$selQuestX = \"SELECT QuestProgress.UserID, Quests.XPValue, QuestProgress.QuestProgress          \nFROM `QuestProgress` \nINNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$id' and QuestProgress.QuestProgress='1';\";\n$qX = mysqli_query($conn, $selQuestX) or die(mysqli_error());\n$questsXCount = $qX->num_rows;\n$questsX = array();\n\nwhile($row = mysqli_fetch_assoc($qX)) {\n   $questsX[] = $row;\n}\n$count = 0;\n$qXP = 0;\nwhile($count < $questsXCount) {\n	$qXP = $qXP + $questsX[$count]['XPValue'];\n	$count++;\n};\n\n// Achievements XP\n$selAchievementsX = \"SELECT AchievementProgress.UserID, Achievements.XPValue, AchievementProgress.AchievementProgress          \nFROM `AchievementProgress` \nINNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.UserID='$id' and AchievementProgress.AchievementProgress='1';\";\n$aX = mysqli_query($conn, $selAchievementsX) or die(mysqli_error());\n$achievementsXCount = $aX->num_rows;\n$achievementsX = array();\n\nwhile($row = mysqli_fetch_assoc($aX)) {\n   $achievementsX[] = $row;\n}\n$count = 0;\n$aXP = 0;\nwhile($count < $achievementsXCount) {\n	$aXP = $aXP + $achievementsX[$count]['XPValue'];\n	$count++;\n};\n\n// Awards XP\n$selXPAwards = \"SELECT * FROM XPAwards WHERE UserID='$id'\";\n$xpA = mysqli_query($conn, $selXPAwards) or die(mysqli_error());\n$XPAwardRowCount = $xpA->num_rows;\n$XPAwards = array();\nwhile($row = mysqli_fetch_assoc($xpA)) {\n   $xpAwards[] = $row;\n}\n$count = 0;\n$XPa = 0;\nwhile($count < $XPAwardRowCount) {\n	$XPa = $XPa + $xpAwards[$count]['XP'];\n	$count++;\n};",
+			"file": "includes/leaderboard.php",
+			"file_size": 586,
+			"file_write_time": 130658948760000000,
+			"settings":
+			{
+				"buffer_size": 2186,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -375,28 +430,57 @@
 	[
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/placeholder",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/quests",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/uploads",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates"
 	],
 	"file_history":
 	[
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/functions.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/footer.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/bell2x.png",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/README.md",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/main.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/header.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/mainTop.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/index.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/config.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/install.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/style.scss",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/notes.txt",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/scripts.js",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/quests.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/demosql.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/README.md",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/footer.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/achievements.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/quests.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/leaderboard.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/achievementsjson.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/achievements.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/ajax.js",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/test.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/install.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/ajax/leaderboard.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/mainBottom.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/ajax/leaderboard.html",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/fonts/fonts.css",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/admin.js",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/customisation.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/resolution.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/tableitems.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/tableitems.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/normalize.css",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/functions.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/bell2x.png",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/main.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/sftp-config.json",
 		"/Users/Daniel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/sorttable.js",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/fixedheadertable.js",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/index.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/templates/footer.php",
 		"/New folder/New folder (3).noindex/New folder (0)/New folder (2)/New folder (2)/rp.html",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/avatarIcon.svg",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/.gitignore",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/fonts/fonts.css",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/config.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/db-connect.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/config.rb",
@@ -414,16 +498,58 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"achievementRowCount",
+			"acx",
+			"achievementPC",
+			"achievementPCRowCount",
+			"acPC",
+			"selAchievementPC",
+			"questsFullb",
+			"questsFullbq",
+			"questsFullb",
+			"questsFullbCount",
+			"quests",
+			"Achievement",
+			"achievement",
+			"achievementsFulla",
+			"achievements",
+			"checkCurrent",
+			"require_once(\"config.php\");\n",
+			"INCLUDES",
+			"questsPC",
+			"Achievements",
+			"QuestProgress",
+			"achievements",
+			"QuestsProgress",
+			"achievementPC",
+			"Achievements",
+			"LIKE",
+			"achievemetnP",
+			"classM",
+			"Username",
+			"achievements",
+			"Achievements",
+			"achievement",
+			"achievements",
+			"query",
+			"CONSTRAINT",
+			"CONSTRAINT `Achievement` FOREIGN KEY (`Achievement ID`) REFERENCES `Achievements` (`Achievement ID`) ON DELETE CASCADE ON UPDATE CASCADE\n",
+			"\";\n$sql = \"",
+			";",
+			"<br />",
+			"png",
+			"INCLUDES",
+			"defined(\"INCLUDES_PATH\")\n    or define(\"INCLUDES_PATH\", realpath(dirname(__FILE__) . '/includes'));\n ",
 			"section",
 			"id",
 			"profilePic",
@@ -451,11 +577,18 @@
 			"nth"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"Quest",
+			"quests",
+			"Quests",
+			"quest",
+			"quests",
+			"",
+			"\";",
 			"35",
 			"#f9f9f9",
 			"#f7f7f7",
@@ -477,53 +610,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "views/templates/header.php",
+					"file": "views/leaderboard.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4739,
+						"buffer_size": 680,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4336,
-								4336
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 955.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "views/main.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5088,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								339,
-								339
+								450,
+								450
 							]
 						],
 						"settings":
@@ -539,28 +643,84 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "index.php",
+					"buffer": 1,
+					"file": "views/templates/tableitems.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 292,
+						"buffer_size": 1304,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								86,
-								109
+								1304,
+								1304
 							]
 						],
 						"settings":
 						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "notes.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								396,
+								396
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/achievements.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3522,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137,
+								190
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -570,54 +730,50 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "views/templates/footer.php",
+					"buffer": 4,
+					"file": "views/quests.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 162,
+						"buffer_size": 4584,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								146,
-								146
+								1936,
+								710
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 153.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "css/style.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12011,
+						"buffer_size": 13611,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								247,
-								247
+								8088,
+								8088
 							]
 						],
 						"settings":
@@ -630,94 +786,158 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "js/scripts.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2471,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1984,
-								1984
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 835.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "config.php",
+					"file": "views/intro.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 556,
+						"buffer_size": 277,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								556,
-								556
+								266,
+								266
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "views/templates/mainTop.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								658,
+								658
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 35.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"file": "includes/demosql.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5021,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4250,
+								4250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1797.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "includes/unlockablesSQL.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								686,
+								686
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 3.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "includes/demo.php",
+					"buffer": 10,
+					"file": "includes/leaderboard.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 602,
+						"buffer_size": 2186,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								22,
-								22
+								1306,
+								1488
 							]
 						],
 						"settings":
 						{
-							"auto_name": "<?php",
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 357.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -725,7 +945,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -751,7 +971,7 @@
 		"cols":
 		[
 			0.0,
-			0.507411504425,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -807,7 +1027,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -815,7 +1035,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 213.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
