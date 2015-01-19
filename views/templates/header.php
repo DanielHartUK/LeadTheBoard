@@ -24,7 +24,7 @@ include_once(INCLUDES_PATH . "/customisation.php");
 	<div class="nav">
 		
 		<?php if ($loggedIn) : ?>
-			<div class="user" id="loggedIn" onClick="openDrawer()"><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9660;</span></div>
+			<div class="user" id="loggedIn" onClick="openDrawer()"><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9654;</span></div>
 		<?php else : ?>
 			<div class="user" id="loggedOut" onClick="loginClick()"> Login/Register </div>
 		<?php endif; ?>

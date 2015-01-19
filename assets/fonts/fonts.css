@@ -102,7 +102,6 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
     font-family: Flaticon;
-    font-size: 20px;
     font-style: normal;
 }.flaticon-bell60:before {
     content: "\e000";
@@ -110,24 +109,31 @@
 .flaticon-key162:before {
     content: "\e001";
 }
-.flaticon-medal61:before {
+.flaticon-locked59:before {
     content: "\e002";
 }
-.flaticon-multiple25:before {
+.flaticon-medal61:before {
     content: "\e003";
 }
-.flaticon-pencil43:before {
+.flaticon-multiple25:before {
     content: "\e004";
 }
-.flaticon-profile8:before {
+.flaticon-pencil43:before {
     content: "\e005";
 }
-.flaticon-settings21:before {
+.flaticon-profile8:before {
     content: "\e006";
 }
-.flaticon-trophy56:before {
+.flaticon-settings21:before {
     content: "\e007";
 }
+.flaticon-trophy56:before {
+    content: "\e008";
+}
+.flaticon-user182:before {
+    content: "\e009";
+}
+
 
 
 @font-face {

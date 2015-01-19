@@ -18,34 +18,35 @@
 			<div class="boxTitle"> Expiring Quests </div>
 			<div class="boxContent">
 				<ul class="expiringQuests">
-
 					<?php 
 						$ai = 0;
-						while($ai < 4) { ?>
+						if($questsFulldCount > 4) { $expiringCount = 4; } else { $expiringCount = $questsFulldCount; };
+						while($ai < $expiringCount) { ?>
 							<li>
-							<img src="/assets/quests/<?php echo $questsFulld[$ai]['Icon']; ?>" class="questThumb">
-							<?php echo $questsFulld[$ai]['Name']; ?> <br /> 
-							<span>
-							<?php 
-							$timeExpire = strtotime($questsFulld[$ai]['Expire']);
-							if($timeExpire - time() < 60) {
-								echo "Less than a minute remaining"; 
-							} elseif($timeExpire - time() < 3600) {
-								$remaining = floor(($timeExpire - time()) / 60);
-								echo floor(($timeExpire - time()) / 60) . " minutes remaining"; 
-							} elseif($timeExpire - time() < 86400) {
-								$remaining = floor(($timeExpire - time()) / 3600);
-								echo  $remaining . " hour";
-								if($remaining != 1){ echo "s";}; 
-								echo "remaining"; 
-							} else {
-								echo floor(($timeExpire - time()) / 86400) . " days remaining"; 
-							}; 
-
-							?>
-
-
-							</span></li>
+								<img src="/assets/quests/<?php echo $questsFulld[$ai]['Icon']; ?>" class="questThumb">
+								<?php echo $questsFulld[$ai]['Name']; ?> <br /> 
+								<span>
+								<?php $timeExpire = strtotime($questsFulld[$ai]['Expire']);
+								if($timeExpire - time() < 60) {
+									echo "Less than a minute remaining"; 
+								} elseif($timeExpire - time() < 3600) {
+									$remaining = floor(($timeExpire - time()) / 60);
+									echo  $remaining . " minute";
+									if($remaining >= 2){ echo "s";}; 
+									echo " remaining"; 
+								} elseif($timeExpire - time() < 86400) {
+									$remaining = floor(($timeExpire - time()) / 3600);
+									echo  $remaining . " hour";
+									if($remaining >= 2){ echo "s";}; 
+									echo " remaining"; 
+								} else {
+									$remaining = floor(($timeExpire - time()) / 86400);
+									echo  $remaining . " day";
+									if($remaining >= 2){ echo "s";}; 
+									echo " remaining"; 
+								}; ?>
+								</span>
+							</li>
 						<?php $ai++;
 						} 
 					?>

@@ -1,3 +1,48 @@
+$('.achievementCircle').mouseover (function() {
+   if (!$(this).parent().hasClass('selected')) {
+     $('.achievementDetails').css('animation', 'none');
+     $('.achievementCircleCont').removeClass('selected')
+     $(this).parent().addClass('selected')
+     x = $(this).data('icon');
+     icon = 'url(../assets/achievements/' + x + ')';
+     title = $(this).data('name');
+     desc = $(this).data('desc');
+     $('.achievementDetails').css('animation', 'fadeOut 0.3s');
+     window.setTimeout(function() { 
+         $('.achievementTitle').text(title); 
+         $('.achievementDesc').text(desc);
+     }, 300);
+     setTimeout(function() { 
+         $('.achievementDetails').css('animation', 'fadeIn 0.3s');
+     }, 300);
+     $('.achievementXP Span').text($(this).data('xp'));
+     $('.achievementIcon').css('background-image', icon); 
+  }
+});
+$('.questCircle').mouseover (function() {
+   if (!$(this).parent().hasClass('selected')) {
+     $('.questDetails').css('animation', 'none');
+     $('.questCircleCont').removeClass('selected')
+     $(this).parent().addClass('selected')
+     x = $(this).data('icon');
+     icon = 'url(../assets/quests/' + x + ')';
+     title = $(this).data('name');
+     desc = $(this).data('desc');
+     $('.questDetails').css('animation', 'fadeOut 0.3s');
+     window.setTimeout(function() { 
+         $('.questTitle').text(title); 
+         $('.questDesc').text(desc);
+     }, 300);
+     setTimeout(function() { 
+         $('.questDetails').css('animation', 'fadeIn 0.3s');
+     }, 300);
+     $('.questXP Span').text($(this).data('xp'));
+     $('.questIcon').css('background-image', icon); 
+  }
+});
+
+
+
 
 var login = false
 function loginClick() {

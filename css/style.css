@@ -368,9 +368,10 @@ ul.menu li:hover {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
+  white-space: initial;
 }
 
-/* line 276, style.scss */
+/* line 277, style.scss */
 .sectionNavigation {
   padding: 1% 0;
   width: 80%;
@@ -378,17 +379,17 @@ ul.menu li:hover {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 282, style.scss */
+/* line 283, style.scss */
 .sectionNavigation ul {
   margin: 0;
   padding: 0;
   border-bottom: 2px solid #808080;
 }
-/* line 287, style.scss */
+/* line 288, style.scss */
 .sectionNavigation ul a {
   color: inherit;
 }
-/* line 290, style.scss */
+/* line 291, style.scss */
 .sectionNavigation ul li {
   display: inline-block;
   margin: 0 2% -2px 0;
@@ -396,23 +397,23 @@ ul.menu li:hover {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
-/* line 297, style.scss */
+/* line 298, style.scss */
 .sectionNavigation ul li.currentPage {
   border-bottom: 2px solid #16a085;
 }
 
-/* line 304, style.scss */
+/* line 305, style.scss */
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
   border-bottom: 2px solid #16a085;
 }
 
-/* line 307, style.scss */
+/* line 308, style.scss */
 .drawerO {
   width: 100%;
 }
 
 /* Leaderboard */
-/* line 312, style.scss */
+/* line 313, style.scss */
 .mainBoard {
   width: 100%;
   margin: 0;
@@ -423,7 +424,7 @@ ul.menu li:hover {
   border-collapse: collapse;
 }
 
-/* line 321, style.scss */
+/* line 322, style.scss */
 .headerBoard {
   background-color: #16a085;
   color: #fff;
@@ -431,14 +432,14 @@ ul.menu li:hover {
   font-size: 1.1em;
   border-right: 1px solid #16A085;
 }
-/* line 328, style.scss */
+/* line 329, style.scss */
 .headerBoard th {
   margin: 0;
   padding: 13px 1%;
   border: 0;
 }
 
-/* line 334, style.scss */
+/* line 335, style.scss */
 .boardEntry {
   border: 0;
   padding: 0;
@@ -446,40 +447,40 @@ ul.menu li:hover {
   background-color: #f7f7f7;
   border-bottom: 1px solid #CCC;
 }
-/* line 341, style.scss */
+/* line 342, style.scss */
 .boardEntry td {
   padding: 1%;
   border-left: 1px solid #CCC;
 }
-/* line 345, style.scss */
+/* line 346, style.scss */
 .boardEntry td:last-child {
   border-right: 1px solid #CCC;
 }
-/* line 349, style.scss */
+/* line 350, style.scss */
 .boardEntry:nth-child(even) {
   background: #ececec;
 }
-/* line 352, style.scss */
+/* line 353, style.scss */
 .boardEntry:first-child {
   background: #f7f7f7;
 }
-/* line 355, style.scss */
+/* line 356, style.scss */
 .boardEntry:hover {
   background-color: #696969;
   color: #FFF;
 }
 
-/* line 360, style.scss */
+/* line 361, style.scss */
 .pos {
   width: 15px;
 }
 
-/* line 363, style.scss */
+/* line 364, style.scss */
 .boardAvatar {
   width: 40px;
 }
 
-/* line 367, style.scss */
+/* line 368, style.scss */
 .boardIcon {
   height: 20px;
   width: 20px;
@@ -488,58 +489,61 @@ ul.menu li:hover {
   margin: 0;
   float: left;
   margin-right: 5%;
+  color: #F3B949;
+  color: rgba(0, 0, 0, 0.46);
+  font-weight: 400;
 }
 
-/* line 377, style.scss */
+/* line 381, style.scss */
 .personIcon {
   background-image: url(../assets/personIconM.png);
   float: none;
   margin: 0 auto;
 }
 
-/* line 382, style.scss */
+/* line 386, style.scss */
 .achievementsIcon {
   background-image: url(../assets/trophyIcon.png);
 }
 
-/* line 385, style.scss */
+/* line 389, style.scss */
 .questsIcon {
   background-image: url(../assets/pencilIcon.png);
 }
 
-/* line 388, style.scss */
+/* line 392, style.scss */
 .xpIcon {
   background-image: url(../assets/xpIcon.png);
 }
 
-/* line 391, style.scss */
+/* line 395, style.scss */
 .avatarBoard {
   height: 40px;
   width: 40px;
   background: gray;
 }
 
-/* line 396, style.scss */
+/* line 400, style.scss */
 .achievementCircleCont, .questCircleCont {
   width: 100px;
   height: 100px;
   overflow: hidden;
   display: inline-block;
-  border: 2px dashed #808080;
+  border: 2px solid #808080;
+  background: #808080;
   border-radius: 62px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 404, style.scss */
+/* line 409, style.scss */
 .achievementCircleCont.selected, .questCircleCont.selected {
   border-color: #9D0000;
-  -webkit-animation: achievementHover 3s infinite;
-  -moz-animation: achievementHover 3s infinite;
-  animation: achievementHover 3s infinite;
+  background: #9D0000;
+  /* @include animation(achievementHover 3s infinite);   */
 }
 
-/* line 409, style.scss */
+/* line 415, style.scss */
 .achievementCircle, .questCircle {
   width: 100px;
   height: 100px;
@@ -594,18 +598,67 @@ ul.menu li:hover {
     transform: rotate(-15deg);
   }
 }
-/* line 424, style.scss */
+/* line 430, style.scss */
 .achievementDetails, .questDetails {
   display: inline-block;
   vertical-align: top;
+  width: calc(100% - 100px - 1% - 15%);
 }
-/* line 428, style.scss */
+/* line 435, style.scss */
 .achievementDetails p, .questDetails p {
   margin: 0;
   padding: 0;
 }
 
-/* line 433, style.scss */
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 448, style.scss */
 .achievementIcon, .questIcon {
   width: 100px;
   height: 100px;
@@ -615,28 +668,54 @@ ul.menu li:hover {
   margin-right: 1%;
 }
 
-/* line 441, style.scss */
+/* line 456, style.scss */
+.achievementIcon {
+  border-radius: 50px;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  transition: 0.6s;
+}
+
+/* line 460, style.scss */
 .achievementInfo, .questInfo {
   overflow: auto;
   border-bottom: 1px solid;
   padding-bottom: 1%;
   margin-bottom: 1%;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* line 468, style.scss */
+.achievementXP, .questXP {
+  width: 15%;
+  display: inline-block;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 900;
+}
+/* line 474, style.scss */
+.achievementXP .flaticon-medal61, .questXP .flaticon-medal61 {
+  font-size: 2em;
+  font-weight: 400;
+  color: #F3B949;
 }
 
 /* Side Boxes */
-/* line 449, style.scss */
+/* line 481, style.scss */
 .sideBlock {
   display: inline-block;
   vertical-align: top;
   width: 19.5%;
   padding-left: 0.5%;
 }
-/* line 455, style.scss */
+/* line 487, style.scss */
 .sideBlock.drawerO {
   display: none;
 }
 
-/* line 459, style.scss */
+/* line 491, style.scss */
 .boxTitle {
   text-align: center;
   color: #fff;
@@ -645,14 +724,14 @@ ul.menu li:hover {
   padding: 13px 1%;
 }
 
-/* line 466, style.scss */
+/* line 498, style.scss */
 .boxContent {
   border: 1px solid #b9b9b9;
   border-top: none;
   text-align: center;
 }
 
-/* line 471, style.scss */
+/* line 503, style.scss */
 .box {
   width: 100%;
   background: #fff;
@@ -661,23 +740,23 @@ ul.menu li:hover {
   margin-bottom: 3%;
 }
 
-/* line 479, style.scss */
+/* line 511, style.scss */
 .youBox .boxContent {
   padding: 4%;
 }
 
-/* line 484, style.scss */
+/* line 516, style.scss */
 .questsBox .boxTitle {
   background-color: #ab452f;
 }
 
-/* line 488, style.scss */
+/* line 520, style.scss */
 .expiringQuests {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 493, style.scss */
+/* line 525, style.scss */
 .expiringQuests li {
   font-weight: 700;
   font-size: 1.1em;
@@ -685,16 +764,16 @@ ul.menu li:hover {
   text-align: left;
   overflow: auto;
 }
-/* line 500, style.scss */
+/* line 532, style.scss */
 .expiringQuests li:nth-child(odd) {
   background-color: #efeeee;
 }
-/* line 504, style.scss */
+/* line 536, style.scss */
 .expiringQuests li span {
   font-size: 1rem;
 }
 
-/* line 509, style.scss */
+/* line 541, style.scss */
 .questThumb {
   width: 50px;
   height: 50px;
@@ -702,7 +781,7 @@ ul.menu li:hover {
   margin-right: 4%;
 }
 
-/* line 515, style.scss */
+/* line 547, style.scss */
 .profilePicRound {
   height: 100px;
   width: 100px;
@@ -710,7 +789,7 @@ ul.menu li:hover {
   margin-top: 2%;
 }
 
-/* line 521, style.scss */
+/* line 553, style.scss */
 .bannerSmall {
   width: 90%;
   padding: 1% 1% 5% 1%;
@@ -727,54 +806,54 @@ ul.menu li:hover {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 536, style.scss */
+  /* line 568, style.scss */
   .notificationIcon {
     background-image: url(../assets/bell2x.png);
   }
 
-  /* line 539, style.scss */
+  /* line 571, style.scss */
   .personIcon {
     background-image: url(../assets/personIconM2x.png);
   }
 
-  /* line 542, style.scss */
+  /* line 574, style.scss */
   .achievementsIcon {
     background-image: url(../assets/trophyIcon2x.png);
   }
 
-  /* line 545, style.scss */
+  /* line 577, style.scss */
   .questsIcon {
     background-image: url(../assets/pencilIcon2x.png);
   }
 
-  /* line 548, style.scss */
+  /* line 580, style.scss */
   .xpIcon {
     background-image: url(../assets/xpIcon2x.png);
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 554, style.scss */
+  /* line 586, style.scss */
   .mainBlock {
     width: 100%;
   }
 
-  /* line 557, style.scss */
+  /* line 589, style.scss */
   .sideBlock {
     display: none;
   }
 
-  /* line 560, style.scss */
+  /* line 592, style.scss */
   .sectionNavigation {
     width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 566, style.scss */
+  /* line 598, style.scss */
   .mainBoard thead {
     display: none;
   }
 
-  /* line 569, style.scss */
+  /* line 601, style.scss */
   .boardEntry {
     display: block;
     box-sizing: border-box;
@@ -784,7 +863,7 @@ ul.menu li:hover {
     border: 0;
   }
 
-  /* line 577, style.scss */
+  /* line 609, style.scss */
   .boardEntry td {
     display: block;
     width: 100%;
@@ -796,7 +875,7 @@ ul.menu li:hover {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
   }
 
-  /* line 582, style.scss */
+  /* line 614, style.scss */
   .boardEntry:first-child td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f9f9f9), color-stop(1, #f9f9f9));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
@@ -806,7 +885,7 @@ ul.menu li:hover {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
   }
 
-  /* line 585, style.scss */
+  /* line 617, style.scss */
   .boardEntry:nth-child(even) td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #ECECEC), color-stop(1, #ECECEC));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
@@ -816,7 +895,7 @@ ul.menu li:hover {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
   }
 
-  /* line 588, style.scss */
+  /* line 620, style.scss */
   .boardEntry td:before {
     content: attr(data-th) ": ";
     float: left;
@@ -825,7 +904,7 @@ ul.menu li:hover {
     font-weight: 700;
   }
 
-  /* line 595, style.scss */
+  /* line 627, style.scss */
   #boardAvatar {
     display: none;
   }

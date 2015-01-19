@@ -8,11 +8,11 @@ require_once(TEMPLATES_PATH . "/mainTop.php");
 	<thead>
 		<tr class="headerBoard">
 			<th>#</th>
-			<th><div class="personIcon boardIcon"></div></th>
+			<th style="text-align: center;"><div class="flaticon-user182 boardIcon" style="width: 100%;"></div></th>
 			<th>Student Name</th>
-			<th><div class="achievementsIcon boardIcon"></div>Achievements</th>
-			<th><div class="questsIcon boardIcon"></div>Quests</th>
-			<th id="xpSort"><div class="xpIcon boardIcon"></div>XP</th>
+			<th><div class="flaticon-trophy56 boardIcon"></div>Achievements</th>
+			<th><div class="flaticon-pencil43 boardIcon"></div>Quests</th>
+			<th><div class="flaticon-medal61 boardIcon"></div>XP</th>
 		</tr>
 	</thead>
 	<tbody>

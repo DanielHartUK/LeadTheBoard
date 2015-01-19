@@ -6,7 +6,7 @@ function pageURLContains($x) {
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; if (false !== strpos($url, $x)) { echo 'class="currentPage"'; };
 }
 ?>
-<div class="content <?php if($admin == 1): echo 'admin'; endif; ?>">
+<div class="content <?php if($admin == 1): echo 'admin'; endif; ?>" style="white-space: nowrap;">
 	<h1> <?php echo $class ?> </h1>
 	<div class="sectionNavigation <?php if($admin == 1): echo 'drawerO'; endif; ?>">
 		<ul>
