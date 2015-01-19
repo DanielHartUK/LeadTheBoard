@@ -1,27 +1,25 @@
 
 
 	<?php 
-	// Displaying the available quests
+		$conn = mysqli_connect($servername, $username, $password, $dbname); // 	
+		$a = "SELECT * FROM Users WHERE Admin='0' ORDER BY Position";
+		$b =  mysqli_query($conn, $a) or die(mysqli_error());
+		$usersLCount = $b->num_rows;
+		$d = array();
+		while($row = mysqli_fetch_assoc($b)) {
+		   $d[] = $row;
+		}
+		mysqli_close($conn); // Close the connection 
+
+
 		$ai = 0; 
-		while($ai < $leaderboardCount) { ?>
-		<?php $idOfUser = $ai; ?>
+		while($ai < $usersLCount) { ?>
+		<?php $idOfUser = $d[$ai]['UserID']; ?>
+
 			<tr class="boardEntry">
-				<td class="pos" data-th="Position">
-					<?php
-					$conn = mysqli_connect($servername, $username, $password, $dbname); // 	
-					$a = "SELECT * FROM Users WHERE UserID='$idOfUser' AND Admin='0'";
-					$b =  mysqli_query($conn, $a) or die(mysqli_error());
-					$c = $b->num_rows;
-					$d = array();
-					while($row = mysqli_fetch_assoc($b)) {
-					   $d[] = $row;
-					}
-					mysqli_close($conn); // Close the connection 
-					echo $d[0]['Position'];
-					?>
-				</td>
-				<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src="../assets/uploads/<?php echo $leaderboarda[$ai]['Avatar']; ?>"></td>
-				<td data-th="Student Name"><?php echo $leaderboarda[$ai]['Name'] . " " . $leaderboarda[$ai]['Surname'];  ?></td>
+				<td class="pos" data-th="Position"><?php echo $d[$ai]['Position']; ?></td>
+				<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src="../assets/uploads/<?php echo $d[$ai]['Avatar']; ?>"></td>
+				<td data-th="Student Name"><?php echo $d[$ai]['Name'] . " " . $d[$ai]['Surname'];  ?></td>
 				<td data-th="Achievements">
 					<?php
 					$conn = mysqli_connect($servername, $username, $password, $dbname); // 	
@@ -43,18 +41,7 @@
 					?>	
 				</td>
 				<td data-th="XP">
-					<?php
-					$conn = mysqli_connect($servername, $username, $password, $dbname); // 	
-					$a = "SELECT * FROM Users WHERE UserID='$idOfUser'";
-					$b =  mysqli_query($conn, $a) or die(mysqli_error());
-					$c = $b->num_rows;
-					$d = array();
-					while($row = mysqli_fetch_assoc($b)) {
-					   $d[] = $row;
-					}
-					mysqli_close($conn); // Close the connection 
-					echo $d[0]['XP'];
-					?>
+					<?php echo $d[$ai]['XP']; ?>
 				</td>
 			</tr>
     		<?php $ai++;

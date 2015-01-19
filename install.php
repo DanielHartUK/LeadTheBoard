@@ -101,5 +101,5 @@ if(! $retval )
 {
   die('Could not create table: ' . mysql_error());
 }
-echo 'LeadTheBoard! successfully installed! <a href="/">Continue</a>';
+echo 'Achievement Unlocked: LeadTheBoard! successfully installed! <a href="/">Continue</a>';
 mysql_close($conn);

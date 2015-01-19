@@ -18,13 +18,47 @@
 			<div class="boxTitle"> Expiring Quests </div>
 			<div class="boxContent">
 				<ul class="expiringQuests">
-					<li><img src="/assets/placeholder/goat.jpg" class="questThumb"> Lorem Ipsum <br /> <span>8 hours left</span></li>
-					<li><img src="/assets/placeholder/goat.jpg" class="questThumb"> Lorem Ipsum <br /> <span>8 hours left</span></li>
-					<li><img src="/assets/placeholder/goat.jpg" class="questThumb"> Lorem Ipsum <br /> <span>8 hours left</span></li>
-					<li><img src="/assets/placeholder/goat.jpg" class="questThumb"> Lorem Ipsum <br /> <span>8 hours left</span></li>
+
+					<?php 
+						$ai = 0;
+						while($ai < 4) { ?>
+							<li>
+							<img src="/assets/quests/<?php echo $questsFulld[$ai]['Icon']; ?>" class="questThumb">
+							<?php echo $questsFulld[$ai]['Name']; ?> <br /> 
+							<span>
+							<?php 
+							$timeExpire = strtotime($questsFulld[$ai]['Expire']);
+							if($timeExpire - time() < 60) {
+								echo "Less than a minute remaining"; 
+							} elseif($timeExpire - time() < 3600) {
+								$remaining = floor(($timeExpire - time()) / 60);
+								echo floor(($timeExpire - time()) / 60) . " minutes remaining"; 
+							} elseif($timeExpire - time() < 86400) {
+								$remaining = floor(($timeExpire - time()) / 3600);
+								echo  $remaining . " hour";
+								if($remaining != 1){ echo "s";}; 
+								echo "remaining"; 
+							} else {
+								echo floor(($timeExpire - time()) / 86400) . " days remaining"; 
+							}; 
+
+							?>
+
+
+							</span></li>
+						<?php $ai++;
+						} 
+					?>
 				</ul>
 			</div>
 		</div>
 	</div><?php endif; ?>
 </div>
 <?php include_once(TEMPLATES_PATH . "/footer.php"); ?>
+
+
+
+
+
+
+

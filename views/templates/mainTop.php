@@ -1,5 +1,6 @@
 <?php 
 include_once(TEMPLATES_PATH . "/header.php"); 
+require_once(INCLUDES_PATH . "/unlockablesSQL.php");
 
 function pageURLContains($x) {
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; if (false !== strpos($url, $x)) { echo 'class="currentPage"'; };

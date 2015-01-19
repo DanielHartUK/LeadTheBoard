@@ -2,7 +2,6 @@
 require_once("../config.php");
 require_once(TEMPLATES_PATH . "/mainTop.php"); 
 require_once(INCLUDES_PATH . "/quests.php");
-require_once(INCLUDES_PATH . "/unlockablesSQL.php");
 ?>
 <div class="quests">
 	<div class="questInfo">
@@ -18,7 +17,7 @@ require_once(INCLUDES_PATH . "/unlockablesSQL.php");
 	<?php 
 	// Displaying the available quests
 		$ai = 0; 
-		while($ai < $questsFullaCount) { ?>
+		while($ai < $questsFullbCount) { ?>
             <?php if ($ai == 0) { ?>
     		<div class="questCircleCont selected">
             <?php } else { ?>
@@ -26,11 +25,11 @@ require_once(INCLUDES_PATH . "/unlockablesSQL.php");
             <?php }; ?>
             <div 
     		class="questCircle" 
-    		data-id="<?php echo $questsFulla[$ai]['questID']; ?>"  
-    		data-name="<?php echo $questsFulla[$ai]['Name'];?>"  
-    		data-desc="<?php echo $questsFulla[$ai]['Description']; ?>"  
-    		data-icon="<?php echo $questsFulla[$ai]['Icon']; ?>"
-            data-xp="<?php echo $questsFulla[$ai]['XPValue']; ?>" 
+    		data-id="<?php echo $questsFullb[$ai]['questID']; ?>"  
+    		data-name="<?php echo $questsFullb[$ai]['Name'];?>"  
+    		data-desc="<?php echo $questsFullb[$ai]['Description']; ?>"  
+    		data-icon="<?php echo $questsFullb[$ai]['Icon']; ?>"
+            data-xp="<?php echo $questsFullb[$ai]['XPValue']; ?>" 
     		onmouseover=" 
             $('.questCircleCont').removeClass('selected')
             $(this).parent().addClass('selected')
@@ -41,7 +40,7 @@ require_once(INCLUDES_PATH . "/unlockablesSQL.php");
             $('.questXP').text('XP: ' + $(this).data('xp'));
     		$('.questIcon').css('background-image', icon); 
     		" 
-    		style="background-image: url(../assets/quests/<?php echo $questsFulla[$ai]['Icon']; ?>);">
+    		style="background-image: url(../assets/quests/<?php echo $questsFullb[$ai]['Icon']; ?>);">
     		</div>
             </div>  
     	<?php $ai++;

@@ -1,6 +1,7 @@
-config.php
 *.sublime-project
 *.sublime-workspace
+LeadTheBoard.sublime-project
+LeadTheBoard.sublime-workspace
 
 # Compiled source #
 ###################

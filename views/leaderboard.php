@@ -2,10 +2,8 @@
 $isLeaderboard = 1;
 require_once("../config.php");
 require_once(TEMPLATES_PATH . "/mainTop.php"); 
-require_once(INCLUDES_PATH . "/leaderboard.php"); 
 ?>
 <div class="leaderboard">
-<button onclick="sorttable.innerSortFunction.apply(document.getElementById('xpSort'), [])"></button>
 	<table class="mainBoard sortable">
 	<thead>
 		<tr class="headerBoard">
