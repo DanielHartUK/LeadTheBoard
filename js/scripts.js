@@ -1,53 +1,3 @@
-$('.achievementCircle').mouseover (function() {
-   if (!$(this).parent().parent().hasClass('selected')) {
-     $('.achievementDetails').css('animation', 'none');
-     $('.achievementCircleCont').removeClass('selected')
-     $(this).parent().parent().addClass('selected')
-     x = $(this).data('icon');
-     icon = 'url(../assets/achievements/' + x + ')';
-     id = '/views/achievement.php?achievement.' + $(this).data('id');
-     title = $(this).data('name');
-     desc = $(this).data('desc');
-     $('.achievementDetails').css('animation', 'fadeOut 0.3s');
-     window.setTimeout(function() { 
-         $('#achievementInfoURL').attr("href", id);
-         $('.achievementTitle').text(title); 
-         $('.achievementDesc').text(desc);
-     }, 300);
-     setTimeout(function() { 
-         $('.achievementDetails').css('animation', 'fadeIn 0.3s');
-     }, 300);
-     $('.achievementXP Span').text($(this).data('xp'));
-     $('.achievementIcon').css('background-image', icon); 
-  }
-});
-$('.questCircle').mouseover (function() {
-   if (!$(this).parent().parent().hasClass('selected')) {
-     $('.questDetails').css('animation', 'none');
-     $('.questCircleCont').removeClass('selected')
-     $(this).parent().parent().addClass('selected')
-     x = $(this).data('icon');
-     icon = 'url(../assets/quests/' + x + ')';
-     id = '/views/quest.php?quest=' + $(this).data('id');
-     title = $(this).data('name');
-     desc = $(this).data('desc');
-     $('.questDetails').css('animation', 'fadeOut 0.3s');
-     window.setTimeout(function() { 
-         $('#questInfoURL').attr("href", id);
-         $('.questTitle').text(title); 
-         $('.questDesc').text(desc);
-     }, 300);
-     setTimeout(function() { 
-         $('.questDetails').css('animation', 'fadeIn 0.3s');
-     }, 300);
-     $('.questXP Span').text($(this).data('xp'));
-     $('.questIcon').css('background-image', icon); 
-  }
-});
-
-
-
-
 var login = false
 function loginClick() {
   if (login) {
@@ -105,6 +55,7 @@ $( document ).ready( function() {
 function layouts () {
   $('.drawer').width($('.box').width());
   cPadding = parseFloat($(".content").css("padding-left"));
+  fPadding = parseFloat($(".footer").css("padding-left"));
 }
 $(document).ready(layouts);
 $(window).resize(layouts);
@@ -112,8 +63,10 @@ $(window).resize(layouts);
 function openDrawer () {
   content = $(".content");
   var x = $('.drawer').width() + cPadding;
+  var f = $('.drawer').width() + fPadding;
   $('.drawer').removeClass("closed");
   $('.content').css("padding-left", x);
+  $('.footer').css("padding-left", f);
   $('.mainBlock').addClass("drawerO");
   $('.sideBlock').addClass("drawerO");
   $('.sectionNavigation').addClass("drawerO");
@@ -121,8 +74,10 @@ function openDrawer () {
 
 function closeDrawer () {
   var x = cPadding;
+  var f = fPadding;
   $('.drawer').addClass("closed");
   $('.content').css("padding-left", x);
+  $('.footer').css("padding-left", f);
   $('.mainBlock').removeClass("drawerO");
   $('.sideBlock').removeClass("drawerO");
   $('.sectionNavigation').removeClass("drawerO");

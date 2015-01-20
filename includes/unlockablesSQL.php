@@ -2,7 +2,7 @@
 
 $conn = mysqli_connect($servername, $username, $password, $dbname); // 
 
-// Achievements XP
+// Achievements Unlocked
 $sql = "SELECT AchievementProgress.UserID, AchievementProgress.AchievementID, AchievementProgress.AchievementProgress, Achievements.Name, Achievements.Description, Achievements.XPValue, Achievements.Icon           
 FROM `AchievementProgress`
 INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.UserID='$id' and AchievementProgress.AchievementProgress='1' ORDER BY AchievementProgress.Timestamp;";

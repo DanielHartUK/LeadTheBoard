@@ -1,0 +1,149 @@
+/* Navigation */
+
+.nav {
+    @include display(flex);
+    @include justify-content(space-between);
+    width: 100%;
+    height: $navHeight;
+    background-color: #16a085;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+#logo {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.6em;
+    color: #FFF;
+    line-height: $navHeight;
+    padding: 0 0.5%;
+
+    a {
+        text-decoration: none;
+        color: #FFF;
+    }
+}
+.profilePicSmall {
+    width: 30px;
+    margin: 10px 10px 0.5% 0;
+    float: left;
+}
+.user {
+    color: #fff;
+    line-height: $navHeight;
+    padding: 0 0.5%;
+    cursor: pointer;
+}
+.close {
+    float: right;
+    font-size: 2em;
+}
+.notificationIcon {
+    text-align: left;
+    background-image: url(../assets/bell.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 17px;
+    padding-right: calc(20px + 0.5%);
+    padding-left: 0.5%; 
+    min-width: 10px;
+    color: #FFF;
+    line-height: $navHeight;
+}
+.downArrow {
+    font-size: 0.7em;
+    margin-left: 0.5em;
+}
+.drawer {
+    position: fixed;
+    display: block;
+    vertical-align: top;
+    width: 19.5%;
+    min-width: 198px;
+    background: #00F;
+    height: 100%;
+    box-sizing: border-box;
+    top: 0;
+    z-index: 9999;
+    left: 0;
+    @include transition($drawerSlide);
+
+    .user {
+        height: 50px;
+        padding: 0px 2.5%;
+    }
+
+    &.closed {
+        left: -346px;
+    }
+}
+ul.menu {
+    list-style: none;
+    color: #FFF;
+    margin: 0;
+    padding: 0%;
+    font-size: 1.1em;
+
+    li {
+        padding: 4%;
+        margin: 2%;
+        border-radius: 4px;
+        font-weight: 700;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.28);
+        }
+    }
+
+}
+.sideIcon {
+    margin-right: 4%;
+    font-weight: 400;
+}
+.sectionNavigation {
+    padding: 1% 0;
+    width: 80%;
+    @include transition($drawerSlide);
+
+
+    ul {
+        margin: 0;
+        padding: 0;
+        border-bottom: 2px solid #808080;
+
+        a {
+            color: inherit;
+        }
+        li {
+            display: inline-block;
+            margin: 0 2% -2px 0;
+            padding: 0 0 4px 0;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+
+            &.currentPage {
+                border-bottom: 2px solid #16a085;
+            }
+        }
+    }
+}
+ul.footerLinks {
+    list-style: none;
+    margin: 0;
+    padding: 1% 0;
+    font-size: 0.9em;
+    border-top: 1px solid #808080;
+
+    li {
+        display: inline-block;
+        margin-right: 1%;
+    }
+}
+.sectionNavigation ul li.current, .sectionNavigation ul li:hover {
+    border-bottom: 2px solid #16a085;
+}
+@include hidpi(2) {
+    .notificationIcon {
+        background-image: url(../assets/bell2x.png);
+    }
+}

@@ -1,0 +1,78 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    font-family: "cabin", sans-serif;
+    font-weight: 400;
+    background-color: #f4f4f4;
+    color: #555555;
+}
+h1 {
+    margin: 0;
+    font-size: 2.6em;
+    font-weight: 400;
+}
+h3 {
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+h6 {
+    margin: 2%;
+    padding: 4%;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h2.sectionTitle {
+    margin: 0 0 1% 0;
+    background: #16A085;
+    color: #FFF;
+    padding: 1%;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+.achievements .sectionTitle {
+    background-color: #2F9DAB;
+}
+.quests .sectionTitle {
+    background-color: #AB452F;
+}
+
+.clickable {
+    cursor: pointer;
+}
+.wrapper {
+    width: 100%;
+    position: relative;
+    padding-top: $navHeight;
+}
+.contentContainer {
+    .noScroll {
+        overflow: hidden;
+    }
+}
+.content {
+    @include transition($drawerSlide);
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0.5%;
+    box-sizing: border-box;
+
+    &.admin {
+        width: calc(100% - 19.5%);
+        margin: 0;
+        float: right;
+    }
+
+}
+.footer {
+    margin: 0 0.5% 0.5% 0.5%;   
+    @include transition($drawerSlide);
+}
