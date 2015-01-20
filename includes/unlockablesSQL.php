@@ -3,7 +3,7 @@
 $conn = mysqli_connect($servername, $username, $password, $dbname); // 
 
 // Achievements XP
-$sql = "SELECT AchievementProgress.UserID, AchievementProgress.AchievementProgress, Achievements.Name, Achievements.Description, Achievements.XPValue, Achievements.Icon           
+$sql = "SELECT AchievementProgress.UserID, AchievementProgress.AchievementID, AchievementProgress.AchievementProgress, Achievements.Name, Achievements.Description, Achievements.XPValue, Achievements.Icon           
 FROM `AchievementProgress`
 INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.UserID='$id' and AchievementProgress.AchievementProgress='1' ORDER BY AchievementProgress.Timestamp;";
 $achievementsFullaq = mysqli_query($conn, $sql) or die(mysqli_error());
@@ -14,7 +14,7 @@ while($row = mysqli_fetch_assoc($achievementsFullaq)) {
    $achievementsFulla[] = $row;
 }
 // Achievements locked
-$sql = "SELECT AchievementProgress.UserID, AchievementProgress.AchievementProgress, Achievements.Name, Achievements.Description, Achievements.XPValue, Achievements.Icon           
+$sql = "SELECT AchievementProgress.UserID, AchievementProgress.AchievementID, AchievementProgress.AchievementProgress, Achievements.Name, Achievements.Description, Achievements.XPValue, Achievements.Icon           
 FROM `AchievementProgress`
 INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.UserID='$id' and AchievementProgress.AchievementProgress='0';";
 $achievementsFullbq = mysqli_query($conn, $sql) or die(mysqli_error());
@@ -26,7 +26,7 @@ while($row = mysqli_fetch_assoc($achievementsFullbq)) {
 }
 
 // Quests Completed
-$sql = "SELECT QuestProgress.UserID, QuestProgress.QuestProgress, Quests.Name, Quests.Description, Quests.XPValue, Quests.Icon           
+$sql = "SELECT QuestProgress.UserID,  QuestProgress.QuestID, QuestProgress.QuestProgress, Quests.Name, Quests.Description, Quests.XPValue, Quests.Icon           
 FROM `QuestProgress`
 INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$id' and QuestProgress.QuestProgress='1' ORDER BY QuestProgress.Timestamp;";
 $questsFullaq = mysqli_query($conn, $sql) or die(mysqli_error());
@@ -38,7 +38,7 @@ while($row = mysqli_fetch_assoc($questsFullaq)) {
 }
 
 // Quests Available
-$sql = "SELECT QuestProgress.UserID, QuestProgress.QuestProgress, Quests.Name, Quests.Description, Quests.XPValue, Quests.Icon, Quests.Expire          
+$sql = "SELECT QuestProgress.UserID, QuestProgress.QuestID, QuestProgress.QuestProgress, Quests.Name, Quests.Description, Quests.XPValue, Quests.Icon, Quests.Expire          
 FROM `QuestProgress`
 INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$id' and QuestProgress.QuestProgress='0' and Quests.Expire>NOW();";
 $questsFullbq = mysqli_query($conn, $sql) or die(mysqli_error());
@@ -50,7 +50,7 @@ while($row = mysqli_fetch_assoc($questsFullbq)) {
 }
 
 //Quests Expired
-$sql = "SELECT QuestProgress.UserID, QuestProgress.QuestProgress, Quests.Name, Quests.Description, Quests.XPValue, Quests.Icon, Quests.Expire          
+$sql = "SELECT QuestProgress.UserID,  QuestProgress.QuestID, QuestProgress.QuestProgress, Quests.Name, Quests.Description, Quests.XPValue, Quests.Icon, Quests.Expire          
 FROM `QuestProgress`
 INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$id' and QuestProgress.QuestProgress='0' and Quests.Expire<NOW();";
 $questsFullcq = mysqli_query($conn, $sql) or die(mysqli_error());
@@ -63,7 +63,7 @@ while($row = mysqli_fetch_assoc($questsFullcq)) {
 
 
 // Quests Expiring
-$sql = "SELECT QuestProgress.UserID, QuestProgress.QuestProgress, Quests.Name, Quests.Description, Quests.XPValue, Quests.Icon, Quests.Expire          
+$sql = "SELECT QuestProgress.UserID, QuestProgress.QuestID, QuestProgress.QuestProgress, Quests.Name, Quests.Description, Quests.XPValue, Quests.Icon, Quests.Expire          
 FROM `QuestProgress`
 INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$id' and QuestProgress.QuestProgress='0' and Quests.Expire>NOW() ORDER BY Quests.Expire;";
 $questsFulldq = mysqli_query($conn, $sql) or die(mysqli_error());

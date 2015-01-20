@@ -1,16 +1,14 @@
 	</div><?php if ($admin == 0): ?><div class="sideBlock">
 		<div class="youBox box"> 
-			<div class="boxTitle" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;"> You </div>
+			<a href="/views/profile.php?user=<?php echo $id; ?>"><div class="boxTitle" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;"> You </div></a>
 			<div class="boxContent">
 				<img src="<?php echo $profilePic ?>" class="profilePicRound">
 				<div class="bannerSmall"> <?php echo $userPosition ?><sup class="superscript"><?php if ($userPosition == 1) : echo 'st'; elseif ($userPosition == 2) : echo 'nd'; elseif ($userPosition == 3) : echo 'rd'; else : echo 'th'; endif;?> </sup></div>
-				<p> 
-					Achievements: <?php echo $achievementsUnlocked ?>/<?php echo $achievementsUnlockable ?>
-					<br />
-					Quests: <?php echo $questsComplete ?>/<?php echo $questsAvailableAccumulation ?>
-					<br />
-					XP: <?php echo $xp ?>
-				</p>
+					<div>
+						<div class="boxStat"><div class="flaticon-trophy56 boxIcon"></div> <?php echo $achievementsUnlocked ?>/<?php echo $achievementsUnlockable ?>
+						</div><div class="boxStat"><div class="flaticon-pencil43 boxIcon"></div> <?php echo $questsComplete ?>/<?php echo $questsAvailableAccumulation ?>
+						</div><div class="boxStat"><div class="flaticon-medal61 boxIcon"></div> <?php echo $xp ?></div>
+					</div>
 			</div>
 		</div>
 
@@ -24,7 +22,7 @@
 						while($ai < $expiringCount) { ?>
 							<li>
 								<img src="/assets/quests/<?php echo $questsFulld[$ai]['Icon']; ?>" class="questThumb">
-								<?php echo $questsFulld[$ai]['Name']; ?> <br /> 
+								<a href="/views/quest.php?quest=<?php echo $questsFulld[$ai]['QuestID']; ?>"><?php echo $questsFulld[$ai]['Name']; ?></a> <br /> 
 								<span>
 								<?php $timeExpire = strtotime($questsFulld[$ai]['Expire']);
 								if($timeExpire - time() < 60) {

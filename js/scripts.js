@@ -1,14 +1,16 @@
 $('.achievementCircle').mouseover (function() {
-   if (!$(this).parent().hasClass('selected')) {
+   if (!$(this).parent().parent().hasClass('selected')) {
      $('.achievementDetails').css('animation', 'none');
      $('.achievementCircleCont').removeClass('selected')
-     $(this).parent().addClass('selected')
+     $(this).parent().parent().addClass('selected')
      x = $(this).data('icon');
      icon = 'url(../assets/achievements/' + x + ')';
+     id = '/views/achievement.php?achievement.' + $(this).data('id');
      title = $(this).data('name');
      desc = $(this).data('desc');
      $('.achievementDetails').css('animation', 'fadeOut 0.3s');
      window.setTimeout(function() { 
+         $('#achievementInfoURL').attr("href", id);
          $('.achievementTitle').text(title); 
          $('.achievementDesc').text(desc);
      }, 300);
@@ -20,16 +22,18 @@ $('.achievementCircle').mouseover (function() {
   }
 });
 $('.questCircle').mouseover (function() {
-   if (!$(this).parent().hasClass('selected')) {
+   if (!$(this).parent().parent().hasClass('selected')) {
      $('.questDetails').css('animation', 'none');
      $('.questCircleCont').removeClass('selected')
-     $(this).parent().addClass('selected')
+     $(this).parent().parent().addClass('selected')
      x = $(this).data('icon');
      icon = 'url(../assets/quests/' + x + ')';
+     id = '/views/quest.php?quest=' + $(this).data('id');
      title = $(this).data('name');
      desc = $(this).data('desc');
      $('.questDetails').css('animation', 'fadeOut 0.3s');
      window.setTimeout(function() { 
+         $('#questInfoURL').attr("href", id);
          $('.questTitle').text(title); 
          $('.questDesc').text(desc);
      }, 300);
@@ -95,7 +99,7 @@ $('table').floatThead({
 });
 
 $( document ).ready( function() {
-  $( ".questThumb" ).imageMask( "../assets/hexmask.jpg" );
+  //$( ".questThumb" ).imageMask( "../assets/hexmask.jpg" );
 } );
 
 function layouts () {

@@ -7,7 +7,7 @@ require_once(INCLUDES_PATH . "/quests.php");
 	<div class="questInfo">
         <div class="questIcon" style="background-image: url(../assets/quests/<?php echo $questsFullb[0]['Icon']; ?>);">
         </div><div class="questDetails">
-            <h1 class="questTitle"><?php echo $questsFullb[0]['Name'];?> </h1>
+            <a id="questInfoURL" href="/views/quest.php?quest=<?php echo $questsFulla[0]['QuestID']; ?>"><h1 class="questTitle"><?php echo $questsFullb[0]['Name'];?> </h1></a>
             <p class="questDesc"><?php echo $questsFullb[0]['Description']; ?> </p>
         </div><div class="questXP"><div class="flaticon-medal61"></div> <span><?php echo $questsFullb[0]['XPValue']; ?></span> </div>
 	</div>
@@ -24,16 +24,18 @@ require_once(INCLUDES_PATH . "/quests.php");
                 <?php } else { ?>
                 <div class="questCircleCont">
                 <?php }; ?>
+                <a href="/views/quest.php?quest=<?php echo $questsFullb[$ai]['QuestID']; ?>">
                     <div 
             		class="questCircle" 
-            		data-id="<?php echo $questsFullb[$ai]['questID']; ?>"  
+            		data-id="<?php echo $questsFullb[$ai]['QuestID']; ?>"  
             		data-name="<?php echo $questsFullb[$ai]['Name'];?>"  
             		data-desc="<?php echo $questsFullb[$ai]['Description']; ?>"  
             		data-icon="<?php echo $questsFullb[$ai]['Icon']; ?>"
                     data-xp="<?php echo $questsFullb[$ai]['XPValue']; ?>" 
             		style="background-image: url(../assets/quests/<?php echo $questsFullb[$ai]['Icon']; ?>);">
             		</div>
-                </div>  
+                </a>
+                </div> 
         	<?php $ai++;
     		}
 	?>
@@ -46,6 +48,7 @@ require_once(INCLUDES_PATH . "/quests.php");
             $ai = 0; 
             while($ai < $questsFullaCount) { ?>
                 <div class="questCircleCont">
+                <a href="/views/quest.php?quest=<?php echo $questsFulla[$ai]['QuestID']; ?>">
                     <div 
                     class="questCircle" 
                     data-id="<?php echo $questsFulla[$ai]['questID']; ?>"  
@@ -55,6 +58,7 @@ require_once(INCLUDES_PATH . "/quests.php");
                     data-xp="<?php echo $questsFulla[$ai]['XPValue']; ?>" 
                     style="background-image: url(../assets/quests/<?php echo $questsFulla[$ai]['Icon']; ?>);">
                     </div>
+                </a>
                 </div>  
             <?php $ai++;
             }
@@ -66,6 +70,7 @@ require_once(INCLUDES_PATH . "/quests.php");
         $ai = 0; 
         while($ai < $questsFullcCount) { ?>
             <div class="questCircleCont">
+            <a href="/views/quest.php?quest=<?php echo $questsFullc[$ai]['QuestID']; ?>">
                 <div 
                 class="questCircle" 
                 data-id="<?php echo $questsFullc[$ai]['questID']; ?>"  
@@ -75,6 +80,7 @@ require_once(INCLUDES_PATH . "/quests.php");
                 data-xp="<?php echo $questsFullc[$ai]['XPValue']; ?>" 
                 style="background-image: url(../assets/quests/<?php echo $questsFullc[$ai]['Icon']; ?>);">
                 </div>
+            </a>
             </div>  
         <?php $ai++;
         } 

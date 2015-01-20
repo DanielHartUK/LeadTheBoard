@@ -56,23 +56,29 @@ h6 {
 }
 
 /* line 39, style.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 43, style.scss */
 .clickable {
   cursor: pointer;
 }
 
-/* line 42, style.scss */
+/* line 46, style.scss */
 .wrapper {
   width: 100%;
   position: relative;
   padding-top: 50px;
 }
 
-/* line 48, style.scss */
+/* line 52, style.scss */
 .contentContainer .noScroll {
   overflow: hidden;
 }
 
-/* line 52, style.scss */
+/* line 56, style.scss */
 .content {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -82,7 +88,7 @@ h6 {
   padding: 0.5%;
   box-sizing: border-box;
 }
-/* line 59, style.scss */
+/* line 63, style.scss */
 .content.admin {
   width: calc(100% - 19.5%);
   margin: 0;
@@ -90,7 +96,7 @@ h6 {
 }
 
 /* Navigation */
-/* line 70, style.scss */
+/* line 74, style.scss */
 .nav {
   display: -webkit-box;
   display: -moz-box;
@@ -116,7 +122,7 @@ h6 {
   z-index: 9999;
 }
 
-/* line 80, style.scss */
+/* line 84, style.scss */
 #logo {
   text-align: center;
   font-weight: 700;
@@ -125,20 +131,20 @@ h6 {
   line-height: 50px;
   padding: 0 0.5%;
 }
-/* line 88, style.scss */
+/* line 92, style.scss */
 #logo a {
   text-decoration: none;
   color: #FFF;
 }
 
-/* line 93, style.scss */
+/* line 97, style.scss */
 .profilePicSmall {
   width: 30px;
   margin: 10px 10px 0.5% 0;
   float: left;
 }
 
-/* line 98, style.scss */
+/* line 102, style.scss */
 .user {
   color: #fff;
   line-height: 50px;
@@ -146,13 +152,13 @@ h6 {
   cursor: pointer;
 }
 
-/* line 104, style.scss */
+/* line 108, style.scss */
 .close {
   float: right;
   font-size: 2em;
 }
 
-/* line 108, style.scss */
+/* line 112, style.scss */
 .notificationIcon {
   text-align: left;
   background-image: url(../assets/bell.png);
@@ -166,13 +172,13 @@ h6 {
   line-height: 50px;
 }
 
-/* line 120, style.scss */
+/* line 124, style.scss */
 .downArrow {
   font-size: 0.7em;
   margin-left: 0.5em;
 }
 
-/* line 124, style.scss */
+/* line 128, style.scss */
 .drawer {
   position: fixed;
   display: block;
@@ -189,17 +195,17 @@ h6 {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 138, style.scss */
+/* line 142, style.scss */
 .drawer .user {
   height: 50px;
   padding: 0px 2.5%;
 }
-/* line 143, style.scss */
+/* line 147, style.scss */
 .drawer.closed {
   left: -346px;
 }
 
-/* line 147, style.scss */
+/* line 151, style.scss */
 ul.menu {
   list-style: none;
   color: #FFF;
@@ -207,26 +213,26 @@ ul.menu {
   padding: 0%;
   font-size: 1.1em;
 }
-/* line 154, style.scss */
+/* line 158, style.scss */
 ul.menu li {
   padding: 4%;
   margin: 2%;
   border-radius: 4px;
   font-weight: 700;
 }
-/* line 160, style.scss */
+/* line 164, style.scss */
 ul.menu li:hover {
   background-color: rgba(0, 0, 0, 0.28);
 }
 
-/* line 166, style.scss */
+/* line 170, style.scss */
 .sideIcon {
   margin-right: 4%;
   font-weight: 400;
 }
 
 /* Login/Register Forms */
-/* line 173, style.scss */
+/* line 177, style.scss */
 .loginContainers {
   width: 100%;
   height: 100%;
@@ -239,12 +245,12 @@ ul.menu li:hover {
   z-index: 9998;
 }
 
-/* line 184, style.scss */
+/* line 188, style.scss */
 .loginContainers.visible {
   display: block;
 }
 
-/* line 187, style.scss */
+/* line 191, style.scss */
 .entryForm {
   position: absolute;
   top: 50%;
@@ -258,26 +264,26 @@ ul.menu li:hover {
   display: none;
 }
 
-/* line 195, style.scss */
+/* line 199, style.scss */
 .entryForm.visible {
   display: block;
 }
 
-/* line 198, style.scss */
+/* line 202, style.scss */
 .loginDiv {
   background-color: #fff;
   padding: 5%;
   box-sizing: border-box;
 }
 
-/* line 203, style.scss */
+/* line 207, style.scss */
 .icon-cross {
   float: right;
   font-size: 0.8em;
   cursor: pointer;
 }
 
-/* line 208, style.scss */
+/* line 212, style.scss */
 .field {
   width: 100%;
   font: inherit;
@@ -288,29 +294,29 @@ ul.menu li:hover {
   border: 1px solid #A5A5A5;
 }
 
-/* line 217, style.scss */
+/* line 221, style.scss */
 .field:focus {
   outline: none;
   border-color: #F00;
 }
 
-/* line 221, style.scss */
+/* line 225, style.scss */
 .formSubmit p {
   float: left;
 }
 
-/* line 224, style.scss */
+/* line 228, style.scss */
 .formSubmit p.clickable:hover {
   border-bottom: 1px dashed #A5A5A5;
 }
 
-/* line 227, style.scss */
+/* line 231, style.scss */
 .formSubmit p.clickable {
   border-bottom: 1px dashed transparent;
   padding-bottom: 1px;
 }
 
-/* line 231, style.scss */
+/* line 235, style.scss */
 .submit, .register {
   background-color: #138972;
   border: none;
@@ -324,43 +330,43 @@ ul.menu li:hover {
   cursor: pointer;
 }
 
-/* line 243, style.scss */
+/* line 247, style.scss */
 .submit {
   margin: 2% 0 0 0;
 }
 
-/* line 246, style.scss */
+/* line 250, style.scss */
 .submit:focus, .register:focus {
   background-color: #146E5C;
   outline: none;
 }
 
-/* line 250, style.scss */
+/* line 254, style.scss */
 .submit:active, .register:active {
   background-color: #147B67;
   border-bottom: 2px solid transparent;
   top: 2px;
 }
 
-/* line 255, style.scss */
+/* line 259, style.scss */
 .register {
   margin: 2% 0;
 }
 
-/* line 258, style.scss */
+/* line 262, style.scss */
 .formBottom {
   display: block;
   overflow: auto;
   margin-top: 1px;
   background-color: #F0F0F0;
 }
-/* line 264, style.scss */
+/* line 268, style.scss */
 .formBottom p {
   float: left;
 }
 
 /* Main */
-/* line 270, style.scss */
+/* line 274, style.scss */
 .mainBlock {
   display: inline-block;
   vertical-align: top;
@@ -371,7 +377,7 @@ ul.menu li:hover {
   white-space: initial;
 }
 
-/* line 277, style.scss */
+/* line 281, style.scss */
 .sectionNavigation {
   padding: 1% 0;
   width: 80%;
@@ -379,17 +385,17 @@ ul.menu li:hover {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 283, style.scss */
+/* line 287, style.scss */
 .sectionNavigation ul {
   margin: 0;
   padding: 0;
   border-bottom: 2px solid #808080;
 }
-/* line 288, style.scss */
+/* line 292, style.scss */
 .sectionNavigation ul a {
   color: inherit;
 }
-/* line 291, style.scss */
+/* line 295, style.scss */
 .sectionNavigation ul li {
   display: inline-block;
   margin: 0 2% -2px 0;
@@ -397,23 +403,23 @@ ul.menu li:hover {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
-/* line 298, style.scss */
+/* line 302, style.scss */
 .sectionNavigation ul li.currentPage {
   border-bottom: 2px solid #16a085;
 }
 
-/* line 305, style.scss */
+/* line 309, style.scss */
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
   border-bottom: 2px solid #16a085;
 }
 
-/* line 308, style.scss */
+/* line 312, style.scss */
 .drawerO {
   width: 100%;
 }
 
 /* Leaderboard */
-/* line 313, style.scss */
+/* line 317, style.scss */
 .mainBoard {
   width: 100%;
   margin: 0;
@@ -424,7 +430,7 @@ ul.menu li:hover {
   border-collapse: collapse;
 }
 
-/* line 322, style.scss */
+/* line 326, style.scss */
 .headerBoard {
   background-color: #16a085;
   color: #fff;
@@ -432,14 +438,14 @@ ul.menu li:hover {
   font-size: 1.1em;
   border-right: 1px solid #16A085;
 }
-/* line 329, style.scss */
+/* line 333, style.scss */
 .headerBoard th {
   margin: 0;
   padding: 13px 1%;
   border: 0;
 }
 
-/* line 335, style.scss */
+/* line 339, style.scss */
 .boardEntry {
   border: 0;
   padding: 0;
@@ -447,43 +453,44 @@ ul.menu li:hover {
   background-color: #f7f7f7;
   border-bottom: 1px solid #CCC;
 }
-/* line 342, style.scss */
+/* line 346, style.scss */
 .boardEntry td {
   padding: 1%;
   border-left: 1px solid #CCC;
 }
-/* line 346, style.scss */
+/* line 350, style.scss */
 .boardEntry td:last-child {
   border-right: 1px solid #CCC;
 }
-/* line 350, style.scss */
+/* line 354, style.scss */
 .boardEntry:nth-child(even) {
   background: #ececec;
 }
-/* line 353, style.scss */
+/* line 357, style.scss */
 .boardEntry:first-child {
   background: #f7f7f7;
 }
-/* line 356, style.scss */
+/* line 360, style.scss */
 .boardEntry:hover {
   background-color: #696969;
   color: #FFF;
 }
 
-/* line 361, style.scss */
+/* line 365, style.scss */
 .pos {
   width: 15px;
 }
 
-/* line 364, style.scss */
+/* line 368, style.scss */
 .boardAvatar {
   width: 40px;
 }
 
-/* line 368, style.scss */
+/* line 372, style.scss */
 .boardIcon {
   height: 20px;
   width: 20px;
+  font-size: 1.1em;
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0;
@@ -494,63 +501,110 @@ ul.menu li:hover {
   font-weight: 400;
 }
 
-/* line 381, style.scss */
+/* line 385, style.scss */
+.flaticon-trophy56.boardIcon {
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  transition: 3s;
+}
+/* line 388, style.scss */
+.flaticon-trophy56.boardIcon:hover {
+  transform: rotateY(360deg);
+}
+
+/* line 392, style.scss */
 .personIcon {
   background-image: url(../assets/personIconM.png);
   float: none;
   margin: 0 auto;
 }
 
-/* line 386, style.scss */
+/* line 397, style.scss */
 .achievementsIcon {
   background-image: url(../assets/trophyIcon.png);
 }
 
-/* line 389, style.scss */
+/* line 400, style.scss */
 .questsIcon {
   background-image: url(../assets/pencilIcon.png);
 }
 
-/* line 392, style.scss */
+/* line 403, style.scss */
 .xpIcon {
   background-image: url(../assets/xpIcon.png);
 }
 
-/* line 395, style.scss */
+/* line 406, style.scss */
+#sorttable_sortfwdind, #sorttable_sortrevind {
+  display: none;
+}
+
+/* line 409, style.scss */
 .avatarBoard {
   height: 40px;
   width: 40px;
   background: gray;
 }
 
-/* line 400, style.scss */
+/* line 414, style.scss */
+.StudentName a {
+  border-bottom: 1px dotted;
+}
+
+/* line 417, style.scss */
 .achievementCircleCont, .questCircleCont {
   width: 100px;
   height: 100px;
   overflow: hidden;
   display: inline-block;
-  border: 2px solid #808080;
-  background: #808080;
-  border-radius: 62px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 409, style.scss */
-.achievementCircleCont.selected, .questCircleCont.selected {
+
+/* line 424, style.scss */
+.achievementCircleCont {
+  border: 2px solid #808080;
+  background: #808080;
+  border-radius: 62px;
+}
+/* line 428, style.scss */
+.achievementCircleCont.selected {
   border-color: #9D0000;
   background: #9D0000;
   /* @include animation(achievementHover 3s infinite);   */
 }
 
-/* line 415, style.scss */
+/* line 434, style.scss */
 .achievementCircle, .questCircle {
   width: 100px;
   height: 100px;
   display: inline-block;
   background-size: contain;
-  border-radius: 50px;
   background-repeat: no-repeat;
+}
+
+/* line 441, style.scss */
+.achievementCircle {
+  border-radius: 50px;
+}
+
+/* line 444, style.scss */
+.questCircle {
+  width: 96px;
+  height: 96px;
+}
+
+/* line 448, style.scss */
+.questCircleCont {
+  background-image: url(../assets/quests/hexback.png);
+  background-size: contain;
+  padding: 2px;
+  box-sizing: border-box;
+}
+/* line 454, style.scss */
+.questCircleCont.selected {
+  background-image: url(../assets/quests/hexbackR.png);
 }
 
 @-webkit-keyframes achievementHover {
@@ -598,13 +652,13 @@ ul.menu li:hover {
     transform: rotate(-15deg);
   }
 }
-/* line 430, style.scss */
+/* line 465, style.scss */
 .achievementDetails, .questDetails {
   display: inline-block;
   vertical-align: top;
   width: calc(100% - 100px - 1% - 15%);
 }
-/* line 435, style.scss */
+/* line 470, style.scss */
 .achievementDetails p, .questDetails p {
   margin: 0;
   padding: 0;
@@ -658,7 +712,7 @@ ul.menu li:hover {
     opacity: 1;
   }
 }
-/* line 448, style.scss */
+/* line 483, style.scss */
 .achievementIcon, .questIcon {
   width: 100px;
   height: 100px;
@@ -668,7 +722,7 @@ ul.menu li:hover {
   margin-right: 1%;
 }
 
-/* line 456, style.scss */
+/* line 491, style.scss */
 .achievementIcon {
   border-radius: 50px;
   -webkit-transition: 0.6s;
@@ -676,7 +730,7 @@ ul.menu li:hover {
   transition: 0.6s;
 }
 
-/* line 460, style.scss */
+/* line 495, style.scss */
 .achievementInfo, .questInfo {
   overflow: auto;
   border-bottom: 1px solid;
@@ -687,7 +741,7 @@ ul.menu li:hover {
   transition: 0.3s;
 }
 
-/* line 468, style.scss */
+/* line 503, style.scss */
 .achievementXP, .questXP {
   width: 15%;
   display: inline-block;
@@ -695,7 +749,7 @@ ul.menu li:hover {
   font-size: 2em;
   font-weight: 900;
 }
-/* line 474, style.scss */
+/* line 509, style.scss */
 .achievementXP .flaticon-medal61, .questXP .flaticon-medal61 {
   font-size: 2em;
   font-weight: 400;
@@ -703,19 +757,19 @@ ul.menu li:hover {
 }
 
 /* Side Boxes */
-/* line 481, style.scss */
+/* line 516, style.scss */
 .sideBlock {
   display: inline-block;
   vertical-align: top;
   width: 19.5%;
   padding-left: 0.5%;
 }
-/* line 487, style.scss */
+/* line 522, style.scss */
 .sideBlock.drawerO {
   display: none;
 }
 
-/* line 491, style.scss */
+/* line 526, style.scss */
 .boxTitle {
   text-align: center;
   color: #fff;
@@ -724,14 +778,14 @@ ul.menu li:hover {
   padding: 13px 1%;
 }
 
-/* line 498, style.scss */
+/* line 533, style.scss */
 .boxContent {
   border: 1px solid #b9b9b9;
   border-top: none;
   text-align: center;
 }
 
-/* line 503, style.scss */
+/* line 538, style.scss */
 .box {
   width: 100%;
   background: #fff;
@@ -740,23 +794,36 @@ ul.menu li:hover {
   margin-bottom: 3%;
 }
 
-/* line 511, style.scss */
+/* line 546, style.scss */
 .youBox .boxContent {
   padding: 4%;
 }
 
-/* line 516, style.scss */
+/* line 550, style.scss */
+.boxStat {
+  margin: 7.5% 0;
+  width: 33.33%;
+  display: inline-block;
+}
+
+/* line 555, style.scss */
+.boxStat:nth-child(2) {
+  border-left: 1px solid #B9B9B9;
+  border-right: 1px solid #B9B9B9;
+}
+
+/* line 560, style.scss */
 .questsBox .boxTitle {
   background-color: #ab452f;
 }
 
-/* line 520, style.scss */
+/* line 564, style.scss */
 .expiringQuests {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 525, style.scss */
+/* line 569, style.scss */
 .expiringQuests li {
   font-weight: 700;
   font-size: 1.1em;
@@ -764,16 +831,16 @@ ul.menu li:hover {
   text-align: left;
   overflow: auto;
 }
-/* line 532, style.scss */
+/* line 576, style.scss */
 .expiringQuests li:nth-child(odd) {
   background-color: #efeeee;
 }
-/* line 536, style.scss */
+/* line 580, style.scss */
 .expiringQuests li span {
   font-size: 1rem;
 }
 
-/* line 541, style.scss */
+/* line 585, style.scss */
 .questThumb {
   width: 50px;
   height: 50px;
@@ -781,7 +848,7 @@ ul.menu li:hover {
   margin-right: 4%;
 }
 
-/* line 547, style.scss */
+/* line 591, style.scss */
 .profilePicRound {
   height: 100px;
   width: 100px;
@@ -789,7 +856,7 @@ ul.menu li:hover {
   margin-top: 2%;
 }
 
-/* line 553, style.scss */
+/* line 597, style.scss */
 .bannerSmall {
   width: 90%;
   padding: 1% 1% 5% 1%;
@@ -806,54 +873,54 @@ ul.menu li:hover {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 568, style.scss */
+  /* line 612, style.scss */
   .notificationIcon {
     background-image: url(../assets/bell2x.png);
   }
 
-  /* line 571, style.scss */
+  /* line 615, style.scss */
   .personIcon {
     background-image: url(../assets/personIconM2x.png);
   }
 
-  /* line 574, style.scss */
+  /* line 618, style.scss */
   .achievementsIcon {
     background-image: url(../assets/trophyIcon2x.png);
   }
 
-  /* line 577, style.scss */
+  /* line 621, style.scss */
   .questsIcon {
     background-image: url(../assets/pencilIcon2x.png);
   }
 
-  /* line 580, style.scss */
+  /* line 624, style.scss */
   .xpIcon {
     background-image: url(../assets/xpIcon2x.png);
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 586, style.scss */
+  /* line 630, style.scss */
   .mainBlock {
     width: 100%;
   }
 
-  /* line 589, style.scss */
+  /* line 633, style.scss */
   .sideBlock {
     display: none;
   }
 
-  /* line 592, style.scss */
+  /* line 636, style.scss */
   .sectionNavigation {
     width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 598, style.scss */
+  /* line 642, style.scss */
   .mainBoard thead {
     display: none;
   }
 
-  /* line 601, style.scss */
+  /* line 645, style.scss */
   .boardEntry {
     display: block;
     box-sizing: border-box;
@@ -863,7 +930,7 @@ ul.menu li:hover {
     border: 0;
   }
 
-  /* line 609, style.scss */
+  /* line 653, style.scss */
   .boardEntry td {
     display: block;
     width: 100%;
@@ -875,7 +942,7 @@ ul.menu li:hover {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
   }
 
-  /* line 614, style.scss */
+  /* line 658, style.scss */
   .boardEntry:first-child td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f9f9f9), color-stop(1, #f9f9f9));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
@@ -885,7 +952,7 @@ ul.menu li:hover {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
   }
 
-  /* line 617, style.scss */
+  /* line 661, style.scss */
   .boardEntry:nth-child(even) td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #ECECEC), color-stop(1, #ECECEC));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
@@ -895,7 +962,7 @@ ul.menu li:hover {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
   }
 
-  /* line 620, style.scss */
+  /* line 664, style.scss */
   .boardEntry td:before {
     content: attr(data-th) ": ";
     float: left;
@@ -904,7 +971,7 @@ ul.menu li:hover {
     font-weight: 700;
   }
 
-  /* line 627, style.scss */
+  /* line 671, style.scss */
   #boardAvatar {
     display: none;
   }

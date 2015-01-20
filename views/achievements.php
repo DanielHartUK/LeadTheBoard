@@ -8,7 +8,7 @@ require_once(INCLUDES_PATH . "/unlockablesSQL.php");
 	<div class="achievementInfo">
         <div class="achievementIcon" style="background-image: url(../assets/achievements/<?php echo $achievementsFulla[0]['Icon']; ?>);">
         </div><div class="achievementDetails">
-            <h1 class="achievementTitle"><?php echo $achievementsFulla[0]['Name'];?> </h1>
+            <a id="achievementInfoURL" href="/views/achievement.php?achievement=<?php echo $achievementsFulla[0]['AchievementID']; ?>"><h1 class="achievementTitle"><?php echo $achievementsFulla[0]['Name'];?> </h1></a>
             <p class="achievementDesc"><?php echo $achievementsFulla[0]['Description']; ?> </p>
         </div><div class="achievementXP"><div class="flaticon-medal61"></div> <span><?php echo $achievementsFulla[0]['XPValue']; ?> </span></div>
 	</div>
@@ -25,15 +25,17 @@ require_once(INCLUDES_PATH . "/unlockablesSQL.php");
             <?php } else { ?>
             <div class="achievementCircleCont">
             <?php }; ?>
-            <div 
-    		class="achievementCircle" 
-    		data-id="<?php echo $achievementsFulla[$ai]['AchievementID']; ?>"  
-    		data-name="<?php echo $achievementsFulla[$ai]['Name'];?>"  
-    		data-desc="<?php echo $achievementsFulla[$ai]['Description']; ?>"  
-    		data-icon="<?php echo $achievementsFulla[$ai]['Icon']; ?>"
-            data-xp="<?php echo $achievementsFulla[$ai]['XPValue']; ?>" 
-    		style="background-image: url(../assets/achievements/<?php echo $achievementsFulla[$ai]['Icon']; ?>);">
-    		</div>
+            <a href="/views/achievement.php?achievement=<?php echo $achievementsFulla[$ai]['AchievementID']; ?>">
+                <div 
+        		class="achievementCircle" 
+        		data-id="<?php echo $achievementsFulla[$ai]['AchievementID']; ?>"  
+        		data-name="<?php echo $achievementsFulla[$ai]['Name'];?>"  
+        		data-desc="<?php echo $achievementsFulla[$ai]['Description']; ?>"  
+        		data-icon="<?php echo $achievementsFulla[$ai]['Icon']; ?>"
+                data-xp="<?php echo $achievementsFulla[$ai]['XPValue']; ?>" 
+        		style="background-image: url(../assets/achievements/<?php echo $achievementsFulla[$ai]['Icon']; ?>);">
+        		</div>
+            </a>
             </div>  
     	<?php $ai++;
 		} 
@@ -47,15 +49,16 @@ require_once(INCLUDES_PATH . "/unlockablesSQL.php");
         $ai = 0; 
         while($ai < $achievementsFullbCount) { ?>
             <div class="achievementCircleCont">
-            <div 
-            class="achievementCircle" 
-            data-id="<?php echo $achievementsFullb[$ai]['AchievementID']; ?>"  
-            data-name="<?php echo $achievementsFullb[$ai]['Name'];?>"  
-            data-desc="<?php echo $achievementsFullb[$ai]['Description']; ?>"  
-            data-icon="locked.png"
-            data-xp="<?php echo $achievementsFullb[$ai]['XPValue']; ?>" 
-            style="background-image: url(../assets/achievements/locked.png);">
-            </div>
+            <a href="/views/quest.php?quest=<?php echo $achievementsFullb[$ai]['AchievementID']; ?>">
+                <div 
+                class="achievementCircle" 
+                data-id="<?php echo $achievementsFullb[$ai]['AchievementID']; ?>"  
+                data-name="<?php echo $achievementsFullb[$ai]['Name'];?>"  
+                data-desc="<?php echo $achievementsFullb[$ai]['Description']; ?>"  
+                data-icon="locked.png"
+                data-xp="<?php echo $achievementsFullb[$ai]['XPValue']; ?>" 
+                style="background-image: url(../assets/achievements/locked.png);">
+                </div>
             </div>  
         <?php $ai++;
         } 

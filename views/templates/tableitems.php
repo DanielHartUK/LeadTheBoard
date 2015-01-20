@@ -19,7 +19,7 @@
 			<tr class="boardEntry">
 				<td class="pos" data-th="Position"><?php echo $d[$ai]['Position']; ?></td>
 				<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src="../assets/uploads/<?php echo $d[$ai]['Avatar']; ?>"></td>
-				<td data-th="Student Name"><?php echo $d[$ai]['Name'] . " " . $d[$ai]['Surname'];  ?></td>
+				<td class="StudentName" data-th="Student Name"><a href="/views/profile.php?user=<?php echo $d[$ai]['UserID']; ?>"> <?php echo $d[$ai]['Name'] . " " . $d[$ai]['Surname'];  ?></a></td>
 				<td data-th="Achievements">
 					<?php
 					$conn = mysqli_connect($servername, $username, $password, $dbname); // 	
