@@ -297,14 +297,19 @@ ul.footerLinks li {
   display: inline-block;
   margin-right: 1%;
 }
+/* line 141, _navigation.scss */
+ul.footerLinks li.copyright {
+  float: right;
+  margin-right: 0;
+}
 
-/* line 142, _navigation.scss */
+/* line 147, _navigation.scss */
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
   border-bottom: 2px solid #16a085;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 146, _navigation.scss */
+  /* line 151, _navigation.scss */
   .notificationIcon {
     background-image: url(../assets/bell2x.png);
   }
@@ -755,7 +760,13 @@ p.unlockableDesc {
   font-size: 0.9em;
 }
 
-/* line 40, _unlockables.scss */
+/* line 39, _unlockables.scss */
+p.unlockableExpire {
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+/* line 43, _unlockables.scss */
 .unlockableXP {
   width: 8%;
   display: inline-block;
@@ -764,14 +775,14 @@ p.unlockableDesc {
   font-weight: 900;
   vertical-align: top;
 }
-/* line 48, _unlockables.scss */
+/* line 51, _unlockables.scss */
 .unlockableXP.flaticon-medal61 {
   font-size: 1.5em;
   font-weight: 400;
   /* color: #F3B949; */
 }
 
-/* line 54, _unlockables.scss */
+/* line 57, _unlockables.scss */
 p.unlockableMessage {
   text-align: center;
   font-size: 1.2em;

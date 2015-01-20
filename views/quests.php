@@ -17,6 +17,7 @@ require_once(INCLUDES_PATH . "/quests.php");
                 </div><div class="unlockableDetails">
                     <h2 class="unlockableTitle"> <?php echo $questsFullb[$ai]['Name'];?> </h2>
                     <p class="unlockableDesc"> <?php echo $questsFullb[$ai]['Description']; ?> </p>
+                    <p class="unlockableExpire"> <?php echo 'Expires: '. date('H:i | l, j/m/y',strtotime($questsFullb[$ai]['Expire'])); ?> </p>
                 </div><div class="unlockableXP"><div class="flaticon-medal61"></div> <span><?php echo $questsFullb[$ai]['XPValue']; ?> </span></div>
             </div>
         <?php $ai++;
@@ -51,6 +52,7 @@ require_once(INCLUDES_PATH . "/quests.php");
                 </div><div class="unlockableDetails">
                     <h2 class="unlockableTitle"> <?php echo $questsFullc[$ai]['Name'];?> </h2>
                     <p class="unlockableDesc"> <?php echo $questsFullc[$ai]['Description']; ?> </p>
+                    <p class="unlockableExpire"> <?php echo 'Expired: '. date('H:i | l, j/m/y',strtotime($questsFullc[$ai]['Expire'])); ?> </p>
                 </div><div class="unlockableXP"><div class="flaticon-medal61"></div> <span><?php echo $questsFullc[$ai]['XPValue']; ?> </span></div>
             </div>
         <?php $ai++;

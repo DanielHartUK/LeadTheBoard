@@ -4,7 +4,7 @@
 	    <ul class="footerLinks">
 	    	<a href="/views/about/support"><li>Support</li></a>
 	    	<a href="/views/about/contact"><li>Contact</li></a>
-	    	<li>&#169; <script>document.write(new Date().getFullYear())</script> LeadTheBoard! </li>
+	    	<li class="copyright">&#169; <script>document.write(new Date().getFullYear())</script> LeadTheBoard! </li>
 	    </ul>
     </div>
 </div> <!-- End Content Container -->

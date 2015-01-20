@@ -1,4 +1,5 @@
 <?php 
+date_default_timezone_set('UTC');
 
 $loggedIn = 1;
 $id = '1421710773';
@@ -160,3 +161,6 @@ $questsComplete = $questsPCRowCount; // Quests Compelted
 $questsAvailable = $questsPRowCount; // Quests currently available
 $questsAvailableAccumulation = $questsPRowCount; // All Quests that were available for this class
 $userColourScheme = $usersO[0]['ColourScheme'];
+$timeZone = $usersO[0]['TimeZone'];
+date_default_timezone_set($timeZone);
+

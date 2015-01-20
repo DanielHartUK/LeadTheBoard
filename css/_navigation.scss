@@ -137,6 +137,11 @@ ul.footerLinks {
     li {
         display: inline-block;
         margin-right: 1%;
+
+        &.copyright {
+            float: right;
+            margin-right: 0;
+        }
     }
 }
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
