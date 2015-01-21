@@ -39,3 +39,7 @@ config.php
 .Trashes
 ehthumbs.db
 Thumbs.db
+config.php
+*.swp
+*.swo
+config.php
