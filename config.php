@@ -3,7 +3,7 @@
 $servername = "localhost";  // URL of MySQL database, localhost will usually be fine
 $username = "test"; // MySQL username
 $password = "test"; // User password
-$dbname = "testx"; // Database 
+$dbname = "test"; // Database 
 
 
 
