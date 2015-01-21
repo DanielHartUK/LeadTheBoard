@@ -1,9 +1,10 @@
 function layouts () {
   if ($('.mainBlock').length) {
-  $('.drawer').width($(window).width() - $('.mainBlock').width() - $(window).width() / 100 * 1);
+    container = '.mainBlock';
   } else {
-  $('.drawer').width($(window).width() - $('.content').width() - $(window).width() / 100 * 1);
+    container = '.content';
   }
+  $(container).width($(window).width() - $('.content').width() - $(window).width() / 100 * 1);
   cPadding = parseFloat($(".content").css("padding-left"));
   fPadding = parseFloat($(".footer").css("padding-left"));
 }
@@ -16,7 +17,7 @@ function openDrawer () {
   var x = $('.drawer').width() + cPadding;
   var f = $('.drawer').width() + fPadding;
   $('.drawer').removeClass("closed");
-  $('.content').css("padding-left", x);
+  $(container).css("padding-left", x);
   $('.footer').css("padding-left", f);
   $('.mainBlock').addClass("drawerO");
   $('.sideBlock').addClass("drawerO");
@@ -25,11 +26,11 @@ function openDrawer () {
 
 function closeDrawer () {
   $('.drawer').addClass("closed");
-  $('.content').attr('style', function(i, style)
+  $(container).attr('style', function(i, style)
   {
       return style.replace(/padding-left[^;]+;?/g, '');
   });
-  $('.footer').attr('style', function(i, style)
+  $(container).attr('style', function(i, style)
   {
       return style.replace(/padding-left[^;]+;?/g, '');
   });
