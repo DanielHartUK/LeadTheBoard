@@ -74,5 +74,5 @@ h2.sectionTitle {
 }
 .footer {
     margin: 0 0.5% 0.5% 0.5%;   
-    @include transition($drawerSlide);
+    @include transition($drawerSlide);  
 }
