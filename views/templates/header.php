@@ -12,7 +12,7 @@ include_once(INCLUDES_PATH . "/customisation.php");
     <script src="../js/jquery.floatThead.min.js"></script>
     <script src="../js/sorttable.js"></script>
     <script src="../js/jquery.imageMask.min.js"></script>
-    <?php if($loggedIn) { ?> <script src="../js/drawer.js"></script><?php } ?>
+    <script src="../js/drawer.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../assets/fonts/fonts.css">
     <meta name="viewport" content="initial-scale=1.0">

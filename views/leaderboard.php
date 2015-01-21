@@ -4,7 +4,7 @@ require_once("config.php");
 require_once(TEMPLATES_PATH . "/mainTop.php"); 
 ?>
 <div class="leaderboard">
-	<table class="mainBoard sortable">
+<!--	<table class="mainBoard sortable">
 	<thead>
 		<tr class="headerBoard">
 			<th>#</th>
@@ -18,6 +18,8 @@ require_once(TEMPLATES_PATH . "/mainTop.php");
 	<tbody>
 		<?php include(TEMPLATES_PATH . "/tableitems.php"); ?>
 	</tbody>
-	</table>
+	</table> -->
+
+	
 </div>
 <?php require_once(TEMPLATES_PATH . "/mainBottom.php"); ?>

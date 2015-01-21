@@ -1,5 +1,9 @@
 function layouts () {
+  if ($('.mainBlock').length) {
   $('.drawer').width($(window).width() - $('.mainBlock').width() - $(window).width() / 100 * 1);
+  } else {
+  $('.drawer').width($(window).width() - $('.content').width() - $(window).width() / 100 * 1);
+  }
   cPadding = parseFloat($(".content").css("padding-left"));
   fPadding = parseFloat($(".footer").css("padding-left"));
 }
