@@ -1,3 +1,17 @@
+var rotation = 0;
+
+jQuery.fn.rotate = function(degrees) {
+    $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+                 '-moz-transform' : 'rotate('+ degrees +'deg)',
+                 '-ms-transform' : 'rotate('+ degrees +'deg)',
+                 'transform' : 'rotate('+ degrees +'deg)'});
+    return $(this);
+};
+
+
+
+
+
 var login = false
 function loginClick() {
   if (login) {
@@ -52,8 +66,22 @@ $( document ).ready( function() {
   //$( ".questThumb" ).imageMask( "../assets/hexmask.jpg" );
 } );
 
+cheet('g o a t', function () {
+  rotation += 36360;
+  $('img').css('transition', '10s');
+  $('img').rotate(rotation);
 
+});
 
+//↑ ↑ ↓ ↓ ← → ← → b a
+cheet('↑ → ↓ ←', function () {
+  rotation += 45;
+  $('body').rotate(rotation);
+});
+cheet('↑ ← ↓ →', function () {
+  rotation -= 45;
+  $('body').rotate(rotation);
+});
 // Smooth Scrolling 
 
 $(function() {

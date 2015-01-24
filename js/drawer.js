@@ -1,40 +1,30 @@
 function layouts () {
-  if ($('.mainBlock').length) {
-    container = '.mainBlock';
-  } else {
-    container = '.content';
-  }
-  $(container).width($(window).width() - $('.content').width() - $(window).width() / 100 * 1);
-  cPadding = parseFloat($(".content").css("padding-left"));
-  fPadding = parseFloat($(".footer").css("padding-left"));
+$('.drawer').width($('.user').outerWidth());
+
 }
 $(document).ready(layouts);
 $(window).resize(layouts);
 
 function openDrawer () {
-  layouts()
-  content = $(".content");
-  var x = $('.drawer').width() + cPadding;
-  var f = $('.drawer').width() + fPadding;
-  $('.drawer').removeClass("closed");
-  $(container).css("padding-left", x);
-  $('.footer').css("padding-left", f);
-  $('.mainBlock').addClass("drawerO");
-  $('.sideBlock').addClass("drawerO");
-  $('.sectionNavigation').addClass("drawerO");
+$('.drawer').removeClass('closed');
+$('.sideBlock').addClass('drawerO');
+c = $('.content').css('padding-left');
+f = $('.footer').css('padding-left');
+$('.content').css('padding-left', $('.drawer').outerWidth() + parseInt(c));
+$('.footer').css('padding-left', $('.drawer').outerWidth() + parseInt(f));
+$('.sectionNavigation').css('width', '100%');
+$('.mainBlock').css('width', '100%');
 }
 
 function closeDrawer () {
-  $('.drawer').addClass("closed");
-  $(container).attr('style', function(i, style)
-  {
-      return style.replace(/padding-left[^;]+;?/g, '');
-  });
-  $(container).attr('style', function(i, style)
-  {
-      return style.replace(/padding-left[^;]+;?/g, '');
-  });
-  $('.mainBlock').removeClass("drawerO");
-  $('.sideBlock').removeClass("drawerO");
-  $('.sectionNavigation').removeClass("drawerO");
+$('.drawer').addClass('closed');
+$('.sideBlock').removeClass('drawerO');
+$('.content').css('padding-left', $('.drawer').outerWidth() + parseInt(c));
+$('.footer').css('padding-left', $('.drawer').outerWidth() + parseInt(f));
+$('.sectionNavigation').css('width', '100%');
+$('.mainBlock').css('width', '100%');
+$('.content').attr('style', function(i, style) { return style.replace(/padding-left[^;]+;?/g, '');});
+$('.footer').attr('style', function(i, style) { return style.replace(/padding-left[^;]+;?/g, '');}); 
+$('.sectionNavigation').attr('style', function(i, style) { return style.replace(/width[^;]+;?/g, '');});
+$('.mainBlock').attr('style', function(i, style) { return style.replace(/width[^;]+;?/g, '');}); 
 }

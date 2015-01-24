@@ -1,7 +1,7 @@
 <?php 
 date_default_timezone_set('UTC');
 
-$loggedIn = '0';
+$loggedIn = 1;
 $id = '1421710773';
 $classID = '0';
 

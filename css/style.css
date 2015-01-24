@@ -206,7 +206,7 @@ h2.sectionTitle {
   display: block;
   vertical-align: top;
   width: 19.5%;
-  min-width: 198px;
+  min-width: 250px;
   background: #00F;
   height: 100%;
   box-sizing: border-box;
@@ -465,19 +465,12 @@ ul.footerLinks li.copyright {
   width: 100%;
 }
 
-/* Leaderboard */
 /* line 15, _main.scss */
 .mainBoard {
   width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  border: 0;
-  border-spacing: 0;
-  border-collapse: collapse;
 }
 
-/* line 24, _main.scss */
+/* line 18, _main.scss */
 .headerBoard {
   background-color: #16a085;
   color: #fff;
@@ -485,55 +478,15 @@ ul.footerLinks li.copyright {
   font-size: 1.1em;
   border-right: 1px solid #16A085;
 }
-/* line 31, _main.scss */
+/* line 25, _main.scss */
 .headerBoard th {
   margin: 0;
   padding: 13px 1%;
   border: 0;
+  text-align: left;
 }
 
-/* line 37, _main.scss */
-.boardEntry {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #CCC;
-}
-/* line 44, _main.scss */
-.boardEntry td {
-  padding: 1%;
-  border-left: 1px solid #CCC;
-}
-/* line 48, _main.scss */
-.boardEntry td:last-child {
-  border-right: 1px solid #CCC;
-}
-/* line 52, _main.scss */
-.boardEntry:nth-child(even) {
-  background: #ececec;
-}
-/* line 55, _main.scss */
-.boardEntry:first-child {
-  background: #f7f7f7;
-}
-/* line 58, _main.scss */
-.boardEntry:hover {
-  background-color: #696969;
-  color: #FFF;
-}
-
-/* line 63, _main.scss */
-.pos {
-  width: 15px;
-}
-
-/* line 66, _main.scss */
-.boardAvatar {
-  width: 40px;
-}
-
-/* line 70, _main.scss */
+/* line 32, _main.scss */
 .boardIcon {
   height: 20px;
   width: 20px;
@@ -548,48 +501,176 @@ ul.footerLinks li.copyright {
   font-weight: 400;
 }
 
-/* line 83, _main.scss */
+/* line 45, _main.scss */
 .flaticon-trophy56.boardIcon {
   -webkit-transition: 3s;
   -moz-transition: 3s;
   transition: 3s;
 }
-/* line 86, _main.scss */
+/* line 48, _main.scss */
 .flaticon-trophy56.boardIcon:hover {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
   transform: rotateY(360deg);
 }
 
-/* line 90, _main.scss */
-#sorttable_sortfwdind, #sorttable_sortrevind {
-  display: none;
+/* line 52, _main.scss */
+.boardEntry {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #CCC;
+}
+/* line 59, _main.scss */
+.boardEntry td {
+  padding: 1%;
+  border: 1px solid #CCC;
+}
+/* line 63, _main.scss */
+.boardEntry td.pos {
+  width: 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 10px;
+}
+/* line 69, _main.scss */
+.boardEntry td.boardAvatar {
+  width: 40px;
+  padding: 10px;
+}
+/* line 75, _main.scss */
+.boardEntry td:last-child {
+  border-right: 1px solid #CCC;
+}
+/* line 79, _main.scss */
+.boardEntry:nth-child(even) {
+  background: #ececec;
+}
+/* line 82, _main.scss */
+.boardEntry:first-child {
+  background: #f7f7f7;
+}
+/* line 85, _main.scss */
+.boardEntry:hover {
+  background-color: #696969;
+  color: #FFF;
 }
 
-/* line 93, _main.scss */
+/* line 90, _main.scss */
 .avatarBoard {
   height: 40px;
   width: 40px;
-  background: gray;
 }
 
-/* line 98, _main.scss */
+/* line 94, _main.scss */
 .StudentName a {
   border-bottom: 1px dotted;
 }
 
+/* Leaderboard    
+.mainBoard {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.headerBoard {
+    background-color: #16a085;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1em;  
+    border-right: 1px solid #16A085;
+
+    th {
+        margin: 0;
+        padding: 13px 1%; 
+        border: 0;
+    }     
+}
+.boardEntry {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #CCC;
+
+    td {
+        padding: 1%;
+        border-left: 1px solid #CCC;
+    }
+    td:last-child {
+        border-right: 1px solid #CCC;
+    }
+
+    &:nth-child(even) {
+        background: #ececec;
+    }
+    &:first-child {
+        background: #f7f7f7;
+    }
+    &:hover {
+        background-color: #696969;
+        color: #FFF;
+    }
+}
+.pos {
+    width: 15px;
+}
+.boardAvatar {
+    width: 40px;
+}
+
+.boardIcon {
+    height: 20px;
+    width: 20px;
+    font-size: 1.1em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    float: left;
+    margin-right: 5%;
+    color: #F3B949;
+    color: rgba(0, 0, 0, 0.46);
+    font-weight: 400;
+}
+.flaticon-trophy56.boardIcon {
+    @include transition(3s);
+
+    &:hover {
+        transform: rotateY(360deg);
+    }
+}
+#sorttable_sortfwdind, #sorttable_sortrevind {
+    display: none;
+}
+.avatarBoard {
+    height: 40px;
+    width: 40px;
+    background: gray;
+}
+
+
+*/
 /* Side Boxes */
-/* line 104, _main.scss */
+/* line 186, _main.scss */
 .sideBlock {
   display: inline-block;
   vertical-align: top;
   width: 19.5%;
   padding-left: 0.5%;
 }
-/* line 110, _main.scss */
+/* line 192, _main.scss */
 .sideBlock.drawerO {
   display: none;
 }
 
-/* line 114, _main.scss */
+/* line 196, _main.scss */
 .boxTitle {
   text-align: center;
   color: #fff;
@@ -598,14 +679,14 @@ ul.footerLinks li.copyright {
   padding: 13px 1%;
 }
 
-/* line 121, _main.scss */
+/* line 203, _main.scss */
 .boxContent {
   border: 1px solid #b9b9b9;
   border-top: none;
   text-align: center;
 }
 
-/* line 126, _main.scss */
+/* line 208, _main.scss */
 .box {
   width: 100%;
   background: #fff;
@@ -614,25 +695,25 @@ ul.footerLinks li.copyright {
   margin-bottom: 3%;
 }
 
-/* line 134, _main.scss */
+/* line 216, _main.scss */
 .youBox .boxContent {
   padding: 4%;
 }
 
-/* line 139, _main.scss */
+/* line 221, _main.scss */
 .boxStat {
   margin: 7.5% 0;
   width: 33.33%;
   display: inline-block;
 }
 
-/* line 144, _main.scss */
+/* line 226, _main.scss */
 .boxStat:nth-child(2) {
   border-left: 1px solid #B9B9B9;
   border-right: 1px solid #B9B9B9;
 }
 
-/* line 148, _main.scss */
+/* line 230, _main.scss */
 .profilePicRound {
   height: 100px;
   width: 100px;
@@ -640,7 +721,7 @@ ul.footerLinks li.copyright {
   margin-top: 2%;
 }
 
-/* line 154, _main.scss */
+/* line 236, _main.scss */
 .bannerSmall {
   width: 90%;
   padding: 1% 1% 5% 1%;
@@ -656,18 +737,18 @@ ul.footerLinks li.copyright {
   top: -15px;
 }
 
-/* line 169, _main.scss */
+/* line 251, _main.scss */
 .questsBox .boxTitle {
   background-color: #ab452f;
 }
 
-/* line 173, _main.scss */
+/* line 255, _main.scss */
 .expiringQuests {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 178, _main.scss */
+/* line 260, _main.scss */
 .expiringQuests li {
   font-weight: 700;
   font-size: 1.1em;
@@ -675,16 +756,16 @@ ul.footerLinks li.copyright {
   text-align: left;
   overflow: auto;
 }
-/* line 185, _main.scss */
+/* line 267, _main.scss */
 .expiringQuests li:nth-child(odd) {
   background-color: #efeeee;
 }
-/* line 189, _main.scss */
+/* line 271, _main.scss */
 .expiringQuests li span {
   font-size: 1rem;
 }
 
-/* line 194, _main.scss */
+/* line 276, _main.scss */
 .questThumb {
   width: 50px;
   height: 50px;
@@ -692,23 +773,118 @@ ul.footerLinks li.copyright {
   margin-right: 4%;
 }
 
+/* Activity */
+/* line 285, _main.scss */
+.activityColumn {
+  width: 33.33%;
+  padding: 0.5%;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+/* line 291, _main.scss */
+.activityColumn.achievementsActivity {
+  padding-left: 0;
+}
+/* line 294, _main.scss */
+.activityColumn.xpActivity {
+  padding-right: 0;
+}
+
+/* line 299, _main.scss */
+.achievementsActivity .sectionTitle {
+  background-color: #2F9DAB;
+  padding: 2%;
+}
+
+/* line 305, _main.scss */
+.questsActivity .sectionTitle {
+  background-color: #AB452F;
+  padding: 2%;
+}
+
+/* line 311, _main.scss */
+.xpActivity .sectionTitle {
+  background-color: #F7CA5D;
+  padding: 2%;
+  color: #000;
+}
+
+/* line 317, _main.scss */
+.activityEntry {
+  width: 100%;
+  background: #FFF;
+  box-sizing: border-box;
+  overflow: auto;
+  margin-bottom: 2%;
+}
+/* line 324, _main.scss */
+.activityEntry .userAvatar {
+  height: 50px;
+  width: 50px;
+  float: left;
+  vertical-align: top;
+  margin-right: 2%;
+}
+/* line 331, _main.scss */
+.activityEntry .userInfo {
+  color: #FFF;
+  padding: 2%;
+  overflow: auto;
+}
+/* line 336, _main.scss */
+.activityEntry h3 {
+  text-align: left;
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+/* line 342, _main.scss */
+.activityEntry p {
+  text-align: left;
+  margin: 0;
+}
+/* line 346, _main.scss */
+.activityEntry .unlockDetail {
+  overflow: auto;
+  padding: 2%;
+  border: 1px solid #B9B9B9;
+  border-top: none;
+}
+/* line 351, _main.scss */
+.activityEntry .unlockDetail h3 {
+  font-size: 1.5em;
+}
+/* line 354, _main.scss */
+.activityEntry .unlockDetail p {
+  font-size: 1.4em;
+}
+/* line 358, _main.scss */
+.activityEntry .icon {
+  border-radius: 50px;
+  height: 65px;
+  width: 65px;
+  float: left;
+  margin-right: 2%;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 201, _main.scss */
+  /* line 369, _main.scss */
   .personIcon {
     background-image: url(../assets/personIconM2x.png);
   }
 
-  /* line 204, _main.scss */
+  /* line 372, _main.scss */
   .achievementsIcon {
     background-image: url(../assets/trophyIcon2x.png);
   }
 
-  /* line 207, _main.scss */
+  /* line 375, _main.scss */
   .questsIcon {
     background-image: url(../assets/pencilIcon2x.png);
   }
 
-  /* line 210, _main.scss */
+  /* line 378, _main.scss */
   .xpIcon {
     background-image: url(../assets/xpIcon2x.png);
   }

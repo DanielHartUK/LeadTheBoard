@@ -8,11 +8,12 @@ include_once(INCLUDES_PATH . "/customisation.php");
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/normalize.css">
-    <script src="../js/jquery-2.1.1.min.js"></script>
-    <script src="../js/jquery.floatThead.min.js"></script>
-    <script src="../js/sorttable.js"></script>
-    <script src="../js/jquery.imageMask.min.js"></script>
-    <script src="../js/drawer.js"></script>
+    <script src="../js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.floatThead.min.js" type="text/javascript"></script>
+    <script src="../js/sorttable.js" type="text/javascript"></script>
+    <script src="../js/jquery.imageMask.min.js" type="text/javascript"></script>
+    <script src="../js/drawer.js" type="text/javascript"></script>
+    <script src="/../js/cheet.js" type="text/javascript"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../assets/fonts/fonts.css">
     <meta name="viewport" content="initial-scale=1.0">
@@ -25,7 +26,7 @@ include_once(INCLUDES_PATH . "/customisation.php");
 	<div class="nav">
 		
 		<?php if ($loggedIn) : ?>
-			<div class="user" id="loggedIn" onClick="openDrawer()"><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9654;</span></div>
+			<div class="user" id="loggedIn" onClick="openDrawer()"><img src="<?php echo $profilePic ?>" class="profilePicSmall" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9654;</span></div>
 		<?php else : ?>
 			<div class="user" id="loggedOut" onClick="loginClick()"> Login/Register </div>
 		<?php endif; ?>
@@ -99,7 +100,7 @@ include_once(INCLUDES_PATH . "/customisation.php");
 	<div class="contentContainer">
 		<?php if ($admin == 0): ?>
 			<div class="drawer closed" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;">
-				<div class="user" id="loggedIn" onClick="closeDrawer()" style="background-color: <?php echo $userColourSecondary[$userColourScheme] ?>;"><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> <span class="close">&#215;</span></div>
+				<div class="user" id="loggedIn" onClick="closeDrawer()" style="background-color: <?php echo $userColourSecondary[$userColourScheme] ?>;"><img src="<?php echo $profilePic ?>" class="profilePicSmall" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar"> <?php echo $firstName. " " .$surname; ?> <span class="close">&#215;</span></div>
 				<ul class="menu"> <h6> Menu </h6>
 	 				<li class="classes"><span class="flaticon-multiple25 sideIcon"></span> Classes </li>
 					<li class="profile"><span class="flaticon-profile8 sideIcon"></span> Profile </li>

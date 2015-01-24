@@ -11,7 +11,91 @@
     width: 100%;
 }
 
-/* Leaderboard */
+
+.mainBoard {
+    width: 100%;
+}
+.headerBoard {
+    background-color: #16a085;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1em;  
+    border-right: 1px solid #16A085;
+
+    th {
+        margin: 0;
+        padding: 13px 1%; 
+        border: 0;
+        text-align: left;
+    }     
+}
+.boardIcon {
+    height: 20px;
+    width: 20px;
+    font-size: 1.1em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    float: left;
+    margin-right: 5%;
+    color: #F3B949;
+    color: rgba(0, 0, 0, 0.46);
+    font-weight: 400;
+}
+.flaticon-trophy56.boardIcon {
+    @include transition(3s);
+
+    &:hover {
+        @include transform(rotateY(360deg));
+    }
+}
+.boardEntry {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #CCC;
+
+    td {
+        padding: 1%;
+        border: 1px solid #CCC;
+
+        &.pos {
+            width: 10px;
+            font-size: 1.2em;
+            font-weight: 500;
+            padding: 10px;
+        }
+        &.boardAvatar {
+            width: 40px;
+            padding: 10px;
+        }
+
+    }
+    td:last-child {
+        border-right: 1px solid #CCC;
+    }
+
+    &:nth-child(even) {
+        background: #ececec;
+    }
+    &:first-child {
+        background: #f7f7f7;
+    }
+    &:hover {
+        background-color: #696969;
+        color: #FFF;
+    }
+}
+.avatarBoard {
+    height: 40px;
+    width: 40px;
+}
+.StudentName a {
+    border-bottom: 1px dotted;
+}
+
+/* Leaderboard    
 .mainBoard {
     width: 100%;
     margin: 0;
@@ -95,11 +179,9 @@
     width: 40px;
     background: gray;
 }
-.StudentName a {
-    border-bottom: 1px dotted;
-}
 
 
+*/
 /* Side Boxes */
 .sideBlock {
     display: inline-block;
@@ -197,6 +279,92 @@
     float: left;
     margin-right: 4%;
 }
+
+/* Activity */
+
+.activityColumn {
+    width: 33.33%;
+    padding: 0.5%;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    &.achievementsActivity {
+        padding-left: 0;
+    }
+    &.xpActivity {
+        padding-right: 0;
+    }
+}
+.achievementsActivity {
+    .sectionTitle {
+        background-color: #2F9DAB;
+        padding: 2%;
+    }
+}
+.questsActivity {
+    .sectionTitle {
+        background-color: #AB452F;
+        padding: 2%;
+    }
+}
+.xpActivity {
+    .sectionTitle {
+        background-color: #F7CA5D;
+        padding: 2%;
+        color: #000;
+    }
+}
+.activityEntry {
+    width: 100%;
+    background: #FFF;
+    box-sizing: border-box;
+    overflow: auto;
+    margin-bottom: 2%;
+
+    .userAvatar {
+        height: 50px;
+        width: 50px;
+        float: left;
+        vertical-align: top;
+        margin-right: 2%;
+    }
+    .userInfo {
+        color: #FFF;
+        padding: 2%;
+        overflow: auto;
+    }
+    h3 {
+        text-align: left;
+        margin: 0;
+        font-size: 1.3em;
+        font-weight: 700;
+    }
+    p {
+        text-align: left;
+        margin: 0;
+    }
+    .unlockDetail {
+        overflow: auto;
+        padding: 2%;
+        border: 1px solid #B9B9B9;
+        border-top: none;
+        h3 {
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1.4em;
+        }
+    }
+    .icon {
+        border-radius: 50px;
+        height: 65px;
+        width: 65px;
+        float: left;
+        margin-right: 2%;
+    }
+}
+
+
 @include hidpi(2) {
     .personIcon {
         background-image: url(../assets/personIconM2x.png);
