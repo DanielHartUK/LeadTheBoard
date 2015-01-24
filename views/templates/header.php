@@ -2,6 +2,7 @@
 include_once(INCLUDES_PATH . "/refreshsql.php"); 
 include_once(INCLUDES_PATH . "/demosql.php"); 
 include_once(INCLUDES_PATH . "/customisation.php"); 
+$IGNORETHISFORNOWloggedIn = 0;
 ?> 
 <!DOCTYPE HTML>
 <HTML>
@@ -31,7 +32,7 @@ include_once(INCLUDES_PATH . "/customisation.php");
 			<div class="user" id="loggedOut" onClick="loginClick()"> Login/Register </div>
 		<?php endif; ?>
 		<div id="logo"><a href="/">LeadTheBoard!</a></div>
-		<?php if ($EASIESTWAYTOCOMMENTTHISOUTFORNOWloggedIn) : ?>
+		<?php if ($IGNORETHISFORNOWloggedIn) : ?>
 			<div class="notificationIcon"><?php if ($unreadNotifications == 0): echo "&nbsp;"; else : echo $unreadNotifications; endif; ?></div>
 		<?php else: ?>
 			<div><!--Empty Div because of flex--></div>

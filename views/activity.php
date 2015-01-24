@@ -1,4 +1,5 @@
 <?php 
+$isLeaderboard = 0;
 require_once("../config.php");
 require_once(TEMPLATES_PATH . "/mainTop.php"); 
 require_once(INCLUDES_PATH . "/activity.php");

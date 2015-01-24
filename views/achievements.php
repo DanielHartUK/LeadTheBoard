@@ -1,7 +1,7 @@
 <?php 
 require_once("../config.php");
+$isLeaderboard = 0;
 require_once(TEMPLATES_PATH . "/mainTop.php"); 
-require_once(INCLUDES_PATH . "/achievements.php");
 ?>
 <div class="achievements">
     <h2 class="sectionTitle"> Unlocked Achievements </h2>
