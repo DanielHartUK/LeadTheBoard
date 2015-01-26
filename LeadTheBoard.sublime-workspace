@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"profi",
+				"profileUID"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
 				"boa",
 				"boardAvatar"
 			],
@@ -256,18 +264,10 @@
 	"buffers":
 	[
 		{
-			"file": "views/achievements.php",
+			"file": "views/activity.php",
 			"settings":
 			{
-				"buffer_size": 2431,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/quests.php",
-			"settings":
-			{
-				"buffer_size": 3510,
+				"buffer_size": 4568,
 				"line_ending": "Unix"
 			}
 		},
@@ -275,31 +275,7 @@
 			"file": "config.php",
 			"settings":
 			{
-				"buffer_size": 902,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/leaderboard.php",
-			"settings":
-			{
-				"buffer_size": 785,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/profile.php",
-			"settings":
-			{
-				"buffer_size": 277,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/templates/footer.php",
-			"settings":
-			{
-				"buffer_size": 516,
+				"buffer_size": 936,
 				"line_ending": "Unix"
 			}
 		},
@@ -307,7 +283,7 @@
 			"file": "views/templates/mainTop.php",
 			"settings":
 			{
-				"buffer_size": 995,
+				"buffer_size": 1000,
 				"line_ending": "Unix"
 			}
 		},
@@ -315,15 +291,15 @@
 			"file": "views/templates/header.php",
 			"settings":
 			{
-				"buffer_size": 6436,
+				"buffer_size": 6730,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "notes.txt",
+			"file": "views/profile.php",
 			"settings":
 			{
-				"buffer_size": 162,
+				"buffer_size": 804,
 				"line_ending": "Unix"
 			}
 		},
@@ -336,10 +312,10 @@
 			}
 		},
 		{
-			"file": "css/style.scss",
+			"file": "css/_account.scss",
 			"settings":
 			{
-				"buffer_size": 3872,
+				"buffer_size": 1745,
 				"line_ending": "Unix"
 			}
 		},
@@ -352,6 +328,14 @@
 			}
 		},
 		{
+			"file": "css/_main.scss",
+			"settings":
+			{
+				"buffer_size": 6669,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "css/_navigation.scss",
 			"settings":
 			{
@@ -360,91 +344,42 @@
 			}
 		},
 		{
-			"file": "js/scripts.js",
-			"settings":
-			{
-				"buffer_size": 2396,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/_main.scss",
-			"settings":
-			{
-				"buffer_size": 5166,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/Daniel/OneDrive/LeadTheBoard/Deliverables.md",
-			"settings":
-			{
-				"buffer_size": 400,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/drawer.js",
-			"settings":
-			{
-				"buffer_size": 1282,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "css/_unlockables.scss",
 			"settings":
 			{
 				"buffer_size": 1044,
-				"line_ending": "Unix",
-				"name": ".achievementListCont {"
-			}
-		},
-		{
-			"file": "css/_account.scss",
-			"settings":
-			{
-				"buffer_size": 1745,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "assets/fonts/fonts.css",
+			"file": "css/style.scss",
 			"settings":
 			{
-				"buffer_size": 4606,
+				"buffer_size": 3872,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "includes/demosql.php",
+			"file": "includes/activity.php",
 			"settings":
 			{
-				"buffer_size": 5118,
+				"buffer_size": 2241,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "install.php",
+			"file": "includes/profile.php",
 			"settings":
 			{
-				"buffer_size": 4091,
+				"buffer_size": 5146,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "includes/unlockablesSQL.php",
+			"file": "js/scripts.js",
 			"settings":
 			{
-				"buffer_size": 3936,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "includes/refreshsql.php",
-			"settings":
-			{
-				"buffer_size": 2838,
+				"buffer_size": 2452,
 				"line_ending": "Unix"
 			}
 		}
@@ -551,38 +486,53 @@
 	[
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates"
 	],
 	"file_history":
 	[
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/quests.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/achievements.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/account.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/_account.scss",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/_general.scss",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/_main.html",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/unlockablesSQL.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/install.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/demosql.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/refreshsql.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/activity.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/style.scss",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/_navigation.scss",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/scripts.js",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/_main.scss",
+		"/Users/Daniel/OneDrive/LeadTheBoard/Deliverables.md",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/drawer.js",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/_unlockables.scss",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/fonts/fonts.css",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/mainBottom.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/header.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/mainTop.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/footer.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/profile.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/leaderboard.php",
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/config.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/bower_components/cheet.js/cheet.js",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/notes.txt",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/README.md",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/x/views/leaderboard.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/x/views/intro.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/_main.scss",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/.gitignore",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/x/views/templates/header.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/achievement.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/mainBottom.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/mainTop.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/leaderboard.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/tableitems.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/intro.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/leaderboard.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/install.php",
 		"/New folder/New folder (3).noindex/New folder (0)/New folder (2)/New folder (2)/rp.html",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/header.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/index.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/config.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/style.scss",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/scripts.js",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/quests.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/demosql.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/footer.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/achievements.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/quests.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/achievementsjson.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/achievements.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/ajax.js",
@@ -590,7 +540,6 @@
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/install.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/ajax/leaderboard.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/ajax/leaderboard.html",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/fonts/fonts.css",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/admin.js",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/customisation.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/resolution.php",
@@ -632,6 +581,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"profile",
+			"$id",
+			"quests",
+			"Primary",
+			"Achievements",
+			"Achievement",
+			"achievement",
+			"quests",
+			"Achievement",
+			"AchievementProgress",
+			"Achievement",
 			"img",
 			"padding-left",
 			"\".content\"",
@@ -767,112 +727,24 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "views/achievements.php",
+					"file": "views/activity.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2431,
+						"buffer_size": 4568,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								218,
-								218
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "views/quests.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3510,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								23,
-								21
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 5.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "config.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 902,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								204,
-								204
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "views/leaderboard.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 785,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								394,
-								395
+								7,
+								27
 							]
 						],
 						"settings":
@@ -884,24 +756,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "views/profile.php",
+					"buffer": 1,
+					"file": "config.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 277,
+						"buffer_size": 936,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								277,
-								277
+								60,
+								60
 							]
 						],
 						"settings":
@@ -912,44 +784,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "views/templates/footer.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 516,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								327,
-								327
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 7.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 2,
 					"file": "views/templates/mainTop.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 995,
+						"buffer_size": 1000,
 						"regions":
 						{
 						},
@@ -969,24 +813,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 3,
 					"file": "views/templates/header.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6436,
+						"buffer_size": 6730,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								405,
-								405
+								4575,
+								4575
 							]
 						],
 						"settings":
@@ -994,43 +838,43 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 285.0,
-						"translation.y": 0.0,
+						"translation.x": 64.0,
+						"translation.y": 1211.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "notes.txt",
-					"semi_transient": true,
+					"buffer": 4,
+					"file": "views/profile.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 162,
+						"buffer_size": 804,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								258,
+								258
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 5,
 					"file": "views/templates/mainBottom.php",
 					"semi_transient": false,
 					"settings":
@@ -1042,8 +886,8 @@
 						"selection":
 						[
 							[
-								362,
-								362
+								290,
+								420
 							]
 						],
 						"settings":
@@ -1051,64 +895,34 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 337.0,
+						"translation.x": 689.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
-					"buffer": 10,
-					"file": "css/style.scss",
+					"buffer": 6,
+					"file": "css/_account.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3872,
+						"buffer_size": 1745,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								602,
-								602
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "css/_general.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1314,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								845,
-								845
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1125,102 +939,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "css/_navigation.scss",
+					"buffer": 7,
+					"file": "css/_general.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2824,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1154,
-								1154
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "js/scripts.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2396,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1668,
-								1668
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 749.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "css/_main.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5166,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								874,
-								874
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 402.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "/Users/Daniel/OneDrive/LeadTheBoard/Deliverables.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 400,
+						"buffer_size": 1314,
 						"regions":
 						{
 						},
@@ -1233,7 +957,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1243,37 +969,67 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
-					"file": "js/drawer.js",
+					"buffer": 8,
+					"file": "css/_main.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1282,
+						"buffer_size": 6669,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1195,
-								1195
+								6004,
+								6004
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4892.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "css/_navigation.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2824,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 10,
 					"file": "css/_unlockables.scss",
 					"semi_transient": false,
 					"settings":
@@ -1285,13 +1041,12 @@
 						"selection":
 						[
 							[
-								823,
-								823
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"auto_name": ".achievementListCont {",
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -1299,24 +1054,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 18,
-					"file": "css/_account.scss",
+					"buffer": 11,
+					"file": "css/style.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1745,
+						"buffer_size": 3872,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1745,
-								1745
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1329,60 +1084,60 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "assets/fonts/fonts.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4606,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								412,
-								412
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 22,
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 20,
-					"file": "includes/demosql.php",
+					"buffer": 12,
+					"file": "includes/activity.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5118,
+						"buffer_size": 2241,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								55,
-								55
+								537,
+								537
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "includes/profile.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4580,
+								4589
 							]
 						],
 						"settings":
@@ -1391,100 +1146,41 @@
 							"tab_size": 3,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 5.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 1834.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 21,
-					"file": "install.php",
+					"buffer": 14,
+					"file": "js/scripts.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4091,
+						"buffer_size": 2452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3532,
-								3532
+								1751,
+								1751
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 834.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "includes/unlockablesSQL.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3936,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								105,
-								105
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 614.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 23,
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "includes/refreshsql.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2838,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2352,
-								2352
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 21,
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -1524,13 +1220,13 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.670152963409,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.922118380062,
+			0.0778816199377,
 			1.0
 		]
 	},
@@ -1585,7 +1281,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 		"last_automatic_layout":

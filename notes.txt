@@ -11,3 +11,6 @@ Secondary: #b94034
 
 References: 
 http://namuol.github.io/cheet.js/
+http://stackoverflow.com/a/17348698
+http://css-tricks.com/snippets/jquery/smooth-scrolling/
+http://mkoryak.github.io/floatThead/

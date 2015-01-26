@@ -66,12 +66,12 @@ h2.sectionTitle {
 }
 
 /* line 41, _general.scss */
-.achievements .sectionTitle {
+.achievements .sectionTitle, .profileAchievements .sectionTitle {
   background-color: #2F9DAB;
 }
 
 /* line 44, _general.scss */
-.quests .sectionTitle {
+.quests .sectionTitle, .profileQuests .sectionTitle {
   background-color: #AB452F;
 }
 
@@ -108,8 +108,12 @@ h2.sectionTitle {
   margin: 0;
   float: right;
 }
+/* line 74, _general.scss */
+.content.noPadding {
+  padding: 0%;
+}
 
-/* line 75, _general.scss */
+/* line 79, _general.scss */
 .footer {
   margin: 0 0.5% 0.5% 0.5%;
   -webkit-transition: 0.3s;
@@ -186,21 +190,27 @@ h2.sectionTitle {
   background-image: url(../assets/bell.png);
   background-repeat: no-repeat;
   background-size: 15px;
-  background-position: 17px;
+  background-position: calc(100% - 6px);
   padding-right: calc(20px + 0.5%);
   padding-left: 0.5%;
   min-width: 10px;
+  box-sizing: border-box;
   color: #FFF;
   line-height: 50px;
+  text-align: right;
+}
+/* line 55, _navigation.scss */
+.notificationIcon.loggedOut {
+  background-image: none;
 }
 
-/* line 53, _navigation.scss */
+/* line 59, _navigation.scss */
 .downArrow {
   font-size: 0.7em;
   margin-left: 0.5em;
 }
 
-/* line 57, _navigation.scss */
+/* line 63, _navigation.scss */
 .drawer {
   position: fixed;
   display: block;
@@ -217,17 +227,17 @@ h2.sectionTitle {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 71, _navigation.scss */
+/* line 77, _navigation.scss */
 .drawer .user {
   height: 50px;
   padding: 0px 2.5%;
 }
-/* line 76, _navigation.scss */
+/* line 82, _navigation.scss */
 .drawer.closed {
   left: -346px;
 }
 
-/* line 80, _navigation.scss */
+/* line 86, _navigation.scss */
 ul.menu {
   list-style: none;
   color: #FFF;
@@ -235,25 +245,25 @@ ul.menu {
   padding: 0%;
   font-size: 1.1em;
 }
-/* line 87, _navigation.scss */
+/* line 93, _navigation.scss */
 ul.menu li {
   padding: 4%;
   margin: 2%;
   border-radius: 4px;
   font-weight: 700;
 }
-/* line 93, _navigation.scss */
+/* line 99, _navigation.scss */
 ul.menu li:hover {
   background-color: rgba(0, 0, 0, 0.28);
 }
 
-/* line 99, _navigation.scss */
+/* line 105, _navigation.scss */
 .sideIcon {
   margin-right: 4%;
   font-weight: 400;
 }
 
-/* line 103, _navigation.scss */
+/* line 109, _navigation.scss */
 .sectionNavigation {
   padding: 1% 0;
   width: 80%;
@@ -261,17 +271,17 @@ ul.menu li:hover {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 109, _navigation.scss */
+/* line 115, _navigation.scss */
 .sectionNavigation ul {
   margin: 0;
   padding: 0;
   border-bottom: 2px solid #808080;
 }
-/* line 114, _navigation.scss */
+/* line 120, _navigation.scss */
 .sectionNavigation ul a {
   color: inherit;
 }
-/* line 117, _navigation.scss */
+/* line 123, _navigation.scss */
 .sectionNavigation ul li {
   display: inline-block;
   margin: 0 2% -2px 0;
@@ -279,12 +289,12 @@ ul.menu li:hover {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
-/* line 124, _navigation.scss */
+/* line 130, _navigation.scss */
 .sectionNavigation ul li.currentPage {
   border-bottom: 2px solid #16a085;
 }
 
-/* line 130, _navigation.scss */
+/* line 136, _navigation.scss */
 ul.footerLinks {
   list-style: none;
   margin: 0;
@@ -292,24 +302,24 @@ ul.footerLinks {
   font-size: 0.9em;
   border-top: 1px solid #808080;
 }
-/* line 137, _navigation.scss */
+/* line 143, _navigation.scss */
 ul.footerLinks li {
   display: inline-block;
   margin-right: 1%;
 }
-/* line 141, _navigation.scss */
+/* line 147, _navigation.scss */
 ul.footerLinks li.copyright {
   float: right;
   margin-right: 0;
 }
 
-/* line 147, _navigation.scss */
+/* line 153, _navigation.scss */
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
   border-bottom: 2px solid #16a085;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 151, _navigation.scss */
+  /* line 157, _navigation.scss */
   .notificationIcon {
     background-image: url(../assets/bell2x.png);
   }
@@ -717,7 +727,7 @@ ul.footerLinks li.copyright {
 .profilePicRound {
   height: 100px;
   width: 100px;
-  border-radius: 50px;
+  border-radius: 60px;
   margin-top: 2%;
 }
 
@@ -965,29 +975,142 @@ p.unlockableMessage {
   font-weight: 700;
 }
 
+/* line 1, _profile.scss */
+.profileTop {
+  width: 100%;
+  background: #46404C;
+  color: #FFF;
+  margin-top: -50px;
+  padding: 3% 3% 1% 3%;
+  padding-top: calc(3% + 50px);
+  box-sizing: border-box;
+  background-image: url(../assets/pattern.png);
+  background-size: 72px;
+  background-position: center top;
+  background-attachment: fixed;
+}
+/* line 14, _profile.scss */
+.profileTop .profilePicRound {
+  border: 4px solid #E4E4E4;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.62);
+  margin: 0;
+  margin-right: 3%;
+  float: left;
+  background: #FFF;
+}
+
+/* line 24, _profile.scss */
+.clanTag {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* line 30, _profile.scss */
+.proStat {
+  display: inline-block;
+  padding: 0 2%;
+  border-right: 1px solid rgba(0, 0, 0, 0.46);
+  text-align: center;
+  font-size: 1.3em;
+}
+/* line 37, _profile.scss */
+.proStat:first-child {
+  padding-left: 0;
+}
+/* line 40, _profile.scss */
+.proStat:last-child {
+  border: none;
+}
+
+/* line 44, _profile.scss */
+.profileStats {
+  background-color: #28252C;
+  color: white;
+  padding: 1%;
+}
+/* line 49, _profile.scss */
+.profileStats .proIcon {
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.46);
+}
+
+/* line 55, _profile.scss */
+.editProfile.button {
+  float: right;
+}
+
+/* line 58, _profile.scss */
+.button {
+  background: rgba(0, 0, 0, 0.42);
+  display: inline-block;
+  text-align: center;
+  padding: 1%;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+/* line 66, _profile.scss */
+.button:hover {
+  background: rgba(0, 0, 0, 0.51);
+}
+/* line 69, _profile.scss */
+.button:active {
+  background: rgba(0, 0, 0, 0.54);
+  padding-top: 1.2%;
+  padding-bottom: 0.8%;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.52);
+}
+
+/* line 76, _profile.scss */
+.profileBox {
+  width: 50%;
+  padding: 1%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 83, _profile.scss */
+.profileAchievements.profileBox {
+  padding-right: 0.5%;
+}
+
+/* line 87, _profile.scss */
+.profileQuests.profileBox {
+  padding-left: 0.5%;
+}
+
+/* line 93, _profile.scss */
+.unlockableIcon.profileAchievement {
+  border-radius: 60px;
+  border: 4px solid #E4E4E4;
+  box-shadow: 0px 0px 1px #000;
+}
+
 @media screen and (max-width: 1024px) {
-  /* line 17, style.scss */
+  /* line 18, style.scss */
   .mainBlock {
     width: 100%;
   }
 
-  /* line 20, style.scss */
+  /* line 21, style.scss */
   .sideBlock {
     display: none;
   }
 
-  /* line 23, style.scss */
+  /* line 24, style.scss */
   .sectionNavigation {
     width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 28, style.scss */
+  /* line 29, style.scss */
   .mainBoard thead {
     display: none;
   }
 
-  /* line 31, style.scss */
+  /* line 32, style.scss */
   .boardEntry {
     display: block;
     box-sizing: border-box;
@@ -997,7 +1120,7 @@ p.unlockableMessage {
     border: 0;
   }
 
-  /* line 39, style.scss */
+  /* line 40, style.scss */
   .boardEntry td {
     display: block;
     width: 100%;
@@ -1009,7 +1132,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
   }
 
-  /* line 44, style.scss */
+  /* line 45, style.scss */
   .boardEntry:first-child td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f9f9f9), color-stop(1, #f9f9f9));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
@@ -1019,7 +1142,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
   }
 
-  /* line 47, style.scss */
+  /* line 48, style.scss */
   .boardEntry:nth-child(even) td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #ECECEC), color-stop(1, #ECECEC));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
@@ -1029,7 +1152,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
   }
 
-  /* line 50, style.scss */
+  /* line 51, style.scss */
   .boardEntry td:before {
     content: attr(data-th) ": ";
     float: left;
@@ -1038,7 +1161,7 @@ p.unlockableMessage {
     font-weight: 700;
   }
 
-  /* line 57, style.scss */
+  /* line 58, style.scss */
   #boardAvatar {
     display: none;
   }

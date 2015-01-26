@@ -38,10 +38,10 @@ h2.sectionTitle {
     font-size: 1.1em;
     text-transform: uppercase;
 }
-.achievements .sectionTitle {
+.achievements .sectionTitle, .profileAchievements .sectionTitle {
     background-color: #2F9DAB;
 }
-.quests .sectionTitle {
+.quests .sectionTitle, .profileQuests .sectionTitle {
     background-color: #AB452F;
 }
 
@@ -69,6 +69,10 @@ h2.sectionTitle {
         width: calc(100% - 19.5%);
         margin: 0;
         float: right;
+    }
+
+    &.noPadding {
+        padding: 0%;
     }
 
 }

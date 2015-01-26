@@ -43,12 +43,18 @@
     background-image: url(../assets/bell.png);
     background-repeat: no-repeat;
     background-size: 15px;
-    background-position: 17px;
+    background-position: calc(100% - 6px);
     padding-right: calc(20px + 0.5%);
     padding-left: 0.5%; 
     min-width: 10px;
+    box-sizing: border-box;
     color: #FFF;
     line-height: $navHeight;
+    text-align: right;
+
+    &.loggedOut {
+        background-image: none;
+    }
 }
 .downArrow {
     font-size: 0.7em;

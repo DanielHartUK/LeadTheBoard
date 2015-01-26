@@ -44,3 +44,5 @@ config.php
 *.swo
 config.php
 config.php
+
+*.sublime-workspace
