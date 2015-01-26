@@ -14,3 +14,11 @@ http://namuol.github.io/cheet.js/
 http://stackoverflow.com/a/17348698
 http://css-tricks.com/snippets/jquery/smooth-scrolling/
 http://mkoryak.github.io/floatThead/
+
+Known issues: 
+Only tested in Webkit based browsers, and Firefox
+Fixed table header readjusts column size
+Not responsive or fixed width, i.e. layout will break after certain width
+No fallbacks for older browsers
+Nav bar: User arrow falls onto next line when resizing window
+	

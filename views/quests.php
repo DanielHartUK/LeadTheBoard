@@ -2,7 +2,6 @@
 require_once("../config.php");
 $isLeaderboard = 0;
 require_once(TEMPLATES_PATH . "/mainTop.php"); 
-require_once(INCLUDES_PATH . "/quests.php");
 ?>
 <div class="quests">
     <h2 class="sectionTitle"> Available Quests </h2>
