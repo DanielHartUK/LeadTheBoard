@@ -12,7 +12,8 @@ require_once(TEMPLATES_PATH . "/mainTop.php");
         }
         $ai = 0; 
 		while($ai < $achievementsFullaCount) { ?>
-            <div class="unlockableListCont" id="achievementID-<?php echo $achievementsFulla[$ai]['AchievementID']; ?>">
+            <a class="headAnchor" id="achievementID-<?php echo $achievementsFulla[$ai]['AchievementID']; ?>"></a>
+            <div class="unlockableListCont" id="achievementID-C-<?php echo $achievementsFulla[$ai]['AchievementID']; ?>">
                 <div class="unlockableIcon achievement" style="background-image: url(../assets/achievements/<?php echo $achievementsFulla[$ai]['Icon']; ?>);">
                 </div><div class="unlockableDetails">
                     <h2 class="unlockableTitle"> <?php echo $achievementsFulla[$ai]['Name'];?> </h2>
@@ -30,7 +31,8 @@ require_once(TEMPLATES_PATH . "/mainTop.php");
         }
         $ai = 0; 
         while($ai < $achievementsFullbCount) { ?>
-            <div class="unlockableListCont" id="achievementID-<?php echo $achievementsFullb[$ai]['AchievementID']; ?>">
+            <a class="headAnchor" id="achievementID-<?php echo $achievementsFullb[$ai]['AchievementID']; ?>"></a>
+            <div class="unlockableListCont" id="achievementID-C-<?php echo $achievementsFullb[$ai]['AchievementID']; ?>">
                 <div class="unlockableIcon achievement" style="background-image: url(../assets/achievements/locked.png);">
                 </div><div class="unlockableDetails">
                     <h2 class="unlockableTitle"> <?php echo $achievementsFullb[$ai]['Name'];?> </h2>

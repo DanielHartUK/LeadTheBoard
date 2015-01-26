@@ -13,7 +13,8 @@ require_once(INCLUDES_PATH . "/quests.php");
         }
     	$ai = 0; 
     	while($ai < $questsFullbCount) { ?>
-            <div class="unlockableListCont" id="questID-<?php echo $questsFullb[$ai]['QuestID']; ?>">
+            <a class="headAnchor" id="questID-<?php echo $questsFullb[$ai]['QuestID']; ?>" ></a>
+            <div class="unlockableListCont" id="questID-C-<?php echo $questsFullb[$ai]['QuestID']; ?>">
                 <div class="unlockableIcon quest" style="background-image: url(../assets/quests/<?php echo $questsFullb[$ai]['Icon']; ?>);">
                 </div><div class="unlockableDetails">
                     <h2 class="unlockableTitle"> <?php echo $questsFullb[$ai]['Name'];?> </h2>
@@ -32,7 +33,8 @@ require_once(INCLUDES_PATH . "/quests.php");
         }
         $ai = 0; 
         while($ai < $questsFullaCount) { ?>
-            <div class="unlockableListCont" id="questID-<?php echo $questsFulla[$ai]['QuestID']; ?>">
+            <a class="headAnchor" id="questID-<?php echo $questsFulla[$ai]['QuestID']; ?>" ></a>
+            <div class="unlockableListCont" id="questID-C-<?php echo $questsFulla[$ai]['QuestID']; ?>">
                 <div class="unlockableIcon quest" style="background-image: url(../assets/quests/<?php echo $questsFulla[$ai]['Icon']; ?>);">
                 </div><div class="unlockableDetails">
                     <h2 class="unlockableTitle"> <?php echo $questsFulla[$ai]['Name'];?> </h2>
@@ -48,7 +50,8 @@ require_once(INCLUDES_PATH . "/quests.php");
     // Displaying the expired quests C
         $ai = 0; 
         while($ai < $questsFullcCount) { ?>
-            <div class="unlockableListCont" id="questID-<?php echo $questsFullc[$ai]['QuestID']; ?>">
+            <a class="headAnchor" id="questID-<?php echo $questsFullc[$ai]['QuestID']; ?>" ></a>
+            <div class="unlockableListCont" id="questID-C-<?php echo $questsFullc[$ai]['QuestID']; ?>">
                 <div class="unlockableIcon quest" style="background-image: url(../assets/quests/<?php echo $questsFullc[$ai]['Icon']; ?>);">
                 </div><div class="unlockableDetails">
                     <h2 class="unlockableTitle"> <?php echo $questsFullc[$ai]['Name'];?> </h2>

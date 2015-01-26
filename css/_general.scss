@@ -30,6 +30,12 @@ a {
     text-decoration: none;
     color: inherit;
 }
+.headAnchor {
+    display: block;
+    margin-top: -60px;
+    height: 60px;
+    visibility: hidden;
+}
 h2.sectionTitle {
     margin: 0 0 1% 0;
     background: #16A085;
