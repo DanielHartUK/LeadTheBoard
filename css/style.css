@@ -917,8 +917,56 @@ ul.footerLinks li.copyright {
   margin-bottom: 1%;
   color: #7B7B7B;
 }
+/* line 8, _unlockables.scss */
+.unlockableListCont.selected {
+  -webkit-animation: selectedGlow 5s ease;
+  -moz-animation: selectedGlow 5s ease;
+  animation: selectedGlow 5s ease;
+}
 
-/* line 11, _unlockables.scss */
+@-webkit-keyframes selectedGlow {
+  0% {
+    background: #fff;
+  }
+  10% {
+    background: #FFFBB1;
+  }
+  90% {
+    background: #FFFBB1;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@-moz-keyframes selectedGlow {
+  0% {
+    background: #fff;
+  }
+  10% {
+    background: #FFFBB1;
+  }
+  90% {
+    background: #FFFBB1;
+  }
+  100% {
+    background: #fff;
+  }
+}
+@keyframes selectedGlow {
+  0% {
+    background: #fff;
+  }
+  10% {
+    background: #FFFBB1;
+  }
+  90% {
+    background: #FFFBB1;
+  }
+  100% {
+    background: #fff;
+  }
+}
+/* line 19, _unlockables.scss */
 .unlockableIcon {
   width: 100px;
   height: 100px;
@@ -929,40 +977,40 @@ ul.footerLinks li.copyright {
   box-sizing: border-box;
   vertical-align: top;
 }
-/* line 21, _unlockables.scss */
+/* line 29, _unlockables.scss */
 .unlockableIcon.achievement {
   border-radius: 60px;
   border: 4px solid #E4E4E4;
   box-shadow: 0px 0px 1px #000;
 }
 
-/* line 27, _unlockables.scss */
+/* line 35, _unlockables.scss */
 .unlockableDetails {
   display: inline-block;
   vertical-align: top;
   width: calc(100% - 100px - 1% - 8%);
 }
 
-/* line 32, _unlockables.scss */
+/* line 40, _unlockables.scss */
 h2.unlockableTitle {
   margin: 0 0 1% 0;
   vertical-align: top;
   text-transform: uppercase;
 }
 
-/* line 37, _unlockables.scss */
+/* line 45, _unlockables.scss */
 p.unlockableDesc {
   margin: 0;
   font-size: 0.9em;
 }
 
-/* line 41, _unlockables.scss */
+/* line 49, _unlockables.scss */
 p.unlockableExpire {
   font-size: 0.85em;
   font-weight: 700;
 }
 
-/* line 45, _unlockables.scss */
+/* line 53, _unlockables.scss */
 .unlockableXP {
   width: 8%;
   display: inline-block;
@@ -971,14 +1019,14 @@ p.unlockableExpire {
   font-weight: 900;
   vertical-align: top;
 }
-/* line 53, _unlockables.scss */
+/* line 61, _unlockables.scss */
 .unlockableXP.flaticon-medal61 {
   font-size: 1.5em;
   font-weight: 400;
   /* color: #F3B949; */
 }
 
-/* line 59, _unlockables.scss */
+/* line 67, _unlockables.scss */
 p.unlockableMessage {
   text-align: center;
   font-size: 1.2em;

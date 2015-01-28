@@ -103,7 +103,7 @@
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
     font-family: Flaticon;
     font-style: normal;
-}.flaticon-bell60:before {
+}}.flaticon-bell60:before {
     content: "\e000";
 }
 .flaticon-key162:before {
@@ -127,15 +127,16 @@
 .flaticon-settings21:before {
     content: "\e007";
 }
-.flaticon-trophy56:before {
-    content: "\e008";
-}
-.flaticon-user182:before {
-    content: "\e009";
-}
 .flaticon-6:before {
     content: "\e008";
 }
+.flaticon-trophy56:before {
+    content: "\e009";
+}
+.flaticon-user182:before {
+    content: "\e00a";
+}
+
 
 
 @font-face {

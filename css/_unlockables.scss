@@ -5,7 +5,15 @@
 	margin-bottom: 1%;
 	color: #7B7B7B;
 
-
+	&.selected {
+		@include animation(selectedGlow 5s ease);
+	}
+}
+@include keyframes(selectedGlow) {
+	0% {background: #fff;}
+	10% {background: #FFFBB1;}
+	90% {background: #FFFBB1;}
+	100% {background: #fff;}
 }
 
 .unlockableIcon {

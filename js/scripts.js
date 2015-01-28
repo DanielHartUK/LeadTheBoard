@@ -15,11 +15,19 @@ function navFlexSize() {
 $(document).ready(navFlexSize);
 $(window).resize(navFlexSize);
 
+function highlightUnlockableLoad() {
+  if(window.location.hash) {
+    highlightUnlockable();
+  }
+}
+
 function highlightUnlockable() {
   var url = window.location.href;
   var id = '#' + url.substr(url.indexOf("#") + 1);
   $('.unlockableListCont').removeClass('selected');
-  $(id).next().addClass('selected');
+  setTimeout(function() {
+    $(id).next().addClass('selected');
+  }, 1);
 }
 
 // Showing/Hiding login containers

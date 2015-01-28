@@ -1,5 +1,8 @@
     <script src="../js/scripts.js"></script>
     <?php if($admin == 1): ?> <script src="../js/admin.js"></script> <?php endif; ?>
+    <?php if(pageURLContains($x = 'achievements') OR pageURLContains($x = 'quests')) {
+		echo '<script> highlightUnlockableLoad() </script>';
+	} ?>
     <div class="footer">
 	    <ul class="footerLinks">
 	    	<a href="/views/about/support"><li>Support</li></a>

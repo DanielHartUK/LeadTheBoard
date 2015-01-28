@@ -22,7 +22,7 @@
 						while($ai < $expiringCount) { ?>
 							<li>
 								<img src="/assets/quests/<?php echo $questsFulld[$ai]['Icon']; ?>" class="questThumb" alt="<?php echo $questsFulld[$ai]['Name']; ?> Icon">
-								<a href="/views/quests.php#questID-<?php echo $questsFulld[$ai]['QuestID']; ?>"><?php echo $questsFulld[$ai]['Name']; ?></a> <br /> 
+								<a href="/views/quests.php#questID-<?php echo $questsFulld[$ai]['QuestID']; ?>" onmousedown="  $('.unlockableListCont').removeClass('selected'); highlightUnlockable()" ><?php echo $questsFulld[$ai]['Name']; ?></a> <br /> 
 								<span>
 								<?php $timeExpire = strtotime($questsFulld[$ai]['Expire']);
 								if($timeExpire - time() < 60) {
