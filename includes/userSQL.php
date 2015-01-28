@@ -37,13 +37,33 @@ while($row = mysqli_fetch_assoc($cl)) {
 }
 
 // Get the User's classes into an array
-$selClassM = "SELECT * FROM ClassMemebers WHERE UserID='$id'";
+$selClassM = "SELECT * FROM ClassMembers WHERE UserID='$id'";
 $clM = mysqli_query($conn, $selClasses) or die(mysqli_error());
 $classMRowCount = $clM->num_rows;
 $classM = array();
 
 while($row = mysqli_fetch_assoc($clM)) {
    $classM[] = $row;
+}
+
+// Get the Clan info into an array
+$selClan = "SELECT * FROM Clans";
+$cla = mysqli_query($conn, $selClan) or die(mysqli_error());
+$clansRowCount = $cla->num_rows;
+$clans = array();
+
+while($row = mysqli_fetch_assoc($cla)) {
+   $clans[] = $row;
+}
+
+// Get the User's clan into an array
+$selClanM = "SELECT * FROM ClanMembers WHERE UserID='$id'";
+$claM = mysqli_query($conn, $selClanM) or die(mysqli_error());
+$clanMRowCount = $claM->num_rows;
+$clanM = array();
+
+while($row = mysqli_fetch_assoc($claM)) {
+   $clanM[] = $row;
 }
 
 // Achievements Available to the user
@@ -146,7 +166,14 @@ $firstName = $users[0]['Name'];
 $surname = $users[0]['Surname'];
 $admin = $users[0]['Admin'];
 $class = $classes[0]['Name'];
-$clan = $usersO[0]['Clan'];
+//$clan = $usersO[0]['Clan'];
+foreach ($clans as $iteration => $value) {
+   if ($clans[$iteration]['ClanID'] == $clanM[0]['ClanID']) {
+      $clanN = $clans[$iteration]['Name'];
+      $emblem = $clans[$iteration]['Emblem'];
+   }
+}
+$email = $users[0]['Email'];
 $unreadNotifications = 0;
 $profilePic = '/assets/uploads/' . $users[0]['Avatar'];
 $xp = $qXP + $aXP + $XPa; 
