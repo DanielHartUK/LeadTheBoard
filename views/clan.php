@@ -1,7 +1,7 @@
 <?php 
 require_once("../config.php");
 
-require_once(TEMPLATES_PATH . "/mainTop.php"); 
+include_once(TEMPLATES_PATH . "/header.php"); 
 ?>
 <script language="javascript">
 function readPicture(input) {
@@ -38,13 +38,7 @@ if(isset($_REQUEST['submit1'])){
 }
 mysqli_close($conn); // Close the connection 
 ?>
-<div class="sectionNavigation">
-  <ul>
-    <a href="http://localhost/views/personalDetails.php"><li>Edit Personal Details</li></a>
-    <a href="http://localhost/views/account.php"><li>Edit Avatar</li></a>
-    <a href="http://localhost/views/clan.php"><li>Clan</li></a>
-  </ul>
-</div>
+<?php require_once(INCLUDES_PATH . "/settingsNav.php") ?>
 <h3>Clan<h3>
 <form name='clan' action='' method=post ENCTYPE="multipart/form-data">
   <?php

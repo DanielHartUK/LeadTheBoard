@@ -1,7 +1,7 @@
 <?php 
 require_once("../config.php");
 
-require_once(TEMPLATES_PATH . "/mainTop.php"); 
+include_once(TEMPLATES_PATH . "/header.php"); 
 ?>
 <?php
 $conn = mysqli_connect($servername, $username, $password, $dbname); // Create a connection to the database
@@ -18,13 +18,7 @@ if(isset($_POST["submit1"])) {
 }
 mysqli_close($conn); // Close the connection 
 ?>
-<div class="sectionNavigation">
-  <ul>
-    <a href="http://localhost/views/personalDetails.php"><li>Edit Personal Details</li></a>
-    <a href="http://localhost/views/account.php"><li>Edit Avatar</li></a>
-    <a href="http://localhost/views/clan.php"><li>Clan</li></a>
-  </ul>
-</div>
+<?php require_once(INCLUDES_PATH . "/settingsNav.php") ?>
 <form name='personalDetails' action='' method=post>
   <TABLE BORDER=2>
     <TR> <TD>First Name</TD> <TD><input type=text name="firstName" value="<?php echo($firstName) ?>"></TD> </TR>

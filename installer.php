@@ -29,7 +29,15 @@ if (isset($_GET['create'])) {
 	  PRIMARY KEY (`ClassID`)
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 	") or die('Could not create table: ' .mysqli_error($conn));
-	
+
+	mysqli_query($conn, "
+	CREATE TABLE IF NOT EXISTS `clans` (
+	  `ClanID` int(11) NOT NULL AUTO_INCREMENT,
+	  `Name` text NOT NULL,
+	  `Emblem` text NOT NULL,
+	  PRIMARY KEY (`ClanID`)
+	) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+	") or die('Could not create table: ' .mysqli_error($conn));
 	
 	mysqli_query($conn, "
 	CREATE TABLE `Quests` (
@@ -86,6 +94,17 @@ if (isset($_GET['create'])) {
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 	") or die('Could not create table: ' .mysqli_error($conn));
 	
+	mysqli_query($conn, "
+	CREATE TABLE IF NOT EXISTS `clanmembers` (
+	  `ClanID` int(32) NOT NULL,
+	  `UserID` int(32) unsigned NOT NULL,
+	  `clanAdmin` int(11) NOT NULL,
+	  KEY `ClanID` (`ClanID`),
+	  KEY `UserID` (`UserID`),
+	  CONSTRAINT `clanmembers` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE,
+	  CONSTRAINT `clans` FOREIGN KEY (`ClanID`) REFERENCES `clans` (`ClanID`)
+	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+	") or die('Could not create table: ' .mysqli_error($conn));
 	
 	mysqli_query($conn, "
 	CREATE TABLE `QuestProgress` (
@@ -140,7 +159,15 @@ if (isset($_GET['create'])) {
 		(0,'Class A'),
 		(1,'Class B');
 	") or die('Could not create table: ' .mysqli_error($conn));
-	
+
+	mysqli_query($conn, "
+	INSERT INTO `clans` (`ClanID`, `Name`, `Emblem`) VALUES
+		(1, 'Goat Hunters!', 'goat.jpg'),
+		(2, 'Goat Busters!', 'goat.jpg'),
+		(3, 'LaserPunchers!', 'goat.jpg'),
+		(5, 'nnn', 'goat.jpg');
+	") or die('Could not create table: ' .mysqli_error($conn));
+
 	mysqli_query($conn, "
 	INSERT INTO `Quests` (`QuestID`, `Name`, `Description`, `XPValue`, `Icon`, `Expire`)
 	VALUES
@@ -170,11 +197,15 @@ if (isset($_GET['create'])) {
 	") or die('Could not create table: ' .mysqli_error($conn));
 	
 	mysqli_query($conn, "
-	
 	INSERT INTO `ClassMembers` (`UserID`, `ClassID`)
 	VALUES
 		(1421710773,0),
 		(1421710893,0);
+	") or die('Could not create table: ' .mysqli_error($conn));
+
+	mysqli_query($conn, "
+	INSERT INTO `clanmembers` (`ClanID`, `UserID`, `clanAdmin`) VALUES
+	(2, 1421710773, 0);
 	") or die('Could not create table: ' .mysqli_error($conn));
 	
 	mysqli_query($conn, "
