@@ -15,6 +15,9 @@ http://stackoverflow.com/a/17348698
 http://css-tricks.com/snippets/jquery/smooth-scrolling/
 http://mkoryak.github.io/floatThead/
 
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a href="http://tutsplus.com" title="TutsPlus">TutsPlus</a>, <a href="http://www.icomoon.io" title="Icomoon">Icomoon</a>, <a href="http://www.simpleicon.com" title="SimpleIcon">SimpleIcon</a>, <a href="http://yanlu.de" title="Yannick">Yannick</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>         is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+
+
 Known issues: 
 Only tested in Webkit based browsers, and Firefox
 Fixed table header readjusts column size

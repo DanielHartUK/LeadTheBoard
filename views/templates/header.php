@@ -26,7 +26,11 @@ $IGNORETHISFORNOWloggedIn = 0;
     <meta name="description" content="">
     <link rel="icon" href="../favicon.png" type="image/png">
 </head>
-<body>
+<?php if(pageURLContains($x = 'achievements') OR pageURLContains($x = 'quests')) {
+	echo '<body onhashchange="highlightUnlockable()">';
+} else {
+	echo '<body>';
+} ?>
 <div class="wrapper">
 	<div class="nav" <?php if(pageURLContains($x = 'profile')) { echo 'style="background-color: rgba(0, 0, 0, 0.1);"'; } ?> >
 		

@@ -133,7 +133,9 @@
 .flaticon-user182:before {
     content: "\e009";
 }
-
+.flaticon-6:before {
+    content: "\e008";
+}
 
 
 @font-face {

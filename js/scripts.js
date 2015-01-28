@@ -12,8 +12,15 @@
 function navFlexSize() {
   $('.notificationIcon').width($('.user').width());
 }
-//$(document).ready(navFlexSize);
-//$(window).resize(navFlexSize);
+$(document).ready(navFlexSize);
+$(window).resize(navFlexSize);
+
+function highlightUnlockable() {
+  var url = window.location.href;
+  var id = '#' + url.substr(url.indexOf("#") + 1);
+  $('.unlockableListCont').removeClass('selected');
+  $(id).next().addClass('selected');
+}
 
 // Showing/Hiding login containers
   var login = false
@@ -85,18 +92,18 @@ function navFlexSize() {
   });
 
 // Smooth Scrolling - http://css-tricks.com/snippets/jquery/smooth-scrolling/
-  $(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
-      }
-    });
-  });
+// $(function() {
+//   $('a[href*=#]:not([href=#])').click(function() {
+//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+//       var target = $(this.hash);
+//       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+//       if (target.length) {
+//         $('html,body').animate({
+//           scrollTop: target.offset().top
+//         }, 1000);
+//         return false;
+//       }
+//     }
+//   });
+// });
 
