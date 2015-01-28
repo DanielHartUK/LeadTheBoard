@@ -14,7 +14,7 @@ $IGNORETHISFORNOWloggedIn = 0;
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/normalize.css">
     <script src="../js/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="../js/jquery.floatThead.min.js" type="text/javascript"></script>
+    <!-- <script src="../js/jquery.floatThead.min.js" type="text/javascript"></script>-->
     <script src="../js/sorttable.js" type="text/javascript"></script>
     <script src="../js/jquery.imageMask.min.js" type="text/javascript"></script>
     <script src="../js/drawer.js" type="text/javascript"></script>
@@ -90,12 +90,12 @@ $IGNORETHISFORNOWloggedIn = 0;
 				<div class="loginDiv">
 				<div class="icon-cross" onclick="closeEntry()"></div>
 					<h3> Register for LeadTheBoard!</h3>
-					<form style="overflow: auto;" action="<?php // echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form">
-						<input class="field registerFirstName" type="text" name="firstName" id="firstName" placeholder="First Name">
-						<input class="field registersurname" type="text" name="surname" id="surname"placeholder="Second Name">
-						<input class="field registerEmail" type="email" name="email" id="email"placeholder="Email Address">
-						<input class="field registerPassword" type="password" name="password" id="password"placeholder="Password">
-						<input class="field registerConfirmPassword" type="password" name="confirmpass" id="confirmpass"placeholder="Confirm Password">
+					<form style="overflow: auto;" method="post" name="registration_form">
+						<input class="field registerFirstName" type="text" name="First Name" id="firstName" placeholder="First Name">
+						<input class="field registersurname" type="text" name="Surname" id="surname"placeholder="Second Name">
+						<input class="field registerEmail" type="email" name="Email address" id="email"placeholder="Email Address">
+						<input class="field registerPassword" type="password" name="Password" id="password"placeholder="Password">
+						<input class="field registerConfirmPassword" type="password" name="Confirm Password" id="confirmpass"placeholder="Confirm Password">
 						<p> Note: Only account administrators should register here. Students will be provided with their logins by the admin </p>
 						<div class="formSubmit">
 							<input type="button" class="submit registerSubmit" value="Register" />

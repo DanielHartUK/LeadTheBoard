@@ -7,11 +7,14 @@
                    'transform' : 'rotate('+ degrees +'deg)'});
       return $(this);
   };
+
+// Set width of notifications div to match that of the 'User' div in the nav bar so that the logo is centred
 function navFlexSize() {
   $('.notificationIcon').width($('.user').width());
 }
-$(document).ready(navFlexSize);
-$(window).resize(navFlexSize);
+//$(document).ready(navFlexSize);
+//$(window).resize(navFlexSize);
+
 // Showing/Hiding login containers
   var login = false
   function loginClick() {

@@ -33,6 +33,7 @@
     line-height: $navHeight;
     padding: 0 0.5%;
     cursor: pointer;
+    white-space: nowrap;
 }
 .close {
     float: right;

@@ -184,15 +184,16 @@ h2.sectionTitle {
   line-height: 50px;
   padding: 0 0.5%;
   cursor: pointer;
+  white-space: nowrap;
 }
 
-/* line 37, _navigation.scss */
+/* line 38, _navigation.scss */
 .close {
   float: right;
   font-size: 2em;
 }
 
-/* line 41, _navigation.scss */
+/* line 42, _navigation.scss */
 .notificationIcon {
   text-align: left;
   background-image: url(../assets/bell.png);
@@ -207,18 +208,18 @@ h2.sectionTitle {
   line-height: 50px;
   text-align: right;
 }
-/* line 55, _navigation.scss */
+/* line 56, _navigation.scss */
 .notificationIcon.loggedOut {
   background-image: none;
 }
 
-/* line 59, _navigation.scss */
+/* line 60, _navigation.scss */
 .downArrow {
   font-size: 0.7em;
   margin-left: 0.5em;
 }
 
-/* line 63, _navigation.scss */
+/* line 64, _navigation.scss */
 .drawer {
   position: fixed;
   display: block;
@@ -235,17 +236,17 @@ h2.sectionTitle {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 77, _navigation.scss */
+/* line 78, _navigation.scss */
 .drawer .user {
   height: 50px;
   padding: 0px 2.5%;
 }
-/* line 82, _navigation.scss */
+/* line 83, _navigation.scss */
 .drawer.closed {
   left: -346px;
 }
 
-/* line 86, _navigation.scss */
+/* line 87, _navigation.scss */
 ul.menu {
   list-style: none;
   color: #FFF;
@@ -253,25 +254,25 @@ ul.menu {
   padding: 0%;
   font-size: 1.1em;
 }
-/* line 93, _navigation.scss */
+/* line 94, _navigation.scss */
 ul.menu li {
   padding: 4%;
   margin: 2%;
   border-radius: 4px;
   font-weight: 700;
 }
-/* line 99, _navigation.scss */
+/* line 100, _navigation.scss */
 ul.menu li:hover {
   background-color: rgba(0, 0, 0, 0.28);
 }
 
-/* line 105, _navigation.scss */
+/* line 106, _navigation.scss */
 .sideIcon {
   margin-right: 4%;
   font-weight: 400;
 }
 
-/* line 109, _navigation.scss */
+/* line 110, _navigation.scss */
 .sectionNavigation {
   padding: 1% 0;
   width: 80%;
@@ -279,17 +280,17 @@ ul.menu li:hover {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 115, _navigation.scss */
+/* line 116, _navigation.scss */
 .sectionNavigation ul {
   margin: 0;
   padding: 0;
   border-bottom: 2px solid #808080;
 }
-/* line 120, _navigation.scss */
+/* line 121, _navigation.scss */
 .sectionNavigation ul a {
   color: inherit;
 }
-/* line 123, _navigation.scss */
+/* line 124, _navigation.scss */
 .sectionNavigation ul li {
   display: inline-block;
   margin: 0 2% -2px 0;
@@ -297,12 +298,12 @@ ul.menu li:hover {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
-/* line 130, _navigation.scss */
+/* line 131, _navigation.scss */
 .sectionNavigation ul li.currentPage {
   border-bottom: 2px solid #16a085;
 }
 
-/* line 136, _navigation.scss */
+/* line 137, _navigation.scss */
 ul.footerLinks {
   list-style: none;
   margin: 0;
@@ -310,24 +311,24 @@ ul.footerLinks {
   font-size: 0.9em;
   border-top: 1px solid #808080;
 }
-/* line 143, _navigation.scss */
+/* line 144, _navigation.scss */
 ul.footerLinks li {
   display: inline-block;
   margin-right: 1%;
 }
-/* line 147, _navigation.scss */
+/* line 148, _navigation.scss */
 ul.footerLinks li.copyright {
   float: right;
   margin-right: 0;
 }
 
-/* line 153, _navigation.scss */
+/* line 154, _navigation.scss */
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
   border-bottom: 2px solid #16a085;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 157, _navigation.scss */
+  /* line 158, _navigation.scss */
   .notificationIcon {
     background-image: url(../assets/bell2x.png);
   }
