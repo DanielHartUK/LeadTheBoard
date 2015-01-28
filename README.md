@@ -1,5 +1,13 @@
 #LeadTheBoard!
 
+##Installation 
+
+To install LeadTheBoard, set up an empty MySQL database and enter the database credentials in config.php, then run /installer.php in a browser and follow the instructions.
+
+(Sample data is inserted into the database currently for testing)
+
+##
+
 LeadTheBoard! is a web site designed to be used in the classroom to improve student's work by providing a competitive incentive in the form of completing Achievements, Quests, and getting XP, with the challenge to reach the top of the central leaderboard of the class.
 
 The teacher has admin control over the classes they teach, allowing them to create new classes, edit existing ones, add and remove students and edit students details. Certain types of data can be imported from and exported to Google Sheets, e.g. grades and attendance records, which can be used by the system to award achievements automatically.
