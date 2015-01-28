@@ -49,7 +49,6 @@ so please reduce the file size and then upload.<BR>";
 }
 mysqli_close($conn); // Close the connection 
 ?>
-<div class="sectionNavigation">
 <?php require_once(INCLUDES_PATH . "/settingsNav.php") ?>
 <div class="accountSettings">
   <h3>Profile Picture</h3>

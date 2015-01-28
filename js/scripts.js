@@ -61,12 +61,12 @@ function navFlexSize() {
   }
 
 // Floating table head - http://mkoryak.github.io/floatThead/
-var pageTop = $('.nav').height();
-$('table').floatThead({
-    scrollingTop: pageTop,
-    useAbsolutePositioning: true //the default value
-});
-
+//var pageTop = $('.nav').height();
+//$('table').floatThead({
+//    scrollingTop: pageTop,
+//    useAbsolutePositioning: true //the default value
+//});
+//
 
 // Cheet
   cheet('g o a t', function () {

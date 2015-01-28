@@ -23,16 +23,17 @@ html, body {
   font-weight: 400;
   background-color: #f4f4f4;
   color: #555555;
+  min-width: 968px;
 }
 
-/* line 11, _general.scss */
+/* line 12, _general.scss */
 h1 {
   margin: 0;
   font-size: 2.6em;
   font-weight: 400;
 }
 
-/* line 16, _general.scss */
+/* line 17, _general.scss */
 h3 {
   font-weight: 400;
   text-align: center;
@@ -40,7 +41,7 @@ h3 {
   margin: 0.5em 0;
 }
 
-/* line 22, _general.scss */
+/* line 23, _general.scss */
 h6 {
   margin: 2%;
   padding: 4%;
@@ -49,13 +50,13 @@ h6 {
   text-transform: uppercase;
 }
 
-/* line 29, _general.scss */
+/* line 30, _general.scss */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 33, _general.scss */
+/* line 34, _general.scss */
 .headAnchor {
   display: block;
   margin-top: -60px;
@@ -63,7 +64,7 @@ a {
   visibility: hidden;
 }
 
-/* line 39, _general.scss */
+/* line 40, _general.scss */
 h2.sectionTitle {
   margin: 0 0 1% 0;
   background: #16A085;
@@ -73,34 +74,34 @@ h2.sectionTitle {
   text-transform: uppercase;
 }
 
-/* line 47, _general.scss */
+/* line 48, _general.scss */
 .achievements .sectionTitle, .profileAchievements .sectionTitle {
   background-color: #2F9DAB;
 }
 
-/* line 50, _general.scss */
+/* line 51, _general.scss */
 .quests .sectionTitle, .profileQuests .sectionTitle {
   background-color: #AB452F;
 }
 
-/* line 54, _general.scss */
+/* line 55, _general.scss */
 .clickable {
   cursor: pointer;
 }
 
-/* line 57, _general.scss */
+/* line 58, _general.scss */
 .wrapper {
   width: 100%;
   position: relative;
   padding-top: 50px;
 }
 
-/* line 63, _general.scss */
+/* line 64, _general.scss */
 .contentContainer .noScroll {
   overflow: hidden;
 }
 
-/* line 67, _general.scss */
+/* line 68, _general.scss */
 .content {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -110,18 +111,18 @@ h2.sectionTitle {
   padding: 0.5%;
   box-sizing: border-box;
 }
-/* line 74, _general.scss */
+/* line 75, _general.scss */
 .content.admin {
   width: calc(100% - 19.5%);
   margin: 0;
   float: right;
 }
-/* line 80, _general.scss */
+/* line 81, _general.scss */
 .content.noPadding {
   padding: 0%;
 }
 
-/* line 85, _general.scss */
+/* line 86, _general.scss */
 .footer {
   margin: 0 0.5% 0.5% 0.5%;
   -webkit-transition: 0.3s;
