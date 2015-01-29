@@ -23,7 +23,9 @@ $IGNORETHISFORNOWloggedIn = 0;
     <link rel="stylesheet" href="../assets/fonts/fonts.css">
     <meta name="viewport" content="initial-scale=1.0">
     <title>LeadTheBoard!</title>
-    <meta name="description" content="">
+    <meta name="description" content="LeadTheBoard! is a tool designed for education to provide incentives to students in the form of unlockables such as Achievements, Quests and XP.">
+    <meta name="keywords" content="LeadTheBoard!, Leaderboard, education, achievements, quests, xp, unlockables">
+	<meta name="author" content="The LeadTheBoard! Team">
     <link rel="icon" href="../favicon.png" type="image/png">
 </head>
 <?php if(pageURLContains($x = 'achievements') OR pageURLContains($x = 'quests')) {
