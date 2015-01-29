@@ -19,6 +19,7 @@ http://mkoryak.github.io/floatThead/
 
 
 Known issues: 
+No santaizing or prepared MySQL yet, i.e. very unsecure right now.
 Only tested in Webkit based browsers, and Firefox
 Fixed table header readjusts column size
 Not responsive or fixed width, i.e. layout will break after certain width

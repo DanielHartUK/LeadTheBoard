@@ -47,7 +47,7 @@ while($row = mysqli_fetch_assoc($clM)) {
 }
 
 // Get the Clan info into an array
-$selClan = "SELECT * FROM Clans";
+$selClan = "SELECT * FROM clans";
 $cla = mysqli_query($conn, $selClan) or die(mysqli_error());
 $clansRowCount = $cla->num_rows;
 $clans = array();
@@ -57,7 +57,7 @@ while($row = mysqli_fetch_assoc($cla)) {
 }
 
 // Get the User's clan into an array
-$selClanM = "SELECT * FROM ClanMembers WHERE UserID='$id'";
+$selClanM = "SELECT * FROM clanmembers WHERE UserID='$id'";
 $claM = mysqli_query($conn, $selClanM) or die(mysqli_error());
 $clanMRowCount = $claM->num_rows;
 $clanM = array();
