@@ -4,7 +4,7 @@ $profileUID =  $_GET['user'];
 include_once(INCLUDES_PATH . "/profile.php"); 
 include_once(TEMPLATES_PATH . "/header.php"); 
 ?>
-	<div class="content noPadding">
+	<div class="content noPadding <?php if($userColourDark[$ProfileUserColourScheme] == 1) { echo 'dark'; }; ?> ">
 		<div class="profileTop" style="background-color: <?php echo $userColourPrimary[$ProfileUserColourScheme] ?>;">
 			<img src="<?php echo $ProfileProfilePic ?>" class="profilePicRound" title="goat" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar">  
 			<h1><?php echo $ProfileFirstName . ' ' . $ProfileSurname; ?> <span class="clanTag">[<?php echo $ProfileClan; ?>]</span>

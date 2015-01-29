@@ -1095,11 +1095,24 @@ p.unlockableMessage {
 }
 
 /* line 55, _profile.scss */
+.dark .proStat {
+  border-right: 1px solid rgba(255, 255, 255, 0.46);
+}
+/* line 58, _profile.scss */
+.dark .proStat:last-child {
+  border-right: none;
+}
+/* line 62, _profile.scss */
+.dark .profileStats .proIcon {
+  color: rgba(255, 255, 255, 0.46);
+}
+
+/* line 69, _profile.scss */
 .editProfile.button {
   float: right;
 }
 
-/* line 58, _profile.scss */
+/* line 72, _profile.scss */
 .button {
   background: rgba(0, 0, 0, 0.42);
   display: inline-block;
@@ -1108,11 +1121,11 @@ p.unlockableMessage {
   border-radius: 5px;
   font-size: 1rem;
 }
-/* line 66, _profile.scss */
+/* line 80, _profile.scss */
 .button:hover {
   background: rgba(0, 0, 0, 0.51);
 }
-/* line 69, _profile.scss */
+/* line 83, _profile.scss */
 .button:active {
   background: rgba(0, 0, 0, 0.54);
   padding-top: 1.2%;
@@ -1120,7 +1133,7 @@ p.unlockableMessage {
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.52);
 }
 
-/* line 76, _profile.scss */
+/* line 90, _profile.scss */
 .profileBox {
   width: 50%;
   padding: 1%;
@@ -1129,17 +1142,17 @@ p.unlockableMessage {
   vertical-align: top;
 }
 
-/* line 83, _profile.scss */
+/* line 97, _profile.scss */
 .profileAchievements.profileBox {
   padding-right: 0.5%;
 }
 
-/* line 87, _profile.scss */
+/* line 101, _profile.scss */
 .profileQuests.profileBox {
   padding-left: 0.5%;
 }
 
-/* line 93, _profile.scss */
+/* line 107, _profile.scss */
 .unlockableIcon.profileAchievement {
   border-radius: 60px;
   border: 4px solid #E4E4E4;
