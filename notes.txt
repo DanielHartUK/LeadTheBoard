@@ -26,3 +26,61 @@ Not responsive or fixed width, i.e. layout will break after certain width
 No fallbacks for older browsers
 Nav bar: User arrow falls onto next line when resizing window
 	
+
+
+
+
+
+
+
+<div class="loginContainers">
+			<!-- Login form -->
+			<div class="entryForm" id="login">
+				<div class="loginDiv">
+				<div class="icon-cross" onclick="closeEntry()"></div>
+				<h3> Login to LeadTheBoard!</h3>
+				
+				</div>
+				<div class="loginDiv formBottom">
+					<p>Get a free account</p> <input type="button" class="register" onclick="registerClick()" value="Register" />
+				</div>
+			</div>
+			<!-- Forgot password form -->
+			<div class="entryForm" id="forgot">
+				<div class="loginDiv">
+				<div class="icon-cross" onclick="closeEntry()"></div>
+				<h3> Reset Password</h3>
+				<p> Enter your registered email below and we'll send you a new password </p>
+				<form style="overflow: auto;">
+					<input class="field forgotEmail" type="email" placeholder="Email Address">
+					<div class="formSubmit">
+						<input type="submit" class="submit loginSubmit" value="Request new password">
+					</div>
+				</form>
+				</div>
+				<div class="loginDiv formBottom">
+					<p>Know your password?</p> <input type="button" class="register" onclick="registerLoginClick()" value="Login" />
+				</div>
+			</div>
+			<!-- Register form -->
+			<div class="entryForm" id="register">
+				<div class="loginDiv">
+				<div class="icon-cross" onclick="closeEntry()"></div>
+					<h3> Register for LeadTheBoard!</h3>
+					<form style="overflow: auto;" method="post" name="registration_form">
+						<input class="field registerFirstName" type="text" name="First Name" id="firstName" placeholder="First Name">
+						<input class="field registersurname" type="text" name="Surname" id="surname"placeholder="Second Name">
+						<input class="field registerEmail" type="email" name="Email address" id="email"placeholder="Email Address">
+						<input class="field registerPassword" type="password" name="Password" id="password"placeholder="Password">
+						<input class="field registerConfirmPassword" type="password" name="Confirm Password" id="confirmpass"placeholder="Confirm Password">
+						<p> Note: Only account administrators should register here. Students will be provided with their logins by the admin </p>
+						<div class="formSubmit">
+							<input type="button" class="submit registerSubmit" value="Register" />
+						</div>
+					</form>
+				</div>
+				<div class="loginDiv formBottom">
+					<p>Already got an account?</p> <input type="button" class="register" onclick="registerLoginClick()" value="Login" />
+				</div>
+			</div>	
+		</div>	

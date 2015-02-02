@@ -59,8 +59,11 @@ h2.sectionTitle {
     width: 100%;
     position: relative;
     padding-top: $navHeight;
+    height: 100%;
+    box-sizing: border-box;
 }
 .contentContainer {
+    height: 100%;
     .noScroll {
         overflow: hidden;
     }
@@ -85,5 +88,10 @@ h2.sectionTitle {
 }
 .footer {
     margin: 0 0.5% 0.5% 0.5%;   
-    @include transition($drawerSlide);  
+    @include transition($drawerSlide);
+}
+.gallop {
+    @include transition(6s ease);
+    position: relative;
+    left: 0px;
 }

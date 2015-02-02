@@ -1,6 +1,7 @@
 // Set the size of the drawer to equal that of the user div. NOTE: This will only have a visual effect if the browser window width exceeds a certain point, as the drawer has a minimum width
 function layouts () {
 $('.drawer').width($('.user').outerWidth());
+$('.drawer.closed').css('left', -$('.drawer').outerWidth());
 }
 $(document).ready(layouts);
 $(window).resize(layouts);
@@ -8,6 +9,7 @@ $(window).resize(layouts);
 // Open the drawer
 function openDrawer () {
 $('.drawer').removeClass('closed');
+$('.drawer').css('left', '0');
 $('.sideBlock').addClass('drawerO');
 c = $('.content').css('padding-left');
 f = $('.footer').css('padding-left');
@@ -15,11 +17,13 @@ $('.content').css('padding-left', $('.drawer').outerWidth() + parseInt(c));
 $('.footer').css('padding-left', $('.drawer').outerWidth() + parseInt(f));
 $('.sectionNavigation').css('width', '100%');
 $('.mainBlock').css('width', '100%');
+
 }
 
 // Close the drawer
 function closeDrawer () {
 $('.drawer').addClass('closed');
+$('.drawer.closed').css('left', -$('.drawer').outerWidth());
 $('.sideBlock').removeClass('drawerO');
 $('.content').css('padding-left', $('.drawer').outerWidth() + parseInt(c));
 $('.footer').css('padding-left', $('.drawer').outerWidth() + parseInt(f));

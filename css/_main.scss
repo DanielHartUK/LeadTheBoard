@@ -94,93 +94,6 @@
     border-bottom: 1px dotted;
 }
 
-/* Leaderboard    
-.mainBoard {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    border: 0;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-.headerBoard {
-    background-color: #16a085;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.1em;  
-    border-right: 1px solid #16A085;
-
-    th {
-        margin: 0;
-        padding: 13px 1%; 
-        border: 0;
-    }     
-}
-.boardEntry {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #CCC;
-
-    td {
-        padding: 1%;
-        border-left: 1px solid #CCC;
-    }
-    td:last-child {
-        border-right: 1px solid #CCC;
-    }
-
-    &:nth-child(even) {
-        background: #ececec;
-    }
-    &:first-child {
-        background: #f7f7f7;
-    }
-    &:hover {
-        background-color: #696969;
-        color: #FFF;
-    }
-}
-.pos {
-    width: 15px;
-}
-.boardAvatar {
-    width: 40px;
-}
-
-.boardIcon {
-    height: 20px;
-    width: 20px;
-    font-size: 1.1em;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0;
-    float: left;
-    margin-right: 5%;
-    color: #F3B949;
-    color: rgba(0, 0, 0, 0.46);
-    font-weight: 400;
-}
-.flaticon-trophy56.boardIcon {
-    @include transition(3s);
-
-    &:hover {
-        transform: rotateY(360deg);
-    }
-}
-#sorttable_sortfwdind, #sorttable_sortrevind {
-    display: none;
-}
-.avatarBoard {
-    height: 40px;
-    width: 40px;
-    background: gray;
-}
-
-
-*/
 /* Side Boxes */
 .sideBlock {
     display: inline-block;
@@ -263,7 +176,7 @@
         text-align: left;
         overflow: auto;
 
-        &:nth-child(odd) {
+        &:nth-child(even) {
             background-color: #efeeee;
         }
 

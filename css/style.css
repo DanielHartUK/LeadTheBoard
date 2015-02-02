@@ -94,14 +94,20 @@ h2.sectionTitle {
   width: 100%;
   position: relative;
   padding-top: 50px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-/* line 64, _general.scss */
+/* line 65, _general.scss */
+.contentContainer {
+  height: 100%;
+}
+/* line 67, _general.scss */
 .contentContainer .noScroll {
   overflow: hidden;
 }
 
-/* line 68, _general.scss */
+/* line 71, _general.scss */
 .content {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -111,23 +117,32 @@ h2.sectionTitle {
   padding: 0.5%;
   box-sizing: border-box;
 }
-/* line 75, _general.scss */
+/* line 78, _general.scss */
 .content.admin {
   width: calc(100% - 19.5%);
   margin: 0;
   float: right;
 }
-/* line 81, _general.scss */
+/* line 84, _general.scss */
 .content.noPadding {
   padding: 0%;
 }
 
-/* line 86, _general.scss */
+/* line 89, _general.scss */
 .footer {
   margin: 0 0.5% 0.5% 0.5%;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
+}
+
+/* line 93, _general.scss */
+.gallop {
+  -webkit-transition: 6s ease;
+  -moz-transition: 6s ease;
+  transition: 6s ease;
+  position: relative;
+  left: 0px;
 }
 
 /* Navigation */
@@ -334,140 +349,7 @@ ul.footerLinks li.copyright {
     background-image: url(../assets/bell2x.png);
   }
 }
-/* Login/Register Forms */
-/* line 3, _account.scss */
-.loginContainers {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 50px;
-  display: none;
-  z-index: 9998;
-}
-
-/* line 14, _account.scss */
-.loginContainers.visible {
-  display: block;
-}
-
-/* line 17, _account.scss */
-.entryForm {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 350px;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  display: none;
-}
-
-/* line 25, _account.scss */
-.entryForm.visible {
-  display: block;
-}
-
-/* line 28, _account.scss */
-.loginDiv {
-  background-color: #fff;
-  padding: 5%;
-  box-sizing: border-box;
-}
-
-/* line 33, _account.scss */
-.icon-cross {
-  float: right;
-  font-size: 0.8em;
-  cursor: pointer;
-}
-
-/* line 38, _account.scss */
-.field {
-  width: 100%;
-  font: inherit;
-  font-weight: 400;
-  padding: 3%;
-  box-sizing: border-box;
-  margin: 1% 0;
-  border: 1px solid #A5A5A5;
-}
-
-/* line 47, _account.scss */
-.field:focus {
-  outline: none;
-  border-color: #F00;
-}
-
-/* line 51, _account.scss */
-.formSubmit p {
-  float: left;
-}
-
-/* line 54, _account.scss */
-.formSubmit p.clickable:hover {
-  border-bottom: 1px dashed #A5A5A5;
-}
-
-/* line 57, _account.scss */
-.formSubmit p.clickable {
-  border-bottom: 1px dashed transparent;
-  padding-bottom: 1px;
-}
-
-/* line 61, _account.scss */
-.submit, .register {
-  background-color: #138972;
-  border: none;
-  color: #FFF;
-  padding: 10px 25px;
-  font-size: 1em;
-  font: inherit;
-  float: right;
-  border-bottom: 2px solid #0E6151;
-  position: relative;
-  cursor: pointer;
-}
-
-/* line 73, _account.scss */
-.submit {
-  margin: 2% 0 0 0;
-}
-
-/* line 76, _account.scss */
-.submit:focus, .register:focus {
-  background-color: #146E5C;
-  outline: none;
-}
-
-/* line 80, _account.scss */
-.submit:active, .register:active {
-  background-color: #147B67;
-  border-bottom: 2px solid transparent;
-  top: 2px;
-}
-
-/* line 85, _account.scss */
-.register {
-  margin: 2% 0;
-}
-
-/* line 88, _account.scss */
-.formBottom {
-  display: block;
-  overflow: auto;
-  margin-top: 1px;
-  background-color: #F0F0F0;
-}
-/* line 94, _account.scss */
-.formBottom p {
-  float: left;
-}
-
+/* @import "_account.scss"; */
 /* Main */
 /* line 2, _main.scss */
 .mainBlock {
@@ -590,107 +472,20 @@ ul.footerLinks li.copyright {
   border-bottom: 1px dotted;
 }
 
-/* Leaderboard    
-.mainBoard {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    border: 0;
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-.headerBoard {
-    background-color: #16a085;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.1em;  
-    border-right: 1px solid #16A085;
-
-    th {
-        margin: 0;
-        padding: 13px 1%; 
-        border: 0;
-    }     
-}
-.boardEntry {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #CCC;
-
-    td {
-        padding: 1%;
-        border-left: 1px solid #CCC;
-    }
-    td:last-child {
-        border-right: 1px solid #CCC;
-    }
-
-    &:nth-child(even) {
-        background: #ececec;
-    }
-    &:first-child {
-        background: #f7f7f7;
-    }
-    &:hover {
-        background-color: #696969;
-        color: #FFF;
-    }
-}
-.pos {
-    width: 15px;
-}
-.boardAvatar {
-    width: 40px;
-}
-
-.boardIcon {
-    height: 20px;
-    width: 20px;
-    font-size: 1.1em;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0;
-    float: left;
-    margin-right: 5%;
-    color: #F3B949;
-    color: rgba(0, 0, 0, 0.46);
-    font-weight: 400;
-}
-.flaticon-trophy56.boardIcon {
-    @include transition(3s);
-
-    &:hover {
-        transform: rotateY(360deg);
-    }
-}
-#sorttable_sortfwdind, #sorttable_sortrevind {
-    display: none;
-}
-.avatarBoard {
-    height: 40px;
-    width: 40px;
-    background: gray;
-}
-
-
-*/
 /* Side Boxes */
-/* line 185, _main.scss */
+/* line 98, _main.scss */
 .sideBlock {
   display: inline-block;
   vertical-align: top;
   width: 19.5%;
   padding-left: 0.5%;
 }
-/* line 191, _main.scss */
+/* line 104, _main.scss */
 .sideBlock.drawerO {
   display: none;
 }
 
-/* line 195, _main.scss */
+/* line 108, _main.scss */
 .boxTitle {
   text-align: center;
   color: #fff;
@@ -699,14 +494,14 @@ ul.footerLinks li.copyright {
   padding: 13px 1%;
 }
 
-/* line 202, _main.scss */
+/* line 115, _main.scss */
 .boxContent {
   border: 1px solid #b9b9b9;
   border-top: none;
   text-align: center;
 }
 
-/* line 207, _main.scss */
+/* line 120, _main.scss */
 .box {
   width: 100%;
   background: #fff;
@@ -715,25 +510,25 @@ ul.footerLinks li.copyright {
   margin-bottom: 3%;
 }
 
-/* line 215, _main.scss */
+/* line 128, _main.scss */
 .youBox .boxContent {
   padding: 4%;
 }
 
-/* line 220, _main.scss */
+/* line 133, _main.scss */
 .boxStat {
   margin: 7.5% 0;
   width: 33.33%;
   display: inline-block;
 }
 
-/* line 225, _main.scss */
+/* line 138, _main.scss */
 .boxStat:nth-child(2) {
   border-left: 1px solid #B9B9B9;
   border-right: 1px solid #B9B9B9;
 }
 
-/* line 229, _main.scss */
+/* line 142, _main.scss */
 .profilePicRound {
   height: 100px;
   width: 100px;
@@ -741,7 +536,7 @@ ul.footerLinks li.copyright {
   margin-top: 2%;
 }
 
-/* line 235, _main.scss */
+/* line 148, _main.scss */
 .bannerSmall {
   width: 90%;
   padding: 1% 1% 5% 1%;
@@ -757,18 +552,18 @@ ul.footerLinks li.copyright {
   top: -15px;
 }
 
-/* line 250, _main.scss */
+/* line 163, _main.scss */
 .questsBox .boxTitle {
   background-color: #ab452f;
 }
 
-/* line 254, _main.scss */
+/* line 167, _main.scss */
 .expiringQuests {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 259, _main.scss */
+/* line 172, _main.scss */
 .expiringQuests li {
   font-weight: 700;
   font-size: 1.1em;
@@ -776,16 +571,16 @@ ul.footerLinks li.copyright {
   text-align: left;
   overflow: auto;
 }
-/* line 266, _main.scss */
-.expiringQuests li:nth-child(odd) {
+/* line 179, _main.scss */
+.expiringQuests li:nth-child(even) {
   background-color: #efeeee;
 }
-/* line 270, _main.scss */
+/* line 183, _main.scss */
 .expiringQuests li span {
   font-size: 1rem;
 }
 
-/* line 275, _main.scss */
+/* line 188, _main.scss */
 .questThumb {
   width: 50px;
   height: 50px;
@@ -794,7 +589,7 @@ ul.footerLinks li.copyright {
 }
 
 /* Activity */
-/* line 284, _main.scss */
+/* line 197, _main.scss */
 .activityColumn {
   width: 33.33%;
   padding: 0.5%;
@@ -802,35 +597,35 @@ ul.footerLinks li.copyright {
   box-sizing: border-box;
   vertical-align: top;
 }
-/* line 290, _main.scss */
+/* line 203, _main.scss */
 .activityColumn.achievementsActivity {
   padding-left: 0;
 }
-/* line 293, _main.scss */
+/* line 206, _main.scss */
 .activityColumn.xpActivity {
   padding-right: 0;
 }
 
-/* line 298, _main.scss */
+/* line 211, _main.scss */
 .achievementsActivity .sectionTitle {
   background-color: #2F9DAB;
   padding: 2%;
 }
 
-/* line 304, _main.scss */
+/* line 217, _main.scss */
 .questsActivity .sectionTitle {
   background-color: #AB452F;
   padding: 2%;
 }
 
-/* line 310, _main.scss */
+/* line 223, _main.scss */
 .xpActivity .sectionTitle {
   background-color: #F7CA5D;
   padding: 2%;
   color: #000;
 }
 
-/* line 316, _main.scss */
+/* line 229, _main.scss */
 .activityEntry {
   width: 100%;
   background: #FFF;
@@ -838,7 +633,7 @@ ul.footerLinks li.copyright {
   overflow: auto;
   margin-bottom: 2%;
 }
-/* line 323, _main.scss */
+/* line 236, _main.scss */
 .activityEntry .userAvatar {
   height: 50px;
   width: 50px;
@@ -846,40 +641,40 @@ ul.footerLinks li.copyright {
   vertical-align: top;
   margin-right: 2%;
 }
-/* line 330, _main.scss */
+/* line 243, _main.scss */
 .activityEntry .userInfo {
   color: #FFF;
   padding: 2%;
   overflow: auto;
 }
-/* line 335, _main.scss */
+/* line 248, _main.scss */
 .activityEntry h3 {
   text-align: left;
   margin: 0;
   font-size: 1.3em;
   font-weight: 700;
 }
-/* line 341, _main.scss */
+/* line 254, _main.scss */
 .activityEntry p {
   text-align: left;
   margin: 0;
 }
-/* line 345, _main.scss */
+/* line 258, _main.scss */
 .activityEntry .unlockDetail {
   overflow: auto;
   padding: 2%;
   border: 1px solid #B9B9B9;
   border-top: none;
 }
-/* line 350, _main.scss */
+/* line 263, _main.scss */
 .activityEntry .unlockDetail h3 {
   font-size: 1.5em;
 }
-/* line 353, _main.scss */
+/* line 266, _main.scss */
 .activityEntry .unlockDetail p {
   font-size: 1.4em;
 }
-/* line 357, _main.scss */
+/* line 270, _main.scss */
 .activityEntry .icon {
   border-radius: 50px;
   height: 65px;
@@ -889,22 +684,22 @@ ul.footerLinks li.copyright {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 368, _main.scss */
+  /* line 281, _main.scss */
   .personIcon {
     background-image: url(../assets/personIconM2x.png);
   }
 
-  /* line 371, _main.scss */
+  /* line 284, _main.scss */
   .achievementsIcon {
     background-image: url(../assets/trophyIcon2x.png);
   }
 
-  /* line 374, _main.scss */
+  /* line 287, _main.scss */
   .questsIcon {
     background-image: url(../assets/pencilIcon2x.png);
   }
 
-  /* line 377, _main.scss */
+  /* line 290, _main.scss */
   .xpIcon {
     background-image: url(../assets/xpIcon2x.png);
   }
@@ -1120,12 +915,13 @@ p.unlockableMessage {
   padding: 1%;
   border-radius: 5px;
   font-size: 1rem;
+  border: 0;
 }
-/* line 80, _profile.scss */
+/* line 81, _profile.scss */
 .button:hover {
   background: rgba(0, 0, 0, 0.51);
 }
-/* line 83, _profile.scss */
+/* line 84, _profile.scss */
 .button:active {
   background: rgba(0, 0, 0, 0.54);
   padding-top: 1.2%;
@@ -1133,7 +929,7 @@ p.unlockableMessage {
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.52);
 }
 
-/* line 90, _profile.scss */
+/* line 91, _profile.scss */
 .profileBox {
   width: 50%;
   padding: 1%;
@@ -1142,46 +938,143 @@ p.unlockableMessage {
   vertical-align: top;
 }
 
-/* line 97, _profile.scss */
+/* line 98, _profile.scss */
 .profileAchievements.profileBox {
   padding-right: 0.5%;
 }
 
-/* line 101, _profile.scss */
+/* line 102, _profile.scss */
 .profileQuests.profileBox {
   padding-left: 0.5%;
 }
 
-/* line 107, _profile.scss */
+/* line 108, _profile.scss */
 .unlockableIcon.profileAchievement {
   border-radius: 60px;
   border: 4px solid #E4E4E4;
   box-shadow: 0px 0px 1px #000;
 }
 
+/* line 1, _login.scss */
+.loginWrap {
+  background: #0D5A4B;
+  color: #fff;
+}
+
+/* line 5, _login.scss */
+.loginBack {
+  line-height: 50px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 1%;
+}
+
+/* line 13, _login.scss */
+.loginBk {
+  margin-top: -50px;
+  min-height: 100%;
+  padding: 10%;
+}
+
+/* line 18, _login.scss */
+.login {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 2%;
+  background-color: #FFF;
+  color: #555;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px #323232;
+}
+
+/* line 27, _login.scss */
+.logo {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.6em;
+  color: #555;
+  line-height: 50px;
+  padding: 0 0.5%;
+  margin-bottom: 3%;
+}
+/* line 36, _login.scss */
+.logo a {
+  text-decoration: none;
+  color: #555;
+}
+
+/* line 41, _login.scss */
+.field {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid #B2B2B2;
+  background: transparent;
+  color: #555;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4% 4% 4% 8%;
+  margin-bottom: 2%;
+  border-radius: 3px;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: 3% 50%;
+}
+/* line 55, _login.scss */
+.field:focus {
+  outline: none;
+  border-color: #CA6158;
+  background-image: url(../assets/arrow.png);
+}
+
+/* line 62, _login.scss */
+.loginSubmit {
+  float: right;
+  padding: 3%;
+  background: #16A085;
+  color: #fff;
+}
+/* line 68, _login.scss */
+.loginSubmit:hover {
+  background: #169980;
+}
+/* line 72, _login.scss */
+.loginSubmit:focus {
+  outline: none;
+  background: #0F594B;
+}
+/* line 77, _login.scss */
+.loginSubmit:active {
+  padding-top: 3.6%;
+  padding-bottom: 2.4%;
+  background: #178B75;
+}
+
 @media screen and (max-width: 1024px) {
-  /* line 18, style.scss */
+  /* line 19, style.scss */
   .mainBlock {
     width: 100%;
   }
 
-  /* line 21, style.scss */
+  /* line 22, style.scss */
   .sideBlock {
     display: none;
   }
 
-  /* line 24, style.scss */
+  /* line 25, style.scss */
   .sectionNavigation {
     width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 29, style.scss */
+  /* line 30, style.scss */
   .mainBoard thead {
     display: none;
   }
 
-  /* line 32, style.scss */
+  /* line 33, style.scss */
   .boardEntry {
     display: block;
     box-sizing: border-box;
@@ -1191,7 +1084,7 @@ p.unlockableMessage {
     border: 0;
   }
 
-  /* line 40, style.scss */
+  /* line 41, style.scss */
   .boardEntry td {
     display: block;
     width: 100%;
@@ -1203,7 +1096,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
   }
 
-  /* line 45, style.scss */
+  /* line 46, style.scss */
   .boardEntry:first-child td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f9f9f9), color-stop(1, #f9f9f9));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
@@ -1213,7 +1106,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
   }
 
-  /* line 48, style.scss */
+  /* line 49, style.scss */
   .boardEntry:nth-child(even) td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #ECECEC), color-stop(1, #ECECEC));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
@@ -1223,7 +1116,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
   }
 
-  /* line 51, style.scss */
+  /* line 52, style.scss */
   .boardEntry td:before {
     content: attr(data-th) ": ";
     float: left;
@@ -1232,7 +1125,7 @@ p.unlockableMessage {
     font-weight: 700;
   }
 
-  /* line 58, style.scss */
+  /* line 59, style.scss */
   #boardAvatar {
     display: none;
   }
