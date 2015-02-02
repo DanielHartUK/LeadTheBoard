@@ -1,15 +1,15 @@
 <?php 
-require_once("../config.php");
+require_once("config.php");
 $profileUID =  $_GET['user'];
 include_once(INCLUDES_PATH . "/profile.php"); 
 include_once(TEMPLATES_PATH . "/header.php"); 
 ?>
-	<div class="content noPadding <?php if($userColourDark[$ProfileUserColourScheme] == 1) { echo 'dark'; }; ?> ">
+	<div class="content <?php if($admin == 1): echo 'admin'; endif; ?> noPadding <?php if($userColourDark[$ProfileUserColourScheme] == 1) { echo 'dark'; }; ?> ">
 		<div class="profileTop" style="background-color: <?php echo $userColourPrimary[$ProfileUserColourScheme] ?>;">
 			<img src="<?php echo $ProfileProfilePic ?>" class="profilePicRound" title="goat" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar">  
 			<h1><?php echo $ProfileFirstName . ' ' . $ProfileSurname; ?> <span class="clanTag">[<?php echo $ProfileClan; ?>]</span>
 			<?php if ($id == $profileUID) { ?>
-				<a href="../views/account.php"><div class="editProfile button"> Edit Profile </div></a>	
+				<a href="../account/account.php"><div class="editProfile button"> Edit Profile </div></a>	
 			<?php } ?>
 			</h1>
 		</div>
@@ -30,7 +30,7 @@ include_once(TEMPLATES_PATH . "/header.php");
 		        }
 		        $ai = 0; 
 				while($ai < $achievementsFullaCount) { ?>
-		        	<a href="achievements.php#achievementID-<?php echo $achievementsFulla[$ai]['AchievementID']; ?>"><img class="unlockableIcon profileAchievement" alt="<?php echo $achievementsFulla[$ai]['Name']; ?>" title="<?php echo $achievementsFulla[$ai]['Name']; ?>" src="../assets/achievements/<?php echo $achievementsFulla[$ai]['Icon']; ?>">
+		        	<a href="../hub/achievements.php#achievementID-<?php echo $achievementsFulla[$ai]['AchievementID']; ?>"><img class="unlockableIcon profileAchievement" alt="<?php echo $achievementsFulla[$ai]['Name']; ?>" title="<?php echo $achievementsFulla[$ai]['Name']; ?>" src="../assets/achievements/<?php echo $achievementsFulla[$ai]['Icon']; ?>">
 		    	<?php $ai++;
 				} 
 			?>
@@ -43,7 +43,7 @@ include_once(TEMPLATES_PATH . "/header.php");
 		        }
 		        $ai = 0; 
 				while($ai < $questsFullaCount) { ?>
-		        	<a href="quests.php#questID-<?php echo $questsFulla[$ai]['QuestID']; ?>"><img class="unlockableIcon profileQuest" alt="<?php echo $questsFulla[$ai]['Name']; ?>"  title="<?php echo $questsFulla[$ai]['Name']; ?>" src="../assets/quests/<?php echo $questsFulla[$ai]['Icon']; ?>">
+		        	<a href="../hub/quests.php#questID-<?php echo $questsFulla[$ai]['QuestID']; ?>"><img class="unlockableIcon profileQuest" alt="<?php echo $questsFulla[$ai]['Name']; ?>"  title="<?php echo $questsFulla[$ai]['Name']; ?>" src="../assets/quests/<?php echo $questsFulla[$ai]['Icon']; ?>">
 		    	<?php $ai++;
 				} 
 			?>

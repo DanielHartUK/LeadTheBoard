@@ -1,12 +1,12 @@
 	</div><?php if ($admin == 0): ?><div class="sideBlock">
 		<div class="youBox box"> 
-			<a href="/views/profile.php?user=<?php echo $id; ?>"><div class="boxTitle" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;"> You </div></a>
+			<a href="/profile.php?user=<?php echo $id; ?>"><div class="boxTitle" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;"> You </div></a>
 			<div class="boxContent">
 				<img src="<?php echo $profilePic ?>" class="profilePicRound" title="goat" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar">  
 				<div class="bannerSmall"> <?php echo $userPosition ?><sup class="superscript"><?php if ($userPosition == 1) : echo 'st'; elseif ($userPosition == 2) : echo 'nd'; elseif ($userPosition == 3) : echo 'rd'; else : echo 'th'; endif;?> </sup></div>
 					<div>
-						<div class="boxStat"><div class="flaticon-trophy56 boxIcon"></div> <?php echo $achievementsUnlocked ?>/<?php echo $achievementsUnlockable ?>
-						</div><div class="boxStat"><div class="flaticon-pencil43 boxIcon"></div> <?php echo $questsComplete ?>/<?php echo $questsAvailableAccumulation ?>
+						<div class="boxStat"><a href="/hub/achievements.php"><div class="flaticon-trophy56 boxIcon"></div> <?php echo $achievementsUnlocked ?>/<?php echo $achievementsUnlockable ?></a>
+						</div><div class="boxStat"><a href="/hub/quests.php"><div class="flaticon-pencil43 boxIcon"></div> <?php echo $questsComplete ?>/<?php echo $questsAvailableAccumulation ?></a>
 						</div><div class="boxStat"><div class="flaticon-medal61 boxIcon"></div> <?php echo $xp ?></div>
 					</div>
 			</div>
@@ -21,8 +21,8 @@
 						if($questsFulldCount > 4) { $expiringCount = 4; } else { $expiringCount = $questsFulldCount; };
 						while($ai < $expiringCount) { ?>
 							<li>
-								<img src="/assets/quests/<?php echo $questsFulld[$ai]['Icon']; ?>" class="questThumb" alt="<?php echo $questsFulld[$ai]['Name']; ?> Icon">
-								<a href="/views/quests.php#questID-<?php echo $questsFulld[$ai]['QuestID']; ?>" onmousedown="  $('.unlockableListCont').removeClass('selected'); highlightUnlockable()" ><?php echo $questsFulld[$ai]['Name']; ?></a> <br /> 
+								<img src="../assets/quests/<?php echo $questsFulld[$ai]['Icon']; ?>" class="questThumb" alt="<?php echo $questsFulld[$ai]['Name']; ?> Icon">
+								<a href="../hub/quests.php#questID-<?php echo $questsFulld[$ai]['QuestID']; ?>" onmousedown="  $('.unlockableListCont').removeClass('selected'); highlightUnlockable()" ><?php echo $questsFulld[$ai]['Name']; ?></a> <br /> 
 								<span>
 								<?php $timeExpire = strtotime($questsFulld[$ai]['Expire']);
 								if($timeExpire - time() < 60) {

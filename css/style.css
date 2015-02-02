@@ -135,8 +135,15 @@ h2.sectionTitle {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-
 /* line 93, _general.scss */
+.footer.admin {
+  float: right;
+  box-sizing: border-box;
+  padding: 0 0.5% 0.5% 0.5%;
+  margin: 0;
+}
+
+/* line 100, _general.scss */
 .gallop {
   -webkit-transition: 6s ease;
   -moz-transition: 6s ease;

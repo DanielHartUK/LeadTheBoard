@@ -134,12 +134,16 @@
 .flaticon-6:before {
     content: "\e009";
 }
-.flaticon-trophy56:before {
+.flaticon-speed13:before {
     content: "\e00a";
 }
-.flaticon-user182:before {
+.flaticon-trophy56:before {
     content: "\e00b";
 }
+.flaticon-user182:before {
+    content: "\e00c";
+}
+
 
 
 @font-face {

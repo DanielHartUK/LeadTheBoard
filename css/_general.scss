@@ -89,6 +89,13 @@ h2.sectionTitle {
 .footer {
     margin: 0 0.5% 0.5% 0.5%;   
     @include transition($drawerSlide);
+
+    &.admin {
+        float: right;
+        box-sizing: border-box;
+        padding: 0 0.5% 0.5% 0.5%;
+        margin: 0;
+    }
 }
 .gallop {
     @include transition(6s ease);
