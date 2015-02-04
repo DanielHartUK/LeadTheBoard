@@ -152,6 +152,78 @@ h2.sectionTitle {
   left: 0px;
 }
 
+/* line 106, _general.scss */
+.button-ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate(0);
+}
+
+/* line 111, _general.scss */
+.button-ripple_content {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 115, _general.scss */
+.button-ripple_ripples {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 120, _general.scss */
+.button-ripple_ripple {
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 1em;
+  height: 1em;
+  margin: -0.5em 0 0 -0.5em;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  top: 0;
+  left: 0;
+  -webkit-transform: ripple-animation 2s;
+  -moz-transform: ripple-animation 2s;
+  -ms-transform: ripple-animation 2s;
+  -o-transform: ripple-animation 2s;
+  transform: ripple-animation 2s;
+}
+
+@-webkit-keyframes ripple-animation {
+  from {
+    transform: scale3d(1, 1, 1);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale3d(100, 100, 1);
+    opacity: 0;
+  }
+}
+@-moz-keyframes ripple-animation {
+  from {
+    transform: scale3d(1, 1, 1);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale3d(100, 100, 1);
+    opacity: 0;
+  }
+}
+@keyframes ripple-animation {
+  from {
+    transform: scale3d(1, 1, 1);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale3d(100, 100, 1);
+    opacity: 0;
+  }
+}
 /* Navigation */
 /* line 3, _navigation.scss */
 .nav {
@@ -288,14 +360,19 @@ ul.menu li {
 ul.menu li:hover {
   background-color: rgba(0, 0, 0, 0.28);
 }
+/* line 104, _navigation.scss */
+ul.menu li.logOut {
+  position: absolute;
+  bottom: 0;
+}
 
-/* line 106, _navigation.scss */
+/* line 111, _navigation.scss */
 .sideIcon {
   margin-right: 4%;
   font-weight: 400;
 }
 
-/* line 110, _navigation.scss */
+/* line 115, _navigation.scss */
 .sectionNavigation {
   padding: 1% 0;
   width: 80%;
@@ -303,17 +380,17 @@ ul.menu li:hover {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 116, _navigation.scss */
+/* line 121, _navigation.scss */
 .sectionNavigation ul {
   margin: 0;
   padding: 0;
   border-bottom: 2px solid #808080;
 }
-/* line 121, _navigation.scss */
+/* line 126, _navigation.scss */
 .sectionNavigation ul a {
   color: inherit;
 }
-/* line 124, _navigation.scss */
+/* line 129, _navigation.scss */
 .sectionNavigation ul li {
   display: inline-block;
   margin: 0 2% -2px 0;
@@ -321,12 +398,12 @@ ul.menu li:hover {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
-/* line 131, _navigation.scss */
+/* line 136, _navigation.scss */
 .sectionNavigation ul li.currentPage {
   border-bottom: 2px solid #16a085;
 }
 
-/* line 137, _navigation.scss */
+/* line 142, _navigation.scss */
 ul.footerLinks {
   list-style: none;
   margin: 0;
@@ -334,24 +411,24 @@ ul.footerLinks {
   font-size: 0.9em;
   border-top: 1px solid #808080;
 }
-/* line 144, _navigation.scss */
+/* line 149, _navigation.scss */
 ul.footerLinks li {
   display: inline-block;
   margin-right: 1%;
 }
-/* line 148, _navigation.scss */
+/* line 153, _navigation.scss */
 ul.footerLinks li.copyright {
   float: right;
   margin-right: 0;
 }
 
-/* line 154, _navigation.scss */
+/* line 159, _navigation.scss */
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
   border-bottom: 2px solid #16a085;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 158, _navigation.scss */
+  /* line 163, _navigation.scss */
   .notificationIcon {
     background-image: url(../assets/bell2x.png);
   }
@@ -962,6 +1039,189 @@ p.unlockableMessage {
   box-shadow: 0px 0px 1px #000;
 }
 
+/* line 10, _dashboard.scss */
+.statRightHolder {
+  display: inline-block;
+  height: 90%;
+  width: 64%;
+  position: relative;
+  top: -32px;
+  margin: 0;
+}
+
+/* line 18, _dashboard.scss */
+.statRightHolder ul {
+  list-style: none;
+  margin: 0;
+}
+
+/* line 22, _dashboard.scss */
+.statRightHolder li {
+  border-bottom: 1px solid #ccc;
+  height: 85px;
+  width: 95%;
+  position: relative;
+  top: -25px;
+}
+
+/* line 29, _dashboard.scss */
+.statRightHolder h3 {
+  display: inline-block;
+  margin-right: 15px;
+  color: #B6B5B5;
+  font-weight: 300;
+  font-size: 38px;
+}
+
+/* line 36, _dashboard.scss */
+.statRightHolder span {
+  display: inline-block;
+  color: #B6B5B5;
+  font-size: 21px;
+  font-weight: 300;
+}
+
+/* line 43, _dashboard.scss */
+.statsLeft {
+  list-style: none;
+  display: inline-block;
+  width: 45%;
+}
+
+/* line 48, _dashboard.scss */
+.statsLeft li {
+  width: 100%;
+  height: 14px;
+  border: none;
+  top: 5px;
+  margin-bottom: 25px;
+}
+
+/* line 55, _dashboard.scss */
+.statsLeft h3 {
+  font-size: 17px;
+  display: inline-block;
+}
+
+/* line 59, _dashboard.scss */
+.statsLeft span {
+  font-size: 17px;
+  display: inline-block;
+}
+
+/* line 63, _dashboard.scss */
+.statsRight {
+  width: 45%;
+  display: inline-block;
+  position: absolute;
+}
+
+/* line 68, _dashboard.scss */
+.statsRight li {
+  width: 100%;
+  height: 14px;
+  border: none;
+  top: 5px;
+  margin-bottom: 25px;
+}
+
+/* line 75, _dashboard.scss */
+.statsRight h3 {
+  font-size: 17px;
+  display: inline-block;
+}
+
+/* line 79, _dashboard.scss */
+.statsRight span {
+  font-size: 17px;
+  display: inline-block;
+}
+
+/* Pie Chart */
+/* line 84, _dashboard.scss */
+.progress-pie-chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  position: relative;
+}
+
+/* line 91, _dashboard.scss */
+.progress-pie-chart.gt-50 {
+  background-color: #81CE97;
+}
+
+/* line 95, _dashboard.scss */
+.ppc-progress {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 200px, 200px, 100px);
+}
+
+/* line 105, _dashboard.scss */
+.ppc-progress .ppc-progress-fill {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 100px, 200px, 0);
+  background: #81CE97;
+  transform: rotate(60deg);
+}
+
+/* line 117, _dashboard.scss */
+.gt-50 .ppc-progress {
+  clip: rect(0, 100px, 200px, 0);
+}
+
+/* line 120, _dashboard.scss */
+.gt-50 .ppc-progress .ppc-progress-fill {
+  clip: rect(0, 200px, 200px, 100px);
+  background: #E5E5E5;
+}
+
+/* line 125, _dashboard.scss */
+.ppc-percents {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 173.91304px/2);
+  top: calc(50% - 173.91304px/2);
+  width: 173.91304px;
+  height: 173.91304px;
+  background: #fff;
+  text-align: center;
+  display: table;
+}
+
+/* line 137, _dashboard.scss */
+.ppc-percents span {
+  display: block;
+  font-size: 2.6em;
+  font-weight: bold;
+  color: #81CE97;
+}
+
+/* line 144, _dashboard.scss */
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 149, _dashboard.scss */
+.progress-pie-chart {
+  margin: 50px auto 0;
+}
+
 /* line 1, _login.scss */
 .loginWrap {
   background: #0D5A4B;
@@ -1060,28 +1320,28 @@ p.unlockableMessage {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 19, style.scss */
+  /* line 20, style.scss */
   .mainBlock {
     width: 100%;
   }
 
-  /* line 22, style.scss */
+  /* line 23, style.scss */
   .sideBlock {
     display: none;
   }
 
-  /* line 25, style.scss */
+  /* line 26, style.scss */
   .sectionNavigation {
     width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 30, style.scss */
+  /* line 31, style.scss */
   .mainBoard thead {
     display: none;
   }
 
-  /* line 33, style.scss */
+  /* line 34, style.scss */
   .boardEntry {
     display: block;
     box-sizing: border-box;
@@ -1091,7 +1351,7 @@ p.unlockableMessage {
     border: 0;
   }
 
-  /* line 41, style.scss */
+  /* line 42, style.scss */
   .boardEntry td {
     display: block;
     width: 100%;
@@ -1103,7 +1363,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
   }
 
-  /* line 46, style.scss */
+  /* line 47, style.scss */
   .boardEntry:first-child td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f9f9f9), color-stop(1, #f9f9f9));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
@@ -1113,7 +1373,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
   }
 
-  /* line 49, style.scss */
+  /* line 50, style.scss */
   .boardEntry:nth-child(even) td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #ECECEC), color-stop(1, #ECECEC));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
@@ -1123,7 +1383,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
   }
 
-  /* line 52, style.scss */
+  /* line 53, style.scss */
   .boardEntry td:before {
     content: attr(data-th) ": ";
     float: left;
@@ -1132,7 +1392,7 @@ p.unlockableMessage {
     font-weight: 700;
   }
 
-  /* line 59, style.scss */
+  /* line 60, style.scss */
   #boardAvatar {
     display: none;
   }

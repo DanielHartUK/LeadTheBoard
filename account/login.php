@@ -13,7 +13,7 @@ include_once(TEMPLATES_PATH . "/header.php");
 			<input class="field loginPassword" type="password" placeholder="Password">
 			<div class="formSubmit">
 				<p class="clickable" onclick="forgotClick()"> Forgot password? </p>
-				<input type="submit" class="submit loginSubmit button" value="Login">
+				<input type="submit" class="submit loginSubmit button " value="Login">
 			</div>
 		</form>
 	</div>

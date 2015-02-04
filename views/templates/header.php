@@ -65,8 +65,8 @@ $IGNORETHISFORNOWloggedIn = 0;
 						<a href=""><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
 					</ul>
 				<?php else: ?>
-				<div class="drawer" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;">
-					<div class="user" id="loggedIn" style="background-color: #16a085;"><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> </div>
+				<div class="drawer" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;"  >
+					<div class="user" id="loggedIn" <?php if (!pageURLContains($x = 'profile')) { ?> style="background-color: #16a085;"<?php  }?>><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> </div>
 					<ul class="menu"> <h6> Admin </h6>
 	 					<a href="<?php echo SITE_URL; ?>/account/dashboard/"><li class="Dashboard"><span class="flaticon-speed13 sideIcon"></span> Dashboard </li></a>
 						<a href="<?php echo SITE_URL; ?>/account/account.php"><li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li></a>

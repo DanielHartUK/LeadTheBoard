@@ -1,6 +1,8 @@
 <?php 
+$isOverview = 1;
 require_once("../../config.php");
 include_once(TEMPLATES_PATH . "/header.php"); 
+include_once(INCLUDES_PATH . "/dashboard.php"); 
 
 if ($admin == 0) {
 	include_once(TEMPLATES_PATH . "/wrongPermissions.php"); 
@@ -9,8 +11,50 @@ if ($admin == 0) {
 
 	<div class="content <?php if($admin == 1): echo 'admin'; endif; ?>">
 		<h1> Dashboard </h1>
-		
-	</div>
+		<?php require_once(TEMPLATES_PATH . "/dashboardNav.php"); ?>
+
+		<div class="statsCont">
+			<div class="stats achievements">
+
+
+ <div class="progressDiv">
+            <div class="statChartHolder">
+                <div class="progress-pie-chart progress-pie-chart0" data-percent="60"><!--Pie Chart -->
+                    <div class="ppc-progress ppc-progress0">
+                        <div class="ppc-progress-fill ppc-progress-fill0"></div>
+                    </div>
+                    <div class="ppc-percents ppc-percents0">
+                    <div class="pcc-percents-wrapper pcc-percents-wrapper0">
+                        <span>%</span>
+                    </div>
+                    </div>
+                </div><!--End Chart -->
+            </div>
+
+            
+        </div>
+ <div class="progressDiv">
+            <div class="statChartHolder">
+                <div class="progress-pie-chart progress-pie-chart1" data-percent="40"><!--Pie Chart -->
+                    <div class="ppc-progress ppc-progress1">
+                        <div class="ppc-progress-fill ppc-progress-fill1"></div>
+                    </div>
+                    <div class="ppc-percents ppc-percents1">
+                    <div class="pcc-percents-wrapper pcc-percents-wrapper1">
+                        <span>%</span>
+                    </div>
+                    </div>
+                </div><!--End Chart -->
+            </div>
+
+            
+        </div>
+
+			</div>
+
+		</div>
+
+<?php echo $totalXP; ?>
 
 <?php 
 }; 

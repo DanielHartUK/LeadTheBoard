@@ -102,3 +102,45 @@ h2.sectionTitle {
     position: relative;
     left: 0px;
 }
+
+.button-ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate(0);
+}
+.button-ripple_content {
+  position: relative;
+  z-index: 1;
+}
+.button-ripple_ripples {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.button-ripple_ripple{
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 1em;
+  height: 1em;
+  margin: -0.5em 0 0 -0.5em;
+  @include transform(scale(0));
+  top: 0;
+  left: 0;
+  @include transform(ripple-animation 2s);
+}
+
+@include keyframes(ripple-animation) {
+    from {
+      transform: scale3d(1,1,1);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale3d(100,100,1);
+      opacity: 0;
+    }
+}
+
+
+
+
