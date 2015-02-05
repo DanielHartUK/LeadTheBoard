@@ -7,7 +7,7 @@ if ($admin == 0) {
 } else {
 ?>
 
-	<div class="content <?php if($admin == 1): echo 'admin'; endif; ?>">
+	<div class="content">
 		<h1> Dashboard </h1>
 		<?php require_once(TEMPLATES_PATH . "/dashboardNav.php"); ?>
 	</div>

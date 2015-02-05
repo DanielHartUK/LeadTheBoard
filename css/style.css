@@ -108,42 +108,58 @@ h2.sectionTitle {
 }
 
 /* line 71, _general.scss */
-.content {
+.drawerMove {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
+}
+
+/* line 74, _general.scss */
+.adminCont {
+  width: calc(100% - 19.5%);
+  float: right;
+}
+
+/* line 78, _general.scss */
+.content {
+  -webkit-transition: 0.3s width;
+  -moz-transition: 0.3s width;
+  transition: 0.3s width;
   max-width: 1800px;
   margin: 0 auto;
   padding: 0.5%;
   box-sizing: border-box;
 }
-/* line 78, _general.scss */
+/* line 85, _general.scss */
 .content.admin {
   width: calc(100% - 19.5%);
   margin: 0;
-  float: right;
 }
-/* line 84, _general.scss */
+/* line 90, _general.scss */
 .content.noPadding {
   padding: 0%;
 }
 
-/* line 89, _general.scss */
+/* line 95, _general.scss */
 .footer {
   margin: 0 0.5% 0.5% 0.5%;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.3s width;
+  -moz-transition: 0.3s width;
+  transition: 0.3s width;
 }
-/* line 93, _general.scss */
+/* line 99, _general.scss */
 .footer.admin {
+  clear: right;
+  width: auto;
+  display: block;
   float: right;
   box-sizing: border-box;
   padding: 0 0.5% 0.5% 0.5%;
   margin: 0;
+  white-space: nowrap;
 }
 
-/* line 100, _general.scss */
+/* line 110, _general.scss */
 .gallop {
   -webkit-transition: 6s ease;
   -moz-transition: 6s ease;
@@ -152,37 +168,37 @@ h2.sectionTitle {
   left: 0px;
 }
 
-/* line 106, _general.scss */
+/* line 116, _general.scss */
 .button {
   background: rgba(0, 0, 0, 0.42);
   display: inline-block;
   text-align: center;
-  padding: 1%;
+  padding: 0.6em;
   border-radius: 5px;
   font-size: 1rem;
   border: 0;
 }
-/* line 115, _general.scss */
+/* line 125, _general.scss */
 .button:hover {
   background: rgba(0, 0, 0, 0.51);
 }
-/* line 118, _general.scss */
+/* line 128, _general.scss */
 .button:active {
   background: rgba(0, 0, 0, 0.54);
-  padding-top: 1.2%;
-  padding-bottom: 0.8%;
+  padding-top: 0.7em;
+  padding-bottom: 0.5em;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.52);
 }
-/* line 125, _general.scss */
+/* line 135, _general.scss */
 .button.blue {
   background: #1892B6;
   color: #FFF;
 }
-/* line 129, _general.scss */
+/* line 139, _general.scss */
 .button.blue:hover {
   background: #1589AB;
 }
-/* line 132, _general.scss */
+/* line 142, _general.scss */
 .button.blue:active {
   background: #157F9E;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.3);
@@ -1310,29 +1326,126 @@ p.unlockableMessage {
   background: #178B75;
 }
 
+/* line 1, _account.scss */
+.formContainer {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+/* line 7, _account.scss */
+.formContainer .button {
+  display: block;
+  margin: 10px 0;
+}
+
+/* line 12, _account.scss */
+.picContainer {
+  position: relative;
+  overflow: auto;
+  height: 180px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 19, _account.scss */
+.accountPic {
+  width: 150px;
+  height: 150px;
+}
+
+/* line 23, _account.scss */
+.changePic {
+  width: 150px;
+  height: 30px;
+  background: #16A085;
+  position: absolute;
+  left: 0;
+  top: 150px;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* line 35, _account.scss */
+.inputField {
+  background: #F4F4F4;
+  display: block;
+  border: 1px solid #B8B8B8;
+  padding: 1.4%;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 4px;
+}
+/* line 44, _account.scss */
+.inputField.disabled {
+  background: #DFDFDF;
+}
+
+/* line 48, _account.scss */
+.detailLabel {
+  font-size: 0.9em;
+  margin: 10px 0 5px 0;
+}
+
+/* line 54, _account.scss */
+.colourOption {
+  width: 50px;
+  height: 50px;
+  margin-right: 3%;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 4px;
+  -webkit-transition: 0.3s border;
+  -moz-transition: 0.3s border;
+  transition: 0.3s border;
+}
+/* line 63, _account.scss */
+.colourOption.selected {
+  border: 4px solid #88BCF7;
+}
+/* line 67, _account.scss */
+.colourOption.a {
+  background-color: #076d91;
+  background-image: -webkit-linear-gradient(#076d91 0%, #076d91 50%, #064e67 50%, #064e67 100%);
+  background-image: linear-gradient(#076d91 0%, #076d91 50%, #064e67 50%, #064e67 100%);
+}
+/* line 70, _account.scss */
+.colourOption.b {
+  background-color: #e74c3c;
+  background-image: -webkit-linear-gradient(#e74c3c 0%, #e74c3c 50%, #b94034 50%, #b94034 100%);
+  background-image: linear-gradient(#e74c3c 0%, #e74c3c 50%, #b94034 50%, #b94034 100%);
+}
+/* line 73, _account.scss */
+.colourOption.c {
+  background-color: #46404c;
+  background-image: -webkit-linear-gradient(#46404c 0%, #46404c 50%, #28252C 50%, #28252C 100%);
+  background-image: linear-gradient(#46404c 0%, #46404c 50%, #28252C 50%, #28252C 100%);
+}
+
 @media screen and (max-width: 1024px) {
-  /* line 20, style.scss */
+  /* line 21, style.scss */
   .mainBlock {
     width: 100%;
   }
 
-  /* line 23, style.scss */
+  /* line 24, style.scss */
   .sideBlock {
     display: none;
   }
 
-  /* line 26, style.scss */
+  /* line 27, style.scss */
   .sectionNavigation {
     width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 31, style.scss */
+  /* line 32, style.scss */
   .mainBoard thead {
     display: none;
   }
 
-  /* line 34, style.scss */
+  /* line 35, style.scss */
   .boardEntry {
     display: block;
     box-sizing: border-box;
@@ -1342,7 +1455,7 @@ p.unlockableMessage {
     border: 0;
   }
 
-  /* line 42, style.scss */
+  /* line 43, style.scss */
   .boardEntry td {
     display: block;
     width: 100%;
@@ -1354,7 +1467,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
   }
 
-  /* line 47, style.scss */
+  /* line 48, style.scss */
   .boardEntry:first-child td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f9f9f9), color-stop(1, #f9f9f9));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
@@ -1364,7 +1477,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
   }
 
-  /* line 50, style.scss */
+  /* line 51, style.scss */
   .boardEntry:nth-child(even) td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #ECECEC), color-stop(1, #ECECEC));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
@@ -1374,7 +1487,7 @@ p.unlockableMessage {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
   }
 
-  /* line 53, style.scss */
+  /* line 54, style.scss */
   .boardEntry td:before {
     content: attr(data-th) ": ";
     float: left;
@@ -1383,7 +1496,7 @@ p.unlockableMessage {
     font-weight: 700;
   }
 
-  /* line 60, style.scss */
+  /* line 61, style.scss */
   #boardAvatar {
     display: none;
   }

@@ -76,4 +76,5 @@ $IGNORETHISFORNOWloggedIn = 0;
 			</div>
 		<?php endif; ?>
 	<?php endif; ?>
+	<div class="drawerMove <?php if($admin == 1) { echo 'adminCont';} ?>"> 
 	

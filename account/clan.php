@@ -1,7 +1,8 @@
 <?php 
 require_once("../config.php");
-
 include_once(TEMPLATES_PATH . "/header.php"); 
+$isAccountIndex = 0;
+
 ?>
 <script language="javascript">
 function readPicture(input) {
@@ -61,9 +62,9 @@ so please reduce the file size and then upload.<BR>";
 }
 mysqli_close($conn); // Close the connection 
 ?>
-<div class="content <?php if($admin == 1): echo 'admin'; endif; ?>">
+<div class="content">
   <h1> Account </h1>
-  <?php include_once(INCLUDES_PATH . "/settingsNav.php"); ?>
+  <?php include_once(TEMPLATES_PATH . "/settingsNav.php"); ?>
   <h3>Clan</h3>
   <form name='clan' action='' method=post ENCTYPE="multipart/form-data">
     <?php

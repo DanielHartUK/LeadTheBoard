@@ -14,7 +14,7 @@ include_once(TEMPLATES_PATH . "/header.php");
 			<img src="<?php echo $ProfileProfilePic ?>" class="profilePicRound" title="goat" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar">  
 			<h1><?php echo $ProfileFirstName . ' ' . $ProfileSurname; ?> <span class="clanTag">[<?php echo $ProfileClan; ?>]</span>
 			<?php if ($id == $profileUID) { ?>
-				<a href="../account/account.php"><div class="editProfile button"> Edit Profile </div></a>	
+				<a href="../account/"><div class="editProfile button"> Edit Profile </div></a>	
 			<?php } ?>
 			</h1>
 		</div>

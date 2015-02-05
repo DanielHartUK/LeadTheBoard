@@ -1,7 +1,8 @@
 <?php 
 require_once("../config.php");
-
 include_once(TEMPLATES_PATH . "/header.php"); 
+$isAccountIndex = 0;
+
 ?>
 <?php
 $conn = mysqli_connect($servername, $username, $password, $dbname); // Create a connection to the database
@@ -18,9 +19,9 @@ if(isset($_POST["submit1"])) {
 }
 mysqli_close($conn); // Close the connection 
 ?>
-<div class="content <?php if($admin == 1): echo 'admin'; endif; ?>">
+<div class="content">
   <h1> Account </h1>
-  <?php include_once(INCLUDES_PATH . "/settingsNav.php"); ?>
+  <?php include_once(TEMPLATES_PATH . "/settingsNav.php"); ?>
   <form name='personalDetails' action='' method=post>
     <TABLE BORDER=2>
       <TR> <TD>First Name</TD> <TD><input type=text name="firstName" value="<?php echo($firstName) ?>"></TD> </TR>

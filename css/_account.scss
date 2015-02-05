@@ -1,102 +1,76 @@
-/* Login/Register Forms */
+.formContainer {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
 
-.loginContainers {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    padding-top: 50px;
-    z-index: 9998;
-    color: #555;
+
+    .button {
+        display: block;
+        margin: 10px 0;
+    }
 }
-.loginContainers.visible {
-    display: block;
-}
-.entryForm {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 350px;
-    @include transform(translate(-50%, -50%));
-    display: none;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.35);
-}
-.entryForm.visible {
-    display: block;
-}
-.loginDiv {
-    background-color: #fff;
-    padding: 5%;
-    box-sizing: border-box;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-.icon-cross {
-    float: right;
-    font-size: 0.8em;
-    cursor: pointer;
-}
-.field {
-    width: 100%;
-    font: inherit;
-    font-weight: 400;
-    padding: 3%;
-    box-sizing: border-box;
-    margin: 1% 0;
-    border: 1px solid #A5A5A5;
-}
-.field:focus {
-    outline: none;
-    border-color: #F00;
-}
-.formSubmit p {
-    float: left;
-}
-.formSubmit p.clickable:hover {
-    border-bottom: 1px dashed #A5A5A5;
-}
-.formSubmit p.clickable {
-    border-bottom: 1px dashed rgba(0, 0, 0, 0);
-    padding-bottom: 1px;
-}
-.submit, .register {
-    background-color: #138972;
-    border: none;
-    color: #FFF;
-    padding: 10px 25px;
-    font-size: 1em;
-    font: inherit;
-    float: right;
-    border-bottom: 2px solid #0E6151;
+.picContainer {
     position: relative;
+    overflow: auto;
+    height: 180px;
+    display: inline-block;
+    vertical-align: top;
+}
+.accountPic {
+    width: 150px;
+    height: 150px;
+}
+.changePic {
+    width: 150px;
+    height: 30px;
+    background: #16A085;
+    position: absolute;
+    left: 0;
+    top: 150px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
     cursor: pointer;
 }
-.submit {
-    margin: 2% 0 0 0;
-}
-.submit:focus, .register:focus {
-    background-color: #146E5C;
-    outline: none;
-}
-.submit:active, .register:active {
-    background-color: #147B67;
-    border-bottom: 2px solid transparent;
-    top: 2px;
-}
-.register {
-    margin: 2% 0;
-}
-.formBottom {
+.inputField {
+    background: #F4F4F4;
     display: block;
-    overflow: auto;
-    margin-top: 1px;
-    background-color: #F0F0F0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border: 1px solid #B8B8B8;
+    padding: 1.4%;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 4px;
 
-    p {
-        float: left;
+    &.disabled {
+        background: #DFDFDF;
+    }
+}
+.detailLabel {
+  font-size: 0.9em;
+  margin: 10px 0 5px 0;
+}
+.colourOptions {
+}
+.colourOption {
+    width: 50px;
+    height: 50px;
+    margin-right: 3%;
+    display: inline-block; 
+    box-sizing: border-box;
+    border-radius: 4px;
+    @include transition(0.3s border);
+
+    &.selected {
+        border: 4px solid #88BCF7;
+    }
+
+    &.a {
+        @include linear-gradient(#076d91 0%, #076d91 50%, #064e67 50%, #064e67 100%);
+    }
+    &.b {
+        @include linear-gradient(#e74c3c 0%, #e74c3c 50%, #b94034 50%, #b94034 100%);
+    }
+    &.c {
+        @include linear-gradient(#46404c 0%, #46404c 50%, #28252C 50%, #28252C 100%);
     }
 }

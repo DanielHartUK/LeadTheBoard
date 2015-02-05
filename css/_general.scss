@@ -68,8 +68,15 @@ h2.sectionTitle {
         overflow: hidden;
     }
 }
-.content {
+.drawerMove {
     @include transition($drawerSlide);
+}
+.adminCont {
+  width: calc(100% - 19.5%);
+  float: right;
+}
+.content {
+    @include transition($drawerSlide width);
     max-width: 1800px;
     margin: 0 auto;
     padding: 0.5%;
@@ -78,7 +85,6 @@ h2.sectionTitle {
     &.admin {
         width: calc(100% - 19.5%);
         margin: 0;
-        float: right;
     }
 
     &.noPadding {
@@ -88,13 +94,17 @@ h2.sectionTitle {
 }
 .footer {
     margin: 0 0.5% 0.5% 0.5%;   
-    @include transition($drawerSlide);
+    @include transition($drawerSlide width);
 
     &.admin {
+        clear: right;
+        width: auto;
+display: block;
         float: right;
         box-sizing: border-box;
         padding: 0 0.5% 0.5% 0.5%;
         margin: 0;
+        white-space: nowrap;
     }
 }
 .gallop {
@@ -107,7 +117,7 @@ h2.sectionTitle {
   background: rgba(0, 0, 0, 0.42);
   display: inline-block;
   text-align: center;
-  padding: 1%;
+  padding: 0.6em;
   border-radius: 5px;
   font-size: 1rem;
   border: 0;
@@ -117,8 +127,8 @@ h2.sectionTitle {
   }
   &:active {
     background: rgba(0, 0, 0, 0.54);
-    padding-top: 1.2%;
-    padding-bottom: 0.8%;
+    padding-top: 0.7em;
+    padding-bottom: 0.5em;
     box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.52);
   }
 

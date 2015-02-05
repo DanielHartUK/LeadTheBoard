@@ -11,10 +11,8 @@ function openDrawer () {
 $('.drawer').removeClass('closed');
 $('.drawer').css('left', '0');
 $('.sideBlock').addClass('drawerO');
-c = $('.content').css('padding-left');
-f = $('.footer').css('padding-left');
-$('.content').css('padding-left', $('.drawer').outerWidth() + parseInt(c));
-$('.footer').css('padding-left', $('.drawer').outerWidth() + parseInt(f));
+c = $('.drawerMove').css('padding-left');
+$('.drawerMove').css('padding-left', $('.drawer').outerWidth() + parseInt(c));
 $('.sectionNavigation').css('width', '100%');
 $('.mainBlock').css('width', '100%');
 
@@ -25,12 +23,8 @@ function closeDrawer () {
 $('.drawer').addClass('closed');
 $('.drawer.closed').css('left', -$('.drawer').outerWidth());
 $('.sideBlock').removeClass('drawerO');
-$('.content').css('padding-left', $('.drawer').outerWidth() + parseInt(c));
-$('.footer').css('padding-left', $('.drawer').outerWidth() + parseInt(f));
-$('.sectionNavigation').css('width', '100%');
-$('.mainBlock').css('width', '100%');
-$('.content').attr('style', function(i, style) { return style.replace(/padding-left[^;]+;?/g, '');}); // Remove the inline styles added by opening the drawer
-$('.footer').attr('style', function(i, style) { return style.replace(/padding-left[^;]+;?/g, '');}); // Remove the inline styles added by opening the drawer
+$('.drawerMove').css('padding-left', $('.drawer').outerWidth() + parseInt(c));
+$('.drawerMove').attr('style', function(i, style) { return style.replace(/padding-left[^;]+;?/g, '');}); // Remove the inline styles added by opening the drawer
 $('.sectionNavigation').attr('style', function(i, style) { return style.replace(/width[^;]+;?/g, '');}); // Remove the inline styles added by opening the drawer
 $('.mainBlock').attr('style', function(i, style) { return style.replace(/width[^;]+;?/g, '');}); // Remove the inline styles added by opening the drawer
 }
