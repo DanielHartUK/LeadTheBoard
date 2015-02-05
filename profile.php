@@ -1,6 +1,11 @@
 <?php 
 require_once("config.php");
-$profileUID =  $_GET['user'];
+require_once(INCLUDES_PATH . "/demoVariables.php");
+if (empty($_GET['user'])) {
+	$profileUID = $id; 
+} else {
+	$profileUID =  $_GET['user'];
+}
 include_once(INCLUDES_PATH . "/profile.php"); 
 include_once(TEMPLATES_PATH . "/header.php"); 
 ?>

@@ -26,7 +26,7 @@ Not responsive or fixed width, i.e. layout will break after certain width
 No fallbacks for older browsers
 Nav bar: User arrow falls onto next line when resizing window
 	
-
+http://img.wonderhowto.com/img/04/21/63459506746235/0/last-resort-method-fix-xbox-360-e74-error-the-red-ring-death.w654.jpg
 
 
 

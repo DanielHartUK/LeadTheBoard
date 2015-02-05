@@ -15,47 +15,41 @@ if ($admin == 0) {
 
 		<div class="statsCont">
 			<div class="stats achievements">
-
-
- <div class="progressDiv">
-            <div class="statChartHolder">
-                <div class="progress-pie-chart progress-pie-chart0" data-percent="60"><!--Pie Chart -->
-                    <div class="ppc-progress ppc-progress0">
-                        <div class="ppc-progress-fill ppc-progress-fill0"></div>
+                <div class="progressDiv">
+                    <div class="statChartHolder">
+                        <div class="progress-pie-chart progress-pie-chart0" data-percent="<?php echo $achievementsUnlocked / $achievementsAvailable * 100; ?>"><!--Pie Chart -->
+                            <div class="ppc-progress ppc-progress0">
+                                <div class="ppc-progress-fill ppc-progress-fill0"></div>
+                            </div>
+                            <div class="ppc-percents ppc-percents0">
+                                <div class="pcc-percents-wrapper pcc-percents-wrapper0">
+                                    <span class="pie-info">Overall Achievement Progress: </span><br > <span class="pie-percent"><?php echo $achievementsUnlocked ." / ". $achievementsAvailable ?></span>
+                                </div>
+                            </div>
+                        </div><!--End Chart -->
                     </div>
-                    <div class="ppc-percents ppc-percents0">
-                    <div class="pcc-percents-wrapper pcc-percents-wrapper0">
-                        <span>%</span>
+                </div>
+			</div><div class="stats quests">
+                <div class="progressDiv">
+                    <div class="statChartHolder">
+                        <div class="progress-pie-chart progress-pie-chart1" data-percent="<?php echo $questsComplete / $questsAvailable * 100; ?>"><!--Pie Chart -->
+                            <div class="ppc-progress ppc-progress1">
+                                <div class="ppc-progress-fill ppc-progress-fill1"></div>
+                            </div>
+                            <div class="ppc-percents ppc-percents1">
+                                <div class="pcc-percents-wrapper pcc-percents-wrapper1">
+                                    <span class="pie-info">Overall Quest Progress: </span><br > <span class="pie-percent"><?php echo $questsComplete ." / ". $questsAvailable; ?></span>
+                                </div>
+                            </div>
+                        </div><!--End Chart -->
                     </div>
-                    </div>
-                </div><!--End Chart -->
+                </div>
+            </div><div class="stats xp">
+                <div class="flaticon-medal61"></div><p>Total XP <br /> <?php echo $totalXP; ?></p>
             </div>
-
-            
-        </div>
- <div class="progressDiv">
-            <div class="statChartHolder">
-                <div class="progress-pie-chart progress-pie-chart1" data-percent="40"><!--Pie Chart -->
-                    <div class="ppc-progress ppc-progress1">
-                        <div class="ppc-progress-fill ppc-progress-fill1"></div>
-                    </div>
-                    <div class="ppc-percents ppc-percents1">
-                    <div class="pcc-percents-wrapper pcc-percents-wrapper1">
-                        <span>%</span>
-                    </div>
-                    </div>
-                </div><!--End Chart -->
-            </div>
-
-            
         </div>
 
-			</div>
-
-		</div>
-
-<?php echo $totalXP; ?>
-
+    </div>
 <?php 
 }; 
 include_once(TEMPLATES_PATH . "/footer.php"); 

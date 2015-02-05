@@ -1,9 +1,3 @@
-<?php 
-require_once("../config.php");
-include_once(TEMPLATES_PATH . "/header.php"); 
-?>
-
-<div class="content <?php if($admin == 1): echo 'admin'; endif; ?>" id="useless">
 <?php function browserDetails() {
 	$userAgent = $_SERVER['HTTP_USER_AGENT'];
 
@@ -40,10 +34,3 @@ include_once(TEMPLATES_PATH . "/header.php");
 $browser=browserDetails();
 
 ?>
-
-<?php echo 'You are using ',$browser['Browser'], ' by ', $browser['From'], '. <br/>' ?>
-<span id='res'>  </span>
-<script>document.getElementById("res").innerHTML = "Your screen resolution is " + screen.width + "*" + screen.height; </script>
-
-</div>
-<?php include_once(TEMPLATES_PATH . "/footer.php"); ?>

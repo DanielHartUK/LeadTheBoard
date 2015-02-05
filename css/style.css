@@ -153,77 +153,41 @@ h2.sectionTitle {
 }
 
 /* line 106, _general.scss */
-.button-ripple {
-  position: relative;
-  overflow: hidden;
-  transform: translate(0);
+.button {
+  background: rgba(0, 0, 0, 0.42);
+  display: inline-block;
+  text-align: center;
+  padding: 1%;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 0;
 }
-
-/* line 111, _general.scss */
-.button-ripple_content {
-  position: relative;
-  z-index: 1;
-}
-
 /* line 115, _general.scss */
-.button-ripple_ripples {
-  position: absolute;
-  top: 0;
-  left: 0;
+.button:hover {
+  background: rgba(0, 0, 0, 0.51);
+}
+/* line 118, _general.scss */
+.button:active {
+  background: rgba(0, 0, 0, 0.54);
+  padding-top: 1.2%;
+  padding-bottom: 0.8%;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.52);
+}
+/* line 125, _general.scss */
+.button.blue {
+  background: #1892B6;
+  color: #FFF;
+}
+/* line 129, _general.scss */
+.button.blue:hover {
+  background: #1589AB;
+}
+/* line 132, _general.scss */
+.button.blue:active {
+  background: #157F9E;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* line 120, _general.scss */
-.button-ripple_ripple {
-  display: block;
-  position: absolute;
-  border-radius: 100%;
-  width: 1em;
-  height: 1em;
-  margin: -0.5em 0 0 -0.5em;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0);
-  top: 0;
-  left: 0;
-  -webkit-transform: ripple-animation 2s;
-  -moz-transform: ripple-animation 2s;
-  -ms-transform: ripple-animation 2s;
-  -o-transform: ripple-animation 2s;
-  transform: ripple-animation 2s;
-}
-
-@-webkit-keyframes ripple-animation {
-  from {
-    transform: scale3d(1, 1, 1);
-    opacity: 0.8;
-  }
-  to {
-    transform: scale3d(100, 100, 1);
-    opacity: 0;
-  }
-}
-@-moz-keyframes ripple-animation {
-  from {
-    transform: scale3d(1, 1, 1);
-    opacity: 0.8;
-  }
-  to {
-    transform: scale3d(100, 100, 1);
-    opacity: 0;
-  }
-}
-@keyframes ripple-animation {
-  from {
-    transform: scale3d(1, 1, 1);
-    opacity: 0.8;
-  }
-  to {
-    transform: scale3d(100, 100, 1);
-    opacity: 0;
-  }
-}
 /* Navigation */
 /* line 3, _navigation.scss */
 .nav {
@@ -991,29 +955,7 @@ p.unlockableMessage {
   float: right;
 }
 
-/* line 72, _profile.scss */
-.button {
-  background: rgba(0, 0, 0, 0.42);
-  display: inline-block;
-  text-align: center;
-  padding: 1%;
-  border-radius: 5px;
-  font-size: 1rem;
-  border: 0;
-}
-/* line 81, _profile.scss */
-.button:hover {
-  background: rgba(0, 0, 0, 0.51);
-}
-/* line 84, _profile.scss */
-.button:active {
-  background: rgba(0, 0, 0, 0.54);
-  padding-top: 1.2%;
-  padding-bottom: 0.8%;
-  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.52);
-}
-
-/* line 91, _profile.scss */
+/* line 73, _profile.scss */
 .profileBox {
   width: 50%;
   padding: 1%;
@@ -1022,24 +964,45 @@ p.unlockableMessage {
   vertical-align: top;
 }
 
-/* line 98, _profile.scss */
+/* line 80, _profile.scss */
 .profileAchievements.profileBox {
   padding-right: 0.5%;
 }
 
-/* line 102, _profile.scss */
+/* line 84, _profile.scss */
 .profileQuests.profileBox {
   padding-left: 0.5%;
 }
 
-/* line 108, _profile.scss */
+/* line 90, _profile.scss */
 .unlockableIcon.profileAchievement {
   border-radius: 60px;
   border: 4px solid #E4E4E4;
   box-shadow: 0px 0px 1px #000;
 }
 
-/* line 10, _dashboard.scss */
+/* line 1, _dashboard.scss */
+.stats {
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: top;
+}
+/* line 6, _dashboard.scss */
+.stats.xp {
+  text-align: center;
+  font-size: 2em;
+  color: #FFD700;
+}
+/* line 11, _dashboard.scss */
+.stats.xp.flaticon-medal61 {
+  font-size: 2em;
+}
+/* line 15, _dashboard.scss */
+.stats.xp p {
+  margin: 0;
+}
+
+/* line 28, _dashboard.scss */
 .statRightHolder {
   display: inline-block;
   height: 90%;
@@ -1049,13 +1012,13 @@ p.unlockableMessage {
   margin: 0;
 }
 
-/* line 18, _dashboard.scss */
+/* line 36, _dashboard.scss */
 .statRightHolder ul {
   list-style: none;
   margin: 0;
 }
 
-/* line 22, _dashboard.scss */
+/* line 40, _dashboard.scss */
 .statRightHolder li {
   border-bottom: 1px solid #ccc;
   height: 85px;
@@ -1064,7 +1027,7 @@ p.unlockableMessage {
   top: -25px;
 }
 
-/* line 29, _dashboard.scss */
+/* line 47, _dashboard.scss */
 .statRightHolder h3 {
   display: inline-block;
   margin-right: 15px;
@@ -1073,7 +1036,7 @@ p.unlockableMessage {
   font-size: 38px;
 }
 
-/* line 36, _dashboard.scss */
+/* line 54, _dashboard.scss */
 .statRightHolder span {
   display: inline-block;
   color: #B6B5B5;
@@ -1081,14 +1044,14 @@ p.unlockableMessage {
   font-weight: 300;
 }
 
-/* line 43, _dashboard.scss */
+/* line 61, _dashboard.scss */
 .statsLeft {
   list-style: none;
   display: inline-block;
   width: 45%;
 }
 
-/* line 48, _dashboard.scss */
+/* line 66, _dashboard.scss */
 .statsLeft li {
   width: 100%;
   height: 14px;
@@ -1097,26 +1060,26 @@ p.unlockableMessage {
   margin-bottom: 25px;
 }
 
-/* line 55, _dashboard.scss */
+/* line 73, _dashboard.scss */
 .statsLeft h3 {
   font-size: 17px;
   display: inline-block;
 }
 
-/* line 59, _dashboard.scss */
+/* line 77, _dashboard.scss */
 .statsLeft span {
   font-size: 17px;
   display: inline-block;
 }
 
-/* line 63, _dashboard.scss */
+/* line 81, _dashboard.scss */
 .statsRight {
   width: 45%;
   display: inline-block;
   position: absolute;
 }
 
-/* line 68, _dashboard.scss */
+/* line 86, _dashboard.scss */
 .statsRight li {
   width: 100%;
   height: 14px;
@@ -1125,34 +1088,35 @@ p.unlockableMessage {
   margin-bottom: 25px;
 }
 
-/* line 75, _dashboard.scss */
+/* line 93, _dashboard.scss */
 .statsRight h3 {
   font-size: 17px;
   display: inline-block;
 }
 
-/* line 79, _dashboard.scss */
+/* line 97, _dashboard.scss */
 .statsRight span {
   font-size: 17px;
   display: inline-block;
 }
 
 /* Pie Chart */
-/* line 84, _dashboard.scss */
+/* line 102, _dashboard.scss */
 .progress-pie-chart {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   background-color: #E5E5E5;
   position: relative;
+  margin: 0 auto;
 }
 
-/* line 91, _dashboard.scss */
+/* line 110, _dashboard.scss */
 .progress-pie-chart.gt-50 {
   background-color: #81CE97;
 }
 
-/* line 95, _dashboard.scss */
+/* line 114, _dashboard.scss */
 .ppc-progress {
   content: "";
   position: absolute;
@@ -1164,8 +1128,11 @@ p.unlockableMessage {
   clip: rect(0, 200px, 200px, 100px);
 }
 
-/* line 105, _dashboard.scss */
+/* line 124, _dashboard.scss */
 .ppc-progress .ppc-progress-fill {
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  transition: 1.5s;
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -1175,21 +1142,31 @@ p.unlockableMessage {
   height: 200px;
   clip: rect(0, 100px, 200px, 0);
   background: #81CE97;
-  transform: rotate(60deg);
+  transform: rotate(0deg);
 }
 
-/* line 117, _dashboard.scss */
+/* line 137, _dashboard.scss */
+.ppc-progress-fill.ppc-progress-fill0 {
+  background: #2F9DAB;
+}
+
+/* line 140, _dashboard.scss */
+.ppc-progress-fill.ppc-progress-fill1 {
+  background: #AB452F;
+}
+
+/* line 144, _dashboard.scss */
 .gt-50 .ppc-progress {
   clip: rect(0, 100px, 200px, 0);
 }
 
-/* line 120, _dashboard.scss */
+/* line 147, _dashboard.scss */
 .gt-50 .ppc-progress .ppc-progress-fill {
   clip: rect(0, 200px, 200px, 100px);
   background: #E5E5E5;
 }
 
-/* line 125, _dashboard.scss */
+/* line 152, _dashboard.scss */
 .ppc-percents {
   content: "";
   position: absolute;
@@ -1198,28 +1175,42 @@ p.unlockableMessage {
   top: calc(50% - 173.91304px/2);
   width: 173.91304px;
   height: 173.91304px;
-  background: #fff;
+  background: #F4F4F4;
   text-align: center;
   display: table;
 }
 
-/* line 137, _dashboard.scss */
+/* line 165, _dashboard.scss */
 .ppc-percents span {
   display: block;
-  font-size: 2.6em;
   font-weight: bold;
   color: #81CE97;
+  box-sizing: border-box;
+  padding: 2%;
+}
+/* line 172, _dashboard.scss */
+.ppc-percents span.pie-info {
+  font-size: 1.2em;
+}
+/* line 175, _dashboard.scss */
+.ppc-percents span.pie-percent {
+  font-size: 2em;
 }
 
-/* line 144, _dashboard.scss */
+/* line 180, _dashboard.scss */
+.pcc-percents-wrapper0 span {
+  color: #2F9DAB;
+}
+
+/* line 183, _dashboard.scss */
+.pcc-percents-wrapper1 span {
+  color: #AB452F;
+}
+
+/* line 186, _dashboard.scss */
 .pcc-percents-wrapper {
   display: table-cell;
   vertical-align: middle;
-}
-
-/* line 149, _dashboard.scss */
-.progress-pie-chart {
-  margin: 50px auto 0;
 }
 
 /* line 1, _login.scss */

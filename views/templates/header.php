@@ -61,7 +61,7 @@ $IGNORETHISFORNOWloggedIn = 0;
 					<ul class="menu"> <h6> Menu </h6>
 	 					<a href="<?php echo SITE_URL; ?>/account/classes.php"><li class="classes"><span class="flaticon-multiple25 sideIcon"></span> Classes </li></a>
 						<a href="<?php echo SITE_URL; ?>/profile.php?user=<?php echo $id; ?>"><li class="profile"><span class="flaticon-profile8 sideIcon"></span> Profile </li></a>
-						<a href="<?php echo SITE_URL; ?>/account/account.php"><li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li></a>
+						<a href="<?php echo SITE_URL; ?>/account/"><li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li></a>
 						<a href=""><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
 					</ul>
 				<?php else: ?>
@@ -69,7 +69,7 @@ $IGNORETHISFORNOWloggedIn = 0;
 					<div class="user" id="loggedIn" <?php if (!pageURLContains($x = 'profile')) { ?> style="background-color: #16a085;"<?php  }?>><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> </div>
 					<ul class="menu"> <h6> Admin </h6>
 	 					<a href="<?php echo SITE_URL; ?>/account/dashboard/"><li class="Dashboard"><span class="flaticon-speed13 sideIcon"></span> Dashboard </li></a>
-						<a href="<?php echo SITE_URL; ?>/account/account.php"><li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li></a>
+						<a href="<?php echo SITE_URL; ?>/account/"><li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li></a>
 						<a href=""><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
 					</ul>
 			<?php endif; ?>

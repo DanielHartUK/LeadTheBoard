@@ -1,4 +1,22 @@
+.stats {
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: top;
 
+  &.xp {
+    text-align: center;
+    font-size: 2em;
+    color: #FFD700;
+
+    &.flaticon-medal61 {
+      font-size: 2em;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
 .progressDiv {
 
 }
@@ -87,6 +105,7 @@ margin-bottom: 25px;
   border-radius: 50%;
   background-color: #E5E5E5;
   position: relative;
+  margin: 0 auto;
 }
 .progress-pie-chart.gt-50 {
   background-color: #81CE97;
@@ -103,6 +122,7 @@ margin-bottom: 25px;
   clip: rect(0, 200px, 200px, 100px);
 }
 .ppc-progress .ppc-progress-fill {
+  @include transition(1.5s);
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -112,8 +132,15 @@ margin-bottom: 25px;
   height: 200px;
   clip: rect(0, 100px, 200px, 0);
   background: #81CE97;
-  transform: rotate(60deg);
+  transform: rotate(0deg);
 }
+.ppc-progress-fill.ppc-progress-fill0 {
+  background: #2F9DAB;
+}
+.ppc-progress-fill.ppc-progress-fill1 {
+  background: #AB452F;
+}
+
 .gt-50 .ppc-progress {
   clip: rect(0, 100px, 200px, 0);
 }
@@ -130,22 +157,35 @@ margin-bottom: 25px;
   top: calc(50% - 173.91304px/2);
   width: 173.91304px;
   height: 173.91304px;
-  background: #fff;
+  background: #F4F4F4;
   text-align: center;
   display: table;
 }
+
 .ppc-percents span {
   display: block;
-  font-size: 2.6em;
   font-weight: bold;
   color: #81CE97;
+  box-sizing: border-box;
+  padding: 2%;
+
+  &.pie-info {
+    font-size: 1.2em;
+  }
+  &.pie-percent {
+    font-size: 2em;
+  }
 }
 
+.pcc-percents-wrapper0 span {
+  color: #2F9DAB;
+}
+.pcc-percents-wrapper1 span {
+  color: #AB452F;
+}
 .pcc-percents-wrapper {
   display: table-cell;
   vertical-align: middle;
 }
 
-.progress-pie-chart {
-  margin: 50px auto 0;
-}
+

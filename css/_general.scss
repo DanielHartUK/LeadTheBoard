@@ -103,44 +103,38 @@ h2.sectionTitle {
     left: 0px;
 }
 
-.button-ripple {
-  position: relative;
-  overflow: hidden;
-  transform: translate(0);
-}
-.button-ripple_content {
-  position: relative;
-  z-index: 1;
-}
-.button-ripple_ripples {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.button-ripple_ripple{
-  display: block;
-  position: absolute;
-  border-radius: 100%;
-  width: 1em;
-  height: 1em;
-  margin: -0.5em 0 0 -0.5em;
-  @include transform(scale(0));
-  top: 0;
-  left: 0;
-  @include transform(ripple-animation 2s);
-}
+.button {
+  background: rgba(0, 0, 0, 0.42);
+  display: inline-block;
+  text-align: center;
+  padding: 1%;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 0;
 
-@include keyframes(ripple-animation) {
-    from {
-      transform: scale3d(1,1,1);
-      opacity: 0.8;
-    }
-    to {
-      transform: scale3d(100,100,1);
-      opacity: 0;
-    }
-}
+  &:hover {
+    background: rgba(0, 0, 0, 0.51);
+  }
+  &:active {
+    background: rgba(0, 0, 0, 0.54);
+    padding-top: 1.2%;
+    padding-bottom: 0.8%;
+    box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.52);
+  }
 
+  &.blue {
+    background: #1892B6;
+    color: #FFF;
+
+    &:hover {
+      background: #1589AB;
+    }
+    &:active {
+      background: #157F9E;
+      box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+}
 
 
 
