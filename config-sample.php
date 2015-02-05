@@ -17,6 +17,9 @@ $dbname = "test"; // Database
 //Site URL
 $siteURL = 'http://localhost';
 
+//Support Email
+$supportEmail = 'example@example.com';
+
 // Consistent paths
 require_once('consistentPaths.php');
 ?>
