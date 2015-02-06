@@ -56,16 +56,17 @@ while($row = mysqli_fetch_assoc($cla)) {
    $clans[] = $row;
 }
 
-// Get the User's clan into an array
-$selClanM = "SELECT * FROM clanmembers WHERE UserID='$id'";
-$claM = mysqli_query($conn, $selClanM) or die(mysqli_error());
-$clanMRowCount = $claM->num_rows;
-$clanM = array();
+if(isset($clans[0])){
+  // Get the User's clan into an array
+  $selClanM = "SELECT * FROM clanmembers WHERE UserID='$id'";
+  $claM = mysqli_query($conn, $selClanM) or die(mysqli_error());
+  $clanMRowCount = $claM->num_rows;
+  $clanM = array();
 
-while($row = mysqli_fetch_assoc($claM)) {
-   $clanM[] = $row;
-}
-
+  while($row = mysqli_fetch_assoc($claM)) {
+     $clanM[] = $row;
+  }
+};
 // Achievements Available to the user
 $selAchievementP = "SELECT * FROM AchievementProgress WHERE UserID='$id' ";
 $acP = mysqli_query($conn, $selAchievementP) or die(mysqli_error());
@@ -167,11 +168,13 @@ $surname = $users[0]['Surname'];
 $admin = $users[0]['Admin'];
 $class = $classes[0]['Name'];
 //$clan = $usersO[0]['Clan'];
-foreach ($clans as $iteration => $value) {
-   if ($clans[$iteration]['ClanID'] == $clanM[0]['ClanID']) {
-      $clanN = $clans[$iteration]['Name'];
-      $emblem = $clans[$iteration]['Emblem'];
-   }
+if(isset($clans[0]) AND isset($clanM[0])){
+  foreach ($clans as $value) {
+     if ($value['ClanID'] == $clanM[0]['ClanID']) {
+        $clanN = $value['Name'];
+        $emblem = $value['Emblem'];
+     }
+  }
 }
 $email = $users[0]['Email'];
 $unreadNotifications = 0;
