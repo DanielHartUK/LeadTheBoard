@@ -144,7 +144,28 @@ display: block;
       box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.3);
     }
   }
-}
+  &.red {
+    background: #ED3600;
+    color: #FFF;
 
+    &:hover {
+        background: #E43400;
+    }
+    &:active {
+        background: #CB2E00;
+    }
+  }
+}
+.warningBanner {
+  padding: 1%;
+  background: #E00000;
+  border-radius: 4px;
+  color: #FFF;
+  text-align: center;
+
+  &.blue {
+    background: #009CE0;
+  }
+}
 
 

@@ -203,6 +203,32 @@ h2.sectionTitle {
   background: #157F9E;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.3);
 }
+/* line 147, _general.scss */
+.button.red {
+  background: #ED3600;
+  color: #FFF;
+}
+/* line 151, _general.scss */
+.button.red:hover {
+  background: #E43400;
+}
+/* line 154, _general.scss */
+.button.red:active {
+  background: #CB2E00;
+}
+
+/* line 159, _general.scss */
+.warningBanner {
+  padding: 1%;
+  background: #E00000;
+  border-radius: 4px;
+  color: #FFF;
+  text-align: center;
+}
+/* line 166, _general.scss */
+.warningBanner.blue {
+  background: #009CE0;
+}
 
 /* Navigation */
 /* line 3, _navigation.scss */
@@ -1421,6 +1447,29 @@ p.unlockableMessage {
   background-color: #46404c;
   background-image: -webkit-linear-gradient(#46404c 0%, #46404c 50%, #28252C 50%, #28252C 100%);
   background-image: linear-gradient(#46404c 0%, #46404c 50%, #28252C 50%, #28252C 100%);
+}
+
+/* line 77, _account.scss */
+.clanCont {
+  overflow: auto;
+}
+/* line 80, _account.scss */
+.clanCont .clanEmblem {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin-right: 2%;
+}
+/* line 86, _account.scss */
+.clanCont h3 {
+  text-align: left;
+  margin: 0;
+}
+
+/* line 92, _account.scss */
+.clanBox {
+  width: 50%;
+  display: inline-block;
 }
 
 @media screen and (max-width: 1024px) {

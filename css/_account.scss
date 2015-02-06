@@ -74,3 +74,23 @@
         @include linear-gradient(#46404c 0%, #46404c 50%, #28252C 50%, #28252C 100%);
     }
 }
+.clanCont {
+
+    overflow: auto;
+    .clanEmblem {
+        width: 150px;
+        height: 150px;
+        float: left;
+        margin-right: 2%;
+    }
+    h3 {
+        text-align: left;
+        margin: 0;
+    }
+}
+
+.clanBox {
+    width: 50%;
+    display: inline-block;
+    
+}

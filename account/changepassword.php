@@ -5,9 +5,16 @@ $isAccountIndex = 0;
 require_once(INCLUDES_PATH . "/accountDetails.php"); 
 
 ?>
+
+
+
+
+
+
+
 <div class="content">
   <h1> Account </h1>
-  <?php include_once(TEMPLATES_PATH . "/settingsNav.php"); ?>
+  <?php include_once(TEMPLATES_PATH . "/accountNav.php"); ?>
   <form name='personalDetails' action='' method=post> 
     <div class="formContainer">
       <p class="detailLabel">Current password</p>

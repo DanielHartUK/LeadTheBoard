@@ -21,7 +21,7 @@ mysqli_close($conn); // Close the connection
 ?>
 <div class="content">
   <h1> Account </h1>
-  <?php include_once(TEMPLATES_PATH . "/settingsNav.php"); ?>
+  <?php include_once(TEMPLATES_PATH . "/accountNav.php"); ?>
   <form name='personalDetails' action='' method=post>
     <TABLE BORDER=2>
       <TR> <TD>First Name</TD> <TD><input type=text name="firstName" value="<?php echo($firstName) ?>"></TD> </TR>
