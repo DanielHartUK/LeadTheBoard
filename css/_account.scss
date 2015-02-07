@@ -50,6 +50,9 @@
   margin: 10px 0 5px 0;
 }
 .colourOptions {
+    .colourRadio {
+        display: none;
+    }
 }
 .colourOption {
     width: 50px;
@@ -83,6 +86,10 @@
         float: left;
         margin-right: 2%;
     }
+    h2 {
+        margin: 0;
+        margin-bottom: 1%;
+    }
     h3 {
         text-align: left;
         margin: 0;
@@ -90,7 +97,99 @@
 }
 
 .clanBox {
-    width: 50%;
+    width: 49.5%;
     display: inline-block;
-    
+    vertical-align: top;
+
+    &:first-child {
+        margin: 1% 0.5% 1% 0;
+    }
+
+    &:last-child {
+        margin: 1% 0 1% 0.5%;
+    }
+
+    .boxTitle {
+        background: #ba2027 ;
+    }
 }
+.clanList {
+    width: 101%;
+    margin: 0 -0.5%;
+
+    .clanRadio {
+        display: none;
+    }
+}
+    
+
+.clanSelect {
+    overflow: auto;
+    padding: 1.5%;
+    margin: 0.5%;
+    box-sizing: border-box;
+    background: #FFF;
+    width: 32.33%;
+    display: inline-block;
+    border: 1px solid #B9B9B9;
+    vertical-align: top;
+    cursor: pointer;
+    border-radius: 4px;
+    @include transition(0.3s background);
+
+    &.selected {
+        background-color: #FFFBB1;
+    }
+
+    &.new {
+        input {
+            width: calc(95% - 50px);
+        }
+    }
+
+    img, .imageNew {
+        height: 50px;
+        width: 50px;
+        float: left;
+        margin-right: 1%;
+    }
+    .imageNew {
+        background: #B9B9B9;
+        color: #FFF;
+        font-size: 0.8em;
+        text-align: center;
+        line-height: 25px;
+        cursor: pointer;
+    }
+    h4 {
+        margin: 0;
+    }
+
+    .clanMembers {
+        margin-top: 1%;
+
+        img {
+            height: 25px;
+            width: 25px;
+            background: #B9B9B9;
+            border-radius: 31px;
+        }
+    }
+
+}
+.boxButton {
+    overflow: auto;
+    bottom: 0;
+    padding: 1%;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+
+    .button {
+        vertical-align: top;
+        display: inline-block;
+    }
+}
+    
+
+

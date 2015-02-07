@@ -6,6 +6,7 @@ if(isset($_REQUEST['submit1'])){
       $clanUpdateQuery = "INSERT INTO `clanmembers`(`ClanID`, `UserID`, `clanAdmin`) VALUES (".$value['ClanID'].",$id,0)";
       mysqli_query($conn, $clanUpdateQuery) or die(mysqli_error());
       $clanN = $value['Name'];
+      
     }
   }
 }elseif(isset($_REQUEST['submit2'])){

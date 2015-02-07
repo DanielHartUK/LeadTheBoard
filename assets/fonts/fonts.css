@@ -110,41 +110,44 @@
 .flaticon-bell60:before {
     content: "\e001";
 }
-.flaticon-home153:before {
+.flaticon-error6:before {
     content: "\e002";
 }
-.flaticon-key162:before {
+.flaticon-home153:before {
     content: "\e003";
 }
-.flaticon-locked59:before {
+.flaticon-key162:before {
     content: "\e004";
 }
-.flaticon-medal61:before {
+.flaticon-locked59:before {
     content: "\e005";
 }
-.flaticon-multiple25:before {
+.flaticon-medal61:before {
     content: "\e006";
 }
-.flaticon-pencil43:before {
+.flaticon-multiple25:before {
     content: "\e007";
 }
-.flaticon-profile8:before {
+.flaticon-pencil43:before {
     content: "\e008";
 }
-.flaticon-settings21:before {
+.flaticon-profile8:before {
     content: "\e009";
 }
-.flaticon-6:before {
+.flaticon-settings21:before {
     content: "\e00a";
 }
-.flaticon-speed13:before {
+.flaticon-6:before {
     content: "\e00b";
 }
-.flaticon-trophy56:before {
+.flaticon-speed13:before {
     content: "\e00c";
 }
-.flaticon-user182:before {
+.flaticon-trophy56:before {
     content: "\e00d";
+}
+.flaticon-user182:before {
+    content: "\e00e";
 }
 
 

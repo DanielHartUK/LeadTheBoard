@@ -1,3 +1,12 @@
+$(window).load(function() {
+  $("body").removeClass("preload");
+});
+$(window).resize(function() {
+    $("body").addClass("preload");
+  setTimeout(function() {
+    $("body").removeClass("preload");
+  }, 1);
+});
 // jQuery rotation - http://stackoverflow.com/a/17348698
   var rotation = 0;
   jQuery.fn.rotate = function(degrees) {

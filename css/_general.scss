@@ -9,6 +9,9 @@ html, body {
     color: #555555;
     min-width: 968px;
 }
+.preload * {
+    @include transition(none !important);
+}
 h1 {
     margin: 0;
     font-size: 2.6em;
@@ -70,9 +73,10 @@ h2.sectionTitle {
 }
 .drawerMove {
     @include transition($drawerSlide);
+    height: 100%;
 }
 .adminCont {
-  width: calc(100% - 19.5%);
+  width: calc(100% - 250px);
   float: right;
 }
 .content {
@@ -99,7 +103,7 @@ h2.sectionTitle {
     &.admin {
         clear: right;
         width: auto;
-display: block;
+        display: block;
         float: right;
         box-sizing: border-box;
         padding: 0 0.5% 0.5% 0.5%;
@@ -121,6 +125,10 @@ display: block;
   border-radius: 5px;
   font-size: 1rem;
   border: 0;
+
+  &.hidden {
+    display: none !important;
+  }
 
   &:hover {
     background: rgba(0, 0, 0, 0.51);
@@ -155,6 +163,17 @@ display: block;
         background: #CB2E00;
     }
   }
+  &.orange {
+    background: #ED7500;
+    color: #FFF;
+
+    &:hover {
+        background: #E06F00;
+    }
+    &:active {
+        background: #D06700;
+    }
+  }
 }
 .warningBanner {
   padding: 1%;
@@ -167,5 +186,26 @@ display: block;
     background: #009CE0;
   }
 }
+.c404 {
+    min-height: 100%;
+    background: #000;
+    color: #FFF;
+}
+.e404 {
+    text-align: center;
+    font-size: 1.4em;
 
+    p {
+        margin: 1.5%;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    a p {
+        font-size: 0.7em;
+    }
+}
+    
 

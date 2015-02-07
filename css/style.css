@@ -27,13 +27,20 @@ html, body {
 }
 
 /* line 12, _general.scss */
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  transition: none !important;
+}
+
+/* line 15, _general.scss */
 h1 {
   margin: 0;
   font-size: 2.6em;
   font-weight: 400;
 }
 
-/* line 17, _general.scss */
+/* line 20, _general.scss */
 h3 {
   font-weight: 400;
   text-align: center;
@@ -41,7 +48,7 @@ h3 {
   margin: 0.5em 0;
 }
 
-/* line 23, _general.scss */
+/* line 26, _general.scss */
 h6 {
   margin: 2%;
   padding: 4%;
@@ -50,13 +57,13 @@ h6 {
   text-transform: uppercase;
 }
 
-/* line 30, _general.scss */
+/* line 33, _general.scss */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 34, _general.scss */
+/* line 37, _general.scss */
 .headAnchor {
   display: block;
   margin-top: -60px;
@@ -64,7 +71,7 @@ a {
   visibility: hidden;
 }
 
-/* line 40, _general.scss */
+/* line 43, _general.scss */
 h2.sectionTitle {
   margin: 0 0 1% 0;
   background: #16A085;
@@ -74,22 +81,22 @@ h2.sectionTitle {
   text-transform: uppercase;
 }
 
-/* line 48, _general.scss */
+/* line 51, _general.scss */
 .achievements .sectionTitle, .profileAchievements .sectionTitle {
   background-color: #2F9DAB;
 }
 
-/* line 51, _general.scss */
+/* line 54, _general.scss */
 .quests .sectionTitle, .profileQuests .sectionTitle {
   background-color: #AB452F;
 }
 
-/* line 55, _general.scss */
+/* line 58, _general.scss */
 .clickable {
   cursor: pointer;
 }
 
-/* line 58, _general.scss */
+/* line 61, _general.scss */
 .wrapper {
   width: 100%;
   position: relative;
@@ -98,29 +105,30 @@ h2.sectionTitle {
   box-sizing: border-box;
 }
 
-/* line 65, _general.scss */
+/* line 68, _general.scss */
 .contentContainer {
   height: 100%;
 }
-/* line 67, _general.scss */
+/* line 70, _general.scss */
 .contentContainer .noScroll {
   overflow: hidden;
 }
 
-/* line 71, _general.scss */
+/* line 74, _general.scss */
 .drawerMove {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
-}
-
-/* line 74, _general.scss */
-.adminCont {
-  width: calc(100% - 19.5%);
-  float: right;
+  height: 100%;
 }
 
 /* line 78, _general.scss */
+.adminCont {
+  width: calc(100% - 250px);
+  float: right;
+}
+
+/* line 82, _general.scss */
 .content {
   -webkit-transition: 0.3s width;
   -moz-transition: 0.3s width;
@@ -130,24 +138,24 @@ h2.sectionTitle {
   padding: 0.5%;
   box-sizing: border-box;
 }
-/* line 85, _general.scss */
+/* line 89, _general.scss */
 .content.admin {
   width: calc(100% - 19.5%);
   margin: 0;
 }
-/* line 90, _general.scss */
+/* line 94, _general.scss */
 .content.noPadding {
   padding: 0%;
 }
 
-/* line 95, _general.scss */
+/* line 99, _general.scss */
 .footer {
   margin: 0 0.5% 0.5% 0.5%;
   -webkit-transition: 0.3s width;
   -moz-transition: 0.3s width;
   transition: 0.3s width;
 }
-/* line 99, _general.scss */
+/* line 103, _general.scss */
 .footer.admin {
   clear: right;
   width: auto;
@@ -159,7 +167,7 @@ h2.sectionTitle {
   white-space: nowrap;
 }
 
-/* line 110, _general.scss */
+/* line 114, _general.scss */
 .gallop {
   -webkit-transition: 6s ease;
   -moz-transition: 6s ease;
@@ -168,7 +176,7 @@ h2.sectionTitle {
   left: 0px;
 }
 
-/* line 116, _general.scss */
+/* line 120, _general.scss */
 .button {
   background: rgba(0, 0, 0, 0.42);
   display: inline-block;
@@ -178,46 +186,63 @@ h2.sectionTitle {
   font-size: 1rem;
   border: 0;
 }
-/* line 125, _general.scss */
+/* line 129, _general.scss */
+.button.hidden {
+  display: none !important;
+}
+/* line 133, _general.scss */
 .button:hover {
   background: rgba(0, 0, 0, 0.51);
 }
-/* line 128, _general.scss */
+/* line 136, _general.scss */
 .button:active {
   background: rgba(0, 0, 0, 0.54);
   padding-top: 0.7em;
   padding-bottom: 0.5em;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.52);
 }
-/* line 135, _general.scss */
+/* line 143, _general.scss */
 .button.blue {
   background: #1892B6;
   color: #FFF;
 }
-/* line 139, _general.scss */
+/* line 147, _general.scss */
 .button.blue:hover {
   background: #1589AB;
 }
-/* line 142, _general.scss */
+/* line 150, _general.scss */
 .button.blue:active {
   background: #157F9E;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.3);
 }
-/* line 147, _general.scss */
+/* line 155, _general.scss */
 .button.red {
   background: #ED3600;
   color: #FFF;
 }
-/* line 151, _general.scss */
+/* line 159, _general.scss */
 .button.red:hover {
   background: #E43400;
 }
-/* line 154, _general.scss */
+/* line 162, _general.scss */
 .button.red:active {
   background: #CB2E00;
 }
+/* line 166, _general.scss */
+.button.orange {
+  background: #ED7500;
+  color: #FFF;
+}
+/* line 170, _general.scss */
+.button.orange:hover {
+  background: #E06F00;
+}
+/* line 173, _general.scss */
+.button.orange:active {
+  background: #D06700;
+}
 
-/* line 159, _general.scss */
+/* line 178, _general.scss */
 .warningBanner {
   padding: 1%;
   background: #E00000;
@@ -225,9 +250,34 @@ h2.sectionTitle {
   color: #FFF;
   text-align: center;
 }
-/* line 166, _general.scss */
+/* line 185, _general.scss */
 .warningBanner.blue {
   background: #009CE0;
+}
+
+/* line 189, _general.scss */
+.c404 {
+  min-height: 100%;
+  background: #000;
+  color: #FFF;
+}
+
+/* line 194, _general.scss */
+.e404 {
+  text-align: center;
+  font-size: 1.4em;
+}
+/* line 198, _general.scss */
+.e404 p {
+  margin: 1.5%;
+}
+/* line 202, _general.scss */
+.e404 h3 {
+  font-size: 2em;
+}
+/* line 206, _general.scss */
+.e404 a p {
+  font-size: 0.7em;
 }
 
 /* Navigation */
@@ -325,7 +375,6 @@ h2.sectionTitle {
   position: fixed;
   display: block;
   vertical-align: top;
-  width: 19.5%;
   min-width: 250px;
   background: #00F;
   height: 100%;
@@ -337,17 +386,17 @@ h2.sectionTitle {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 78, _navigation.scss */
+/* line 77, _navigation.scss */
 .drawer .user {
   height: 50px;
   padding: 0px 2.5%;
 }
-/* line 83, _navigation.scss */
+/* line 82, _navigation.scss */
 .drawer.closed {
   left: -346px;
 }
 
-/* line 87, _navigation.scss */
+/* line 86, _navigation.scss */
 ul.menu {
   list-style: none;
   color: #FFF;
@@ -355,30 +404,30 @@ ul.menu {
   padding: 0%;
   font-size: 1.1em;
 }
-/* line 94, _navigation.scss */
+/* line 93, _navigation.scss */
 ul.menu li {
   padding: 4%;
   margin: 2%;
   border-radius: 4px;
   font-weight: 700;
 }
-/* line 100, _navigation.scss */
+/* line 99, _navigation.scss */
 ul.menu li:hover {
   background-color: rgba(0, 0, 0, 0.28);
 }
-/* line 104, _navigation.scss */
+/* line 103, _navigation.scss */
 ul.menu li.logOut {
   position: absolute;
   bottom: 0;
 }
 
-/* line 111, _navigation.scss */
+/* line 110, _navigation.scss */
 .sideIcon {
   margin-right: 4%;
   font-weight: 400;
 }
 
-/* line 115, _navigation.scss */
+/* line 114, _navigation.scss */
 .sectionNavigation {
   padding: 1% 0;
   width: 80%;
@@ -386,17 +435,17 @@ ul.menu li.logOut {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 121, _navigation.scss */
+/* line 120, _navigation.scss */
 .sectionNavigation ul {
   margin: 0;
   padding: 0;
   border-bottom: 2px solid #808080;
 }
-/* line 126, _navigation.scss */
+/* line 125, _navigation.scss */
 .sectionNavigation ul a {
   color: inherit;
 }
-/* line 129, _navigation.scss */
+/* line 128, _navigation.scss */
 .sectionNavigation ul li {
   display: inline-block;
   margin: 0 2% -2px 0;
@@ -404,12 +453,12 @@ ul.menu li.logOut {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
-/* line 136, _navigation.scss */
+/* line 135, _navigation.scss */
 .sectionNavigation ul li.currentPage {
   border-bottom: 2px solid #16a085;
 }
 
-/* line 142, _navigation.scss */
+/* line 141, _navigation.scss */
 ul.footerLinks {
   list-style: none;
   margin: 0;
@@ -417,31 +466,31 @@ ul.footerLinks {
   font-size: 0.9em;
   border-top: 1px solid #808080;
 }
-/* line 149, _navigation.scss */
+/* line 148, _navigation.scss */
 ul.footerLinks li {
   display: inline-block;
   margin-right: 1%;
 }
-/* line 153, _navigation.scss */
+/* line 152, _navigation.scss */
 ul.footerLinks li.copyright {
   float: right;
   margin-right: 0;
 }
 
-/* line 159, _navigation.scss */
+/* line 158, _navigation.scss */
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
   border-bottom: 2px solid #16a085;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 163, _navigation.scss */
+  /* line 162, _navigation.scss */
   .notificationIcon {
     background-image: url(../assets/bell2x.png);
   }
 }
 /* @import "_account.scss"; */
 /* Main */
-/* line 2, _main.scss */
+/* line 2, _hub.scss */
 .mainBlock {
   display: inline-block;
   vertical-align: top;
@@ -452,17 +501,17 @@ ul.footerLinks li.copyright {
   white-space: initial;
 }
 
-/* line 9, _main.scss */
+/* line 9, _hub.scss */
 .drawerO {
   width: 100%;
 }
 
-/* line 14, _main.scss */
+/* line 14, _hub.scss */
 .mainBoard {
   width: 100%;
 }
 
-/* line 17, _main.scss */
+/* line 17, _hub.scss */
 .headerBoard {
   background-color: #16a085;
   color: #fff;
@@ -470,7 +519,7 @@ ul.footerLinks li.copyright {
   font-size: 1.1em;
   border-right: 1px solid #16A085;
 }
-/* line 24, _main.scss */
+/* line 24, _hub.scss */
 .headerBoard th {
   margin: 0;
   padding: 13px 1%;
@@ -478,7 +527,7 @@ ul.footerLinks li.copyright {
   text-align: left;
 }
 
-/* line 31, _main.scss */
+/* line 31, _hub.scss */
 .boardIcon {
   height: 20px;
   width: 20px;
@@ -493,13 +542,13 @@ ul.footerLinks li.copyright {
   font-weight: 400;
 }
 
-/* line 44, _main.scss */
+/* line 44, _hub.scss */
 .flaticon-trophy56.boardIcon {
   -webkit-transition: 3s;
   -moz-transition: 3s;
   transition: 3s;
 }
-/* line 47, _main.scss */
+/* line 47, _hub.scss */
 .flaticon-trophy56.boardIcon:hover {
   -webkit-transform: rotateY(360deg);
   -moz-transform: rotateY(360deg);
@@ -508,7 +557,7 @@ ul.footerLinks li.copyright {
   transform: rotateY(360deg);
 }
 
-/* line 51, _main.scss */
+/* line 51, _hub.scss */
 .boardEntry {
   border: 0;
   padding: 0;
@@ -516,66 +565,66 @@ ul.footerLinks li.copyright {
   background-color: #f7f7f7;
   border-bottom: 1px solid #CCC;
 }
-/* line 58, _main.scss */
+/* line 58, _hub.scss */
 .boardEntry td {
   padding: 1%;
   border: 1px solid #CCC;
 }
-/* line 62, _main.scss */
+/* line 62, _hub.scss */
 .boardEntry td.pos {
   width: 10px;
   font-size: 1.2em;
   font-weight: 500;
   padding: 10px;
 }
-/* line 68, _main.scss */
+/* line 68, _hub.scss */
 .boardEntry td.boardAvatar {
   width: 40px;
   padding: 10px;
 }
-/* line 74, _main.scss */
+/* line 74, _hub.scss */
 .boardEntry td:last-child {
   border-right: 1px solid #CCC;
 }
-/* line 78, _main.scss */
+/* line 78, _hub.scss */
 .boardEntry:nth-child(even) {
   background: #ececec;
 }
-/* line 81, _main.scss */
+/* line 81, _hub.scss */
 .boardEntry:first-child {
   background: #f7f7f7;
 }
-/* line 84, _main.scss */
+/* line 84, _hub.scss */
 .boardEntry:hover {
   background-color: #696969;
   color: #FFF;
 }
 
-/* line 89, _main.scss */
+/* line 89, _hub.scss */
 .avatarBoard {
   height: 40px;
   width: 40px;
 }
 
-/* line 93, _main.scss */
+/* line 93, _hub.scss */
 .StudentName a {
   border-bottom: 1px dotted;
 }
 
 /* Side Boxes */
-/* line 98, _main.scss */
+/* line 98, _hub.scss */
 .sideBlock {
   display: inline-block;
   vertical-align: top;
   width: 19.5%;
   padding-left: 0.5%;
 }
-/* line 104, _main.scss */
+/* line 104, _hub.scss */
 .sideBlock.drawerO {
   display: none;
 }
 
-/* line 108, _main.scss */
+/* line 108, _hub.scss */
 .boxTitle {
   text-align: center;
   color: #fff;
@@ -584,14 +633,14 @@ ul.footerLinks li.copyright {
   padding: 13px 1%;
 }
 
-/* line 115, _main.scss */
+/* line 115, _hub.scss */
 .boxContent {
   border: 1px solid #b9b9b9;
   border-top: none;
   text-align: center;
 }
 
-/* line 120, _main.scss */
+/* line 120, _hub.scss */
 .box {
   width: 100%;
   background: #fff;
@@ -600,25 +649,25 @@ ul.footerLinks li.copyright {
   margin-bottom: 3%;
 }
 
-/* line 128, _main.scss */
+/* line 128, _hub.scss */
 .youBox .boxContent {
   padding: 4%;
 }
 
-/* line 133, _main.scss */
+/* line 133, _hub.scss */
 .boxStat {
   margin: 7.5% 0;
   width: 33.33%;
   display: inline-block;
 }
 
-/* line 138, _main.scss */
+/* line 138, _hub.scss */
 .boxStat:nth-child(2) {
   border-left: 1px solid #B9B9B9;
   border-right: 1px solid #B9B9B9;
 }
 
-/* line 142, _main.scss */
+/* line 142, _hub.scss */
 .profilePicRound {
   height: 100px;
   width: 100px;
@@ -626,7 +675,7 @@ ul.footerLinks li.copyright {
   margin-top: 2%;
 }
 
-/* line 148, _main.scss */
+/* line 148, _hub.scss */
 .bannerSmall {
   width: 90%;
   padding: 1% 1% 5% 1%;
@@ -642,18 +691,18 @@ ul.footerLinks li.copyright {
   top: -15px;
 }
 
-/* line 163, _main.scss */
+/* line 163, _hub.scss */
 .questsBox .boxTitle {
   background-color: #ab452f;
 }
 
-/* line 167, _main.scss */
+/* line 167, _hub.scss */
 .expiringQuests {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 172, _main.scss */
+/* line 172, _hub.scss */
 .expiringQuests li {
   font-weight: 700;
   font-size: 1.1em;
@@ -661,16 +710,16 @@ ul.footerLinks li.copyright {
   text-align: left;
   overflow: auto;
 }
-/* line 179, _main.scss */
+/* line 179, _hub.scss */
 .expiringQuests li:nth-child(even) {
   background-color: #efeeee;
 }
-/* line 183, _main.scss */
+/* line 183, _hub.scss */
 .expiringQuests li span {
   font-size: 1rem;
 }
 
-/* line 188, _main.scss */
+/* line 188, _hub.scss */
 .questThumb {
   width: 50px;
   height: 50px;
@@ -679,7 +728,7 @@ ul.footerLinks li.copyright {
 }
 
 /* Activity */
-/* line 197, _main.scss */
+/* line 197, _hub.scss */
 .activityColumn {
   width: 33.33%;
   padding: 0.5%;
@@ -687,35 +736,35 @@ ul.footerLinks li.copyright {
   box-sizing: border-box;
   vertical-align: top;
 }
-/* line 203, _main.scss */
+/* line 203, _hub.scss */
 .activityColumn.achievementsActivity {
   padding-left: 0;
 }
-/* line 206, _main.scss */
+/* line 206, _hub.scss */
 .activityColumn.xpActivity {
   padding-right: 0;
 }
 
-/* line 211, _main.scss */
+/* line 211, _hub.scss */
 .achievementsActivity .sectionTitle {
   background-color: #2F9DAB;
   padding: 2%;
 }
 
-/* line 217, _main.scss */
+/* line 217, _hub.scss */
 .questsActivity .sectionTitle {
   background-color: #AB452F;
   padding: 2%;
 }
 
-/* line 223, _main.scss */
+/* line 223, _hub.scss */
 .xpActivity .sectionTitle {
   background-color: #F7CA5D;
   padding: 2%;
   color: #000;
 }
 
-/* line 229, _main.scss */
+/* line 229, _hub.scss */
 .activityEntry {
   width: 100%;
   background: #FFF;
@@ -723,7 +772,7 @@ ul.footerLinks li.copyright {
   overflow: auto;
   margin-bottom: 2%;
 }
-/* line 236, _main.scss */
+/* line 236, _hub.scss */
 .activityEntry .userAvatar {
   height: 50px;
   width: 50px;
@@ -731,40 +780,40 @@ ul.footerLinks li.copyright {
   vertical-align: top;
   margin-right: 2%;
 }
-/* line 243, _main.scss */
+/* line 243, _hub.scss */
 .activityEntry .userInfo {
   color: #FFF;
   padding: 2%;
   overflow: auto;
 }
-/* line 248, _main.scss */
+/* line 248, _hub.scss */
 .activityEntry h3 {
   text-align: left;
   margin: 0;
   font-size: 1.3em;
   font-weight: 700;
 }
-/* line 254, _main.scss */
+/* line 254, _hub.scss */
 .activityEntry p {
   text-align: left;
   margin: 0;
 }
-/* line 258, _main.scss */
+/* line 258, _hub.scss */
 .activityEntry .unlockDetail {
   overflow: auto;
   padding: 2%;
   border: 1px solid #B9B9B9;
   border-top: none;
 }
-/* line 263, _main.scss */
+/* line 263, _hub.scss */
 .activityEntry .unlockDetail h3 {
   font-size: 1.5em;
 }
-/* line 266, _main.scss */
+/* line 266, _hub.scss */
 .activityEntry .unlockDetail p {
   font-size: 1.4em;
 }
-/* line 270, _main.scss */
+/* line 270, _hub.scss */
 .activityEntry .icon {
   border-radius: 50px;
   height: 65px;
@@ -774,22 +823,22 @@ ul.footerLinks li.copyright {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 281, _main.scss */
+  /* line 281, _hub.scss */
   .personIcon {
     background-image: url(../assets/personIconM2x.png);
   }
 
-  /* line 284, _main.scss */
+  /* line 284, _hub.scss */
   .achievementsIcon {
     background-image: url(../assets/trophyIcon2x.png);
   }
 
-  /* line 287, _main.scss */
+  /* line 287, _hub.scss */
   .questsIcon {
     background-image: url(../assets/pencilIcon2x.png);
   }
 
-  /* line 290, _main.scss */
+  /* line 290, _hub.scss */
   .xpIcon {
     background-image: url(../assets/xpIcon2x.png);
   }
@@ -1414,7 +1463,12 @@ p.unlockableMessage {
   margin: 10px 0 5px 0;
 }
 
-/* line 54, _account.scss */
+/* line 53, _account.scss */
+.colourOptions .colourRadio {
+  display: none;
+}
+
+/* line 57, _account.scss */
 .colourOption {
   width: 50px;
   height: 50px;
@@ -1426,49 +1480,149 @@ p.unlockableMessage {
   -moz-transition: 0.3s border;
   transition: 0.3s border;
 }
-/* line 63, _account.scss */
+/* line 66, _account.scss */
 .colourOption.selected {
   border: 4px solid #88BCF7;
 }
-/* line 67, _account.scss */
+/* line 70, _account.scss */
 .colourOption.a {
   background-color: #076d91;
   background-image: -webkit-linear-gradient(#076d91 0%, #076d91 50%, #064e67 50%, #064e67 100%);
   background-image: linear-gradient(#076d91 0%, #076d91 50%, #064e67 50%, #064e67 100%);
 }
-/* line 70, _account.scss */
+/* line 73, _account.scss */
 .colourOption.b {
   background-color: #e74c3c;
   background-image: -webkit-linear-gradient(#e74c3c 0%, #e74c3c 50%, #b94034 50%, #b94034 100%);
   background-image: linear-gradient(#e74c3c 0%, #e74c3c 50%, #b94034 50%, #b94034 100%);
 }
-/* line 73, _account.scss */
+/* line 76, _account.scss */
 .colourOption.c {
   background-color: #46404c;
   background-image: -webkit-linear-gradient(#46404c 0%, #46404c 50%, #28252C 50%, #28252C 100%);
   background-image: linear-gradient(#46404c 0%, #46404c 50%, #28252C 50%, #28252C 100%);
 }
 
-/* line 77, _account.scss */
+/* line 80, _account.scss */
 .clanCont {
   overflow: auto;
 }
-/* line 80, _account.scss */
+/* line 83, _account.scss */
 .clanCont .clanEmblem {
   width: 150px;
   height: 150px;
   float: left;
   margin-right: 2%;
 }
-/* line 86, _account.scss */
+/* line 89, _account.scss */
+.clanCont h2 {
+  margin: 0;
+  margin-bottom: 1%;
+}
+/* line 93, _account.scss */
 .clanCont h3 {
   text-align: left;
   margin: 0;
 }
 
-/* line 92, _account.scss */
+/* line 99, _account.scss */
 .clanBox {
-  width: 50%;
+  width: 49.5%;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 104, _account.scss */
+.clanBox:first-child {
+  margin: 1% 0.5% 1% 0;
+}
+/* line 108, _account.scss */
+.clanBox:last-child {
+  margin: 1% 0 1% 0.5%;
+}
+/* line 112, _account.scss */
+.clanBox .boxTitle {
+  background: #ba2027;
+}
+
+/* line 116, _account.scss */
+.clanList {
+  width: 101%;
+  margin: 0 -0.5%;
+}
+/* line 120, _account.scss */
+.clanList .clanRadio {
+  display: none;
+}
+
+/* line 126, _account.scss */
+.clanSelect {
+  overflow: auto;
+  padding: 1.5%;
+  margin: 0.5%;
+  box-sizing: border-box;
+  background: #FFF;
+  width: 32.33%;
+  display: inline-block;
+  border: 1px solid #B9B9B9;
+  vertical-align: top;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: 0.3s background;
+  -moz-transition: 0.3s background;
+  transition: 0.3s background;
+}
+/* line 140, _account.scss */
+.clanSelect.selected {
+  background-color: #FFFBB1;
+}
+/* line 145, _account.scss */
+.clanSelect.new input {
+  width: calc(95% - 50px);
+}
+/* line 150, _account.scss */
+.clanSelect img, .clanSelect .imageNew {
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin-right: 1%;
+}
+/* line 156, _account.scss */
+.clanSelect .imageNew {
+  background: #B9B9B9;
+  color: #FFF;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+}
+/* line 164, _account.scss */
+.clanSelect h4 {
+  margin: 0;
+}
+/* line 168, _account.scss */
+.clanSelect .clanMembers {
+  margin-top: 1%;
+}
+/* line 171, _account.scss */
+.clanSelect .clanMembers img {
+  height: 25px;
+  width: 25px;
+  background: #B9B9B9;
+  border-radius: 31px;
+}
+
+/* line 180, _account.scss */
+.boxButton {
+  overflow: auto;
+  bottom: 0;
+  padding: 1%;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: right;
+}
+/* line 188, _account.scss */
+.boxButton .button {
+  vertical-align: top;
   display: inline-block;
 }
 

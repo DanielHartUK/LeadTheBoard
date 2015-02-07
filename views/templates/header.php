@@ -29,9 +29,9 @@ $IGNORETHISFORNOWloggedIn = 0;
     <link rel="icon" href="<?php echo SITE_URL; ?>/favicon.png" type="image/png">
 </head>
 <?php if(pageURLContains($x = 'achievements') OR pageURLContains($x = 'quests')) {
-	echo '<body onhashchange="highlightUnlockable()">';
+	echo '<body onhashchange="highlightUnlockable()" class="preload">';
 } else {
-	echo '<body>';
+	echo '<body class="preload">';
 } ?>
 <div class="wrapper <?php if(pageURLContains($x = 'login')) { echo 'loginWrap'; }; ?>">
 	<?php if(!pageURLContains($x = 'login')) : ?>

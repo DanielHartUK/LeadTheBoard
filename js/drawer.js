@@ -2,6 +2,8 @@
 function layouts () {
 $('.drawer').width($('.user').outerWidth());
 $('.drawer.closed').css('left', -$('.drawer').outerWidth());
+$('.adminCont').width($(window).width() - $('.drawer').outerWidth());
+
 }
 $(document).ready(layouts);
 $(window).resize(layouts);

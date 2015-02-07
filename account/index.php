@@ -22,10 +22,15 @@ require_once(INCLUDES_PATH . "/accountDetails.php");
       </select>
       <p class="detailLabel"> Colour scheme: </p> 
       <div class="colourOptions">
+        <input class="colourRadio" type="radio" selected="<?php if($userColourScheme == 0) { echo 'selected'; } ?>" name="colourOption" id="coloura">
+        <input class="colourRadio" type="radio" selected="<?php if($userColourScheme == 1) { echo 'selected'; } ?>" name="colourOption" id="colourb">
+        <input class="colourRadio" type="radio" selected="<?php if($userColourScheme == 2) { echo 'selected'; } ?>" name="colourOption" id="colourc">
+
         <div class="colourOption a <?php if($userColourScheme == 0) { echo 'selected'; } ?>">
         </div><div class="colourOption b <?php if($userColourScheme == 1) { echo 'selected'; } ?>">
         </div><div class="colourOption c <?php if($userColourScheme == 2) { echo 'selected'; } ?>">
         </div>
+
       </div>
       <input name='submit' class="button blue"  type="submit" value="Submit">  
     </div>
