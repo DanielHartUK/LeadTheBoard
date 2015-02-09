@@ -1073,27 +1073,50 @@ p.unlockableMessage {
 }
 
 /* line 1, _dashboard.scss */
+h2.sectionTitle.statsTitle {
+  background: #e5404c;
+}
+
+/* line 4, _dashboard.scss */
+.statsCont {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+/* line 8, _dashboard.scss */
 .stats {
-  display: inline-block;
+  display: block;
   width: 33.33%;
   vertical-align: top;
 }
-/* line 6, _dashboard.scss */
-.stats.xp {
-  text-align: center;
-  font-size: 2em;
-  color: #FFD700;
+
+/* line 14, _dashboard.scss */
+.boxTitle.achievements {
+  background: #2F9DAB;
 }
-/* line 11, _dashboard.scss */
-.stats.xp.flaticon-medal61 {
-  font-size: 2em;
+/* line 17, _dashboard.scss */
+.boxTitle.quests {
+  background: #AB452F;
 }
-/* line 15, _dashboard.scss */
-.stats.xp p {
-  margin: 0;
+/* line 20, _dashboard.scss */
+.boxTitle.xp {
+  background: #FFD700;
+  color: #555;
 }
 
-/* line 28, _dashboard.scss */
+/* line 26, _dashboard.scss */
+.progressDiv {
+  border-top: 0;
+  padding: 10%;
+}
+
+/* line 35, _dashboard.scss */
 .statRightHolder {
   display: inline-block;
   height: 90%;
@@ -1103,13 +1126,13 @@ p.unlockableMessage {
   margin: 0;
 }
 
-/* line 36, _dashboard.scss */
+/* line 43, _dashboard.scss */
 .statRightHolder ul {
   list-style: none;
   margin: 0;
 }
 
-/* line 40, _dashboard.scss */
+/* line 47, _dashboard.scss */
 .statRightHolder li {
   border-bottom: 1px solid #ccc;
   height: 85px;
@@ -1118,7 +1141,7 @@ p.unlockableMessage {
   top: -25px;
 }
 
-/* line 47, _dashboard.scss */
+/* line 54, _dashboard.scss */
 .statRightHolder h3 {
   display: inline-block;
   margin-right: 15px;
@@ -1127,7 +1150,7 @@ p.unlockableMessage {
   font-size: 38px;
 }
 
-/* line 54, _dashboard.scss */
+/* line 61, _dashboard.scss */
 .statRightHolder span {
   display: inline-block;
   color: #B6B5B5;
@@ -1135,14 +1158,14 @@ p.unlockableMessage {
   font-weight: 300;
 }
 
-/* line 61, _dashboard.scss */
+/* line 68, _dashboard.scss */
 .statsLeft {
   list-style: none;
   display: inline-block;
   width: 45%;
 }
 
-/* line 66, _dashboard.scss */
+/* line 73, _dashboard.scss */
 .statsLeft li {
   width: 100%;
   height: 14px;
@@ -1151,26 +1174,26 @@ p.unlockableMessage {
   margin-bottom: 25px;
 }
 
-/* line 73, _dashboard.scss */
+/* line 80, _dashboard.scss */
 .statsLeft h3 {
   font-size: 17px;
   display: inline-block;
 }
 
-/* line 77, _dashboard.scss */
+/* line 84, _dashboard.scss */
 .statsLeft span {
   font-size: 17px;
   display: inline-block;
 }
 
-/* line 81, _dashboard.scss */
+/* line 88, _dashboard.scss */
 .statsRight {
   width: 45%;
   display: inline-block;
   position: absolute;
 }
 
-/* line 86, _dashboard.scss */
+/* line 93, _dashboard.scss */
 .statsRight li {
   width: 100%;
   height: 14px;
@@ -1179,20 +1202,20 @@ p.unlockableMessage {
   margin-bottom: 25px;
 }
 
-/* line 93, _dashboard.scss */
+/* line 100, _dashboard.scss */
 .statsRight h3 {
   font-size: 17px;
   display: inline-block;
 }
 
-/* line 97, _dashboard.scss */
+/* line 104, _dashboard.scss */
 .statsRight span {
   font-size: 17px;
   display: inline-block;
 }
 
 /* Pie Chart */
-/* line 102, _dashboard.scss */
+/* line 109, _dashboard.scss */
 .progress-pie-chart {
   width: 200px;
   height: 200px;
@@ -1202,12 +1225,12 @@ p.unlockableMessage {
   margin: 0 auto;
 }
 
-/* line 110, _dashboard.scss */
+/* line 117, _dashboard.scss */
 .progress-pie-chart.gt-50 {
   background-color: #81CE97;
 }
 
-/* line 114, _dashboard.scss */
+/* line 121, _dashboard.scss */
 .ppc-progress {
   content: "";
   position: absolute;
@@ -1219,11 +1242,11 @@ p.unlockableMessage {
   clip: rect(0, 200px, 200px, 100px);
 }
 
-/* line 124, _dashboard.scss */
+/* line 131, _dashboard.scss */
 .ppc-progress .ppc-progress-fill {
-  -webkit-transition: 1.5s;
-  -moz-transition: 1.5s;
-  transition: 1.5s;
+  -webkit-animation: chart 1.5s;
+  -moz-animation: chart 1.5s;
+  animation: chart 1.5s;
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -1236,28 +1259,33 @@ p.unlockableMessage {
   transform: rotate(0deg);
 }
 
-/* line 137, _dashboard.scss */
-.ppc-progress-fill.ppc-progress-fill0 {
+/* line 144, _dashboard.scss */
+.ppc-progress-fill.ppc-progress-fill0, .achievements .gt-50 {
   background: #2F9DAB;
 }
 
-/* line 140, _dashboard.scss */
-.ppc-progress-fill.ppc-progress-fill1 {
+/* line 147, _dashboard.scss */
+.ppc-progress-fill.ppc-progress-fill1, .quests .gt-50 {
   background: #AB452F;
 }
 
-/* line 144, _dashboard.scss */
+/* line 150, _dashboard.scss */
+.ppc-progress-fill.ppc-progress-fill2, .xp .gt-50 {
+  background: #FFD700;
+}
+
+/* line 154, _dashboard.scss */
 .gt-50 .ppc-progress {
   clip: rect(0, 100px, 200px, 0);
 }
 
-/* line 147, _dashboard.scss */
+/* line 157, _dashboard.scss */
 .gt-50 .ppc-progress .ppc-progress-fill {
   clip: rect(0, 200px, 200px, 100px);
   background: #E5E5E5;
 }
 
-/* line 152, _dashboard.scss */
+/* line 162, _dashboard.scss */
 .ppc-percents {
   content: "";
   position: absolute;
@@ -1271,7 +1299,7 @@ p.unlockableMessage {
   display: table;
 }
 
-/* line 165, _dashboard.scss */
+/* line 175, _dashboard.scss */
 .ppc-percents span {
   display: block;
   font-weight: bold;
@@ -1279,29 +1307,201 @@ p.unlockableMessage {
   box-sizing: border-box;
   padding: 2%;
 }
-/* line 172, _dashboard.scss */
-.ppc-percents span.pie-info {
-  font-size: 1.2em;
-}
-/* line 175, _dashboard.scss */
-.ppc-percents span.pie-percent {
-  font-size: 2em;
-}
 
-/* line 180, _dashboard.scss */
+/* line 184, _dashboard.scss */
 .pcc-percents-wrapper0 span {
   color: #2F9DAB;
 }
 
-/* line 183, _dashboard.scss */
+/* line 187, _dashboard.scss */
 .pcc-percents-wrapper1 span {
   color: #AB452F;
 }
 
-/* line 186, _dashboard.scss */
+/* line 190, _dashboard.scss */
+.pcc-percents-wrapper2 span {
+  color: #FFD700;
+}
+
+/* line 193, _dashboard.scss */
 .pcc-percents-wrapper {
   display: table-cell;
   vertical-align: middle;
+}
+
+/* line 197, _dashboard.scss */
+.pie-info {
+  font-size: 3em;
+  opacity: 0;
+}
+
+/* line 201, _dashboard.scss */
+.achievements .pie-info {
+  -webkit-animation: icon 0.4s 0.2s forwards;
+  -moz-animation: icon 0.4s 0.2s forwards;
+  animation: icon 0.4s 0.2s forwards;
+}
+
+/* line 204, _dashboard.scss */
+.quests .pie-info {
+  -webkit-animation: icon 0.4s 0.4s forwards;
+  -moz-animation: icon 0.4s 0.4s forwards;
+  animation: icon 0.4s 0.4s forwards;
+}
+
+/* line 207, _dashboard.scss */
+.xp .pie-info {
+  -webkit-animation: icon 0.4s 0.6s forwards;
+  -moz-animation: icon 0.4s 0.6s forwards;
+  animation: icon 0.4s 0.6s forwards;
+}
+
+@-webkit-keyframes icon {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes icon {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes icon {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 214, _dashboard.scss */
+.achievements .totals {
+  -webkit-animation: fadeDown 0.4s 0.3s forwards;
+  -moz-animation: fadeDown 0.4s 0.3s forwards;
+  animation: fadeDown 0.4s 0.3s forwards;
+}
+
+/* line 217, _dashboard.scss */
+.quests .totals {
+  -webkit-animation: fadeDown 0.4s 0.5s forwards;
+  -moz-animation: fadeDown 0.4s 0.5s forwards;
+  animation: fadeDown 0.4s 0.5s forwards;
+}
+
+/* line 220, _dashboard.scss */
+.xp .totals {
+  -webkit-animation: fadeDown 0.4s 0.7s forwards;
+  -moz-animation: fadeDown 0.4s 0.7s forwards;
+  animation: fadeDown 0.4s 0.7s forwards;
+}
+
+/* line 223, _dashboard.scss */
+.totals {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 10% 0 0;
+  position: relative;
+  top: -10px;
+  font-weight: 700;
+  opacity: 0;
+}
+/* line 232, _dashboard.scss */
+.totals span {
+  font-size: 1.5em;
+}
+
+@-webkit-keyframes fadeDown {
+  0% {
+    top: -10px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeDown {
+  0% {
+    top: -10px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeDown {
+  0% {
+    top: -10px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+/* line 246, _dashboard.scss */
+.topStudents {
+  margin-top: 10%;
+  opacity: 0;
+  position: relative;
+  top: -10px;
+  -webkit-animation: fadeDown 0.4s 0.9s forwards;
+  -moz-animation: fadeDown 0.4s 0.9s forwards;
+  animation: fadeDown 0.4s 0.9s forwards;
+}
+/* line 253, _dashboard.scss */
+.topStudents h5 {
+  border-top: 1px solid #C8C8C8;
+  text-transform: uppercase;
+  padding: 3% 0;
+  line-height: 20px;
+  margin: 0;
+}
+
+/* line 261, _dashboard.scss */
+.student {
+  margin-bottom: 2%;
+}
+/* line 264, _dashboard.scss */
+.student .pos {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.5em;
+  font-weight: 700;
+  width: 10%;
+  line-height: 40px;
+}
+/* line 272, _dashboard.scss */
+.student .topStudentDetails {
+  display: inline-block;
+  vertical-align: top;
+  width: 90%;
+}
+/* line 277, _dashboard.scss */
+.student .topStudentDetails img {
+  float: left;
+  height: 40px;
+  width: 40px;
+  background: #808080;
+  margin-right: 4%;
+  border-radius: 29px;
+  border: none;
+}
+/* line 287, _dashboard.scss */
+.student .topStudentDetails h4 {
+  margin: 0;
+  font-size: 1.2em;
+}
+/* line 292, _dashboard.scss */
+.student .topStudentDetails p {
+  margin: 0;
 }
 
 /* line 1, _login.scss */

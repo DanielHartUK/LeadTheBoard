@@ -1,24 +1,31 @@
+h2.sectionTitle.statsTitle {
+  background: #e5404c;
+}
+.statsCont {
+  @include display(flex);
+  width: 100%;
+}
 .stats {
-  display: inline-block;
+  display: block;
   width: 33.33%;
   vertical-align: top;
-
-  &.xp {
-    text-align: center;
-    font-size: 2em;
-    color: #FFD700;
-
-    &.flaticon-medal61 {
-      font-size: 2em;
-    }
-
-    p {
-      margin: 0;
-    }
-  }
 }
-.progressDiv {
+.boxTitle {
+  &.achievements {
+    background: #2F9DAB;
+  }
+  &.quests {
+    background: #AB452F;
+  }
+  &.xp {
+    background: #FFD700;
+    color: #555;
+  }  
+}
 
+.progressDiv {
+    border-top: 0;
+    padding: 10%;
 }
 
 .statChartHolder {
@@ -122,7 +129,7 @@ margin-bottom: 25px;
   clip: rect(0, 200px, 200px, 100px);
 }
 .ppc-progress .ppc-progress-fill {
-  @include transition(1.5s);
+  @include animation(chart 1.5s);
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -134,11 +141,14 @@ margin-bottom: 25px;
   background: #81CE97;
   transform: rotate(0deg);
 }
-.ppc-progress-fill.ppc-progress-fill0 {
+.ppc-progress-fill.ppc-progress-fill0, .achievements .gt-50 {
   background: #2F9DAB;
 }
-.ppc-progress-fill.ppc-progress-fill1 {
+.ppc-progress-fill.ppc-progress-fill1, .quests .gt-50 {
   background: #AB452F;
+}
+.ppc-progress-fill.ppc-progress-fill2, .xp .gt-50 {
+  background: #FFD700;
 }
 
 .gt-50 .ppc-progress {
@@ -169,12 +179,6 @@ margin-bottom: 25px;
   box-sizing: border-box;
   padding: 2%;
 
-  &.pie-info {
-    font-size: 1.2em;
-  }
-  &.pie-percent {
-    font-size: 2em;
-  }
 }
 
 .pcc-percents-wrapper0 span {
@@ -183,9 +187,115 @@ margin-bottom: 25px;
 .pcc-percents-wrapper1 span {
   color: #AB452F;
 }
+.pcc-percents-wrapper2 span {
+  color: #FFD700;
+}
 .pcc-percents-wrapper {
   display: table-cell;
   vertical-align: middle;
 }
+.pie-info {
+  font-size: 3em;
+  opacity: 0;
+}
+.achievements .pie-info {
+  @include animation(icon 0.4s 0.2s forwards);
+}
+.quests .pie-info {
+  @include animation(icon 0.4s 0.4s forwards);
+}
+.xp .pie-info {
+  @include animation(icon 0.4s 0.6s forwards);
+}
+@include keyframes(icon) {
+  0% { opacity: 0;}
+  100% { opacity: 1; }
+}
+.achievements .totals {
+    @include animation(fadeDown 0.4s 0.3s forwards);
+}
+.quests .totals {
+    @include animation(fadeDown 0.4s 0.5s forwards);
+}
+.xp .totals {
+    @include animation(fadeDown 0.4s 0.7s forwards);
+}
+.totals {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 10% 0 0;
+  position: relative;
+  top: -10px;
+  font-weight: 700;
+  opacity: 0;
+
+  span {
+    font-size: 1.5em;
+  }
+}
+@include keyframes(fadeDown) {
+  0% {   
+    top: -10px;
+    opacity: 0;
+  }
+  100% {   
+    top: 0;
+    opacity: 1;
+  }
+}
+.topStudents {
+  margin-top: 10%;
+  opacity: 0;
+  position: relative;
+  top: -10px;
+  @include animation(fadeDown 0.4s 0.90s forwards);
+
+  h5 {
+    border-top: 1px solid #C8C8C8;
+    text-transform: uppercase;
+    padding: 3% 0;
+    line-height: 20px;
+    margin: 0;
+  }
+}
+.student {
+  margin-bottom: 2%;
+
+  .pos {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.5em;
+    font-weight: 700;
+    width: 10%;
+    line-height: 40px;
+  }
+  .topStudentDetails {
+    display: inline-block;
+    vertical-align: top;
+    width: 90%;
+
+    img {
+      float: left;
+      height: 40px;
+      width: 40px;
+      background: #808080;
+      margin-right: 4%;
+      border-radius: 29px;
+      border: none; 
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 1.2em;
+    }
+    
+    p {
+        margin: 0;
+    }
+  }
+}
+
+
+
 
 

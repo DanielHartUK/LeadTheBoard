@@ -125,7 +125,6 @@ if (isset($_GET['create'])) {
 	  `UserID` int(32) unsigned NOT NULL,
 	  `ColourScheme` tinyint(1) NOT NULL DEFAULT '0',
 	  `TimeZone` text NOT NULL,
-	  `Clan` text NOT NULL,
 	  PRIMARY KEY (`UserID`),
 	  CONSTRAINT `User Options` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -220,10 +219,10 @@ if (isset($_GET['create'])) {
 	") or die('Could not create table: ' .mysqli_error($conn));
 	
 	mysqli_query($conn, "
-	INSERT INTO `UserOptions` (`UserID`, `ColourScheme`, `TimeZone`, `Clan`)
+	INSERT INTO `UserOptions` (`UserID`, `ColourScheme`, `TimeZone`)
 	VALUES
-		(1421710773,0,'Europe/London','IPSU'),
-		(1421710893,1,'Europe/London','LORE');
+		(1421710773,0,'Europe/London'),
+		(1421710893,1,'Europe/London');
 	") or die('Could not create table: ' .mysqli_error($conn));
 	
 	mysqli_query($conn, "

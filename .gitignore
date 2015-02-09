@@ -2,6 +2,8 @@ LeadTheBoard.sublime-project
 LeadTheBoard.sublime-workspace
 .psd 
 config.php
+assets/uploads/*
+views/assignment/*
 
 # Compiled source #
 ###################
@@ -47,3 +49,5 @@ config.php
 config.php
 
 *.sublime-workspace
+
+

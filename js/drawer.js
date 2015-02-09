@@ -3,11 +3,11 @@ function layouts () {
 $('.drawer').width($('.user').outerWidth());
 $('.drawer.closed').css('left', -$('.drawer').outerWidth());
 $('.adminCont').width($(window).width() - $('.drawer').outerWidth());
-
 }
+if($(window).width() < 968) {
 $(document).ready(layouts);
 $(window).resize(layouts);
-
+}
 // Open the drawer
 function openDrawer () {
 $('.drawer').removeClass('closed');

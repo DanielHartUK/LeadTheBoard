@@ -39,8 +39,8 @@ function readPicture(input) {
               </div><?php } ?>
             <div class="boxButton">
               <?php if(isset($clanN)) { ?><input name='submit3' type='submit' value='Leave Clan' class="button red"><?php } ?>
-              <?php if(!isset($clanN)) { ?><input name="" type="submit" class="button orange" id="createNew" value="Create New"> 
-              <input name="" type="submit" class="button blue" id="joinClan" value="Join"><?php } ?>
+              <?php if(!isset($clanN)) { ?><input name="" type="submit" class="button orange hidden" id="createNew" value="Create New"> 
+              <input name="" type="submit" class="button blue hidden" id="joinClan" value="Join"><?php } ?>
             </div>
           </div>
       </div>
