@@ -1528,10 +1528,24 @@ h2.sectionTitle.statsTitle {
   border-bottom: 1px solid #C8C8C8;
   box-sizing: border-box;
 }
-/* line 321, _dashboard.scss */
+/* line 318, _dashboard.scss */
+.dashboardTable tr.headerDash th.hStudents, .dashboardTable tr.headerDash th.hAch, .dashboardTable tr.headerDash th.hQuests {
+  width: 10%;
+  text-align: center;
+}
+/* line 325, _dashboard.scss */
 .dashboardTable tbody td {
   padding: 1%;
   font-size: 1.1em;
+}
+/* line 329, _dashboard.scss */
+.dashboardTable tbody td.tStudents, .dashboardTable tbody td.tAch, .dashboardTable tbody td.tQuests {
+  width: 10%;
+  text-align: center;
+}
+/* line 333, _dashboard.scss */
+.dashboardTable tbody td.tActions {
+  width: 15%;
 }
 
 /* line 1, _login.scss */
@@ -1849,8 +1863,12 @@ h2.sectionTitle.statsTitle {
   width: 100%;
   box-sizing: border-box;
   text-align: right;
+  background: #E5E5E5;
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
-/* line 188, _account.scss */
+/* line 192, _account.scss */
 .boxButton .button {
   vertical-align: top;
   display: inline-block;
