@@ -295,6 +295,35 @@ margin-bottom: 25px;
   }
 }
 
+.dashboardTable {
+    width: 100%;
+    text-align: left;
+    border: 1px solid #C8C8C8;
+
+    thead {
+        font-size: 1.1em;
+        /* background-color: #AD4B4B; */
+        box-sizing: border-box;
+    }
+    .boardIcon {
+      color: inherit;
+    }
+    tr.headerDash th {
+        padding: 1%;
+        color: #555;
+        border-left: 1px solid #C8C8C8;
+        border-bottom: 1px solid #C8C8C8;
+        box-sizing: border-box;
+
+
+    }
+    tbody {
+      td {
+        padding: 1%;
+        font-size: 1.1em;
+      }
+    }
+}
 
 
 

@@ -110,44 +110,53 @@
 .flaticon-bell60:before {
     content: "\e001";
 }
-.flaticon-error6:before {
+.flaticon-close47:before {
     content: "\e002";
 }
-.flaticon-home153:before {
+.flaticon-delete84:before {
     content: "\e003";
 }
-.flaticon-key162:before {
+.flaticon-error6:before {
     content: "\e004";
 }
-.flaticon-locked59:before {
+.flaticon-home153:before {
     content: "\e005";
 }
-.flaticon-medal61:before {
+.flaticon-key162:before {
     content: "\e006";
 }
-.flaticon-multiple25:before {
+.flaticon-locked59:before {
     content: "\e007";
 }
-.flaticon-pencil43:before {
+.flaticon-medal61:before {
     content: "\e008";
 }
-.flaticon-profile8:before {
+.flaticon-multiple25:before {
     content: "\e009";
 }
-.flaticon-settings21:before {
+.flaticon-pencil43:before {
     content: "\e00a";
 }
-.flaticon-6:before {
+.flaticon-profile8:before {
     content: "\e00b";
 }
-.flaticon-speed13:before {
+.flaticon-settings21:before {
     content: "\e00c";
 }
-.flaticon-trophy56:before {
+.flaticon-6:before {
     content: "\e00d";
 }
-.flaticon-user182:before {
+.flaticon-speed13:before {
     content: "\e00e";
+}
+.flaticon-symbol5:before {
+    content: "\e00f";
+}
+.flaticon-trophy56:before {
+    content: "\e010";
+}
+.flaticon-user182:before {
+    content: "\e011";
 }
 
 

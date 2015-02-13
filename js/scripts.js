@@ -34,6 +34,7 @@ gclickCount = 0;
 $('.gallop').click(function() {
   if (gclickCount >= 5) {
     $(this).css('transition', '4s');
+    $(this).css('transform', 'scale('+scale+')');
     $(this).css('left', $(this).width() + 50 + $(window).width());
     setTimeout(function() {
       $('.gallop').css('left', 0);

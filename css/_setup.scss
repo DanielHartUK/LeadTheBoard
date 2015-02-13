@@ -1,0 +1,31 @@
+.setup {
+	.nav {
+	  display: block;
+	}
+	.sectionNavigation {
+		width: 100%;
+		li:hover {
+			border-bottom: 2px solid rgba(22, 160, 133, 0);
+			cursor: initial;
+		}
+	}
+
+	form {
+		border-top: 1px solid #dbdbdb;
+
+		.button {
+			margin: 2% 0;
+		}
+	}
+}
+.install {
+    margin: 0 auto;
+    max-width: 700px;
+
+    h1 {
+        text-align: left;
+    }
+}
+.valFail, .valFaile {
+    border-color: red;
+}

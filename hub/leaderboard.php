@@ -1,5 +1,6 @@
 <?php 
 $isLeaderboard = 1;
+$pageTitle = 'Leaderboard';
 require_once("config.php");
 require_once(TEMPLATES_PATH . "/mainTop.php"); 
 ?>

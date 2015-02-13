@@ -22,7 +22,7 @@ $IGNORETHISFORNOWloggedIn = 0;
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/fonts/fonts.css">
     <meta name="viewport" content="initial-scale=1.0">
-    <title>LeadTheBoard!</title>
+    <title><?php if(isset($pageTitle)) { echo $pageTitle . " | "; } ?>LeadTheBoard!</title>
     <meta name="description" content="LeadTheBoard! is a tool designed for education to provide incentives to students in the form of unlockables such as Achievements, Quests and XP.">
     <meta name="keywords" content="LeadTheBoard!, Leaderboard, education, achievements, quests, xp, unlockables">
 	<meta name="author" content="The LeadTheBoard! Team">

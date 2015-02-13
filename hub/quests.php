@@ -1,6 +1,7 @@
 <?php 
 require_once("../config.php");
 $isLeaderboard = 0;
+$pageTitle = 'Quests';
 require_once(TEMPLATES_PATH . "/mainTop.php"); 
 ?>
 <div class="quests">
