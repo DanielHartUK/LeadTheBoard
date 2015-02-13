@@ -5,6 +5,14 @@ $(".colourOption").click(function() {
 	$(".colourOption").removeClass("selected");
 	$(this).addClass("selected");
 });
+$('.clanSelect').click(function() {  
+  $('.boxButton').show();
+  setTimeout(function() {
+  $('.footer').css('padding-bottom', $('.boxButton').height() * 1.5);
+
+  }, 1)
+});
+
 $(".clanSelect").click(function() {
 	var classes = this.classList;
 	var x = String(classes).replace('clanSelect clanID-','');

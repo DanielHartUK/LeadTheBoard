@@ -52,3 +52,5 @@ config.php
 *.sublime-workspace
 
 
+
+*.sublime-workspace

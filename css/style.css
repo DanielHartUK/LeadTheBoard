@@ -1864,11 +1864,13 @@ h2.sectionTitle.statsTitle {
   box-sizing: border-box;
   text-align: right;
   background: #E5E5E5;
+  display: none;
   position: fixed;
   right: 0;
   bottom: 0;
+  z-index: 99;
 }
-/* line 192, _account.scss */
+/* line 194, _account.scss */
 .boxButton .button {
   vertical-align: top;
   display: inline-block;

@@ -315,12 +315,24 @@ margin-bottom: 25px;
         border-bottom: 1px solid #C8C8C8;
         box-sizing: border-box;
 
+        &.hStudents, &.hAch, &.hQuests {
+          width: 10%;
+          text-align: center;
+        }
 
     }
     tbody {
       td {
         padding: 1%;
         font-size: 1.1em;
+
+        &.tStudents, &.tAch, &.tQuests {
+          width: 10%;
+          text-align: center;
+        }
+        &.tActions {
+          width: 15%;
+        }
       }
     }
 }
