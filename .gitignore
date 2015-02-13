@@ -4,6 +4,7 @@ LeadTheBoard.sublime-workspace
 config.php
 assets/uploads/*
 views/assignment/*
+assignment_work/*
 
 # Compiled source #
 ###################
