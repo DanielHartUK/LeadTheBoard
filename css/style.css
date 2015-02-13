@@ -1508,44 +1508,75 @@ h2.sectionTitle.statsTitle {
 .dashboardTable {
   width: 100%;
   text-align: left;
-  border: 1px solid #C8C8C8;
+  border: 1px solid #758F9B;
 }
 /* line 303, _dashboard.scss */
 .dashboardTable thead {
   font-size: 1.1em;
-  /* background-color: #AD4B4B; */
   box-sizing: border-box;
 }
-/* line 308, _dashboard.scss */
+/* line 307, _dashboard.scss */
 .dashboardTable .boardIcon {
   color: inherit;
+  float: none;
+  margin: 0;
 }
-/* line 311, _dashboard.scss */
+/* line 312, _dashboard.scss */
 .dashboardTable tr.headerDash th {
   padding: 1%;
-  color: #555;
-  border-left: 1px solid #C8C8C8;
-  border-bottom: 1px solid #C8C8C8;
+  color: #094764;
+  border-left: 1px solid #758F9B;
+  border-bottom: 1px solid #758F9B;
+  border-top: 1px solid #758F9B;
   box-sizing: border-box;
+  background: #96B8C8;
 }
-/* line 318, _dashboard.scss */
+/* line 321, _dashboard.scss */
 .dashboardTable tr.headerDash th.hStudents, .dashboardTable tr.headerDash th.hAch, .dashboardTable tr.headerDash th.hQuests {
   width: 10%;
   text-align: center;
 }
-/* line 325, _dashboard.scss */
+/* line 326, _dashboard.scss */
+.dashboardTable tr.headerDash th:last-child {
+  border-right: 1px solid #758F9B;
+}
+/* line 332, _dashboard.scss */
+.dashboardTable tbody tr {
+  border-bottom: 1px solid #758F9B;
+  box-sizing: border-box;
+  background: #FFF;
+}
+/* line 337, _dashboard.scss */
+.dashboardTable tbody tr:nth-child(2n) {
+  background: #F9F9F9;
+}
+/* line 340, _dashboard.scss */
+.dashboardTable tbody tr:hover {
+  background: #FFFFC1;
+}
+/* line 344, _dashboard.scss */
 .dashboardTable tbody td {
   padding: 1%;
   font-size: 1.1em;
 }
-/* line 329, _dashboard.scss */
+/* line 348, _dashboard.scss */
 .dashboardTable tbody td.tStudents, .dashboardTable tbody td.tAch, .dashboardTable tbody td.tQuests {
   width: 10%;
   text-align: center;
 }
-/* line 333, _dashboard.scss */
+/* line 352, _dashboard.scss */
 .dashboardTable tbody td.tActions {
   width: 15%;
+  font-size: 1.2em;
+  opacity: 1;
+}
+/* line 357, _dashboard.scss */
+.dashboardTable tbody td .flaticon-cogwheel25.action {
+  color: #F26E00;
+}
+/* line 360, _dashboard.scss */
+.dashboardTable tbody td .flaticon-delete84.action {
+  color: #F00000;
 }
 
 /* line 1, _login.scss */
