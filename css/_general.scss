@@ -96,26 +96,7 @@ h2.sectionTitle {
     }
 
 }
-.footer {
-    margin: 0 0.5% 0.5% 0.5%;   
-    @include transition($drawerSlide width);
 
-    &.admin {
-        clear: right;
-        width: auto;
-        display: block;
-        float: right;
-        box-sizing: border-box;
-        padding: 0 0.5% 0.5% 0.5%;
-        margin: 0;
-        white-space: nowrap;
-    }
-}
-.gallop {
-    @include transition(6s ease);
-    position: relative;
-    left: 0px;
-}
 
 .button {
   background: rgba(0, 0, 0, 0.42);
@@ -185,6 +166,31 @@ h2.sectionTitle {
   &.blue {
     background: #009CE0;
   }
+  &.cookie {
+    background: rgba(0, 0, 0, 0);
+    color: #FFF;
+    padding: 0.5%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    height: 50px;
+    line-height: 35px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    text-align: left;
+
+    a {
+      border-bottom: 1px dotted;
+    }
+
+    .close {
+      float: none;
+      font-size: 1.5em;
+      padding: 1%;
+      cursor: pointer;
+    }
+  }
 }
 .c404 {
     min-height: 100%;
@@ -208,4 +214,15 @@ h2.sectionTitle {
     }
 }
     
+.gradient-rainbow { 
+  background: -moz-linear-gradient(left, red, orange, yellow, green, 
+  blue, indigo, violet);
+  background: -webkit-gradient(linear, left center, right center, from(red), 
+  color-stop(14%, orange), color-stop(28%, yellow), color-stop(42%, green), 
+  color-stop(56%, blue), color-stop(70%, indigo), to(violet)); 
+  background: -o-linear-gradient(left, red, orange, yellow, green, 
+  blue, indigo, violet);
+  background: -ms-linear-gradient(left, red, orange, yellow, green, 
+  blue, indigo, violet);
+}
 

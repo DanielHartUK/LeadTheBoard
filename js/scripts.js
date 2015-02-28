@@ -1,3 +1,10 @@
+$(".close.cookieBanner").click(function() {
+  $(this).parent().css('display', 'none');
+    var d = new Date();
+    d.setTime(d.getTime() + (90*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = "cookieWarning" + "=" + 1 + "; " + expires;
+});
 $(window).load(function() {
   $("body").removeClass("preload");
 });
@@ -7,6 +14,13 @@ $(window).resize(function() {
     $("body").removeClass("preload");
   }, 1);
 });
+
+//function unlockablesCalcFallback() {
+//  var unlockableWidth = $('.unlockableListCont').width();
+//  $('.unlockableDetails').width( unlockableWidth - 100 - (unlockableWidth / 100) - (unlockableWidth / 100 * 8) );
+//};
+//$(document).ready(unlockablesCalcFallback);
+//$(window).resize(unlockablesCalcFallback);
 // jQuery rotation - http://stackoverflow.com/a/17348698
   var rotation = 0;
   jQuery.fn.rotate = function(degrees) {
@@ -35,6 +49,7 @@ $('.gallop').click(function() {
   if (gclickCount >= 5) {
     $(this).css('transition', '4s');
     $(this).css('transform', 'scale('+scale+')');
+    $(this).addClass("gradient-rainbow");
     $(this).css('left', $(this).width() + 50 + $(window).width());
     setTimeout(function() {
       $('.gallop').css('left', 0);

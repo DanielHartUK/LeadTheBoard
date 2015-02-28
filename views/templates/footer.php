@@ -1,11 +1,4 @@
-    <div class="footer ">
-	    <ul class="footerLinks">
-	    	<li><div class="flaticon-aries1 gallop"></div> </li>
-	    	<a href="<?php echo SITE_URL; ?>/about/"><li>About</li></a>
-	    	<a href="<?php echo SITE_URL; ?>/about/support.php"><li>Support</li></a>
-	    	<li class="copyright">&#169; <script>document.write(new Date().getFullYear())</script> LeadTheBoard! </li>
-	    </ul>
-    </div>
+
 	<?php if($admin = 1) { echo '</div> '; } ?> 
 </div> <!-- End Content Container -->
 </div><!-- End Wrapper -->

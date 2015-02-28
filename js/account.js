@@ -8,7 +8,7 @@ $(".colourOption").click(function() {
 $('.clanSelect').click(function() {  
   $('.boxButton').show();
   setTimeout(function() {
-  $('.footer').css('padding-bottom', $('.boxButton').height() * 1.5);
+  $('.clanList').css('padding-bottom', $('.boxButton').height() * 1.5);
 
   }, 1)
 });
@@ -33,5 +33,12 @@ $(".clanSelect.new").click(function() {
 $( "#newClanName" ).keyup(function() {
     var value = $( this ).val();
     $("#createNew").val("Create " + value );
- })
-  
+});
+$(".editStudent").click(function() {
+	if(!$(this).find(".inputCheck").prop("checked")) {
+		$(this).find(".inputCheck").prop("checked", true);
+	} else {
+		$(this).find(".inputCheck").prop("checked", false);
+	}
+});
+

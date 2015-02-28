@@ -1,14 +1,19 @@
 /* Navigation */
 
 .nav {
-    @include display(flex);
-    @include justify-content(space-between);
+    /*@include display(flex);
+    @include justify-content(space-between); */
     width: 100%;
     height: $navHeight;
     background-color: #16a085;
     position: fixed;
     top: 0;
     z-index: 9999;
+
+    .user {
+        position: absolute;
+        left: 0;
+    }
 }
 #logo {
     text-align: center;
@@ -28,6 +33,7 @@
     margin: 10px 10px 0.5% 0;
     float: left;
 }
+
 .user {
     color: #fff;
     line-height: $navHeight;
@@ -100,10 +106,7 @@ ul.menu {
             background-color: rgba(0, 0, 0, 0.28);
         }
 
-        &.logOut {
-            position: absolute;
-            bottom: 0;
-        }
+
     }
 
 }
@@ -138,21 +141,42 @@ ul.menu {
         }
     }
 }
+.footer {
+  position: absolute;
+  bottom: 0;
+  color: #FFF;
+  text-align: center;
+  width: 100%;
+  padding: 2%;
+  box-sizing: border-box;
+
+    &.admin {
+        clear: right;
+        width: auto;
+        display: block;
+        float: right;
+        box-sizing: border-box;
+        padding: 0 0.5% 0.5% 0.5%;
+        margin: 0;
+        white-space: nowrap;
+    }
+}
+.gallop {
+    @include transition(6s ease);
+    position: relative;
+    left: 0px;
+}
 ul.footerLinks {
     list-style: none;
     margin: 0;
-    padding: 1% 0;
-    font-size: 0.9em;
-    border-top: 1px solid #808080;
+    padding: 1%;
+    font-size: 0.8em;
 
     li {
         display: inline-block;
         margin-right: 1%;
+        margin-bottom: 2%;
 
-        &.copyright {
-            float: right;
-            margin-right: 0;
-        }
     }
 }
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {

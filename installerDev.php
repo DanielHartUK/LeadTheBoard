@@ -9,7 +9,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 	
 
 if(isset($_GET['step'])) {
-	if ($_GET['step'] == 2) {
+	if ($_GET['step'] == 20) {
 
 		mysqli_query($conn, "
 		CREATE TABLE `AchievementProgress` (
@@ -316,7 +316,7 @@ if(isset($_GET['step'])) {
 				<?php if(isset($_GET['error'])) { 
 					echo '<div class="warningBanner red"> Error: ' . $_GET['error'] . '<br /> Please check your credentials</div>'; 
 				} else { ?>
-				<p> Welcome to LeadTheBoard! To get started we first need to set up your database. <br/>
+				<p> Welcome to LeadTheBoard! To get started we first need to set up your database and check your URL. <br/>
 				You'll need a MySQL database and you'll need to know the credentials to it to continue. If you don't have these then try contacting your webhost.
 				</p>
 				<?php } ?>
@@ -329,6 +329,8 @@ if(isset($_GET['step'])) {
       				<input required type="password" name="dbPass" value="<?php echo $password; ?>" class="inputField">
 					<p class="detailLabel">Database name</p>
       				<input required type="text" name="dbName" value="<?php echo $dbname; ?>" class="inputField">
+					<p class="detailLabel">Site URL <span class="tip">This is what appears in your browser's address bar</span></p>
+      				<input required type="text" name="url" value="<?php echo $url; ?>" class="inputField">
       				<input required type="submit" class="button blue" name="dbCred" value="Next">
       			</form>
 			<?php } ?>

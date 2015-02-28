@@ -1,0 +1,130 @@
+.studentsList {
+    width: 100%;
+    text-align: left;
+    border: 1px solid #758F9B;
+
+	.editCheck {
+		width: 4%;
+		text-align: center;
+	}
+	.editAvatar {
+		width: 50px;
+	}	
+	.editActions {
+		width: 10%;
+	}
+	.flaticon-cogwheel25.action {
+        color: #F26E00;
+    }
+    thead {
+        font-size: 1.1em;
+        box-sizing: border-box;
+
+		th {
+      		padding: 1%;
+      		color: #094764;
+      		border-left: 1px solid #758F9B;
+      		border-bottom: 1px solid #758F9B;
+      		border-top: 1px solid #758F9B;
+      		box-sizing: border-box;
+      		background: #96B8C8;
+
+      		&.editName {
+      			border-left: none;
+      		}
+		}
+	}
+	tbody {
+      	tr {
+      	  	border-bottom: 1px solid #758F9B;
+      	  	box-sizing: border-box;
+      	  	background: #FFF;
+		
+      	  	&:nth-child(2n) {
+      	  	  background: #F9F9F9;
+      	  	}
+      	  	&:hover {
+      	  	  background: #FFFFC1;
+      	  	}
+
+      	  	td {
+      	  		padding: 1%;
+      	  		img {
+					width: 50px;
+					height: 50px;
+					margin: 1% 1% 1% 0;
+				}
+      	  	}
+      	}
+	}
+}
+
+.dashboardTable {
+    width: 100%;
+    text-align: left;
+    border: 1px solid #758F9B;
+
+    thead {
+        font-size: 1.1em;
+        box-sizing: border-box;
+    }
+    .boardIcon {
+      color: inherit;
+      float: none;
+      margin: 0;
+    }
+    tr.headerDash th {
+      padding: 1%;
+      color: #094764;
+      border-left: 1px solid #758F9B;
+      border-bottom: 1px solid #758F9B;
+      border-top: 1px solid #758F9B;
+      box-sizing: border-box;
+      background: #96B8C8;
+
+        &.hStudents, &.hAch, &.hQuests {
+          width: 10%;
+          text-align: center;
+        }
+
+        &:last-child{
+          border-right: 1px solid #758F9B;
+        }
+
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid #758F9B;
+        box-sizing: border-box;
+        background: #FFF;
+
+        &:nth-child(2n) {
+          background: #F9F9F9;
+        }
+        &:hover {
+          background: #FFFFC1;
+        }
+      }
+      td {
+        padding: 1%;
+        font-size: 1.1em;
+
+        &.tStudents, &.tAch, &.tQuests {
+          width: 10%;
+          text-align: center;
+        }
+        &.tActions {
+          width: 15%;
+          font-size: 1.2em;
+          opacity: 1;
+        }
+        .flaticon-cogwheel25.action {
+          color: #F26E00;
+        }
+        .flaticon-delete84.action {
+          color: #F00000;
+        }
+      }
+    }
+}
+

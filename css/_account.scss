@@ -185,12 +185,14 @@
     box-sizing: border-box;
     text-align: right;
     background: #E5E5E5;
-    display: none;
     position: fixed;
     right: 0;
     bottom: 0;
     z-index: 99;
 
+    &.hidden {
+        display: none;
+    }
     .button {
         vertical-align: top;
         display: inline-block;

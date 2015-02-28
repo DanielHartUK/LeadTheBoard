@@ -148,35 +148,7 @@ h2.sectionTitle {
   padding: 0%;
 }
 
-/* line 99, _general.scss */
-.footer {
-  margin: 0 0.5% 0.5% 0.5%;
-  -webkit-transition: 0.3s width;
-  -moz-transition: 0.3s width;
-  transition: 0.3s width;
-}
-/* line 103, _general.scss */
-.footer.admin {
-  clear: right;
-  width: auto;
-  display: block;
-  float: right;
-  box-sizing: border-box;
-  padding: 0 0.5% 0.5% 0.5%;
-  margin: 0;
-  white-space: nowrap;
-}
-
-/* line 114, _general.scss */
-.gallop {
-  -webkit-transition: 6s ease;
-  -moz-transition: 6s ease;
-  transition: 6s ease;
-  position: relative;
-  left: 0px;
-}
-
-/* line 120, _general.scss */
+/* line 101, _general.scss */
 .button {
   background: rgba(0, 0, 0, 0.42);
   display: inline-block;
@@ -186,63 +158,63 @@ h2.sectionTitle {
   font-size: 1rem;
   border: 0;
 }
-/* line 129, _general.scss */
+/* line 110, _general.scss */
 .button.hidden {
   display: none !important;
 }
-/* line 133, _general.scss */
+/* line 114, _general.scss */
 .button:hover {
   background: rgba(0, 0, 0, 0.51);
 }
-/* line 136, _general.scss */
+/* line 117, _general.scss */
 .button:active {
   background: rgba(0, 0, 0, 0.54);
   padding-top: 0.7em;
   padding-bottom: 0.5em;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.52);
 }
-/* line 143, _general.scss */
+/* line 124, _general.scss */
 .button.blue {
   background: #1892B6;
   color: #FFF;
 }
-/* line 147, _general.scss */
+/* line 128, _general.scss */
 .button.blue:hover {
   background: #1589AB;
 }
-/* line 150, _general.scss */
+/* line 131, _general.scss */
 .button.blue:active {
   background: #157F9E;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.3);
 }
-/* line 155, _general.scss */
+/* line 136, _general.scss */
 .button.red {
   background: #ED3600;
   color: #FFF;
 }
-/* line 159, _general.scss */
+/* line 140, _general.scss */
 .button.red:hover {
   background: #E43400;
 }
-/* line 162, _general.scss */
+/* line 143, _general.scss */
 .button.red:active {
   background: #CB2E00;
 }
-/* line 166, _general.scss */
+/* line 147, _general.scss */
 .button.orange {
   background: #ED7500;
   color: #FFF;
 }
-/* line 170, _general.scss */
+/* line 151, _general.scss */
 .button.orange:hover {
   background: #E06F00;
 }
-/* line 173, _general.scss */
+/* line 154, _general.scss */
 .button.orange:active {
   background: #D06700;
 }
 
-/* line 178, _general.scss */
+/* line 159, _general.scss */
 .warningBanner {
   padding: 1%;
   background: #E00000;
@@ -250,55 +222,75 @@ h2.sectionTitle {
   color: #FFF;
   text-align: center;
 }
-/* line 185, _general.scss */
+/* line 166, _general.scss */
 .warningBanner.blue {
   background: #009CE0;
 }
+/* line 169, _general.scss */
+.warningBanner.cookie {
+  background: transparent;
+  color: #FFF;
+  padding: 0.5%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  height: 50px;
+  line-height: 35px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  text-align: left;
+}
+/* line 183, _general.scss */
+.warningBanner.cookie a {
+  border-bottom: 1px dotted;
+}
+/* line 187, _general.scss */
+.warningBanner.cookie .close {
+  float: none;
+  font-size: 1.5em;
+  padding: 1%;
+  cursor: pointer;
+}
 
-/* line 189, _general.scss */
+/* line 195, _general.scss */
 .c404 {
   min-height: 100%;
   background: #000;
   color: #FFF;
 }
 
-/* line 194, _general.scss */
+/* line 200, _general.scss */
 .e404 {
   text-align: center;
   font-size: 1.4em;
 }
-/* line 198, _general.scss */
+/* line 204, _general.scss */
 .e404 p {
   margin: 1.5%;
 }
-/* line 202, _general.scss */
+/* line 208, _general.scss */
 .e404 h3 {
   font-size: 2em;
 }
-/* line 206, _general.scss */
+/* line 212, _general.scss */
 .e404 a p {
   font-size: 0.7em;
+}
+
+/* line 217, _general.scss */
+.gradient-rainbow {
+  background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+  background: -webkit-gradient(linear, left center, right center, from(red), color-stop(14%, orange), color-stop(28%, yellow), color-stop(42%, green), color-stop(56%, blue), color-stop(70%, indigo), to(violet));
+  background: -o-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+  background: -ms-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
 }
 
 /* Navigation */
 /* line 3, _navigation.scss */
 .nav {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  box-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -o-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: justify;
+  /*@include display(flex);
+  @include justify-content(space-between); */
   width: 100%;
   height: 50px;
   background-color: #16a085;
@@ -306,8 +298,13 @@ h2.sectionTitle {
   top: 0;
   z-index: 9999;
 }
-
 /* line 13, _navigation.scss */
+.nav .user {
+  position: absolute;
+  left: 0;
+}
+
+/* line 18, _navigation.scss */
 #logo {
   text-align: center;
   font-weight: 700;
@@ -316,20 +313,20 @@ h2.sectionTitle {
   line-height: 50px;
   padding: 0 0.5%;
 }
-/* line 21, _navigation.scss */
+/* line 26, _navigation.scss */
 #logo a {
   text-decoration: none;
   color: #FFF;
 }
 
-/* line 26, _navigation.scss */
+/* line 31, _navigation.scss */
 .profilePicSmall {
   width: 30px;
   margin: 10px 10px 0.5% 0;
   float: left;
 }
 
-/* line 31, _navigation.scss */
+/* line 37, _navigation.scss */
 .user {
   color: #fff;
   line-height: 50px;
@@ -338,13 +335,13 @@ h2.sectionTitle {
   white-space: nowrap;
 }
 
-/* line 38, _navigation.scss */
+/* line 44, _navigation.scss */
 .close {
   float: right;
   font-size: 2em;
 }
 
-/* line 42, _navigation.scss */
+/* line 48, _navigation.scss */
 .notificationIcon {
   text-align: left;
   background-image: url(../assets/bell.png);
@@ -359,18 +356,18 @@ h2.sectionTitle {
   line-height: 50px;
   text-align: right;
 }
-/* line 56, _navigation.scss */
+/* line 62, _navigation.scss */
 .notificationIcon.loggedOut {
   background-image: none;
 }
 
-/* line 60, _navigation.scss */
+/* line 66, _navigation.scss */
 .downArrow {
   font-size: 0.7em;
   margin-left: 0.5em;
 }
 
-/* line 64, _navigation.scss */
+/* line 70, _navigation.scss */
 .drawer {
   position: fixed;
   display: block;
@@ -386,17 +383,17 @@ h2.sectionTitle {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 77, _navigation.scss */
+/* line 83, _navigation.scss */
 .drawer .user {
   height: 50px;
   padding: 0px 2.5%;
 }
-/* line 82, _navigation.scss */
+/* line 88, _navigation.scss */
 .drawer.closed {
   left: -346px;
 }
 
-/* line 86, _navigation.scss */
+/* line 92, _navigation.scss */
 ul.menu {
   list-style: none;
   color: #FFF;
@@ -404,30 +401,25 @@ ul.menu {
   padding: 0%;
   font-size: 1.1em;
 }
-/* line 93, _navigation.scss */
+/* line 99, _navigation.scss */
 ul.menu li {
   padding: 4%;
   margin: 2%;
   border-radius: 4px;
   font-weight: 700;
 }
-/* line 99, _navigation.scss */
+/* line 105, _navigation.scss */
 ul.menu li:hover {
   background-color: rgba(0, 0, 0, 0.28);
 }
-/* line 103, _navigation.scss */
-ul.menu li.logOut {
-  position: absolute;
-  bottom: 0;
-}
 
-/* line 110, _navigation.scss */
+/* line 113, _navigation.scss */
 .sideIcon {
   margin-right: 4%;
   font-weight: 400;
 }
 
-/* line 114, _navigation.scss */
+/* line 117, _navigation.scss */
 .sectionNavigation {
   padding: 1% 0;
   width: 80%;
@@ -435,17 +427,17 @@ ul.menu li.logOut {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 120, _navigation.scss */
+/* line 123, _navigation.scss */
 .sectionNavigation ul {
   margin: 0;
   padding: 0;
   border-bottom: 2px solid #808080;
 }
-/* line 125, _navigation.scss */
+/* line 128, _navigation.scss */
 .sectionNavigation ul a {
   color: inherit;
 }
-/* line 128, _navigation.scss */
+/* line 131, _navigation.scss */
 .sectionNavigation ul li {
   display: inline-block;
   margin: 0 2% -2px 0;
@@ -453,37 +445,63 @@ ul.menu li.logOut {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
-/* line 135, _navigation.scss */
+/* line 138, _navigation.scss */
 .sectionNavigation ul li.currentPage {
   border-bottom: 2px solid #16a085;
 }
 
-/* line 141, _navigation.scss */
+/* line 144, _navigation.scss */
+.footer {
+  position: absolute;
+  bottom: 0;
+  color: #FFF;
+  text-align: center;
+  width: 100%;
+  padding: 2%;
+  box-sizing: border-box;
+}
+/* line 153, _navigation.scss */
+.footer.admin {
+  clear: right;
+  width: auto;
+  display: block;
+  float: right;
+  box-sizing: border-box;
+  padding: 0 0.5% 0.5% 0.5%;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* line 164, _navigation.scss */
+.gallop {
+  -webkit-transition: 6s ease;
+  -moz-transition: 6s ease;
+  transition: 6s ease;
+  position: relative;
+  left: 0px;
+}
+
+/* line 169, _navigation.scss */
 ul.footerLinks {
   list-style: none;
   margin: 0;
-  padding: 1% 0;
-  font-size: 0.9em;
-  border-top: 1px solid #808080;
+  padding: 1%;
+  font-size: 0.8em;
 }
-/* line 148, _navigation.scss */
+/* line 175, _navigation.scss */
 ul.footerLinks li {
   display: inline-block;
   margin-right: 1%;
-}
-/* line 152, _navigation.scss */
-ul.footerLinks li.copyright {
-  float: right;
-  margin-right: 0;
+  margin-bottom: 2%;
 }
 
-/* line 158, _navigation.scss */
+/* line 182, _navigation.scss */
 .sectionNavigation ul li.current, .sectionNavigation ul li:hover {
   border-bottom: 2px solid #16a085;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 162, _navigation.scss */
+  /* line 186, _navigation.scss */
   .notificationIcon {
     background-image: url(../assets/bell2x.png);
   }
@@ -569,15 +587,16 @@ ul.footerLinks li.copyright {
 .boardEntry td {
   padding: 1%;
   border: 1px solid #CCC;
+  box-sizing: border-box;
 }
-/* line 62, _hub.scss */
+/* line 63, _hub.scss */
 .boardEntry td.pos {
   width: 10px;
   font-size: 1.2em;
   font-weight: 500;
   padding: 10px;
 }
-/* line 68, _hub.scss */
+/* line 69, _hub.scss */
 .boardEntry td.boardAvatar {
   width: 40px;
   padding: 10px;
@@ -587,44 +606,52 @@ ul.footerLinks li.copyright {
   border-right: 1px solid #CCC;
 }
 /* line 78, _hub.scss */
+.boardEntry td.achievements {
+  width: 20%;
+}
+/* line 81, _hub.scss */
+.boardEntry td.quests, .boardEntry td.xp {
+  width: 15%;
+}
+/* line 86, _hub.scss */
 .boardEntry:nth-child(even) {
   background: #ececec;
 }
-/* line 81, _hub.scss */
+/* line 89, _hub.scss */
 .boardEntry:first-child {
   background: #f7f7f7;
 }
-/* line 84, _hub.scss */
+/* line 92, _hub.scss */
 .boardEntry:hover {
   background-color: #696969;
   color: #FFF;
 }
 
-/* line 89, _hub.scss */
+/* line 97, _hub.scss */
 .avatarBoard {
   height: 40px;
   width: 40px;
 }
 
-/* line 93, _hub.scss */
+/* line 101, _hub.scss */
 .StudentName a {
   border-bottom: 1px dotted;
 }
 
 /* Side Boxes */
-/* line 98, _hub.scss */
+/* line 106, _hub.scss */
 .sideBlock {
   display: inline-block;
   vertical-align: top;
   width: 19.5%;
   padding-left: 0.5%;
 }
-/* line 104, _hub.scss */
+/* line 112, _hub.scss */
 .sideBlock.drawerO {
   display: none;
 }
 
-/* line 108, _hub.scss */
+/* line 116, _hub.scss */
 .boxTitle {
   text-align: center;
   color: #fff;
@@ -633,14 +660,14 @@ ul.footerLinks li.copyright {
   padding: 13px 1%;
 }
 
-/* line 115, _hub.scss */
+/* line 123, _hub.scss */
 .boxContent {
   border: 1px solid #b9b9b9;
   border-top: none;
   text-align: center;
 }
 
-/* line 120, _hub.scss */
+/* line 128, _hub.scss */
 .box {
   width: 100%;
   background: #fff;
@@ -649,25 +676,25 @@ ul.footerLinks li.copyright {
   margin-bottom: 3%;
 }
 
-/* line 128, _hub.scss */
+/* line 136, _hub.scss */
 .youBox .boxContent {
   padding: 4%;
 }
 
-/* line 133, _hub.scss */
+/* line 141, _hub.scss */
 .boxStat {
   margin: 7.5% 0;
   width: 33.33%;
   display: inline-block;
 }
 
-/* line 138, _hub.scss */
+/* line 146, _hub.scss */
 .boxStat:nth-child(2) {
   border-left: 1px solid #B9B9B9;
   border-right: 1px solid #B9B9B9;
 }
 
-/* line 142, _hub.scss */
+/* line 150, _hub.scss */
 .profilePicRound {
   height: 100px;
   width: 100px;
@@ -675,7 +702,7 @@ ul.footerLinks li.copyright {
   margin-top: 2%;
 }
 
-/* line 148, _hub.scss */
+/* line 156, _hub.scss */
 .bannerSmall {
   width: 90%;
   padding: 1% 1% 5% 1%;
@@ -691,18 +718,18 @@ ul.footerLinks li.copyright {
   top: -15px;
 }
 
-/* line 163, _hub.scss */
+/* line 171, _hub.scss */
 .questsBox .boxTitle {
   background-color: #ab452f;
 }
 
-/* line 167, _hub.scss */
+/* line 175, _hub.scss */
 .expiringQuests {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 172, _hub.scss */
+/* line 180, _hub.scss */
 .expiringQuests li {
   font-weight: 700;
   font-size: 1.1em;
@@ -710,16 +737,16 @@ ul.footerLinks li.copyright {
   text-align: left;
   overflow: auto;
 }
-/* line 179, _hub.scss */
+/* line 187, _hub.scss */
 .expiringQuests li:nth-child(even) {
   background-color: #efeeee;
 }
-/* line 183, _hub.scss */
+/* line 191, _hub.scss */
 .expiringQuests li span {
   font-size: 1rem;
 }
 
-/* line 188, _hub.scss */
+/* line 196, _hub.scss */
 .questThumb {
   width: 50px;
   height: 50px;
@@ -728,7 +755,7 @@ ul.footerLinks li.copyright {
 }
 
 /* Activity */
-/* line 197, _hub.scss */
+/* line 205, _hub.scss */
 .activityColumn {
   width: 33.33%;
   padding: 0.5%;
@@ -736,35 +763,35 @@ ul.footerLinks li.copyright {
   box-sizing: border-box;
   vertical-align: top;
 }
-/* line 203, _hub.scss */
+/* line 211, _hub.scss */
 .activityColumn.achievementsActivity {
   padding-left: 0;
 }
-/* line 206, _hub.scss */
+/* line 214, _hub.scss */
 .activityColumn.xpActivity {
   padding-right: 0;
 }
 
-/* line 211, _hub.scss */
+/* line 219, _hub.scss */
 .achievementsActivity .sectionTitle {
   background-color: #2F9DAB;
   padding: 2%;
 }
 
-/* line 217, _hub.scss */
+/* line 225, _hub.scss */
 .questsActivity .sectionTitle {
   background-color: #AB452F;
   padding: 2%;
 }
 
-/* line 223, _hub.scss */
+/* line 231, _hub.scss */
 .xpActivity .sectionTitle {
   background-color: #F7CA5D;
   padding: 2%;
   color: #000;
 }
 
-/* line 229, _hub.scss */
+/* line 237, _hub.scss */
 .activityEntry {
   width: 100%;
   background: #FFF;
@@ -772,7 +799,7 @@ ul.footerLinks li.copyright {
   overflow: auto;
   margin-bottom: 2%;
 }
-/* line 236, _hub.scss */
+/* line 244, _hub.scss */
 .activityEntry .userAvatar {
   height: 50px;
   width: 50px;
@@ -780,40 +807,40 @@ ul.footerLinks li.copyright {
   vertical-align: top;
   margin-right: 2%;
 }
-/* line 243, _hub.scss */
+/* line 251, _hub.scss */
 .activityEntry .userInfo {
   color: #FFF;
   padding: 2%;
   overflow: auto;
 }
-/* line 248, _hub.scss */
+/* line 256, _hub.scss */
 .activityEntry h3 {
   text-align: left;
   margin: 0;
   font-size: 1.3em;
   font-weight: 700;
 }
-/* line 254, _hub.scss */
+/* line 262, _hub.scss */
 .activityEntry p {
   text-align: left;
   margin: 0;
 }
-/* line 258, _hub.scss */
+/* line 266, _hub.scss */
 .activityEntry .unlockDetail {
   overflow: auto;
   padding: 2%;
   border: 1px solid #B9B9B9;
   border-top: none;
 }
-/* line 263, _hub.scss */
+/* line 271, _hub.scss */
 .activityEntry .unlockDetail h3 {
   font-size: 1.5em;
 }
-/* line 266, _hub.scss */
+/* line 274, _hub.scss */
 .activityEntry .unlockDetail p {
   font-size: 1.4em;
 }
-/* line 270, _hub.scss */
+/* line 278, _hub.scss */
 .activityEntry .icon {
   border-radius: 50px;
   height: 65px;
@@ -823,22 +850,22 @@ ul.footerLinks li.copyright {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 281, _hub.scss */
+  /* line 289, _hub.scss */
   .personIcon {
     background-image: url(../assets/personIconM2x.png);
   }
 
-  /* line 284, _hub.scss */
+  /* line 292, _hub.scss */
   .achievementsIcon {
     background-image: url(../assets/trophyIcon2x.png);
   }
 
-  /* line 287, _hub.scss */
+  /* line 295, _hub.scss */
   .questsIcon {
     background-image: url(../assets/pencilIcon2x.png);
   }
 
-  /* line 290, _hub.scss */
+  /* line 298, _hub.scss */
   .xpIcon {
     background-image: url(../assets/xpIcon2x.png);
   }
@@ -934,17 +961,18 @@ h2.unlockableTitle {
 
 /* line 45, _unlockables.scss */
 p.unlockableDesc {
+  white-space: normal;
   margin: 0;
   font-size: 0.9em;
 }
 
-/* line 49, _unlockables.scss */
+/* line 50, _unlockables.scss */
 p.unlockableExpire {
   font-size: 0.85em;
   font-weight: 700;
 }
 
-/* line 53, _unlockables.scss */
+/* line 54, _unlockables.scss */
 .unlockableXP {
   width: 8%;
   display: inline-block;
@@ -953,14 +981,14 @@ p.unlockableExpire {
   font-weight: 900;
   vertical-align: top;
 }
-/* line 61, _unlockables.scss */
+/* line 62, _unlockables.scss */
 .unlockableXP.flaticon-medal61 {
   font-size: 1.5em;
   font-weight: 400;
   /* color: #F3B949; */
 }
 
-/* line 67, _unlockables.scss */
+/* line 68, _unlockables.scss */
 p.unlockableMessage {
   text-align: center;
   font-size: 1.2em;
@@ -1895,16 +1923,161 @@ h2.sectionTitle.statsTitle {
   box-sizing: border-box;
   text-align: right;
   background: #E5E5E5;
-  display: none;
   position: fixed;
   right: 0;
   bottom: 0;
   z-index: 99;
 }
-/* line 194, _account.scss */
+/* line 193, _account.scss */
+.boxButton.hidden {
+  display: none;
+}
+/* line 196, _account.scss */
 .boxButton .button {
   vertical-align: top;
   display: inline-block;
+}
+
+/* line 1, _edit.scss */
+.studentsList {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #758F9B;
+}
+/* line 6, _edit.scss */
+.studentsList .editCheck {
+  width: 4%;
+  text-align: center;
+}
+/* line 10, _edit.scss */
+.studentsList .editAvatar {
+  width: 50px;
+}
+/* line 13, _edit.scss */
+.studentsList .editActions {
+  width: 10%;
+}
+/* line 16, _edit.scss */
+.studentsList .flaticon-cogwheel25.action {
+  color: #F26E00;
+}
+/* line 19, _edit.scss */
+.studentsList thead {
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+/* line 23, _edit.scss */
+.studentsList thead th {
+  padding: 1%;
+  color: #094764;
+  border-left: 1px solid #758F9B;
+  border-bottom: 1px solid #758F9B;
+  border-top: 1px solid #758F9B;
+  box-sizing: border-box;
+  background: #96B8C8;
+}
+/* line 32, _edit.scss */
+.studentsList thead th.editName {
+  border-left: none;
+}
+/* line 38, _edit.scss */
+.studentsList tbody tr {
+  border-bottom: 1px solid #758F9B;
+  box-sizing: border-box;
+  background: #FFF;
+}
+/* line 43, _edit.scss */
+.studentsList tbody tr:nth-child(2n) {
+  background: #F9F9F9;
+}
+/* line 46, _edit.scss */
+.studentsList tbody tr:hover {
+  background: #FFFFC1;
+}
+/* line 50, _edit.scss */
+.studentsList tbody tr td {
+  padding: 1%;
+}
+/* line 52, _edit.scss */
+.studentsList tbody tr td img {
+  width: 50px;
+  height: 50px;
+  margin: 1% 1% 1% 0;
+}
+
+/* line 62, _edit.scss */
+.dashboardTable {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #758F9B;
+}
+/* line 67, _edit.scss */
+.dashboardTable thead {
+  font-size: 1.1em;
+  box-sizing: border-box;
+}
+/* line 71, _edit.scss */
+.dashboardTable .boardIcon {
+  color: inherit;
+  float: none;
+  margin: 0;
+}
+/* line 76, _edit.scss */
+.dashboardTable tr.headerDash th {
+  padding: 1%;
+  color: #094764;
+  border-left: 1px solid #758F9B;
+  border-bottom: 1px solid #758F9B;
+  border-top: 1px solid #758F9B;
+  box-sizing: border-box;
+  background: #96B8C8;
+}
+/* line 85, _edit.scss */
+.dashboardTable tr.headerDash th.hStudents, .dashboardTable tr.headerDash th.hAch, .dashboardTable tr.headerDash th.hQuests {
+  width: 10%;
+  text-align: center;
+}
+/* line 90, _edit.scss */
+.dashboardTable tr.headerDash th:last-child {
+  border-right: 1px solid #758F9B;
+}
+/* line 96, _edit.scss */
+.dashboardTable tbody tr {
+  border-bottom: 1px solid #758F9B;
+  box-sizing: border-box;
+  background: #FFF;
+}
+/* line 101, _edit.scss */
+.dashboardTable tbody tr:nth-child(2n) {
+  background: #F9F9F9;
+}
+/* line 104, _edit.scss */
+.dashboardTable tbody tr:hover {
+  background: #FFFFC1;
+}
+/* line 108, _edit.scss */
+.dashboardTable tbody td {
+  padding: 1%;
+  font-size: 1.1em;
+}
+/* line 112, _edit.scss */
+.dashboardTable tbody td.tStudents, .dashboardTable tbody td.tAch, .dashboardTable tbody td.tQuests {
+  width: 10%;
+  text-align: center;
+}
+/* line 116, _edit.scss */
+.dashboardTable tbody td.tActions {
+  width: 15%;
+  font-size: 1.2em;
+  opacity: 1;
+}
+/* line 121, _edit.scss */
+.dashboardTable tbody td .flaticon-cogwheel25.action {
+  color: #F26E00;
+}
+/* line 124, _edit.scss */
+.dashboardTable tbody td .flaticon-delete84.action {
+  color: #F00000;
 }
 
 /* line 2, _setup.scss */
@@ -1945,28 +2118,28 @@ h2.sectionTitle.statsTitle {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 23, style.scss */
+  /* line 24, style.scss */
   .mainBlock {
     width: 100%;
   }
 
-  /* line 26, style.scss */
+  /* line 27, style.scss */
   .sideBlock {
     display: none;
   }
 
-  /* line 29, style.scss */
+  /* line 30, style.scss */
   .sectionNavigation {
     width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 34, style.scss */
+  /* line 35, style.scss */
   .mainBoard thead {
     display: none;
   }
 
-  /* line 37, style.scss */
+  /* line 38, style.scss */
   .boardEntry {
     display: block;
     box-sizing: border-box;
@@ -1976,7 +2149,7 @@ h2.sectionTitle.statsTitle {
     border: 0;
   }
 
-  /* line 45, style.scss */
+  /* line 46, style.scss */
   .boardEntry td {
     display: block;
     width: 100%;
@@ -1988,7 +2161,7 @@ h2.sectionTitle.statsTitle {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
   }
 
-  /* line 50, style.scss */
+  /* line 51, style.scss */
   .boardEntry:first-child td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f9f9f9), color-stop(1, #f9f9f9));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
@@ -1998,7 +2171,7 @@ h2.sectionTitle.statsTitle {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
   }
 
-  /* line 53, style.scss */
+  /* line 54, style.scss */
   .boardEntry:nth-child(even) td {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #ECECEC), color-stop(1, #ECECEC));
     background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
@@ -2008,7 +2181,7 @@ h2.sectionTitle.statsTitle {
     background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
   }
 
-  /* line 56, style.scss */
+  /* line 57, style.scss */
   .boardEntry td:before {
     content: attr(data-th) ": ";
     float: left;
@@ -2017,7 +2190,7 @@ h2.sectionTitle.statsTitle {
     font-weight: 700;
   }
 
-  /* line 63, style.scss */
+  /* line 64, style.scss */
   #boardAvatar {
     display: none;
   }

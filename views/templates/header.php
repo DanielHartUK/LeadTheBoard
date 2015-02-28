@@ -6,7 +6,24 @@ include_once(INCLUDES_PATH . "/customisation.php");
 function pageURLContains($x) {
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; if (false !== strpos($url, $x)) { return true; };
 }
+//TO DO : REMOVE IN PRODUCTION!!!!
 $IGNORETHISFORNOWloggedIn = 0;
+
+//TO DO : REMOVE IN PRODUCTION!!!!
+if(isset($_GET['setAdmin'])) {
+	if($_GET['setAdmin']==0) {
+		$conn = mysqli_connect($servername, $username, $password, $dbname); // Create the connection
+		$makeAdmin = "UPDATE USERS SET Admin='0' WHERE UserID='$id'";
+		mysqli_query($conn, $makeAdmin) or die(mysqli_error());
+	}
+	if($_GET['setAdmin']==1) {
+		$conn = mysqli_connect($servername, $username, $password, $dbname); // Create the connection
+		$makeAdmin = "UPDATE USERS SET Admin='1' WHERE UserID='$id'";
+		mysqli_query($conn, $makeAdmin) or die(mysqli_error());
+	}
+}
+
+
 ?> 
 <!DOCTYPE HTML>
 <HTML>
@@ -41,6 +58,9 @@ $IGNORETHISFORNOWloggedIn = 0;
 			<a href="<?php echo SITE_URL; ?>/account/login.php" class="user"><div class="user" id="loggedOut"> Login/Register </div></a>
 		<?php endif; ?>
 		<div id="logo"><a href="/">LeadTheBoard!</a></div>
+		<?php if(!isset($_COOKIE['cookieWarning'])) { ?>
+			<div class="warningBanner cookie"> LeadTheBoard! uses cookies. <a href="<?php echo SITE_URL; ?>/about/cookies.php"> More Info </a> <span class="close cookieBanner">&#215;</span> </div>
+		<?php } ?>
 		<?php if ($IGNORETHISFORNOWloggedIn) { ?>
 			<div class="notificationIcon">
 				<?php if ($unreadNotifications == 0) { 
@@ -52,6 +72,7 @@ $IGNORETHISFORNOWloggedIn = 0;
 		<?php } else { ?>
 			<div class="notificationIcon loggedOut"></div>
 		<?php }; ?>
+
 	</div>
 	<div class="contentContainer">
 		<?php if ($loggedIn) : ?>
@@ -85,8 +106,23 @@ $IGNORETHISFORNOWloggedIn = 0;
 						<a href=""><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
 					</ul>
 			<?php } ?>
+			    <div class="footer ">
+				    <ul class="footerLinks">
+				    	<li><div class="flaticon-aries1 gallop"></div> </li>
+				    	<a href="<?php echo SITE_URL; ?>/about/"><li>About</li></a>
+				    	<a href="<?php echo SITE_URL; ?>/about/support.php"><li>Support</li></a>
+				    	<br>
+				    	<li class="copyright">&#169; <script>document.write(new Date().getFullYear())</script> LeadTheBoard! </li>
+				    </ul>
+			    </div>
 			</div>
 		<?php endif; ?>
 	<?php endif; ?>
 	<div class="drawerMove <?php if($admin == 1 OR pageURLContains($x = 'account')) { echo 'adminCont';} ?>"> 
+
+
+
+
+
+
 	

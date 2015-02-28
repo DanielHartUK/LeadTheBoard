@@ -58,6 +58,7 @@
     td {
         padding: 1%;
         border: 1px solid #CCC;
+        box-sizing: border-box;
 
         &.pos {
             width: 10px;
@@ -70,9 +71,16 @@
             padding: 10px;
         }
 
-    }
-    td:last-child {
-        border-right: 1px solid #CCC;
+        &:last-child {
+            border-right: 1px solid #CCC;
+        }
+
+        &.achievements {
+            width: 20%;
+        }
+        &.quests, &.xp {
+            width: 15%;
+        }
     }
 
     &:nth-child(even) {

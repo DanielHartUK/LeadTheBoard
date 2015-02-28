@@ -37,7 +37,7 @@ function readPicture(input) {
                   <!-- get 5 or so members of the clan --><a href="<?php echo SITE_URL . '/profile.php?user=' ;?>" ><img src="<!-- user image -->"></a>
                   </div>
               </div><?php } ?>
-            <div class="boxButton">
+            <div class="boxButton hidden">
               <?php if(isset($clanN)) { ?><input name='submit3' type='submit' value='Leave Clan' class="button red"><?php } ?>
               <?php if(!isset($clanN)) { ?><input name="" type="submit" class="button orange hidden" id="createNew" value="Create New"> 
               <input name="" type="submit" class="button blue hidden" id="joinClan" value="Join"><?php } ?>

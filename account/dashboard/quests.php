@@ -11,6 +11,10 @@ if ($admin == 0) {
 	<div class="content">
         <h1> Dashboard </h1>
 		<?php require_once(TEMPLATES_PATH . "/dashboardNav.php"); ?>
+		
+		
+
+
 	</div>
 
 <?php 

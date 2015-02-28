@@ -31,11 +31,11 @@ include_once(INCLUDES_PATH . "/classes.php");
 						<td class="tAch"> <?php echo $class['Name']; ?> </td>
 						<td class="tQuests"> <?php echo $class['Name']; ?> </td>
 						<td class="tStudents"> <?php echo $classMembers[$class['ClassID']]['UserID']; ?> </td>
-						<td class="tActions"> <a href="edit/class.php?class=<?php echo 0;?>"><span title="Edit" class="flaticon-cogwheel25 action"></span></a> <a href=""><span title="Delete" class="flaticon-delete84 action"></span></a> </td>
+						<td class="tActions"> <a href="edit/class.php?class=<?php echo $class['ClassID'];?>"><span title="Edit" class="flaticon-cogwheel25 action"></span></a> <a href=""><span title="Delete" class="flaticon-delete84 action"></span></a> </td>
 					</tr>
 			<?php } ?>
 			</tbody>
-			<tfoot>
+			<tfoot>z
 			</tfoot>		
 		</table>
 

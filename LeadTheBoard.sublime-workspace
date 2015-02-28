@@ -4,8 +4,100 @@
 		"selected_items":
 		[
 			[
+				"Lead",
+				"LeadTheBoard"
+			],
+			[
 				"border",
-				"border-radius"
+				"border-box"
+			],
+			[
+				"students",
+				"studentsClass"
+			],
+			[
+				"st",
+				"studentsClass"
+			],
+			[
+				"array_ke",
+				"array_key_exists"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"cla",
+				"classID"
+			],
+			[
+				"class",
+				"classID"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"user",
+				"userSetup"
+			],
+			[
+				"on",
+				"onblur	Attr"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"is",
+				"isset"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"col",
+				"colourOption"
+			],
+			[
+				"page",
+				"pageURLContains"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"ine",
+				"inline-block"
+			],
+			[
+				"ma",
+				"margin"
 			],
 			[
 				"tran",
@@ -52,10 +144,6 @@
 				"QuestProgress"
 			],
 			[
-				"bor",
-				"border-color"
-			],
-			[
 				"result",
 				"result_array"
 			],
@@ -64,28 +152,8 @@
 				"background-repeat"
 			],
 			[
-				"on",
-				"onclick	Attr"
-			],
-			[
-				"user",
-				"userAgent"
-			],
-			[
-				"font",
-				"font-weight"
-			],
-			[
 				"drawe",
 				"drawerSlide"
-			],
-			[
-				"in",
-				"include"
-			],
-			[
-				"page",
-				"pageTop"
 			],
 			[
 				"side",
@@ -114,10 +182,6 @@
 			[
 				"tex",
 				"text-align"
-			],
-			[
-				"fon",
-				"font-weight"
 			],
 			[
 				"main",
@@ -160,16 +224,8 @@
 				"scrollCount"
 			],
 			[
-				"bo",
-				"bottom"
-			],
-			[
 				"table",
 				"table-cell"
-			],
-			[
-				"trans",
-				"transparent"
 			],
 			[
 				"background",
@@ -190,10 +246,6 @@
 			[
 				"slide",
 				"slidesNo"
-			],
-			[
-				"ba",
-				"background-color"
 			],
 			[
 				"z",
@@ -236,10 +288,6 @@
 				"display"
 			],
 			[
-				"ma",
-				"margin"
-			],
-			[
 				"op",
 				"opacity"
 			],
@@ -272,58 +320,34 @@
 	"buffers":
 	[
 		{
-			"file": "account/dashboard/index.php",
+			"file": "includes/classes.php",
 			"settings":
 			{
-				"buffer_size": 2016,
+				"buffer_size": 902,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/templates/footer.php",
+			"file": "account/dashboard/edit/class.php",
 			"settings":
 			{
-				"buffer_size": 973,
+				"buffer_size": 1986,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/_account.scss",
+			"file": "account/clan.php",
 			"settings":
 			{
-				"buffer_size": 1936,
-				"line_ending": "Unix"
+				"buffer_size": 2546,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "css/_general.scss",
+			"file": "views/templates/header.php",
 			"settings":
 			{
-				"buffer_size": 2475,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/_login.scss",
-			"settings":
-			{
-				"buffer_size": 1324,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/_main.scss",
-			"settings":
-			{
-				"buffer_size": 5214,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/_navigation.scss",
-			"settings":
-			{
-				"buffer_size": 3054,
+				"buffer_size": 7988,
 				"line_ending": "Unix"
 			}
 		},
@@ -331,15 +355,129 @@
 			"file": "css/_dashboard.scss",
 			"settings":
 			{
-				"buffer_size": 2448,
+				"buffer_size": 6282,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/_unlockables.scss",
+			"file": "account/dashboard/classes.php",
 			"settings":
 			{
-				"buffer_size": 1249,
+				"buffer_size": 1496,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "account/index.php",
+			"settings":
+			{
+				"buffer_size": 2116,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "includes/refreshsql.php",
+			"settings":
+			{
+				"buffer_size": 2838,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/templates/dashboardNav.php",
+			"settings":
+			{
+				"buffer_size": 1001,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "account/dashboard/quests.php",
+			"settings":
+			{
+				"buffer_size": 391,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Class ID from Classes -> Class members\n\nUser ID from Class members where class ID = row class ID\n\naID = achievement ID from achievements progress where progress = 1 and userID = uID\n\naXP = achievement xp from achievements where achievement id = aiD\n\naXP + qXP + xpAXP\n\n\n\n\n\n<?php \n\n",
+			"settings":
+			{
+				"buffer_size": 281,
+				"line_ending": "Unix",
+				"name": "Class ID from Classes -> Class members"
+			}
+		},
+		{
+			"file": "hub/leaderboard.php",
+			"settings":
+			{
+				"buffer_size": 2551,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "includes/editDash.php",
+			"settings":
+			{
+				"buffer_size": 1499,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<script language=\"javascript\">\nfunction readPicture(input) {\n        if (input.files && input.files[0]) {\n            var reader = new FileReader();\n\n            reader.onload = function (e) {\n                $('#emblemPreview')\n                    .attr('src', e.target.result)\n            };\n\n            reader.readAsDataURL(input.files[0]);\n        }\n    }\n</script>\n<?php\n$conn = mysqli_connect($servername, $username, $password, $dbname); // Create a connection to the database\nif(isset($_REQUEST['submit1'])){\n  foreach($clans as $iteration => $value){\n    if($_POST[\"clanChoice\"] == $clans[$iteration]['ClanID']){\n      $clanUpdateQuery = \"INSERT INTO `clanmembers`(`ClanID`, `UserID`, `clanAdmin`) VALUES (\".$clans[$iteration]['ClanID'].\",$id,0)\";\n      mysqli_query($conn, $clanUpdateQuery) or die(mysqli_error());\n      $clanN = $clans[$iteration]['Name'];\n    }\n  }\n}elseif(isset($_REQUEST['submit2'])){\n  $file_upload = true;\n\n  if($_FILES[emblem][size]>1000000){\n    $msg=$msg.\"Your uploaded file size is more than 1MB\nso please reduce the file size and then upload.<BR>\";\n    $file_upload=false;\n  }\n  if (!($_FILES[emblem][type] ==\"image/jpeg\" OR $_FILES[emblem][type] ==\"image/gif\" OR $_FILES[emblem][type] ==\"image/png\" OR $_FILES[emblem][type] ==\"image/bmp\")) {\n    $msg=$msg.\"Your uploaded file must be a JPEG, BMP, PNG or GIF. Other file types are not allowed<BR>\";\n    $file_upload=false;\n  }\n\n  if($file_upload){\n    $file_name=$_FILES[emblem][name];\n    $file_path=\"../assets/uploads/$file_name\"; // the path with the file name where the file will be stored\n    if(!move_uploaded_file($_FILES[emblem][tmp_name], $file_path)){\n    echo \"Failed to upload file. Contact Site admin to fix the problem\";\n    } else {\n      $emblem = $file_path;\n      $clanUpdateQuery = \"INSERT INTO `$dbname`.`clans` (`ClanID`, `Name`, `Emblem`) VALUES (NULL, \".$_POST['clanN'].\", $file_name)\";\n      mysqli_query($conn, $clanUpdateQuery) or die(mysqli_error());\n      $clanN = $_POST['clanN'];\n    }\n  } else {\n    echo $msg;\n  }\n}elseif(isset($_REQUEST['submit3'])){\n  $clanUpdateQuery = \"DELETE FROM `$dbname`.`clanmembers` WHERE `UserID` = $id\";\n  mysqli_query($conn, $clanUpdateQuery) or die(mysqli_error());\n  unset($clanN);\n}\nmysqli_close($conn); // Close the connection \n?>\n\n<?php\n    if(!isset($clanN)){\n      echo(\"<p>You aren't a member of any clan. Do you want to join one? Or make a new one?</p><select name='clanChoice'><option value=''>Pick an existing clan</option>\");\n      foreach($clans as $iteration => $value){\n        echo(\"<option value='\".$clans[$iteration]['ClanID'].\"'>\".$clans[$iteration]['Name'].\"</option>\");\n      }\n      echo(\"</select><input name='submit1' type='submit' value='Save Choice'>\");\n      echo(\"<p>New Clan</p><table border=2><tr><td>Clan Name</td><td><input type='text' name='clanN'</td></tr>\");\n      echo(\"<tr><td>Emblem</td><td><input type='file' accept='image' name='emblem' onchange='readPicture(this)'></td></tr>\");\n      echo(\"</table><img id='emblemPreview' src='' style='max-height=40%; max-width=40%'>\");\n      echo(\"<input name='submit2' type='submit' value='Save New Clan'>\");\n      \n  }else{\n    echo(\"<p>You are a member of the clan: $clanN </p>\");\n    echo(\"<img id='emblemPreview' src='/assets/uploads/$emblem' style='max-height=40%; max-width=40%'>\");\n    echo(\"<input name='submit3' type='submit' value='Leave Clan'>\");\n  }\n  ?>",
+			"settings":
+			{
+				"buffer_size": 3394,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/_setup.scss",
+			"settings":
+			{
+				"buffer_size": 392,
+				"line_ending": "Unix",
+				"name": ".setup .nav {"
+			}
+		},
+		{
+			"file": "css/_account.scss",
+			"settings":
+			{
+				"buffer_size": 3433,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/_edit.scss",
+			"settings":
+			{
+				"buffer_size": 2414,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/templates/footer.php",
+			"settings":
+			{
+				"buffer_size": 707,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/style.css",
+			"settings":
+			{
+				"buffer_size": 44025,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/templates/settingsNav.php",
+			"settings":
+			{
+				"buffer_size": 474,
 				"line_ending": "Unix"
 			}
 		},
@@ -347,64 +485,63 @@
 			"file": "css/style.scss",
 			"settings":
 			{
-				"buffer_size": 3953,
+				"buffer_size": 4023,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "includes/demoVariables.php",
+			"file": "css/_hub.scss",
 			"settings":
 			{
-				"buffer_size": 79,
+				"buffer_size": 5376,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "includes/profile.php",
+			"file": "css/_general.scss",
 			"settings":
 			{
-				"buffer_size": 6484,
+				"buffer_size": 3983,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "includes/dashboard.php",
+			"file": "css/_navigation.scss",
 			"settings":
 			{
-				"buffer_size": 2951,
+				"buffer_size": 3306,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/dashboard.js",
+			"file": "js/scripts.js",
 			"settings":
 			{
-				"buffer_size": 428,
-				"line_ending": "Unix",
-				"name": "$('head style[type=\"text/css\"]').attr('type', 'tex"
-			}
-		},
-		{
-			"file": "config.php",
-			"settings":
-			{
-				"buffer_size": 493,
+				"buffer_size": 4574,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config-sample.php",
+			"file": "js/setup.js",
 			"settings":
 			{
-				"buffer_size": 488,
+				"buffer_size": 1106,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "consistentPaths.php",
+			"file": "account/details.php",
 			"settings":
 			{
-				"buffer_size": 1070,
+				"buffer_size": 4907,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/account.js",
+			"settings":
+			{
+				"buffer_size": 1296,
 				"line_ending": "Unix"
 			}
 		}
@@ -513,39 +650,102 @@
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/about",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard/edit",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/css",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/hub",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/js",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/assignment",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/assignment/Editing",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/assignment/loginSimple",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates"
 	],
 	"file_history":
 	[
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/header.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/login.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/groups.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/footer.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/mainBottom.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/mainTop.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/profile.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard/achievements.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/dashboardNav.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard/students.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard/quests.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/wrongPermissions.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/.htaccess",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/404.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/aboutNav.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/about/index.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard/classes.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/about/contact.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/about/support.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard.php",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/tableitems.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/js/scripts.js",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard/classes.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard/edit/class.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/clan.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/js/clan.js",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/js/dashboard.js",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/demoVariables.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/activity.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/js/drawer.js",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/userSQL.php",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/profile.php",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/js/scripts.js",
-		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/js/drawer.js",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/dashboard.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/js/account.js",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/consistentPaths.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/config-sample.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/installerDev.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/index.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/setup.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/assignment/Editing/editHandler.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/assignment/Editing/editing.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/config.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/headerSetup.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/footerSetup.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/installerDevOld.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/assignment/Editing/config.txt",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/assignment/loginDB/loginHandler.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/assignment/loginDB/login.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/assignment/login.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/assignment/loginHandler.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/js/setup.js",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/installer.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard/index.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard/quests.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/clan.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/profile.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/accountNav.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/setupNav.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/hub/quests.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/hub/leaderboard.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/hub/achievements.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/hub/activity.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/header.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/mainTop.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/.gitignore",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard/students.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard/achievements.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/config.rb",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/details.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/changepassword.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/footer.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/404.php",
+		"/Users/Daniel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/timezone.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/settingsNav.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/accountDetails.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/settingsNav.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/css/_general.scss",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/upload.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/groups.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/notes.txt",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/css/_login.scss",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/css/_main.scss",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/css/_profile.scss",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/css/_navigation.scss",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/css/_dashboard.scss",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/about/support.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/resolution.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/css/_unlockables.scss",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/css/style.scss",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/uploadFile.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/personalDetails.php",
+		"/Users/Daniel/OneDrive/Documents/College Work/Unit 27/Assignment 2/resolution.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/resolution.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/login.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/mainBottom.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/dashboardNav.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/wrongPermissions.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/.htaccess",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/aboutNav.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/about/index.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/about/contact.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/account/dashboard.php",
+		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/activity.php",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/templates/snippets/wrongPermissions.php",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/includes/consistentPaths.php",
 		"/Users/Daniel/OneDrive/Projects/LeadTheBoard/LeadTheBoard/views/activity.php",
@@ -590,41 +790,7 @@
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/x/views/templates/header.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/achievement.php",
 		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/templates/tableitems.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/intro.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/leaderboard.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/index.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/quests.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/achievementsjson.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/achievements.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/ajax.js",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/test.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/install.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/ajax/leaderboard.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/ajax/leaderboard.html",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/admin.js",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/customisation.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/resolution.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/tableitems.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/normalize.css",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/functions.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/bell2x.png",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/main.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/sftp-config.json",
-		"/Users/Daniel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/sorttable.js",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/js/fixedheadertable.js",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/templates/footer.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/avatarIcon.svg",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/includes/config.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/db-connect.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/css/config.rb",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/style.scss",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/reset.css",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/header.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/footer.php",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/scripts.js",
-		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/assets/fonts/stylesheet.css",
-		"/Users/Daniel/Downloads/webfontkit-20141217-041624/stylesheet.css"
+		"/Users/Daniel/OneDrive/LeadTheBoard/LeadTheBoard/views/intro.php"
 	],
 	"find":
 	{
@@ -642,6 +808,112 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"background",
+			"0",
+			"$i",
+			"i",
+			"fuck",
+			"row",
+			"classesX",
+			"classes",
+			"ass",
+			"value",
+			"tudents",
+			"classes",
+			"classq",
+			"class",
+			"<br />",
+			"2",
+			"clq",
+			"selClasses",
+			"row",
+			"selClasses",
+			"Cl",
+			"cl",
+			"ur",
+			"div",
+			"&.t",
+			"dbName",
+			"value",
+			"count",
+			"email",
+			"[0]",
+			"['id'][0]",
+			"ur",
+			"<input",
+			"input",
+			". '\";",
+			"' . ",
+			"'",
+			"echo",
+			"'",
+			"fp",
+			"</a>",
+			"../",
+			"//",
+			"usersO",
+			"urO",
+			"selUsersO",
+			"User's",
+			"user's",
+			"User's",
+			"User",
+			"                    <div class=\"topStudents\">\n\n                    </div>",
+			"                        <?php $s = 0; while($s < 3) { ?> \n",
+			"h3",
+			"                    <div class=\"topStudents\">\n",
+			"20px",
+			"echo $s",
+			"div",
+			"}\n",
+			"nested",
+			"div",
+			"0.5s",
+			"5s",
+			"  opacity: 1;\n",
+			"aniDur",
+			"  font-size: 3em;\n  opacity: 0;",
+			"gt",
+			"none",
+			"display",
+			"1",
+			"selQuestX",
+			"aXP",
+			"selAchievementsX",
+			"p class='unlockableMessage'",
+			"ED7500",
+			"myClasses",
+			"p",
+			"$clans[$iteration]",
+			"echo:",
+			"\"selected\"",
+			"\">",
+			"<option value=\"",
+			"\">",
+			"America",
+			"\">",
+			"\n",
+			"Africa",
+			"Kamchatka",
+			"Asia",
+			" \"",
+			">",
+			"Asia",
+			"value=\"<?php echo($email); ?>\"",
+			"75",
+			"100px",
+			"dashboard",
+			"064e67",
+			"076d91",
+			"2989d8",
+			"1e5799",
+			"rgba(255,255,255,1)",
+			"rgba(0,0,0,1)",
+			"input",
+			"<option",
+			"option",
+			"&&",
+			"OR",
 			"pieID",
 			"50px",
 			"100px",
@@ -663,106 +935,7 @@
 			"Achievement",
 			"AchievementProgress",
 			"Achievement",
-			"img",
-			"padding-left",
-			"\".content\"",
-			"CSS",
-			"TEMPLATES",
-			"help",
-			"Achievement",
-			"achievementsFullb",
-			"achievementID",
-			"achievementsFulla",
-			"achievementCircle",
-			"questsFullb",
-			"achievementsFulla",
-			"h1",
-			"Fulla",
-			"achievement",
-			"quest",
-			"achievement",
-			"quest",
-			"QuestID",
-			"boardIcon",
-			"achievement",
-			"%);\n",
-			"quests",
-			"questsFulla",
-			"DATE(Quests.Expire)",
-			"questsFullb",
-			"questsFulla",
-			"questsFullaCount",
-			"<?php \n$conn = mysqli_connect($servername, $username, $password, $dbname); // \n\n$sql = \"SELECT Users.UserID, Users.Name, Users.Surname, Users.Avatar, ClassMembers.ClassID, Users.Admin\nFROM `Users`\nINNER JOIN `ClassMembers` on ClassMembers.UserID = Users.UserID WHERE ClassMembers.ClassID='$classID' AND Users.Admin='0'\";\n$leaderboardq = mysqli_query($conn, $sql) or die(mysqli_error());\n$leaderboardCount = $leaderboardq->num_rows;\n$leaderboarda = array();\n\nwhile($row = mysqli_fetch_assoc($leaderboardq)) {\n   $leaderboarda[] = $row;\n}\n\n\n\n$selQuestX = \"SELECT QuestProgress.UserID, Quests.XPValue, QuestProgress.QuestProgress          \nFROM `QuestProgress` \nINNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$id' and QuestProgress.QuestProgress='1';\";\n$qX = mysqli_query($conn, $selQuestX) or die(mysqli_error());\n$questsXCount = $qX->num_rows;\n$questsX = array();\n\nwhile($row = mysqli_fetch_assoc($qX)) {\n   $questsX[] = $row;\n}\n$count = 0;\n$qXP = 0;\nwhile($count < $questsXCount) {\n	$qXP = $qXP + $questsX[$count]['XPValue'];\n	$count++;\n};\n\n// Achievements XP\n$selAchievementsX = \"SELECT AchievementProgress.UserID, Achievements.XPValue, AchievementProgress.AchievementProgress          \nFROM `AchievementProgress` \nINNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.UserID='$id' and AchievementProgress.AchievementProgress='1';\";\n$aX = mysqli_query($conn, $selAchievementsX) or die(mysqli_error());\n$achievementsXCount = $aX->num_rows;\n$achievementsX = array();\n\nwhile($row = mysqli_fetch_assoc($aX)) {\n   $achievementsX[] = $row;\n}\n$count = 0;\n$aXP = 0;\nwhile($count < $achievementsXCount) {\n	$aXP = $aXP + $achievementsX[$count]['XPValue'];\n	$count++;\n};\n\n// Awards XP\n$selXPAwards = \"SELECT * FROM XPAwards WHERE UserID='$id'\";\n$xpA = mysqli_query($conn, $selXPAwards) or die(mysqli_error());\n$XPAwardRowCount = $xpA->num_rows;\n$XPAwards = array();\nwhile($row = mysqli_fetch_assoc($xpA)) {\n   $xpAwards[] = $row;\n}\n$count = 0;\n$XPa = 0;\nwhile($count < $XPAwardRowCount) {\n	$XPa = $XPa + $xpAwards[$count]['XP'];\n	$count++;\n};\nmysqli_close($conn); // Close the connection \n\n",
-			"xpU",
-			"xp",
-			"xpUpdate",
-			"achievementRowCount",
-			"acx",
-			"achievementPC",
-			"achievementPCRowCount",
-			"acPC",
-			"selAchievementPC",
-			"questsFullb",
-			"questsFullbq",
-			"questsFullb",
-			"questsFullbCount",
-			"quests",
-			"Achievement",
-			"achievement",
-			"achievementsFulla",
-			"achievements",
-			"checkCurrent",
-			"require_once(\"config.php\");\n",
-			"INCLUDES",
-			"questsPC",
-			"Achievements",
-			"QuestProgress",
-			"achievements",
-			"QuestsProgress",
-			"achievementPC",
-			"Achievements",
-			"LIKE",
-			"achievemetnP",
-			"classM",
-			"Username",
-			"achievements",
-			"Achievements",
-			"achievement",
-			"achievements",
-			"query",
-			"CONSTRAINT",
-			"CONSTRAINT `Achievement` FOREIGN KEY (`Achievement ID`) REFERENCES `Achievements` (`Achievement ID`) ON DELETE CASCADE ON UPDATE CASCADE\n",
-			"\";\n$sql = \"",
-			";",
-			"<br />",
-			"png",
-			"INCLUDES",
-			"defined(\"INCLUDES_PATH\")\n    or define(\"INCLUDES_PATH\", realpath(dirname(__FILE__) . '/includes'));\n ",
-			"section",
-			"id",
-			"profilePic",
-			"define(\"HOST\", \"localhost\");\ndefine(\"USER\", \"user\");\ndefine(\"PASSWORD\", 'v3vFUWMfDcIZ%8Z9*&8u@Am#nOuD*^#E');\ndefine(\"DATABASE\", \"LeadTheBoard\");\n\ndefine(\"CAN_REGISTER\", \"any\");\ndefine(\"DEFAULT_ROLE\", \"member\");\n\n",
-			"define",
-			"define(\"HOST\", \"localhost\");\ndefine(\"USER\", \"user\");\ndefine(\"PASSWORD\", 'v3vFUWMfDcIZ%8Z9*&8u@Am#nOuD*^#E');\ndefine(\"DATABASE\", \"LeadTheBoard\");\n\ndefine(\"CAN_REGISTER\", \"any\");\ndefine(\"DEFAULT_ROLE\", \"member\");\n\ndefine(\"SECURE\", FALSE); // DEVELOPMENT ONLY ",
-			"#rgba",
-			"16A084",
-			"50",
-			"#f7f7f7",
-			"#F9F9F9",
-			"#16A084",
-			"<td data-th=\"avatar\">",
-			"22",
-			"64",
-			"data-th=\"Position\"",
-			"/",
-			"fonts",
-			"555555",
-			"555",
-			"mobileSignIn",
-			"display: flex;",
-			"$b",
-			"; ",
-			"nth"
+			"img"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -770,6 +943,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"$value",
+			"echo",
 			"Quest",
 			"quests",
 			"Quests",
@@ -798,92 +973,441 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "account/dashboard/index.php",
+					"file": "includes/classes.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2016,
+						"buffer_size": 902,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1398,
-								1398
+								101,
+								101
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 539.0,
-						"translation.y": 192.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "views/templates/footer.php",
+					"file": "account/dashboard/edit/class.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 973,
+						"buffer_size": 1986,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								729,
-								793
+								1911,
+								1911
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
-						"translation.x": 385.0,
+						"translation.x": 12.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 17,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 5,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 2,
-					"file": "css/_account.scss",
+					"file": "account/clan.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1936,
+						"buffer_size": 2546,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2050,
+								2050
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 99.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/templates/header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7988,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3537,
+								3537
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 263.0,
+						"translation.y": 633.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "css/_dashboard.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6279,
+								4924
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "account/dashboard/classes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1496,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1151,
+								1146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 5.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "account/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								355
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "includes/refreshsql.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1049,
+								1278
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 835.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "views/templates/dashboardNav.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1001,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							],
+							[
+								318,
+								318
+							],
+							[
+								499,
+								499
+							],
+							[
+								695,
+								695
+							],
+							[
+								873,
+								873
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "account/dashboard/quests.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 391,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								316,
+								316
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								270,
+								270
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Class ID from Classes -> Class members",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "hub/leaderboard.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2330,
+								2330
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 10,
+			"sheets":
+			[
+				{
+					"buffer": 12,
+					"file": "includes/editDash.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1295,
+								1295
+							],
+							[
+								1335,
+								1335
+							],
+							[
+								1424,
+								1424
+							],
+							[
+								1441,
+								1441
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 406.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3394,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								349,
+								349
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -894,87 +1418,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "css/_general.scss",
+					"buffer": 14,
+					"file": "css/_setup.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2475,
+						"buffer_size": 392,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1840,
-								1826
+								16,
+								16
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "css/_login.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1324,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								866,
-								866
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 686.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "css/_main.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5214,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								5214
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"auto_name": ".setup .nav {",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -984,20 +1447,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "css/_navigation.scss",
+					"buffer": 15,
+					"file": "css/_account.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3054,
+						"buffer_size": 3433,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1875,
-								1875
+								3323,
+								3323
 							]
 						],
 						"settings":
@@ -1007,49 +1470,50 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1189.0,
+						"translation.y": 2626.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "css/_dashboard.scss",
+					"buffer": 16,
+					"file": "css/_edit.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2448,
+						"buffer_size": 2414,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								542,
-								840
+								265,
+								265
 							]
 						],
 						"settings":
 						{
+							"auto_name": "",
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1023.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 21,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "css/_unlockables.scss",
+					"buffer": 17,
+					"file": "views/templates/footer.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1249,
+						"buffer_size": 707,
 						"regions":
 						{
 						},
@@ -1062,8 +1526,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1073,20 +1536,78 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "css/style.scss",
+					"buffer": 18,
+					"file": "css/style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3953,
+						"buffer_size": 44025,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								466,
-								466
+								5451,
+								5451
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "views/templates/settingsNav.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 474,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								274,
+								274
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 140.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "css/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4023,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								535,
+								535
 							]
 						],
 						"settings":
@@ -1099,22 +1620,142 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "css/_hub.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1096,
+								1096
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1211.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "css/_general.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3983,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3193,
+								3193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2453.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "css/_navigation.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2508,
+								2508
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1232.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 10,
-					"file": "includes/demoVariables.php",
+					"buffer": 24,
+					"file": "js/scripts.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 79,
+						"buffer_size": 4574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								143,
+								143
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "js/setup.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1106,
 						"regions":
 						{
 						},
@@ -1127,95 +1768,6 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "includes/profile.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 6484,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								6484
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2062.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "includes/dashboard.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2951,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								335,
-								356
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 343.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "js/dashboard.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 428,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								428,
-								428
-							]
-						],
-						"settings":
-						{
-							"auto_name": "$('head style[type=\"text/css\"]').attr('type', 'tex",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -1224,93 +1776,66 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 26,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
-					"file": "config.php",
-					"semi_transient": false,
+					"buffer": 26,
+					"file": "account/details.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 493,
+						"buffer_size": 4907,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								396,
-								431
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "config-sample.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 488,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								83,
-								83
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "consistentPaths.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1070,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								320,
-								7
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "js/account.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1296,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								17
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1350,20 +1875,20 @@
 		"cols":
 		[
 			0.0,
-			0.430183912138,
+			0.512547244741,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.374385021866,
+			0.783596168731,
 			1.0
 		]
 	},
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 43.0
+		"height": 41.0
 	},
 	"output.find_results":
 	{
@@ -1411,7 +1936,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 2,
+	"selected_group": 0,
 	"settings":
 	{
 		"last_automatic_layout":
