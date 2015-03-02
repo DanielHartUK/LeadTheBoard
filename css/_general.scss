@@ -7,7 +7,7 @@ html, body {
     font-weight: 400;
     background-color: #f4f4f4;
     color: #555555;
-    min-width: 968px;
+    /* min-width: 968px; */
 }
 .preload * {
     @include transition(none !important);
@@ -193,13 +193,19 @@ h2.sectionTitle {
   }
 }
 .c404 {
+    height: 100%;
     min-height: 100%;
     background: #000;
     color: #FFF;
+    padding: 2%;
 }
 .e404 {
     text-align: center;
     font-size: 1.4em;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 800px;
 
     p {
         margin: 1.5%;
@@ -213,7 +219,111 @@ h2.sectionTitle {
         font-size: 0.7em;
     }
 }
-    
+
+.invader {
+  display: inline-block;
+  margin: 0.5%;
+  width: 5%;
+}
+$s1: 2% 0;
+$s2: 1.8% 0;
+$s3: 1.8% 0;
+.space1 {
+  padding: $s1;
+  background-image: url(../assets/404/space_1.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+}
+.space2 {
+  padding: $s2;
+  background-image: url(../assets/404/space_3.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.space3 {
+  padding: $s3;
+  background-image: url(../assets/404/space_5.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.missiles {
+  position: absolute;
+  top: 0;
+
+    &.ready {
+      @include transition(2s linear);
+    }
+    &.fire {
+    top: 100px;
+  }
+}
+.missile {
+  width: 16px;
+  height: 27px;
+  margin: 0 auto;
+  background-image: url(../assets/404/space_13.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.space1dead {
+  padding: $s1;
+}
+.space2dead {
+  padding: $s2;
+}
+.space3dead {
+  padding: $s3;
+}
+
+.bunkers {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+}
+.bunker {
+  display: inline-block;
+  width: 6.6%;
+  padding: 2.51% 0;
+  margin: 0 7%;
+  background-image: url(../assets/404/space_7.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.players {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.player {
+  width: 50px;
+  height: 31px;
+  background-image: url(../assets/404/space_8.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+
+  &.dead {
+    width: 55px;
+    background-image: url(../assets/404/space_9.svg);
+  }
+} 
+p.message {
+  font-family: eightMadness, sans-serif;
+  color: #f00;
+  font-size: 2em;
+  margin: 5% 0;
+  position: relative;
+  top: 15px;
+  opacity: 0;
+  @include transition(2s);
+
+  &.visible {
+    top: 0;
+    opacity: 1;
+  }
+}   
 .gradient-rainbow { 
   background: -moz-linear-gradient(left, red, orange, yellow, green, 
   blue, indigo, violet);

@@ -19,12 +19,12 @@ mysqli_close($conn); // Close the connection
 	<table class="mainBoard ">
 		<thead>
 			<tr class="headerBoard">
-				<th>#</th>
-				<th style="text-align: center;"><div class="flaticon-user182 boardIcon" style="width: 100%;"></div></th>
-				<th>Student Name</th>
-				<th><div class="flaticon-trophy56 boardIcon"></div>Achievements</th>
-				<th><div class="flaticon-pencil43 boardIcon"></div>Quests</th>
-				<th><div class="flaticon-medal61 boardIcon"></div>XP</th>
+				<th id="headPos">#</th>
+				<th id="headPro" style="text-align: center;"><div class="flaticon-user182 boardIcon" style="width: 100%;"></div></th>
+				<th id="headName">Student Name</th>
+				<th id="headAch"><div class="flaticon-trophy56 boardIcon"></div><span class="headLabel"> Achievements </span> </th>
+				<th id="headQuests"><div class="flaticon-pencil43 boardIcon"></div><span class="headLabel"> Quests </span> </th>
+				<th id="headXP"><div class="flaticon-medal61 boardIcon"></div><span class="headLabel"> XP </span> </th>
 			</tr>
 		</thead>
 		<tbody>
@@ -33,7 +33,7 @@ mysqli_close($conn); // Close the connection
 				while($ai < $usersLCount) { ?>
 				<?php $idOfUser = $d[$ai]['UserID']; ?>
 
-					<tr class="boardEntry">
+					<tr class="boardEntry <?php if ($idOfUser == $id ) { echo 'userBoard'; } ?>">
 						<td class="pos" data-th="Position"><?php echo $d[$ai]['Position']; ?></td>
 						<td data-th="avatar" class="boardAvatar"><img class="avatarBoard" src="../assets/uploads/<?php echo $d[$ai]['Avatar']; ?>"></td>
 						<td class="StudentName" data-th="Student Name"><a href="/profile.php?user=<?php echo $d[$ai]['UserID']; ?>"> <?php echo $d[$ai]['Name'] . " " . $d[$ai]['Surname'];  ?></a></td>

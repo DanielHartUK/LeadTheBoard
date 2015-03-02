@@ -15,12 +15,22 @@ $(window).resize(function() {
   }, 1);
 });
 
-//function unlockablesCalcFallback() {
-//  var unlockableWidth = $('.unlockableListCont').width();
-//  $('.unlockableDetails').width( unlockableWidth - 100 - (unlockableWidth / 100) - (unlockableWidth / 100 * 8) );
-//};
-//$(document).ready(unlockablesCalcFallback);
-//$(window).resize(unlockablesCalcFallback);
+
+function responsive() {
+  
+}
+var isMob;
+function tableBreak() {
+  if($(window).width() < 760) {
+    $('.headLabel').css('display', 'none');
+    isMob = true;
+  } else if(isMob) {
+    $('.headLabel').attr('style', function(i, style) { return style.replace(/display[^;]+;?/g, '');});
+  }
+}
+$(window).resize(tableBreak);
+$(document).ready(tableBreak);
+
 // jQuery rotation - http://stackoverflow.com/a/17348698
   var rotation = 0;
   jQuery.fn.rotate = function(degrees) {

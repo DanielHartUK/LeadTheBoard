@@ -23,7 +23,7 @@ html, body {
   font-weight: 400;
   background-color: #f4f4f4;
   color: #555555;
-  min-width: 968px;
+  /* min-width: 968px; */
 }
 
 /* line 12, _general.scss */
@@ -255,30 +255,168 @@ h2.sectionTitle {
 
 /* line 195, _general.scss */
 .c404 {
+  height: 100%;
   min-height: 100%;
   background: #000;
   color: #FFF;
+  padding: 2%;
 }
 
-/* line 200, _general.scss */
+/* line 202, _general.scss */
 .e404 {
   text-align: center;
   font-size: 1.4em;
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 800px;
 }
-/* line 204, _general.scss */
+/* line 210, _general.scss */
 .e404 p {
   margin: 1.5%;
 }
-/* line 208, _general.scss */
+/* line 214, _general.scss */
 .e404 h3 {
   font-size: 2em;
 }
-/* line 212, _general.scss */
+/* line 218, _general.scss */
 .e404 a p {
   font-size: 0.7em;
 }
 
-/* line 217, _general.scss */
+/* line 223, _general.scss */
+.invader {
+  display: inline-block;
+  margin: 0.5%;
+  width: 5%;
+}
+
+/* line 231, _general.scss */
+.space1 {
+  padding: 2% 0;
+  background-image: url(../assets/404/space_1.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+}
+
+/* line 238, _general.scss */
+.space2 {
+  padding: 1.8% 0;
+  background-image: url(../assets/404/space_3.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* line 244, _general.scss */
+.space3 {
+  padding: 1.8% 0;
+  background-image: url(../assets/404/space_5.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* line 250, _general.scss */
+.missiles {
+  position: absolute;
+  top: 0;
+}
+/* line 254, _general.scss */
+.missiles.ready {
+  -webkit-transition: 2s linear;
+  -moz-transition: 2s linear;
+  transition: 2s linear;
+}
+/* line 257, _general.scss */
+.missiles.fire {
+  top: 100px;
+}
+
+/* line 261, _general.scss */
+.missile {
+  width: 16px;
+  height: 27px;
+  margin: 0 auto;
+  background-image: url(../assets/404/space_13.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* line 270, _general.scss */
+.space1dead {
+  padding: 2% 0;
+}
+
+/* line 273, _general.scss */
+.space2dead {
+  padding: 1.8% 0;
+}
+
+/* line 276, _general.scss */
+.space3dead {
+  padding: 1.8% 0;
+}
+
+/* line 280, _general.scss */
+.bunkers {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+}
+
+/* line 285, _general.scss */
+.bunker {
+  display: inline-block;
+  width: 6.6%;
+  padding: 2.51% 0;
+  margin: 0 7%;
+  background-image: url(../assets/404/space_7.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* line 294, _general.scss */
+.players {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 299, _general.scss */
+.player {
+  width: 50px;
+  height: 31px;
+  background-image: url(../assets/404/space_8.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+/* line 307, _general.scss */
+.player.dead {
+  width: 55px;
+  background-image: url(../assets/404/space_9.svg);
+}
+
+/* line 312, _general.scss */
+p.message {
+  font-family: eightMadness, sans-serif;
+  color: #f00;
+  font-size: 2em;
+  margin: 5% 0;
+  position: relative;
+  top: 15px;
+  opacity: 0;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  transition: 2s;
+}
+/* line 322, _general.scss */
+p.message.visible {
+  top: 0;
+  opacity: 1;
+}
+
+/* line 327, _general.scss */
 .gradient-rainbow {
   background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
   background: -webkit-gradient(linear, left center, right center, from(red), color-stop(14%, orange), color-stop(28%, yellow), color-stop(42%, green), color-stop(56%, blue), color-stop(70%, indigo), to(violet));
@@ -583,75 +721,83 @@ ul.footerLinks li {
   background-color: #f7f7f7;
   border-bottom: 1px solid #CCC;
 }
-/* line 58, _hub.scss */
+/* line 59, _hub.scss */
 .boardEntry td {
   padding: 1%;
   border: 1px solid #CCC;
   box-sizing: border-box;
 }
-/* line 63, _hub.scss */
+/* line 64, _hub.scss */
 .boardEntry td.pos {
   width: 10px;
   font-size: 1.2em;
   font-weight: 500;
   padding: 10px;
 }
-/* line 69, _hub.scss */
+/* line 70, _hub.scss */
 .boardEntry td.boardAvatar {
   width: 40px;
   padding: 10px;
 }
-/* line 74, _hub.scss */
+/* line 75, _hub.scss */
 .boardEntry td:last-child {
   border-right: 1px solid #CCC;
 }
-/* line 78, _hub.scss */
+/* line 79, _hub.scss */
 .boardEntry td.achievements {
   width: 20%;
 }
-/* line 81, _hub.scss */
+/* line 82, _hub.scss */
 .boardEntry td.quests, .boardEntry td.xp {
   width: 15%;
 }
-/* line 86, _hub.scss */
+/* line 87, _hub.scss */
 .boardEntry:nth-child(even) {
   background: #ececec;
 }
-/* line 89, _hub.scss */
+/* line 90, _hub.scss */
 .boardEntry:first-child {
   background: #f7f7f7;
 }
-/* line 92, _hub.scss */
+/* line 93, _hub.scss */
+.boardEntry:first-child td {
+  border-top: 0;
+}
+/* line 97, _hub.scss */
 .boardEntry:hover {
   background-color: #696969;
   color: #FFF;
 }
+/* line 101, _hub.scss */
+.boardEntry:hover td {
+  border-color: #696969;
+}
 
-/* line 97, _hub.scss */
+/* line 106, _hub.scss */
 .avatarBoard {
   height: 40px;
   width: 40px;
 }
 
-/* line 101, _hub.scss */
+/* line 110, _hub.scss */
 .StudentName a {
   border-bottom: 1px dotted;
 }
 
 /* Side Boxes */
-/* line 106, _hub.scss */
+/* line 115, _hub.scss */
 .sideBlock {
   display: inline-block;
   vertical-align: top;
   width: 19.5%;
   padding-left: 0.5%;
 }
-/* line 112, _hub.scss */
+/* line 121, _hub.scss */
 .sideBlock.drawerO {
   display: none;
 }
 
-/* line 116, _hub.scss */
+/* line 125, _hub.scss */
 .boxTitle {
   text-align: center;
   color: #fff;
@@ -660,14 +806,14 @@ ul.footerLinks li {
   padding: 13px 1%;
 }
 
-/* line 123, _hub.scss */
+/* line 132, _hub.scss */
 .boxContent {
   border: 1px solid #b9b9b9;
   border-top: none;
   text-align: center;
 }
 
-/* line 128, _hub.scss */
+/* line 137, _hub.scss */
 .box {
   width: 100%;
   background: #fff;
@@ -676,25 +822,25 @@ ul.footerLinks li {
   margin-bottom: 3%;
 }
 
-/* line 136, _hub.scss */
+/* line 145, _hub.scss */
 .youBox .boxContent {
   padding: 4%;
 }
 
-/* line 141, _hub.scss */
+/* line 150, _hub.scss */
 .boxStat {
   margin: 7.5% 0;
   width: 33.33%;
   display: inline-block;
 }
 
-/* line 146, _hub.scss */
+/* line 155, _hub.scss */
 .boxStat:nth-child(2) {
   border-left: 1px solid #B9B9B9;
   border-right: 1px solid #B9B9B9;
 }
 
-/* line 150, _hub.scss */
+/* line 159, _hub.scss */
 .profilePicRound {
   height: 100px;
   width: 100px;
@@ -702,7 +848,7 @@ ul.footerLinks li {
   margin-top: 2%;
 }
 
-/* line 156, _hub.scss */
+/* line 165, _hub.scss */
 .bannerSmall {
   width: 90%;
   padding: 1% 1% 5% 1%;
@@ -718,18 +864,18 @@ ul.footerLinks li {
   top: -15px;
 }
 
-/* line 171, _hub.scss */
+/* line 180, _hub.scss */
 .questsBox .boxTitle {
   background-color: #ab452f;
 }
 
-/* line 175, _hub.scss */
+/* line 184, _hub.scss */
 .expiringQuests {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 180, _hub.scss */
+/* line 189, _hub.scss */
 .expiringQuests li {
   font-weight: 700;
   font-size: 1.1em;
@@ -737,16 +883,16 @@ ul.footerLinks li {
   text-align: left;
   overflow: auto;
 }
-/* line 187, _hub.scss */
+/* line 196, _hub.scss */
 .expiringQuests li:nth-child(even) {
   background-color: #efeeee;
 }
-/* line 191, _hub.scss */
+/* line 200, _hub.scss */
 .expiringQuests li span {
   font-size: 1rem;
 }
 
-/* line 196, _hub.scss */
+/* line 205, _hub.scss */
 .questThumb {
   width: 50px;
   height: 50px;
@@ -755,7 +901,7 @@ ul.footerLinks li {
 }
 
 /* Activity */
-/* line 205, _hub.scss */
+/* line 214, _hub.scss */
 .activityColumn {
   width: 33.33%;
   padding: 0.5%;
@@ -763,35 +909,35 @@ ul.footerLinks li {
   box-sizing: border-box;
   vertical-align: top;
 }
-/* line 211, _hub.scss */
+/* line 220, _hub.scss */
 .activityColumn.achievementsActivity {
   padding-left: 0;
 }
-/* line 214, _hub.scss */
+/* line 223, _hub.scss */
 .activityColumn.xpActivity {
   padding-right: 0;
 }
 
-/* line 219, _hub.scss */
+/* line 228, _hub.scss */
 .achievementsActivity .sectionTitle {
   background-color: #2F9DAB;
   padding: 2%;
 }
 
-/* line 225, _hub.scss */
+/* line 234, _hub.scss */
 .questsActivity .sectionTitle {
   background-color: #AB452F;
   padding: 2%;
 }
 
-/* line 231, _hub.scss */
+/* line 240, _hub.scss */
 .xpActivity .sectionTitle {
   background-color: #F7CA5D;
   padding: 2%;
   color: #000;
 }
 
-/* line 237, _hub.scss */
+/* line 246, _hub.scss */
 .activityEntry {
   width: 100%;
   background: #FFF;
@@ -799,7 +945,7 @@ ul.footerLinks li {
   overflow: auto;
   margin-bottom: 2%;
 }
-/* line 244, _hub.scss */
+/* line 253, _hub.scss */
 .activityEntry .userAvatar {
   height: 50px;
   width: 50px;
@@ -807,40 +953,40 @@ ul.footerLinks li {
   vertical-align: top;
   margin-right: 2%;
 }
-/* line 251, _hub.scss */
+/* line 260, _hub.scss */
 .activityEntry .userInfo {
   color: #FFF;
   padding: 2%;
   overflow: auto;
 }
-/* line 256, _hub.scss */
+/* line 265, _hub.scss */
 .activityEntry h3 {
   text-align: left;
   margin: 0;
   font-size: 1.3em;
   font-weight: 700;
 }
-/* line 262, _hub.scss */
+/* line 271, _hub.scss */
 .activityEntry p {
   text-align: left;
   margin: 0;
 }
-/* line 266, _hub.scss */
+/* line 275, _hub.scss */
 .activityEntry .unlockDetail {
   overflow: auto;
   padding: 2%;
   border: 1px solid #B9B9B9;
   border-top: none;
 }
-/* line 271, _hub.scss */
+/* line 280, _hub.scss */
 .activityEntry .unlockDetail h3 {
   font-size: 1.5em;
 }
-/* line 274, _hub.scss */
+/* line 283, _hub.scss */
 .activityEntry .unlockDetail p {
   font-size: 1.4em;
 }
-/* line 278, _hub.scss */
+/* line 287, _hub.scss */
 .activityEntry .icon {
   border-radius: 50px;
   height: 65px;
@@ -850,22 +996,22 @@ ul.footerLinks li {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 289, _hub.scss */
+  /* line 298, _hub.scss */
   .personIcon {
     background-image: url(../assets/personIconM2x.png);
   }
 
-  /* line 292, _hub.scss */
+  /* line 301, _hub.scss */
   .achievementsIcon {
     background-image: url(../assets/trophyIcon2x.png);
   }
 
-  /* line 295, _hub.scss */
+  /* line 304, _hub.scss */
   .questsIcon {
     background-image: url(../assets/pencilIcon2x.png);
   }
 
-  /* line 298, _hub.scss */
+  /* line 307, _hub.scss */
   .xpIcon {
     background-image: url(../assets/xpIcon2x.png);
   }
@@ -2133,65 +2279,31 @@ h2.sectionTitle.statsTitle {
     width: 100%;
   }
 }
-@media screen and (max-width: 600px) {
-  /* line 35, style.scss */
-  .mainBoard thead {
-    display: none;
+@media screen and (max-width: 760px) {
+  /* line 40, style.scss */
+  .headerBoard th {
+    padding: 2%;
   }
 
-  /* line 38, style.scss */
-  .boardEntry {
-    display: block;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin-bottom: 1%;
-    border-radius: 5px;
-    border: 0;
+  /* line 43, style.scss */
+  .boardAvatar, #headPro {
+    display: none;
   }
 
   /* line 46, style.scss */
-  .boardEntry td {
-    display: block;
-    width: 100%;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f7f7f7), color-stop(1, #f7f7f7));
-    background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
-    background-image: -moz-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
-    background-image: -webkit-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
-    background-image: -ms-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
-    background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
+  #headPos, #headAch, #headQuests, #headXP {
+    text-align: center;
   }
 
-  /* line 51, style.scss */
-  .boardEntry:first-child td {
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #f9f9f9), color-stop(1, #f9f9f9));
-    background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
-    background-image: -moz-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
-    background-image: -webkit-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
-    background-image: -ms-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
-    background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
+  /* line 49, style.scss */
+  .boardEntry td.achievements, .boardEntry td.quests, .boardEntry td.xp {
+    width: 10%;
+    text-align: center;
   }
 
-  /* line 54, style.scss */
-  .boardEntry:nth-child(even) td {
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(22, 160, 132, 0.75)), color-stop(0.5, rgba(22, 160, 132, 0.75)), color-stop(0.5, #ECECEC), color-stop(1, #ECECEC));
-    background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
-    background-image: -moz-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
-    background-image: -webkit-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
-    background-image: -ms-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
-    background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
-  }
-
-  /* line 57, style.scss */
-  .boardEntry td:before {
-    content: attr(data-th) ": ";
-    float: left;
-    width: 36%;
-    color: #fff;
-    font-weight: 700;
-  }
-
-  /* line 64, style.scss */
-  #boardAvatar {
-    display: none;
+  /* line 53, style.scss */
+  .boardIcon {
+    margin: 0 auto;
+    float: none;
   }
 }

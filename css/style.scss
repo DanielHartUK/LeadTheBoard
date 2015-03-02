@@ -32,41 +32,27 @@ $tableBreak: 600px;
     }
 }
 @media screen and (max-width: $tableBreak) {
-    .mainBoard thead {
-        display: none;
-    }
-    .boardEntry {
-        display: block;
-        box-sizing: border-box;
-        overflow: hidden;
-        margin-bottom: 1%;
-        border-radius: 5px;
-        border: 0;
-    }
-    .boardEntry td {
-        display: block;
-        width: 100%;
-        background-image: -webkit-gradient(linear,left top,right top,color-stop(0, rgba(22, 160, 132, 0.75)),color-stop(0.5, rgba(22, 160, 132, 0.75)),color-stop(0.5, #f7f7f7),color-stop(1, #f7f7f7));background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);background-image: -moz-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);background-image: -webkit-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);background-image: -ms-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f7f7f7 35%, #f7f7f7 100%);
-    }
-    .boardEntry:first-child  td {
-        background-image: -webkit-gradient(linear,left top,right top,color-stop(0, rgba(22, 160, 132, 0.75)),color-stop(0.5, rgba(22, 160, 132, 0.75)),color-stop(0.5, #f9f9f9),color-stop(1, #f9f9f9));background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);background-image: -moz-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);background-image: -webkit-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);background-image: -ms-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #f9f9f9 35%, #f9f9f9 100%);
-    }
-    .boardEntry:nth-child(even)  td {
-        background-image: -webkit-gradient(linear,left top,right top,color-stop(0, rgba(22, 160, 132, 0.75)),color-stop(0.5, rgba(22, 160, 132, 0.75)),color-stop(0.5, #ECECEC),color-stop(1, #ECECEC));background-image: -o-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);background-image: -moz-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);background-image: -webkit-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);background-image: -ms-linear-gradient(right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);background-image: linear-gradient(to right, rgba(22, 160, 132, 0.75) 0%, rgba(22, 160, 132, 0.75) 35%, #ECECEC 35%, #ECECEC 100%);
-    }
-    .boardEntry td:before {
-        content: attr(data-th)": ";
-        float: left;
-        width: 36%;
-        color: #fff;
-        font-weight: 700;
-    }
-    #boardAvatar {
-        display: none;
-    }
+
+
 }
 
-@media screen and (max-width: 768px) {
-   
+@media screen and (max-width: 760px) {
+    .headerBoard th {
+        padding: 2%;
+    }
+    .boardAvatar, #headPro {
+        display: none;
+    }
+    #headPos, #headAch, #headQuests, #headXP {
+        text-align: center;
+    }
+    .boardEntry td.achievements, .boardEntry td.quests, .boardEntry td.xp {
+        width: 10%;
+        text-align: center;
+    }
+    .boardIcon {
+        margin: 0 auto;
+        float: none;
+    }
 }
 
