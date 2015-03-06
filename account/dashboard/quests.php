@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 $isOverview = 0;
 require_once("../../config.php");
 include_once(TEMPLATES_PATH . "/header.php"); 

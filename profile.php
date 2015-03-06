@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 require_once("config.php");
 require_once(INCLUDES_PATH . "/demoVariables.php");
 if (empty($_GET['user'])) {

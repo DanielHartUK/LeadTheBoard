@@ -52,6 +52,10 @@
   background-repeat: no-repeat;
   background-position: 3% 50%;
 
+  &.loginName {
+    width: 49.4%;
+  }
+
   &:focus {
     outline: none;
     border-color: #CA6158;

@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 $isLeaderboard = 0;
 $pageTitle = 'Activity';
 require_once("../config.php");

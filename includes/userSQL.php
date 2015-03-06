@@ -1,4 +1,7 @@
 <?php 
+if (isset($_SESSION['UserID'])) {
+  $id = $_SESSION['UserID'];
+
 date_default_timezone_set('UTC');
 
 $conn = mysqli_connect($servername, $username, $password, $dbname); // Create the connection
@@ -189,4 +192,6 @@ $questsAvailableAccumulation = $questsPRowCount; // All Quests that were availab
 $userColourScheme = $usersO[0]['ColourScheme'];
 $timeZone = $usersO[0]['TimeZone'];
 date_default_timezone_set($timeZone);
+
+}
 
