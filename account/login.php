@@ -12,6 +12,11 @@ include_once(TEMPLATES_PATH . "/header.php");
 				if($_GET['passwordreset'] == 2) { $message = "Password reset"; }
 				echo '<div class="warningBanner blue">' .  $message  . '</div>'; 
 			} ?>
+			<?php if(isset($_GET['error'])) { 
+				if($_GET['error'] == 1) { $message = "Email not registered"; }
+				if($_GET['error'] == 2) { $message = "Incorrect password"; }
+				echo '<div class="warningBanner blue">' .  $message  . '</div>'; 
+			} ?>
 			<form method="post"  style="overflow: auto;" action="<?php echo SITE_URL;?>/includes/login.php">
 				<input class="field loginEmail" id="focus" name="email" type="email" placeholder="Email Address">
 				<input class="field loginPassword" name="password" type="password" placeholder="Password">

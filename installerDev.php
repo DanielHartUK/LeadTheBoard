@@ -136,7 +136,15 @@ if(isset($_GET['step'])) {
 		(3, 'Quest 4', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consequat euismod lectus a rutrum. Sed ornare libero vel vestibulum finibus. Ut nisi tortor, aliquet sed dapibus quis, ultricies id est. Mauris consequat pulvinar sapien ac elementum. Fusce elementum arcu at gravida eleifend.', 10, 'goat.png', '2015-02-09 16:26:27', 1421710773),
 		(4, 'Quest 5', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consequat euismod lectus a rutrum. Sed ornare libero vel vestibulum finibus. Ut nisi tortor, aliquet sed dapibus quis, ultricies id est. Mauris consequat pulvinar sapien ac elementum. Fusce elementum arcu at gravida eleifend.b d', 20, 'goat.png', '2015-01-19 05:26:44', 1421710773);
 		") or die('Could not create table: ' .mysqli_error($conn));
-		
+
+		mysqli_query($conn, "
+		CREATE TABLE `ResetPassword` (
+		  `UserID` bigint(255) unsigned NOT NULL,
+		  `Token` text NOT NULL,
+		  `Time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+		") or die('Could not create table: ' .mysqli_error($conn));
+
 		mysqli_query($conn, "
 		CREATE TABLE `UserOptions` (
 		  `UserID` BIGINT(255) unsigned NOT NULL,
@@ -289,6 +297,12 @@ if(isset($_GET['step'])) {
 		") or die('Could not create table: ' .mysqli_error($conn));
 		
 		mysqli_query($conn, "
+		ALTER TABLE `ResetPassword`
+		ADD CONSTRAINT `Reset` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`);
+		") or die('Could not create table: ' .mysqli_error($conn));
+
+
+		mysqli_query($conn, "
 		ALTER TABLE `UserOptions`
 		ADD CONSTRAINT `User Options` FOREIGN KEY (`UserID`) REFERENCES `Users` (`UserID`) ON DELETE CASCADE ON UPDATE CASCADE;
 		") or die('Could not create table: ' .mysqli_error($conn));
@@ -352,23 +366,7 @@ if(isset($_GET['step'])) {
 	      				<input type="submit" class="button red" id="submit" name="dbCred" disabled="disabled" value="Next"> <span id="formerror"> </span>
 	      			</form>
 	      		<?php } ?>
-
-
-
-
 			<?php } ?>
-
-
-
-
-			<?php if($createSuccess) { echo '<p> Achievement Unlocked: LeadTheBoard! successfully installed! <!-- <a href="/">Continue</a> --> <br></p>'; } ?>
-			<?php if($sampleSuccess) { echo '<p> Sample demo data inserted <br/ > <a href="/"><div class="button" style="background: rgb(22, 142, 185); color: white;"> Complete </div></a></p>'; } ?>
-		
-
-
-
-
-
 		</div>
 	</div>
 

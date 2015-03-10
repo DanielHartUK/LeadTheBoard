@@ -1,4 +1,4 @@
-<?php
+<?php 
 $conn = mysqli_connect($servername, $username, $password, $dbname); // Create a connection to the database
 $joinClan = $conn->prepare("INSERT INTO `clanmembers`(`ClanID`, `UserID`, `clanAdmin`) VALUES (?, ?, ?)");
 $joinClan->bind_param('iii', $clanID, $id, $clanAdmin);

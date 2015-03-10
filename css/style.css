@@ -1758,6 +1758,12 @@ h2.sectionTitle.statsTitle {
   color: #F00000;
 }
 
+/* line 366, _dashboard.scss */
+.clearLogs {
+  float: right;
+  margin-bottom: 1%;
+}
+
 /* line 1, _login.scss */
 .loginWrap {
   background-image: url(../assets/loginbk.jpg);

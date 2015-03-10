@@ -49,8 +49,10 @@ function readPicture(input) {
   </form>
 </div>
 <?php require_once(TEMPLATES_PATH . "/footer.php"); ?>
-=======
-<?php session_start(); 
+
+<!--
+============
+<?php 
 require_once("../config.php");
 include_once(TEMPLATES_PATH . "/header.php"); 
 $isAccountIndex = 0;
@@ -86,7 +88,7 @@ function readPicture(input) {
                 <img src="/assets/uploads/<?php echo $value['Emblem']; ?>">  
                 <h4><?php echo $value['Name']; ?></h4> 
                 <div class="clanMembers">
-                  <!-- get 5 or so members of the clan --><a href="<?php echo SITE_URL . '/profile.php?user=' ;?>" ><img src="<!-- user image -->"></a>
+                  <a href="<?php echo SITE_URL . '/profile.php?user=' ;?>" ><img src=""></a>
                   </div>
               </div><?php } ?>
             <div class="boxButton hidden">
@@ -98,4 +100,4 @@ function readPicture(input) {
       </div>
   </form>
 </div>
-<?php require_once(TEMPLATES_PATH . "/footer.php"); ?>
+<?php require_once(TEMPLATES_PATH . "/footer.php"); ?> -->

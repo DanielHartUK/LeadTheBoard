@@ -35,7 +35,7 @@ include_once(INCLUDES_PATH . "/classes.php");
 					</tr>
 			<?php } ?>
 			</tbody>
-			<tfoot>z
+			<tfoot>
 			</tfoot>		
 		</table>
 

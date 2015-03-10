@@ -19,22 +19,34 @@ if(isset($_POST['email'])) {
 	}
 
 if ($userRowCount == 0) {
-	$url = SITE_URL . '/account/login.php?error=1'; 
+	$ip = $_SERVER['REMOTE_ADDR'];
+	$type = 1;
+	$errorLog = $conn->prepare("INSERT INTO LoginAttempts (Email, IP, Type) VALUES (?, ?, ?)");
+	$errorLog->bind_param("ssi", $email, $ip, $type);
+	$errorLog->execute();		
+	$errorLog->close();
+	$url = SITE_URL . '?error=1'; 
 	header( "Location: $url" );
 } 
 else {
 	if (password_verify($_POST['password'], $login[0]['Password']) ) {
 		$_SESSION['UserID'] =  $login[0]['UserID'];
 		$_SESSION['loggedIn'] =  1;
+		$url = SITE_URL ; 
+		header( "Location: $url" );
 	} else {
-		$url = SITE_URL . '/account/login.php?error=2'; 
+		$ip = $_SERVER['REMOTE_ADDR'];
+		$type = 2;
+		$errorLog = $conn->prepare("INSERT INTO LoginAttempts (Email, IP, Type) VALUES (?, ?, ?)");
+		$errorLog->bind_param("ssi", $email, $ip, $type);
+		$errorLog->execute();		
+		$errorLog->close();
+		$url = SITE_URL . '?error=2'; 
 		header( "Location: $url" );
 		session_unset(); 
 		session_destroy();
 	}
 }
-$url = SITE_URL ; 
-header( "Location: $url" );
 
 
 }

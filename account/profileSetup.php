@@ -9,10 +9,11 @@ include_once(INCLUDES_PATH . "/demoVariables.php");
 include_once(INCLUDES_PATH . "/userSQL.php");
 include_once(TEMPLATES_PATH . "/header.php"); 
 ?>
+
 <div class="content loginBk">
 	<div class="logo"> LeadTheBoard! </div>
 
-		<div class="login profile">
+		<div class="login profile" style="text-align: center;">
 			<div class="title"> Profile </div>
 
 			<form style="overflow: auto;" id="register" method="post" action="<?php echo SITE_URL;?>/includes/profileSetup.php">
@@ -20,6 +21,9 @@ include_once(TEMPLATES_PATH . "/header.php");
 				<div class="picContainer">
       				<img class="accountPic" src="<?php echo SITE_URL;?>/assets/profileEmpty.png">
       				<div type="file" class="changePic" onchange="readPicture(this)"> Change Avatar </div>
+              	<input style="display:none" type='file' accept='image/jpeg, image/bmp, image/png, image/gif' id='imageUpload' name='emblem' onchange="$('#emblemUploadBox').html('<img id=\'emblemPreview\'>'), readPicture(this)"/>
+              	<div onclick="$('#imageUpload').click()" id="emblemUploadBox" class="imageNew">Upload <br /> Emblem </div>  
+
    				</div>
       			<h4> Colour Scheme </h4>
       			<div class="colourOptions">

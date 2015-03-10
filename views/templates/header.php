@@ -4,6 +4,7 @@ include_once(INCLUDES_PATH . "/demoVariables.php");
 include_once(INCLUDES_PATH . "/refreshsql.php"); 
 include_once(INCLUDES_PATH . "/userSQL.php");
 include_once(INCLUDES_PATH . "/customisation.php"); 
+include_once(INCLUDES_PATH . "/analyticsScript.php"); 
 function pageURLContains($x) {
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; if (false !== strpos($url, $x)) { return true; };
 }
@@ -119,22 +120,7 @@ if(isset($_GET['setAdmin'])) {
 			</div>
 		<?php endif; ?>
 	<?php endif; ?>
-	<div class="drawerMove 
-	<?php 
-	if( pageURLContains($x = 'account')	) { 
-		if(isset($login)) {
-		} else { 
-			echo 'adminCont'; 
-		} 
-	} else if (isset($admin)) { 
-		if ($admin == 1) { 
-			echo 'adminCont'; 
-		} 
-	} else { 
-
-	} ?>"> 
-
-
+	<div class="drawerMove <?php if(pageURLContains($x = 'account')) { if(isset($login)) { } else { echo 'adminCont'; } } else if (isset($admin)) { if ($admin == 1) { echo 'adminCont'; } } else { } ?>"> 
 
 
 
