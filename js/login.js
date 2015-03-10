@@ -1,3 +1,6 @@
+$(document).ready(function() {
+	$('#focus').focus();
+});
 function checkEmpty() {
     var empty = $('#register').find("input").filter(function() {
         return this.value === "";

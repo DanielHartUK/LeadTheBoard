@@ -46,5 +46,5 @@ if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,255}$/', $_POST['pass
 	};
 };
 $conn->close();
-$url = SITE_URL ; 
+$url = SITE_URL .'/account/setup.php' ; 
 header( "Location: $url" );

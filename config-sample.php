@@ -14,6 +14,14 @@ $username = "test"; // MySQL username
 $password = "test"; // User password
 $dbname = "test"; // Database 
 
+// Mail settings
+
+$emailhost = 'smtp.gmail.com';
+$emailport = '465';
+$emailsecurity = 'ssl';
+$emailuser = '@gmail.com';
+$emailpass = ''; // Use app password if 2 step auth enabled
+
 //Site URL
 $siteURL = 'http://localhost';
 

@@ -166,6 +166,10 @@ h2.sectionTitle {
   &.blue {
     background: #009CE0;
   }
+  &.transparent {
+    background: transparent;
+    color: #555;
+  }
   &.cookie {
     background: rgba(0, 0, 0, 0);
     color: #FFF;
