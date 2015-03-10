@@ -14,9 +14,10 @@ $('.clanSelect').click(function() {
 });
 
 $(".clanSelect").click(function() {
-	var classes = this.classList;
-	var x = String(classes).replace('clanSelect clanID-','');
-	$("#clan-" + x).prop("checked", true)
+	var x = $(this).attr("id")
+	/*var classes = this.classList;
+	var x = String(classes).replace('clanSelect clanID-','');*/
+	$("#clan-" + x).prop("checked", true);
 	$(".clanSelect").removeClass("selected");
 	$(this).addClass("selected");
 });

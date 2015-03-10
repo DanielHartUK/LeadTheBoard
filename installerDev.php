@@ -330,7 +330,7 @@ if(isset($_GET['step'])) {
 					<p class="detailLabel">Database name</p>
       				<input required type="text" name="dbName" value="<?php echo $dbname; ?>" class="inputField">
 					<p class="detailLabel">Site URL <span class="tip">This is what appears in your browser's address bar</span></p>
-      				<input required type="text" name="url" value="<?php echo $url; ?>" class="inputField">
+      				<input required type="text" name="url" value="<?php echo $siteURL; ?>" class="inputField">
       				<input required type="submit" class="button blue" name="dbCred" value="Next">
       			</form>
 			<?php } ?>

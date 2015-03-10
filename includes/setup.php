@@ -31,7 +31,7 @@ $password = "' . $_POST["dbPass"] . '"; // User password
 $dbname = "' . $_POST["dbName"] . '"; // Database 
 
 //Site URL
-$siteURL = "http://localhost:8888";
+$siteURL = "'.$_POST["url"].'";
 
 //Support Email
 $supportEmail = "me@kingdingdan.com";

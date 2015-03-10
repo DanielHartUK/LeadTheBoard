@@ -6,17 +6,17 @@ require_once(INCLUDES_PATH . "/clan.php");
 ?>
 <script type="text/javascript">
 function readPicture(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        $('#emblemUploadBox').innerHTML = "";
+        reader.onload = function (e) {
+            $('#emblemPreview')
+                .attr('src', e.target.result)
+        };
 
-            reader.onload = function (e) {
-                $('#emblemPreview')
-                    .attr('src', e.target.result)
-            };
-
-            reader.readAsDataURL(input.files[0]);
-        }
+        reader.readAsDataURL(input.files[0]);
     }
+}
 </script>
 <div class="content">
   <h1> Account </h1>
@@ -25,12 +25,14 @@ function readPicture(input) {
 
       <div class="clanContainer">
           <div class="warningBanner blue"><?php if(!isset($clanN)) { echo  "<span class='flaticon-error6'></span> You're not a member of any clans, join or create one."; } else { echo "You are a member of " . $clanN ;} //if(clan admin) { echo ' You are also an admin.'} ?> </div>
+          
           <div class="clanList">
             <div class="clanSelect new">
-              <div class="imageNew">Upload <br /> Emblem </div>  
+              <input style="display:none" type='file' accept='image/jpeg, image/bmp, image/png, image/gif' id='imageUpload' name='emblem' onchange="$('#emblemUploadBox').html('<img id=\'emblemPreview\'>'), readPicture(this)"/>
+              <div onclick="$('#imageUpload').click()" id="emblemUploadBox" class="imageNew">Upload <br /> Emblem </div>  
               <h4> Create new clan </h4>
               <h4><input type="text" maxlength="16" name="newClan" id="newClanName" placeholder="Name"></h4> 
-            </div><?php foreach($clans as $value){ ?><input type="radio" name="clanJoin" class="clanRadio" id="clan-<?php echo $value['ClanID'];?>"><div class="clanSelect existing clanID-<?php echo $value['ClanID']; // if($value['ClanID'] == $clanI) { echo ' selected'; } ?>" data-name="<?php echo $value['Name']; ?>">
+            </div><?php foreach($clans as $value){ ?><input type="radio" name="clanJoin" class="clanRadio" value="<?php echo $value['ClanID'];?>" id="clan-<?php echo $value['ClanID'];?>"><div id="<?php echo $value['ClanID']; ?>"class="clanSelect existing clanID-<?php echo $value['ClanID']; // if($value['ClanID'] == $clanI) { echo ' selected'; } ?>" data-name="<?php echo $value['Name']; ?>">
                 <img src="/assets/uploads/<?php echo $value['Emblem']; ?>">  
                 <h4><?php echo $value['Name']; ?></h4> 
                 <div class="clanMembers">

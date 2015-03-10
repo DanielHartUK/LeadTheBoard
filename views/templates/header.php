@@ -13,13 +13,13 @@ $IGNORETHISFORNOWloggedIn = 0;
 if(isset($_GET['setAdmin'])) {
 	if($_GET['setAdmin']==0) {
 		$conn = mysqli_connect($servername, $username, $password, $dbname); // Create the connection
-		$makeAdmin = "UPDATE USERS SET Admin='0' WHERE UserID='$id'";
-		mysqli_query($conn, $makeAdmin) or die(mysqli_error());
+		$makeAdmin = "UPDATE Users SET Admin='0' WHERE UserID='$id'";
+		mysqli_query($conn, $makeAdmin) or die(mysqli_error($conn));
 	}
 	if($_GET['setAdmin']==1) {
 		$conn = mysqli_connect($servername, $username, $password, $dbname); // Create the connection
-		$makeAdmin = "UPDATE USERS SET Admin='1' WHERE UserID='$id'";
-		mysqli_query($conn, $makeAdmin) or die(mysqli_error());
+		$makeAdmin = "UPDATE Users SET Admin='1' WHERE UserID='$id'";
+		mysqli_query($conn, $makeAdmin) or die(mysqli_error($conn));
 	}
 }
 

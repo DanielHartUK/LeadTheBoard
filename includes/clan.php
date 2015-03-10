@@ -1,7 +1,7 @@
 <?php
 $conn = mysqli_connect($servername, $username, $password, $dbname); // Create a connection to the database
 $joinClan = $conn->prepare("INSERT INTO `clanmembers`(`ClanID`, `UserID`, `clanAdmin`) VALUES (?, ?, ?)");
-$joinClan->bind_param('iii', $clanID, $id, $clanID);
+$joinClan->bind_param('iii', $clanID, $id, $clanAdmin);
 
 $newClan = $conn->prepare("INSERT INTO `clans` (`ClanID`, `Name`, `Emblem`) VALUES (NULL, ?, ?)");
 $newClan->bind_param('ss', $clanN, $file_name);
