@@ -9,11 +9,11 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 	
 
 if(isset($_GET['step'])) {
-	if ($_GET['step'] == 20) {
+	if ($_GET['step'] == 2) {
 
 		mysqli_query($conn, "
 		CREATE TABLE `AchievementProgress` (
-		  `UserID` int(32) unsigned NOT NULL,
+		  `UserID` BIGINT(255) unsigned NOT NULL,
 		  `AchievementID` int(32) unsigned NOT NULL,
 		  `AchievementProgress` int(3) unsigned NOT NULL,
 		  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -49,7 +49,7 @@ if(isset($_GET['step'])) {
 		mysqli_query($conn, "
 		CREATE TABLE `clanmembers` (
 		  `ClanID` int(32) NOT NULL,
-		  `UserID` int(32) unsigned NOT NULL,
+		  `UserID` BIGINT(255) unsigned NOT NULL,
 		  `clanAdmin` int(11) NOT NULL
 		) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 		") or die('Could not create table: ' .mysqli_error($conn));
@@ -86,7 +86,7 @@ if(isset($_GET['step'])) {
 		
 		mysqli_query($conn, "
 		CREATE TABLE `ClassMembers` (
-		  `UserID` int(32) unsigned NOT NULL,
+		  `UserID` BIGINT(255) unsigned NOT NULL,
 		  `ClassID` int(32) unsigned DEFAULT NULL
 		) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 		") or die('Could not create table: ' .mysqli_error($conn));
@@ -99,7 +99,7 @@ if(isset($_GET['step'])) {
 		
 		mysqli_query($conn, "
 		CREATE TABLE `QuestProgress` (
-		  `UserID` int(32) unsigned NOT NULL,
+		  `UserID` BIGINT(255) unsigned NOT NULL,
 		  `QuestID` int(32) unsigned NOT NULL,
 		  `QuestProgress` int(3) unsigned NOT NULL,
 		  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
@@ -139,7 +139,7 @@ if(isset($_GET['step'])) {
 		
 		mysqli_query($conn, "
 		CREATE TABLE `UserOptions` (
-		  `UserID` int(32) unsigned NOT NULL,
+		  `UserID` BIGINT(255) unsigned NOT NULL,
 		  `ColourScheme` tinyint(1) NOT NULL DEFAULT '0',
 		  `TimeZone` text NOT NULL
 		) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -153,7 +153,7 @@ if(isset($_GET['step'])) {
 		
 		mysqli_query($conn, "
 		CREATE TABLE `Users` (
-		  `UserID` int(32) unsigned NOT NULL,
+		  `UserID` BIGINT(255) unsigned NOT NULL,
 		  `Name` text NOT NULL,
 		  `Surname` text NOT NULL,
 		  `Email` text NOT NULL,
@@ -174,7 +174,7 @@ if(isset($_GET['step'])) {
 		
 		mysqli_query($conn, "
 		CREATE TABLE `XPAwards` (
-		  `UserID` int(32) unsigned NOT NULL,
+		  `UserID` BIGINT(255) unsigned NOT NULL,
 		  `XP` int(11) NOT NULL,
 		  `Description` text NOT NULL,
 		  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

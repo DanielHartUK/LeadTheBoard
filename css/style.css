@@ -227,6 +227,11 @@ h2.sectionTitle {
   background: #009CE0;
 }
 /* line 169, _general.scss */
+.warningBanner.transparent {
+  background: transparent;
+  color: #555;
+}
+/* line 173, _general.scss */
 .warningBanner.cookie {
   background: transparent;
   color: #FFF;
@@ -241,11 +246,11 @@ h2.sectionTitle {
   box-sizing: border-box;
   text-align: left;
 }
-/* line 183, _general.scss */
+/* line 187, _general.scss */
 .warningBanner.cookie a {
   border-bottom: 1px dotted;
 }
-/* line 187, _general.scss */
+/* line 191, _general.scss */
 .warningBanner.cookie .close {
   float: none;
   font-size: 1.5em;
@@ -253,7 +258,7 @@ h2.sectionTitle {
   cursor: pointer;
 }
 
-/* line 195, _general.scss */
+/* line 199, _general.scss */
 .c404 {
   height: 100%;
   min-height: 100%;
@@ -262,7 +267,7 @@ h2.sectionTitle {
   padding: 2%;
 }
 
-/* line 202, _general.scss */
+/* line 206, _general.scss */
 .e404 {
   text-align: center;
   font-size: 1.4em;
@@ -271,27 +276,27 @@ h2.sectionTitle {
   margin: 0 auto;
   max-width: 800px;
 }
-/* line 210, _general.scss */
+/* line 214, _general.scss */
 .e404 p {
   margin: 1.5%;
 }
-/* line 214, _general.scss */
+/* line 218, _general.scss */
 .e404 h3 {
   font-size: 2em;
 }
-/* line 218, _general.scss */
+/* line 222, _general.scss */
 .e404 a p {
   font-size: 0.7em;
 }
 
-/* line 223, _general.scss */
+/* line 227, _general.scss */
 .invader {
   display: inline-block;
   margin: 0.5%;
   width: 5%;
 }
 
-/* line 231, _general.scss */
+/* line 235, _general.scss */
 .space1 {
   padding: 2% 0;
   background-image: url(../assets/404/space_1.svg);
@@ -300,7 +305,7 @@ h2.sectionTitle {
   background-size: contain;
 }
 
-/* line 238, _general.scss */
+/* line 242, _general.scss */
 .space2 {
   padding: 1.8% 0;
   background-image: url(../assets/404/space_3.svg);
@@ -308,7 +313,7 @@ h2.sectionTitle {
   background-size: contain;
 }
 
-/* line 244, _general.scss */
+/* line 248, _general.scss */
 .space3 {
   padding: 1.8% 0;
   background-image: url(../assets/404/space_5.svg);
@@ -316,23 +321,23 @@ h2.sectionTitle {
   background-size: contain;
 }
 
-/* line 250, _general.scss */
+/* line 254, _general.scss */
 .missiles {
   position: absolute;
   top: 0;
 }
-/* line 254, _general.scss */
+/* line 258, _general.scss */
 .missiles.ready {
   -webkit-transition: 2s linear;
   -moz-transition: 2s linear;
   transition: 2s linear;
 }
-/* line 257, _general.scss */
+/* line 261, _general.scss */
 .missiles.fire {
   top: 100px;
 }
 
-/* line 261, _general.scss */
+/* line 265, _general.scss */
 .missile {
   width: 16px;
   height: 27px;
@@ -342,29 +347,29 @@ h2.sectionTitle {
   background-size: contain;
 }
 
-/* line 270, _general.scss */
+/* line 274, _general.scss */
 .space1dead {
   padding: 2% 0;
 }
 
-/* line 273, _general.scss */
+/* line 277, _general.scss */
 .space2dead {
   padding: 1.8% 0;
 }
 
-/* line 276, _general.scss */
+/* line 280, _general.scss */
 .space3dead {
   padding: 1.8% 0;
 }
 
-/* line 280, _general.scss */
+/* line 284, _general.scss */
 .bunkers {
   position: absolute;
   bottom: 60px;
   width: 100%;
 }
 
-/* line 285, _general.scss */
+/* line 289, _general.scss */
 .bunker {
   display: inline-block;
   width: 6.6%;
@@ -375,14 +380,14 @@ h2.sectionTitle {
   background-size: contain;
 }
 
-/* line 294, _general.scss */
+/* line 298, _general.scss */
 .players {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-/* line 299, _general.scss */
+/* line 303, _general.scss */
 .player {
   width: 50px;
   height: 31px;
@@ -391,13 +396,13 @@ h2.sectionTitle {
   background-size: contain;
   margin: 0 auto;
 }
-/* line 307, _general.scss */
+/* line 311, _general.scss */
 .player.dead {
   width: 55px;
   background-image: url(../assets/404/space_9.svg);
 }
 
-/* line 312, _general.scss */
+/* line 316, _general.scss */
 p.message {
   font-family: eightMadness, sans-serif;
   color: #f00;
@@ -410,13 +415,13 @@ p.message {
   -moz-transition: 2s;
   transition: 2s;
 }
-/* line 322, _general.scss */
+/* line 326, _general.scss */
 p.message.visible {
   top: 0;
   opacity: 1;
 }
 
-/* line 327, _general.scss */
+/* line 331, _general.scss */
 .gradient-rainbow {
   background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
   background: -webkit-gradient(linear, left center, right center, from(red), color-stop(14%, orange), color-stop(28%, yellow), color-stop(42%, green), color-stop(56%, blue), color-stop(70%, indigo), to(violet));
@@ -1755,11 +1760,13 @@ h2.sectionTitle.statsTitle {
 
 /* line 1, _login.scss */
 .loginWrap {
-  background: #0D5A4B;
+  background-image: url(../assets/loginbk.jpg);
+  background-size: cover;
+  background-position: 50%;
   color: #fff;
 }
 
-/* line 5, _login.scss */
+/* line 7, _login.scss */
 .loginBack {
   line-height: 50px;
   color: #fff;
@@ -1769,26 +1776,51 @@ h2.sectionTitle.statsTitle {
   padding-left: 1%;
 }
 
-/* line 13, _login.scss */
+/* line 15, _login.scss */
 .loginBk {
   margin-top: -50px;
   min-height: 100%;
-  padding: 10%;
+  padding: 3%;
 }
 
-/* line 18, _login.scss */
-.login {
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 2%;
+/* line 20, _login.scss */
+.loginCont {
   background-color: #FFF;
-  color: #555;
   border-radius: 4px;
+  width: 716px;
+}
+
+/* line 25, _login.scss */
+.login {
+  max-width: 356px;
+  margin: 0 auto;
+  padding: 1.5em;
+  vertical-align: top;
+  color: #555;
+  box-sizing: border-box;
+  background: #FFF;
+  border-radius: 2px;
   box-shadow: 0px 0px 4px #323232;
 }
+/* line 36, _login.scss */
+.login .warningBanner {
+  padding: 3% 1%;
+  margin-bottom: 3%;
+}
 
-/* line 27, _login.scss */
+/* line 42, _login.scss */
 .logo {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.6em;
+  color: #fff;
+  line-height: 50px;
+  padding: 0 0.5%;
+  margin-bottom: 1%;
+}
+
+/* line 51, _login.scss */
+.title {
   text-align: center;
   font-weight: 700;
   font-size: 1.6em;
@@ -1797,13 +1829,8 @@ h2.sectionTitle.statsTitle {
   padding: 0 0.5%;
   margin-bottom: 3%;
 }
-/* line 36, _login.scss */
-.logo a {
-  text-decoration: none;
-  color: #555;
-}
 
-/* line 41, _login.scss */
+/* line 60, _login.scss */
 .field {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
@@ -1820,34 +1847,61 @@ h2.sectionTitle.statsTitle {
   background-repeat: no-repeat;
   background-position: 3% 50%;
 }
-/* line 55, _login.scss */
+/* line 74, _login.scss */
+.field.loginName {
+  width: 49.4%;
+}
+/* line 78, _login.scss */
 .field:focus {
   outline: none;
   border-color: #CA6158;
   background-image: url(../assets/arrow.png);
 }
 
-/* line 62, _login.scss */
+/* line 85, _login.scss */
 .loginSubmit {
   float: right;
   padding: 3%;
   background: #16A085;
   color: #fff;
 }
-/* line 68, _login.scss */
+/* line 91, _login.scss */
 .loginSubmit:hover {
   background: #169980;
 }
-/* line 72, _login.scss */
+/* line 95, _login.scss */
 .loginSubmit:focus {
   outline: none;
   background: #0F594B;
 }
-/* line 77, _login.scss */
+/* line 100, _login.scss */
 .loginSubmit:active {
   padding-top: 3.6%;
   padding-bottom: 2.4%;
   background: #178B75;
+}
+
+/* line 107, _login.scss */
+.loginSwitch {
+  border-top: 1px solid #B2B2B2;
+  margin-top: 5%;
+  padding-top: 5%;
+  overflow: auto;
+}
+/* line 114, _login.scss */
+.loginSwitch .button {
+  float: right;
+}
+
+/* line 118, _login.scss */
+.lsm {
+  padding-top: 0.6em;
+  float: left;
+}
+
+/* line 122, _login.scss */
+.formSubmit {
+  margin-top: 0.5em;
 }
 
 /* line 1, _account.scss */

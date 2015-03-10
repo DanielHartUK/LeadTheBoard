@@ -1,7 +1,8 @@
 <?php 
+
 include_once(INCLUDES_PATH . "/demoVariables.php"); 
 include_once(INCLUDES_PATH . "/refreshsql.php"); 
-include_once(INCLUDES_PATH . "/userSQL.php"); 
+include_once(INCLUDES_PATH . "/userSQL.php");
 include_once(INCLUDES_PATH . "/customisation.php"); 
 function pageURLContains($x) {
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; if (false !== strpos($url, $x)) { return true; };
@@ -50,8 +51,8 @@ if(isset($_GET['setAdmin'])) {
 } else {
 	echo '<body class="preload">';
 } ?>
-<div class="wrapper <?php if(pageURLContains($x = 'login')) { echo 'loginWrap'; }; ?>">
-	<?php if(!pageURLContains($x = 'login')) : ?>
+<div class="wrapper <?php if(isset($login)) { echo 'loginWrap'; }; ?>">
+	<?php if(!isset($login)) : ?>
 	<div class="nav" <?php if(pageURLContains($x = 'profile') OR pageURLContains($x = 'login')) { echo 'style="background-color: rgba(0, 0, 0, 0.1);"'; } ?> >
 		<?php if ($loggedIn) : ?>
 			<div class="user" id="loggedIn" onClick="openDrawer()"><img src="<?php echo $profilePic ?>" class="profilePicSmall" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9654;</span></div>		<?php else : ?>
@@ -84,7 +85,7 @@ if(isset($_GET['setAdmin'])) {
 	 					<a href="<?php echo SITE_URL; ?>/account/classes.php"><li class="classes"><span class="flaticon-multiple25 sideIcon"></span> Classes </li></a>
 						<a href="<?php echo SITE_URL; ?>/profile.php?user=<?php echo $id; ?>"><li class="profile"><span class="flaticon-profile8 sideIcon"></span> Profile </li></a>
 						<a href="<?php echo SITE_URL; ?>/account/"><li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li></a>
-						<a href=""><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
+						<a href="<?php echo SITE_URL; ?>?logOut=1"><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
 					</ul>
 			<?php } elseif ($admin == 0) { ?>
 				<div class="drawer closed" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;">
@@ -94,7 +95,7 @@ if(isset($_GET['setAdmin'])) {
 	 					<a href="<?php echo SITE_URL; ?>/account/classes.php"><li class="classes"><span class="flaticon-multiple25 sideIcon"></span> Classes </li></a>
 						<a href="<?php echo SITE_URL; ?>/profile.php?user=<?php echo $id; ?>"><li class="profile"><span class="flaticon-profile8 sideIcon"></span> Profile </li></a>
 						<a href="<?php echo SITE_URL; ?>/account/"><li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li></a>
-						<a href=""><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
+						<a href="<?php echo SITE_URL; ?>?logOut=1"><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
 					</ul>
 			<?php } else { ?>
 				<div class="drawer" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;"  >
@@ -103,7 +104,7 @@ if(isset($_GET['setAdmin'])) {
 						<a href="<?php echo SITE_URL; ?>/"><li class="Home"><span class="flaticon-home153 sideIcon"></span> Home </li></a>
 	 					<a href="<?php echo SITE_URL; ?>/account/dashboard/"><li class="Dashboard"><span class="flaticon-speed13 sideIcon"></span> Dashboard </li></a>
 						<a href="<?php echo SITE_URL; ?>/account/"><li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li></a>
-						<a href=""><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
+						<a href="<?php echo SITE_URL; ?>?logOut=1"><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
 					</ul>
 			<?php } ?>
 			    <div class="footer ">
@@ -118,7 +119,20 @@ if(isset($_GET['setAdmin'])) {
 			</div>
 		<?php endif; ?>
 	<?php endif; ?>
-	<div class="drawerMove <?php if($admin == 1 OR pageURLContains($x = 'account')) { echo 'adminCont';} ?>"> 
+	<div class="drawerMove 
+	<?php 
+	if( pageURLContains($x = 'account')	) { 
+		if(isset($login)) {
+		} else { 
+			echo 'adminCont'; 
+		} 
+	} else if (isset($admin)) { 
+		if ($admin == 1) { 
+			echo 'adminCont'; 
+		} 
+	} else { 
+
+	} ?>"> 
 
 
 

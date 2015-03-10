@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 $isOverview = 0;
 $isEdit= 1;
 
