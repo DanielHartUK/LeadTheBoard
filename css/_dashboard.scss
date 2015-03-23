@@ -106,97 +106,99 @@ margin-bottom: 25px;
     display:inline-block;
 }
 /* Pie Chart */
-.progress-pie-chart {
-  width:200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #E5E5E5;
-  position: relative;
-  margin: 0 auto;
-}
-.progress-pie-chart.gt-50 {
-  background-color: #81CE97;
-}
-
-.ppc-progress {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50% - 100px);
-  top: calc(50% - 100px);
-  width: 200px;
-  height: 200px;
-  clip: rect(0, 200px, 200px, 100px);
-}
-.ppc-progress .ppc-progress-fill {
-  @include animation(chart 1.5s);
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50% - 100px);
-  top: calc(50% - 100px);
-  width: 200px;
-  height: 200px;
-  clip: rect(0, 100px, 200px, 0);
-  background: #81CE97;
-  transform: rotate(0deg);
-}
-.ppc-progress-fill.ppc-progress-fill0, .achievements .gt-50 {
-  background: #2F9DAB;
-}
-.ppc-progress-fill.ppc-progress-fill1, .quests .gt-50 {
-  background: #AB452F;
-}
-.ppc-progress-fill.ppc-progress-fill2, .xp .gt-50 {
-  background: #FFD700;
-}
-
-.gt-50 .ppc-progress {
-  clip: rect(0, 100px, 200px, 0);
-}
-.gt-50 .ppc-progress .ppc-progress-fill {
-  clip: rect(0, 200px, 200px, 100px);
-  background: #E5E5E5;
-}
-
-.ppc-percents {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50% - 173.91304px/2);
-  top: calc(50% - 173.91304px/2);
-  width: 173.91304px;
-  height: 173.91304px;
-  background: #F4F4F4;
-  text-align: center;
-  display: table;
-}
-
-.ppc-percents span {
-  display: block;
-  font-weight: bold;
-  color: #81CE97;
-  box-sizing: border-box;
-  padding: 2%;
-
-}
-
-.pcc-percents-wrapper0 span {
-  color: #2F9DAB;
-}
-.pcc-percents-wrapper1 span {
-  color: #AB452F;
-}
-.pcc-percents-wrapper2 span {
-  color: #FFD700;
-}
-.pcc-percents-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
-.pie-info {
-  font-size: 3em;
-  opacity: 0;
+.statsCont.dashboard{
+  .progress-pie-chart {
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #E5E5E5;
+    position: relative;
+    margin: 0 auto;
+  }
+  .progress-pie-chart.gt-50 {
+    background-color: #81CE97;
+  }
+  
+  .ppc-progress {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    clip: rect(0, 200px, 200px, 100px);
+  }
+  .ppc-progress .ppc-progress-fill {
+    @include animation(chart 1.5s);
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    clip: rect(0, 100px, 200px, 0);
+    background: #81CE97;
+    transform: rotate(0deg);
+  }
+  .ppc-progress-fill.ppc-progress-fill0, .achievements .gt-50 {
+    background: #2F9DAB;
+  }
+  .ppc-progress-fill.ppc-progress-fill1, .quests .gt-50 {
+    background: #AB452F;
+  }
+  .ppc-progress-fill.ppc-progress-fill2, .xp .gt-50 {
+    background: #FFD700;
+  }
+  
+  .gt-50 .ppc-progress {
+    clip: rect(0, 100px, 200px, 0);
+  }
+  .gt-50 .ppc-progress .ppc-progress-fill {
+    clip: rect(0, 200px, 200px, 100px);
+    background: #E5E5E5;
+  }
+  
+  .ppc-percents {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 173.91304px/2);
+    top: calc(50% - 173.91304px/2);
+    width: 173.91304px;
+    height: 173.91304px;
+    background: #F4F4F4;
+    text-align: center;
+    display: table;
+  }
+  
+  .ppc-percents span {
+    display: block;
+    font-weight: bold;
+    color: #81CE97;
+    box-sizing: border-box;
+    padding: 2%;
+  
+  }
+  
+  .pcc-percents-wrapper0 span {
+    color: #2F9DAB;
+  }
+  .pcc-percents-wrapper1 span {
+    color: #AB452F;
+  }
+  .pcc-percents-wrapper2 span {
+    color: #FFD700;
+  }
+  .pcc-percents-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .pie-info {
+    font-size: 3em;
+    opacity: 0;
+  }
 }
 .achievements .pie-info {
   @include animation(icon 0.4s 0.2s forwards);
@@ -328,6 +330,9 @@ margin-bottom: 25px;
         }
 
     }
+    &.logs tbody {
+        font-size: 0.7em;
+    }
     tbody {
       tr {
         border-bottom: 1px solid #758F9B;
@@ -367,6 +372,9 @@ margin-bottom: 25px;
   float: right;
   margin-bottom: 1%;
 }
-
+.logStat {
+  display: inline-block;
+  padding: 1% 0
+}
 
 

@@ -1,10 +1,15 @@
 <?php 
 
 include_once(INCLUDES_PATH . "/demoVariables.php"); 
+if($loggedIn == 0 and !isset($login)) { 
+		$url = SITE_URL . '?error=3'; 
+		header( "Location: $url" );
+ } 
 include_once(INCLUDES_PATH . "/refreshsql.php"); 
 include_once(INCLUDES_PATH . "/userSQL.php");
 include_once(INCLUDES_PATH . "/customisation.php"); 
 include_once(INCLUDES_PATH . "/analyticsScript.php"); 
+include_once(INCLUDES_PATH . "/project.php"); 
 function pageURLContains($x) {
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; if (false !== strpos($url, $x)) { return true; };
 }
@@ -46,6 +51,16 @@ if(isset($_GET['setAdmin'])) {
     <meta name="keywords" content="LeadTheBoard!, Leaderboard, education, achievements, quests, xp, unlockables">
 	<meta name="author" content="The LeadTheBoard! Team">
     <link rel="icon" href="<?php echo SITE_URL; ?>/favicon.png" type="image/png">
+    <?php if(isset($userColourScheme)) { ?> 
+    <style>
+    	.sectionNavigation ul li.currentPage {
+    		border-color: <?php echo $userColourSecondary[$userColourScheme] ?> ;
+    	}
+       	.sectionNavigation ul li:hover {
+    		border-color: <?php echo $userColourSecondary[$userColourScheme] ?> ;
+    	}
+    </style>
+    <?php } ?>
 </head>
 <?php if(pageURLContains($x = 'achievements') OR pageURLContains($x = 'quests')) {
 	echo '<body onhashchange="highlightUnlockable()" class="preload">';
@@ -54,9 +69,9 @@ if(isset($_GET['setAdmin'])) {
 } ?>
 <div class="wrapper <?php if(isset($login)) { echo 'loginWrap'; }; ?>">
 	<?php if(!isset($login)) : ?>
-	<div class="nav" <?php if(pageURLContains($x = 'profile') OR pageURLContains($x = 'login')) { echo 'style="background-color: rgba(0, 0, 0, 0.1);"'; } ?> >
+	<div class="nav"  style="background-color: <?php echo $userColourSecondary[$userColourScheme] ?>;"  >
 		<?php if ($loggedIn) : ?>
-			<div class="user" id="loggedIn" onClick="openDrawer()"><img src="<?php echo $profilePic ?>" class="profilePicSmall" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9654;</span></div>		<?php else : ?>
+			<div class="user" <?php if(!pageURLContains($x = 'profile')) { ?>style="background-color: <?php echo $userColourSecondary[$userColourScheme] ?>;" <?php } ?> id="loggedIn" onClick="openDrawer()"><img src="<?php echo $profilePic ?>" class="profilePicSmall" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar"> <?php echo $firstName. " " .$surname; ?> <span class="downArrow">&#9654;</span></div>		<?php else : ?>
 			<a href="<?php echo SITE_URL; ?>/account/login.php" class="user"><div class="user" id="loggedOut"> Login/Register </div></a>
 		<?php endif; ?>
 		<div id="logo"><a href="/">LeadTheBoard!</a></div>
@@ -78,7 +93,8 @@ if(isset($_GET['setAdmin'])) {
 	</div>
 	<div class="contentContainer">
 		<?php if ($loggedIn) : ?>
-			<?php if ($admin == 0 AND pageURLContains($x = 'account')) { ?>
+			<?php // Keep drawer open on account
+			if ($admin == 0 AND pageURLContains($x = 'account')) { ?>
 				<div class="drawer" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;">
 					<div class="user" id="loggedIn" style="background-color: <?php echo $userColourSecondary[$userColourScheme] ?>;"><img src="<?php echo $profilePic ?>" class="profilePicSmall" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar"> <?php echo $firstName. " " .$surname; ?> </div>
 					<ul class="menu"> <h6> Menu </h6>
@@ -88,7 +104,8 @@ if(isset($_GET['setAdmin'])) {
 						<a href="<?php echo SITE_URL; ?>/account/"><li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li></a>
 						<a href="<?php echo SITE_URL; ?>?logOut=1"><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
 					</ul>
-			<?php } elseif ($admin == 0) { ?>
+			<?php } // Keep drawer open for admins
+			elseif ($admin == 0) { ?>
 				<div class="drawer closed" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;">
 					<div class="user" id="loggedIn" onClick="closeDrawer()" style="background-color: <?php echo $userColourSecondary[$userColourScheme] ?>;"><img src="<?php echo $profilePic ?>" class="profilePicSmall" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar"> <?php echo $firstName. " " .$surname; ?> <span class="close">&#215;</span></div>
 					<ul class="menu"> <h6> Menu </h6>
@@ -100,7 +117,7 @@ if(isset($_GET['setAdmin'])) {
 					</ul>
 			<?php } else { ?>
 				<div class="drawer" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;"  >
-					<div class="user" id="loggedIn" <?php if (!pageURLContains($x = 'profile')) { ?> style="background-color: #16a085;"<?php  }?>><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> </div>
+					<div class="user" id="loggedIn" <?php if (!pageURLContains($x = 'profile')) { ?> style="background-color: <?php echo $userColourSecondary[$userColourScheme] ?>;"<?php  }?>><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> </div>
 					<ul class="menu"> <h6> Admin </h6>
 						<a href="<?php echo SITE_URL; ?>/"><li class="Home"><span class="flaticon-home153 sideIcon"></span> Home </li></a>
 	 					<a href="<?php echo SITE_URL; ?>/account/dashboard/"><li class="Dashboard"><span class="flaticon-speed13 sideIcon"></span> Dashboard </li></a>
@@ -113,6 +130,9 @@ if(isset($_GET['setAdmin'])) {
 				    	<li><div class="flaticon-aries1 gallop"></div> </li>
 				    	<a href="<?php echo SITE_URL; ?>/about/"><li>About</li></a>
 				    	<a href="<?php echo SITE_URL; ?>/about/support.php"><li>Support</li></a>
+				    	<a href="<?php echo SITE_URL; ?>/about/bugs.php"><li>Bugs</li></a>
+				    	<br>
+				    	<li class="version"><?php echo $version . ' | <span class="status">' . $status . '</span>'; ?></li>
 				    	<br>
 				    	<li class="copyright">&#169; <script>document.write(new Date().getFullYear())</script> LeadTheBoard! </li>
 				    </ul>

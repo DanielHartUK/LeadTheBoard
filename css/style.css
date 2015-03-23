@@ -148,7 +148,18 @@ h2.sectionTitle {
   padding: 0%;
 }
 
-/* line 101, _general.scss */
+/* line 100, _general.scss */
+.code {
+  font-family: consolas, "cabin", sans-serif;
+  padding: 1%;
+  background: #46404C;
+  color: #FF9A27;
+  border-radius: 4px;
+  margin-bottom: 1%;
+  font-size: 0.9em;
+}
+
+/* line 110, _general.scss */
 .button {
   background: rgba(0, 0, 0, 0.42);
   display: inline-block;
@@ -157,64 +168,65 @@ h2.sectionTitle {
   border-radius: 5px;
   font-size: 1rem;
   border: 0;
+  vertical-align: top;
 }
-/* line 110, _general.scss */
+/* line 120, _general.scss */
 .button.hidden {
   display: none !important;
 }
-/* line 114, _general.scss */
+/* line 124, _general.scss */
 .button:hover {
   background: rgba(0, 0, 0, 0.51);
 }
-/* line 117, _general.scss */
+/* line 127, _general.scss */
 .button:active {
   background: rgba(0, 0, 0, 0.54);
   padding-top: 0.7em;
   padding-bottom: 0.5em;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.52);
 }
-/* line 124, _general.scss */
+/* line 134, _general.scss */
 .button.blue {
   background: #1892B6;
   color: #FFF;
 }
-/* line 128, _general.scss */
+/* line 138, _general.scss */
 .button.blue:hover {
   background: #1589AB;
 }
-/* line 131, _general.scss */
+/* line 141, _general.scss */
 .button.blue:active {
   background: #157F9E;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.3);
 }
-/* line 136, _general.scss */
+/* line 146, _general.scss */
 .button.red {
   background: #ED3600;
   color: #FFF;
 }
-/* line 140, _general.scss */
+/* line 150, _general.scss */
 .button.red:hover {
   background: #E43400;
 }
-/* line 143, _general.scss */
+/* line 153, _general.scss */
 .button.red:active {
   background: #CB2E00;
 }
-/* line 147, _general.scss */
+/* line 157, _general.scss */
 .button.orange {
   background: #ED7500;
   color: #FFF;
 }
-/* line 151, _general.scss */
+/* line 161, _general.scss */
 .button.orange:hover {
   background: #E06F00;
 }
-/* line 154, _general.scss */
+/* line 164, _general.scss */
 .button.orange:active {
   background: #D06700;
 }
 
-/* line 159, _general.scss */
+/* line 169, _general.scss */
 .warningBanner {
   padding: 1%;
   background: #E00000;
@@ -222,16 +234,16 @@ h2.sectionTitle {
   color: #FFF;
   text-align: center;
 }
-/* line 166, _general.scss */
+/* line 176, _general.scss */
 .warningBanner.blue {
   background: #009CE0;
 }
-/* line 169, _general.scss */
+/* line 179, _general.scss */
 .warningBanner.transparent {
   background: transparent;
   color: #555;
 }
-/* line 173, _general.scss */
+/* line 183, _general.scss */
 .warningBanner.cookie {
   background: transparent;
   color: #FFF;
@@ -246,11 +258,11 @@ h2.sectionTitle {
   box-sizing: border-box;
   text-align: left;
 }
-/* line 187, _general.scss */
+/* line 197, _general.scss */
 .warningBanner.cookie a {
   border-bottom: 1px dotted;
 }
-/* line 191, _general.scss */
+/* line 201, _general.scss */
 .warningBanner.cookie .close {
   float: none;
   font-size: 1.5em;
@@ -258,7 +270,7 @@ h2.sectionTitle {
   cursor: pointer;
 }
 
-/* line 199, _general.scss */
+/* line 209, _general.scss */
 .c404 {
   height: 100%;
   min-height: 100%;
@@ -267,7 +279,7 @@ h2.sectionTitle {
   padding: 2%;
 }
 
-/* line 206, _general.scss */
+/* line 216, _general.scss */
 .e404 {
   text-align: center;
   font-size: 1.4em;
@@ -276,27 +288,27 @@ h2.sectionTitle {
   margin: 0 auto;
   max-width: 800px;
 }
-/* line 214, _general.scss */
+/* line 224, _general.scss */
 .e404 p {
   margin: 1.5%;
 }
-/* line 218, _general.scss */
+/* line 228, _general.scss */
 .e404 h3 {
   font-size: 2em;
 }
-/* line 222, _general.scss */
+/* line 232, _general.scss */
 .e404 a p {
   font-size: 0.7em;
 }
 
-/* line 227, _general.scss */
+/* line 237, _general.scss */
 .invader {
   display: inline-block;
   margin: 0.5%;
   width: 5%;
 }
 
-/* line 235, _general.scss */
+/* line 245, _general.scss */
 .space1 {
   padding: 2% 0;
   background-image: url(../assets/404/space_1.svg);
@@ -305,7 +317,7 @@ h2.sectionTitle {
   background-size: contain;
 }
 
-/* line 242, _general.scss */
+/* line 252, _general.scss */
 .space2 {
   padding: 1.8% 0;
   background-image: url(../assets/404/space_3.svg);
@@ -313,7 +325,7 @@ h2.sectionTitle {
   background-size: contain;
 }
 
-/* line 248, _general.scss */
+/* line 258, _general.scss */
 .space3 {
   padding: 1.8% 0;
   background-image: url(../assets/404/space_5.svg);
@@ -321,23 +333,23 @@ h2.sectionTitle {
   background-size: contain;
 }
 
-/* line 254, _general.scss */
+/* line 264, _general.scss */
 .missiles {
   position: absolute;
   top: 0;
 }
-/* line 258, _general.scss */
+/* line 268, _general.scss */
 .missiles.ready {
   -webkit-transition: 2s linear;
   -moz-transition: 2s linear;
   transition: 2s linear;
 }
-/* line 261, _general.scss */
+/* line 271, _general.scss */
 .missiles.fire {
   top: 100px;
 }
 
-/* line 265, _general.scss */
+/* line 275, _general.scss */
 .missile {
   width: 16px;
   height: 27px;
@@ -347,29 +359,29 @@ h2.sectionTitle {
   background-size: contain;
 }
 
-/* line 274, _general.scss */
+/* line 284, _general.scss */
 .space1dead {
   padding: 2% 0;
 }
 
-/* line 277, _general.scss */
+/* line 287, _general.scss */
 .space2dead {
   padding: 1.8% 0;
 }
 
-/* line 280, _general.scss */
+/* line 290, _general.scss */
 .space3dead {
   padding: 1.8% 0;
 }
 
-/* line 284, _general.scss */
+/* line 294, _general.scss */
 .bunkers {
   position: absolute;
   bottom: 60px;
   width: 100%;
 }
 
-/* line 289, _general.scss */
+/* line 299, _general.scss */
 .bunker {
   display: inline-block;
   width: 6.6%;
@@ -380,14 +392,14 @@ h2.sectionTitle {
   background-size: contain;
 }
 
-/* line 298, _general.scss */
+/* line 308, _general.scss */
 .players {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-/* line 303, _general.scss */
+/* line 313, _general.scss */
 .player {
   width: 50px;
   height: 31px;
@@ -396,13 +408,13 @@ h2.sectionTitle {
   background-size: contain;
   margin: 0 auto;
 }
-/* line 311, _general.scss */
+/* line 321, _general.scss */
 .player.dead {
   width: 55px;
   background-image: url(../assets/404/space_9.svg);
 }
 
-/* line 316, _general.scss */
+/* line 326, _general.scss */
 p.message {
   font-family: eightMadness, sans-serif;
   color: #f00;
@@ -415,18 +427,18 @@ p.message {
   -moz-transition: 2s;
   transition: 2s;
 }
-/* line 326, _general.scss */
+/* line 336, _general.scss */
 p.message.visible {
   top: 0;
   opacity: 1;
 }
 
-/* line 331, _general.scss */
+/* line 341, _general.scss */
 .gradient-rainbow {
-  background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
-  background: -webkit-gradient(linear, left center, right center, from(red), color-stop(14%, orange), color-stop(28%, yellow), color-stop(42%, green), color-stop(56%, blue), color-stop(70%, indigo), to(violet));
-  background: -o-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
-  background: -ms-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
+  background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet) !important;
+  background: -webkit-gradient(linear, left center, right center, from(red), color-stop(14%, orange), color-stop(28%, yellow), color-stop(42%, green), color-stop(56%, blue), color-stop(70%, indigo), to(violet)) !important;
+  background: -o-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet) !important;
+  background: -ms-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet) !important;
 }
 
 /* Navigation */
@@ -473,18 +485,19 @@ p.message.visible {
 .user {
   color: #fff;
   line-height: 50px;
+  max-height: 50px;
   padding: 0 0.5%;
   cursor: pointer;
   white-space: nowrap;
 }
 
-/* line 44, _navigation.scss */
+/* line 45, _navigation.scss */
 .close {
   float: right;
   font-size: 2em;
 }
 
-/* line 48, _navigation.scss */
+/* line 49, _navigation.scss */
 .notificationIcon {
   text-align: left;
   background-image: url(../assets/bell.png);
@@ -499,18 +512,18 @@ p.message.visible {
   line-height: 50px;
   text-align: right;
 }
-/* line 62, _navigation.scss */
+/* line 63, _navigation.scss */
 .notificationIcon.loggedOut {
   background-image: none;
 }
 
-/* line 66, _navigation.scss */
+/* line 67, _navigation.scss */
 .downArrow {
   font-size: 0.7em;
   margin-left: 0.5em;
 }
 
-/* line 70, _navigation.scss */
+/* line 71, _navigation.scss */
 .drawer {
   position: fixed;
   display: block;
@@ -526,17 +539,17 @@ p.message.visible {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 83, _navigation.scss */
+/* line 84, _navigation.scss */
 .drawer .user {
   height: 50px;
   padding: 0px 2.5%;
 }
-/* line 88, _navigation.scss */
+/* line 89, _navigation.scss */
 .drawer.closed {
   left: -346px;
 }
 
-/* line 92, _navigation.scss */
+/* line 93, _navigation.scss */
 ul.menu {
   list-style: none;
   color: #FFF;
@@ -544,25 +557,25 @@ ul.menu {
   padding: 0%;
   font-size: 1.1em;
 }
-/* line 99, _navigation.scss */
+/* line 100, _navigation.scss */
 ul.menu li {
   padding: 4%;
   margin: 2%;
   border-radius: 4px;
   font-weight: 700;
 }
-/* line 105, _navigation.scss */
+/* line 106, _navigation.scss */
 ul.menu li:hover {
   background-color: rgba(0, 0, 0, 0.28);
 }
 
-/* line 113, _navigation.scss */
+/* line 114, _navigation.scss */
 .sideIcon {
   margin-right: 4%;
   font-weight: 400;
 }
 
-/* line 117, _navigation.scss */
+/* line 118, _navigation.scss */
 .sectionNavigation {
   padding: 1% 0;
   width: 80%;
@@ -570,17 +583,17 @@ ul.menu li:hover {
   -moz-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 123, _navigation.scss */
+/* line 124, _navigation.scss */
 .sectionNavigation ul {
   margin: 0;
   padding: 0;
   border-bottom: 2px solid #808080;
 }
-/* line 128, _navigation.scss */
+/* line 129, _navigation.scss */
 .sectionNavigation ul a {
   color: inherit;
 }
-/* line 131, _navigation.scss */
+/* line 132, _navigation.scss */
 .sectionNavigation ul li {
   display: inline-block;
   margin: 0 2% -2px 0;
@@ -588,12 +601,16 @@ ul.menu li:hover {
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
-/* line 138, _navigation.scss */
+/* line 139, _navigation.scss */
 .sectionNavigation ul li.currentPage {
   border-bottom: 2px solid #16a085;
 }
+/* line 142, _navigation.scss */
+.sectionNavigation ul li:hover {
+  border-bottom: 2px solid #16a085;
+}
 
-/* line 144, _navigation.scss */
+/* line 148, _navigation.scss */
 .footer {
   position: absolute;
   bottom: 0;
@@ -603,7 +620,7 @@ ul.menu li:hover {
   padding: 2%;
   box-sizing: border-box;
 }
-/* line 153, _navigation.scss */
+/* line 157, _navigation.scss */
 .footer.admin {
   clear: right;
   width: auto;
@@ -615,7 +632,7 @@ ul.menu li:hover {
   white-space: nowrap;
 }
 
-/* line 164, _navigation.scss */
+/* line 168, _navigation.scss */
 .gallop {
   -webkit-transition: 6s ease;
   -moz-transition: 6s ease;
@@ -624,27 +641,22 @@ ul.menu li:hover {
   left: 0px;
 }
 
-/* line 169, _navigation.scss */
+/* line 173, _navigation.scss */
 ul.footerLinks {
   list-style: none;
   margin: 0;
   padding: 1%;
   font-size: 0.8em;
 }
-/* line 175, _navigation.scss */
+/* line 179, _navigation.scss */
 ul.footerLinks li {
   display: inline-block;
   margin-right: 1%;
   margin-bottom: 2%;
 }
 
-/* line 182, _navigation.scss */
-.sectionNavigation ul li.current, .sectionNavigation ul li:hover {
-  border-bottom: 2px solid #16a085;
-}
-
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  /* line 186, _navigation.scss */
+  /* line 187, _navigation.scss */
   .notificationIcon {
     background-image: url(../assets/bell2x.png);
   }
@@ -1149,83 +1161,245 @@ p.unlockableMessage {
 /* line 1, _profile.scss */
 .profileTop {
   width: 100%;
-  background: #46404C;
-  color: #FFF;
+  color: #555;
   margin-top: -50px;
-  padding: 3% 3% 1% 3%;
-  padding-top: calc(3% + 50px);
+  padding: 1%;
+  padding-top: calc(1% + 50px);
   box-sizing: border-box;
-  background-image: url(../assets/pattern.png);
-  background-size: 72px;
-  background-position: center top;
-  background-attachment: fixed;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Hussar", "Cabin", sans-serif;
 }
-/* line 14, _profile.scss */
+/* line 11, _profile.scss */
+.profileTop .profileInfo {
+  overflow: auto;
+  width: 15%;
+  text-align: center;
+  min-width: 180px;
+}
+/* line 18, _profile.scss */
+.profileTop .profileInfo h3 {
+  line-height: 0.9em;
+  text-transform: uppercase;
+}
+/* line 22, _profile.scss */
+.profileTop .profileInfo h3 span {
+  font-size: 0.8em;
+}
+/* line 28, _profile.scss */
 .profileTop .profilePicRound {
-  border: 4px solid #E4E4E4;
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.62);
   margin: 0;
-  margin-right: 3%;
-  float: left;
+  height: 125px;
+  width: 125px;
+  border-radius: 108px;
   background: #FFF;
+  border: 6px solid #064E67;
 }
 
-/* line 24, _profile.scss */
+/* line 38, _profile.scss */
 .clanTag {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 700;
+  color: #05364C;
+}
+
+/* Pie Chart */
+/* line 47, _profile.scss */
+.profileStats h3 {
+  text-align: left;
+}
+/* line 50, _profile.scss */
+.profileStats h5 {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin: 0;
+  border-bottom: 1px solid;
+}
+/* line 56, _profile.scss */
+.profileStats .progress-pie-chart {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  position: relative;
+  margin: 0 auto;
+}
+/* line 64, _profile.scss */
+.profileStats .progress-pie-chart.gt-50 {
+  background-color: #81CE97;
+}
+/* line 68, _profile.scss */
+.profileStats .ppc-progress {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  clip: rect(0, 100px, 100px, 50px);
+}
+/* line 78, _profile.scss */
+.profileStats .ppc-progress .ppc-progress-fill {
+  -webkit-animation: chart 1.5s;
+  -moz-animation: chart 1.5s;
+  animation: chart 1.5s;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 50px);
+  top: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  clip: rect(0, 50px, 100px, 0);
+  background: #81CE97;
+  transform: rotate(0deg);
+}
+/* line 91, _profile.scss */
+.profileStats .ppc-progress-fill.ppc-progress-fill0, .profileStats .achievements .gt-50 {
+  background: #2F9DAB;
+}
+/* line 94, _profile.scss */
+.profileStats .ppc-progress-fill.ppc-progress-fill1, .profileStats .quests .gt-50 {
+  background: #AB452F;
+}
+/* line 97, _profile.scss */
+.profileStats .ppc-progress-fill.ppc-progress-fill2, .profileStats .xp .gt-50 {
+  background: #FFD700;
+}
+/* line 101, _profile.scss */
+.profileStats .gt-50 .ppc-progress {
+  clip: rect(0, 50px, 100px, 0);
+}
+/* line 104, _profile.scss */
+.profileStats .gt-50 .ppc-progress .ppc-progress-fill {
+  clip: rect(0, 100px, 100px, 50px);
+  background: #E5E5E5;
+}
+/* line 109, _profile.scss */
+.profileStats .ppc-percents {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 86px/2);
+  top: calc(50% - 85px/2);
+  width: 86px;
+  height: 85px;
+  background: #F4F4F4;
+  text-align: center;
+  display: table;
+}
+/* line 122, _profile.scss */
+.profileStats .ppc-percents span {
+  display: block;
+  font-weight: bold;
+  color: #81CE97;
+  box-sizing: border-box;
+  padding: 2%;
+}
+/* line 131, _profile.scss */
+.profileStats .pcc-percents-wrapper0 span {
+  color: #2F9DAB;
+}
+/* line 134, _profile.scss */
+.profileStats .pcc-percents-wrapper1 span {
+  color: #AB452F;
+}
+/* line 137, _profile.scss */
+.profileStats .pcc-percents-wrapper2 span {
+  color: #FFD700;
+}
+/* line 140, _profile.scss */
+.profileStats .pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 144, _profile.scss */
+.profileStats .pie-info {
+  font-size: 3em;
+  opacity: 0;
+}
+
+/* line 149, _profile.scss */
+.profileStats {
+  padding: 1%;
+  width: 85%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 250px;
+}
+/* line 157, _profile.scss */
+.profileStats .profileStatBox {
+  width: 50%;
+  height: 50%;
+  vertical-align: top;
+}
+/* line 162, _profile.scss */
+.profileStats .profileStatBox .profileChart {
+  display: inline-block;
+  vertical-align: top;
+  width: 114px;
+  height: 114px;
+}
+/* line 168, _profile.scss */
+.profileStats .profileStatBox .profileChart .position {
+  line-height: 114px;
+  text-align: center;
+  font-size: 1.5em;
+}
+/* line 174, _profile.scss */
+.profileStats .profileStatBox .profileStat {
+  display: inline-block;
+}
+/* line 179, _profile.scss */
+.profileStats .pie-info {
+  font-size: 1.5em;
   color: #fff;
 }
-
-/* line 30, _profile.scss */
-.proStat {
-  display: inline-block;
-  padding: 0 2%;
-  border-right: 1px solid rgba(0, 0, 0, 0.46);
-  text-align: center;
-  font-size: 1.3em;
-}
-/* line 37, _profile.scss */
-.proStat:first-child {
-  padding-left: 0;
-}
-/* line 40, _profile.scss */
-.proStat:last-child {
-  border: none;
-}
-
-/* line 44, _profile.scss */
-.profileStats {
-  background-color: #28252C;
-  color: white;
-  padding: 1%;
-}
-/* line 49, _profile.scss */
+/* line 184, _profile.scss */
 .profileStats .proIcon {
   font-size: 1.5em;
   color: rgba(0, 0, 0, 0.46);
 }
 
-/* line 55, _profile.scss */
+/* line 190, _profile.scss */
 .dark .proStat {
   border-right: 1px solid rgba(255, 255, 255, 0.46);
 }
-/* line 58, _profile.scss */
+/* line 193, _profile.scss */
 .dark .proStat:last-child {
   border-right: none;
 }
-/* line 62, _profile.scss */
+/* line 197, _profile.scss */
 .dark .profileStats .proIcon {
   color: rgba(255, 255, 255, 0.46);
 }
 
-/* line 69, _profile.scss */
+/* line 204, _profile.scss */
 .editProfile.button {
   float: right;
 }
 
-/* line 73, _profile.scss */
+/* line 208, _profile.scss */
 .profileBox {
   width: 50%;
   padding: 1%;
@@ -1234,17 +1408,17 @@ p.unlockableMessage {
   vertical-align: top;
 }
 
-/* line 80, _profile.scss */
+/* line 215, _profile.scss */
 .profileAchievements.profileBox {
   padding-right: 0.5%;
 }
 
-/* line 84, _profile.scss */
+/* line 219, _profile.scss */
 .profileQuests.profileBox {
   padding-left: 0.5%;
 }
 
-/* line 90, _profile.scss */
+/* line 225, _profile.scss */
 .unlockableIcon.profileAchievement {
   border-radius: 60px;
   border: 4px solid #E4E4E4;
@@ -1394,8 +1568,8 @@ h2.sectionTitle.statsTitle {
 }
 
 /* Pie Chart */
-/* line 109, _dashboard.scss */
-.progress-pie-chart {
+/* line 110, _dashboard.scss */
+.statsCont.dashboard .progress-pie-chart {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -1403,14 +1577,12 @@ h2.sectionTitle.statsTitle {
   position: relative;
   margin: 0 auto;
 }
-
-/* line 117, _dashboard.scss */
-.progress-pie-chart.gt-50 {
+/* line 118, _dashboard.scss */
+.statsCont.dashboard .progress-pie-chart.gt-50 {
   background-color: #81CE97;
 }
-
-/* line 121, _dashboard.scss */
-.ppc-progress {
+/* line 122, _dashboard.scss */
+.statsCont.dashboard .ppc-progress {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -1420,9 +1592,8 @@ h2.sectionTitle.statsTitle {
   height: 200px;
   clip: rect(0, 200px, 200px, 100px);
 }
-
-/* line 131, _dashboard.scss */
-.ppc-progress .ppc-progress-fill {
+/* line 132, _dashboard.scss */
+.statsCont.dashboard .ppc-progress .ppc-progress-fill {
   -webkit-animation: chart 1.5s;
   -moz-animation: chart 1.5s;
   animation: chart 1.5s;
@@ -1437,35 +1608,29 @@ h2.sectionTitle.statsTitle {
   background: #81CE97;
   transform: rotate(0deg);
 }
-
-/* line 144, _dashboard.scss */
-.ppc-progress-fill.ppc-progress-fill0, .achievements .gt-50 {
+/* line 145, _dashboard.scss */
+.statsCont.dashboard .ppc-progress-fill.ppc-progress-fill0, .statsCont.dashboard .achievements .gt-50 {
   background: #2F9DAB;
 }
-
-/* line 147, _dashboard.scss */
-.ppc-progress-fill.ppc-progress-fill1, .quests .gt-50 {
+/* line 148, _dashboard.scss */
+.statsCont.dashboard .ppc-progress-fill.ppc-progress-fill1, .statsCont.dashboard .quests .gt-50 {
   background: #AB452F;
 }
-
-/* line 150, _dashboard.scss */
-.ppc-progress-fill.ppc-progress-fill2, .xp .gt-50 {
+/* line 151, _dashboard.scss */
+.statsCont.dashboard .ppc-progress-fill.ppc-progress-fill2, .statsCont.dashboard .xp .gt-50 {
   background: #FFD700;
 }
-
-/* line 154, _dashboard.scss */
-.gt-50 .ppc-progress {
+/* line 155, _dashboard.scss */
+.statsCont.dashboard .gt-50 .ppc-progress {
   clip: rect(0, 100px, 200px, 0);
 }
-
-/* line 157, _dashboard.scss */
-.gt-50 .ppc-progress .ppc-progress-fill {
+/* line 158, _dashboard.scss */
+.statsCont.dashboard .gt-50 .ppc-progress .ppc-progress-fill {
   clip: rect(0, 200px, 200px, 100px);
   background: #E5E5E5;
 }
-
-/* line 162, _dashboard.scss */
-.ppc-percents {
+/* line 163, _dashboard.scss */
+.statsCont.dashboard .ppc-percents {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -1477,58 +1642,52 @@ h2.sectionTitle.statsTitle {
   text-align: center;
   display: table;
 }
-
-/* line 175, _dashboard.scss */
-.ppc-percents span {
+/* line 176, _dashboard.scss */
+.statsCont.dashboard .ppc-percents span {
   display: block;
   font-weight: bold;
   color: #81CE97;
   box-sizing: border-box;
   padding: 2%;
 }
-
-/* line 184, _dashboard.scss */
-.pcc-percents-wrapper0 span {
+/* line 185, _dashboard.scss */
+.statsCont.dashboard .pcc-percents-wrapper0 span {
   color: #2F9DAB;
 }
-
-/* line 187, _dashboard.scss */
-.pcc-percents-wrapper1 span {
+/* line 188, _dashboard.scss */
+.statsCont.dashboard .pcc-percents-wrapper1 span {
   color: #AB452F;
 }
-
-/* line 190, _dashboard.scss */
-.pcc-percents-wrapper2 span {
+/* line 191, _dashboard.scss */
+.statsCont.dashboard .pcc-percents-wrapper2 span {
   color: #FFD700;
 }
-
-/* line 193, _dashboard.scss */
-.pcc-percents-wrapper {
+/* line 194, _dashboard.scss */
+.statsCont.dashboard .pcc-percents-wrapper {
   display: table-cell;
   vertical-align: middle;
 }
-
-/* line 197, _dashboard.scss */
-.pie-info {
+/* line 198, _dashboard.scss */
+.statsCont.dashboard .pie-info {
   font-size: 3em;
   opacity: 0;
 }
 
-/* line 201, _dashboard.scss */
+/* line 203, _dashboard.scss */
 .achievements .pie-info {
   -webkit-animation: icon 0.4s 0.2s forwards;
   -moz-animation: icon 0.4s 0.2s forwards;
   animation: icon 0.4s 0.2s forwards;
 }
 
-/* line 204, _dashboard.scss */
+/* line 206, _dashboard.scss */
 .quests .pie-info {
   -webkit-animation: icon 0.4s 0.4s forwards;
   -moz-animation: icon 0.4s 0.4s forwards;
   animation: icon 0.4s 0.4s forwards;
 }
 
-/* line 207, _dashboard.scss */
+/* line 209, _dashboard.scss */
 .xp .pie-info {
   -webkit-animation: icon 0.4s 0.6s forwards;
   -moz-animation: icon 0.4s 0.6s forwards;
@@ -1559,28 +1718,28 @@ h2.sectionTitle.statsTitle {
     opacity: 1;
   }
 }
-/* line 214, _dashboard.scss */
+/* line 216, _dashboard.scss */
 .achievements .totals {
   -webkit-animation: fadeDown 0.4s 0.3s forwards;
   -moz-animation: fadeDown 0.4s 0.3s forwards;
   animation: fadeDown 0.4s 0.3s forwards;
 }
 
-/* line 217, _dashboard.scss */
+/* line 219, _dashboard.scss */
 .quests .totals {
   -webkit-animation: fadeDown 0.4s 0.5s forwards;
   -moz-animation: fadeDown 0.4s 0.5s forwards;
   animation: fadeDown 0.4s 0.5s forwards;
 }
 
-/* line 220, _dashboard.scss */
+/* line 222, _dashboard.scss */
 .xp .totals {
   -webkit-animation: fadeDown 0.4s 0.7s forwards;
   -moz-animation: fadeDown 0.4s 0.7s forwards;
   animation: fadeDown 0.4s 0.7s forwards;
 }
 
-/* line 223, _dashboard.scss */
+/* line 225, _dashboard.scss */
 .totals {
   font-size: 1.2em;
   text-align: center;
@@ -1590,7 +1749,7 @@ h2.sectionTitle.statsTitle {
   font-weight: 700;
   opacity: 0;
 }
-/* line 232, _dashboard.scss */
+/* line 234, _dashboard.scss */
 .totals span {
   font-size: 1.5em;
 }
@@ -1625,7 +1784,7 @@ h2.sectionTitle.statsTitle {
     opacity: 1;
   }
 }
-/* line 246, _dashboard.scss */
+/* line 248, _dashboard.scss */
 .topStudents {
   margin-top: 10%;
   opacity: 0;
@@ -1635,7 +1794,7 @@ h2.sectionTitle.statsTitle {
   -moz-animation: fadeDown 0.4s 0.9s forwards;
   animation: fadeDown 0.4s 0.9s forwards;
 }
-/* line 253, _dashboard.scss */
+/* line 255, _dashboard.scss */
 .topStudents h5 {
   border-top: 1px solid #C8C8C8;
   text-transform: uppercase;
@@ -1644,11 +1803,11 @@ h2.sectionTitle.statsTitle {
   margin: 0;
 }
 
-/* line 261, _dashboard.scss */
+/* line 263, _dashboard.scss */
 .student {
   margin-bottom: 2%;
 }
-/* line 264, _dashboard.scss */
+/* line 266, _dashboard.scss */
 .student .pos {
   display: inline-block;
   vertical-align: top;
@@ -1657,13 +1816,13 @@ h2.sectionTitle.statsTitle {
   width: 10%;
   line-height: 40px;
 }
-/* line 272, _dashboard.scss */
+/* line 274, _dashboard.scss */
 .student .topStudentDetails {
   display: inline-block;
   vertical-align: top;
   width: 90%;
 }
-/* line 277, _dashboard.scss */
+/* line 279, _dashboard.scss */
 .student .topStudentDetails img {
   float: left;
   height: 40px;
@@ -1673,34 +1832,34 @@ h2.sectionTitle.statsTitle {
   border-radius: 29px;
   border: none;
 }
-/* line 287, _dashboard.scss */
+/* line 289, _dashboard.scss */
 .student .topStudentDetails h4 {
   margin: 0;
   font-size: 1.2em;
 }
-/* line 292, _dashboard.scss */
+/* line 294, _dashboard.scss */
 .student .topStudentDetails p {
   margin: 0;
 }
 
-/* line 298, _dashboard.scss */
+/* line 300, _dashboard.scss */
 .dashboardTable {
   width: 100%;
   text-align: left;
   border: 1px solid #758F9B;
 }
-/* line 303, _dashboard.scss */
+/* line 305, _dashboard.scss */
 .dashboardTable thead {
   font-size: 1.1em;
   box-sizing: border-box;
 }
-/* line 307, _dashboard.scss */
+/* line 309, _dashboard.scss */
 .dashboardTable .boardIcon {
   color: inherit;
   float: none;
   margin: 0;
 }
-/* line 312, _dashboard.scss */
+/* line 314, _dashboard.scss */
 .dashboardTable tr.headerDash th {
   padding: 1%;
   color: #094764;
@@ -1710,58 +1869,68 @@ h2.sectionTitle.statsTitle {
   box-sizing: border-box;
   background: #96B8C8;
 }
-/* line 321, _dashboard.scss */
+/* line 323, _dashboard.scss */
 .dashboardTable tr.headerDash th.hStudents, .dashboardTable tr.headerDash th.hAch, .dashboardTable tr.headerDash th.hQuests {
   width: 10%;
   text-align: center;
 }
-/* line 326, _dashboard.scss */
+/* line 328, _dashboard.scss */
 .dashboardTable tr.headerDash th:last-child {
   border-right: 1px solid #758F9B;
 }
-/* line 332, _dashboard.scss */
+/* line 333, _dashboard.scss */
+.dashboardTable.logs tbody {
+  font-size: 0.7em;
+}
+/* line 337, _dashboard.scss */
 .dashboardTable tbody tr {
   border-bottom: 1px solid #758F9B;
   box-sizing: border-box;
   background: #FFF;
 }
-/* line 337, _dashboard.scss */
+/* line 342, _dashboard.scss */
 .dashboardTable tbody tr:nth-child(2n) {
   background: #F9F9F9;
 }
-/* line 340, _dashboard.scss */
+/* line 345, _dashboard.scss */
 .dashboardTable tbody tr:hover {
   background: #FFFFC1;
 }
-/* line 344, _dashboard.scss */
+/* line 349, _dashboard.scss */
 .dashboardTable tbody td {
   padding: 1%;
   font-size: 1.1em;
 }
-/* line 348, _dashboard.scss */
+/* line 353, _dashboard.scss */
 .dashboardTable tbody td.tStudents, .dashboardTable tbody td.tAch, .dashboardTable tbody td.tQuests {
   width: 10%;
   text-align: center;
 }
-/* line 352, _dashboard.scss */
+/* line 357, _dashboard.scss */
 .dashboardTable tbody td.tActions {
   width: 15%;
   font-size: 1.2em;
   opacity: 1;
 }
-/* line 357, _dashboard.scss */
+/* line 362, _dashboard.scss */
 .dashboardTable tbody td .flaticon-cogwheel25.action {
   color: #F26E00;
 }
-/* line 360, _dashboard.scss */
+/* line 365, _dashboard.scss */
 .dashboardTable tbody td .flaticon-delete84.action {
   color: #F00000;
 }
 
-/* line 366, _dashboard.scss */
+/* line 371, _dashboard.scss */
 .clearLogs {
   float: right;
   margin-bottom: 1%;
+}
+
+/* line 375, _dashboard.scss */
+.logStat {
+  display: inline-block;
+  padding: 1% 0;
 }
 
 /* line 1, _login.scss */
@@ -2323,45 +2492,412 @@ h2.sectionTitle.statsTitle {
   border-color: red;
 }
 
+/* line 1, _notifications.scss */
+.notificationPopupCont {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  -webkit-animation: notifyPop 10s linear forwards;
+  -moz-animation: notifyPop 10s linear forwards;
+  animation: notifyPop 10s linear forwards;
+}
+/* line 11, _notifications.scss */
+.notificationPopupCont h3 {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+/* line 17, _notifications.scss */
+.notificationPopupCont p {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-animation: text1 10s linear forwards;
+  -moz-animation: text1 10s linear forwards;
+  animation: text1 10s linear forwards;
+}
+
+/* line 28, _notifications.scss */
+.notificationPopup {
+  margin: 0 auto;
+  height: 80px;
+  box-sizing: border-box;
+  display: inline-block;
+  box-shadow: 0px 0px 10px #888;
+}
+/* line 35, _notifications.scss */
+.notificationPopup .notificationInfo {
+  padding: 1em;
+  margin-right: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  height: 58px;
+  box-sizing: border-box;
+  -webkit-animation: texti 10s linear forwards;
+  -moz-animation: texti 10s linear forwards;
+  animation: texti 10s linear forwards;
+}
+
+/* line 46, _notifications.scss */
+.achievementUnlocked {
+  border-radius: 80px;
+}
+/* line 49, _notifications.scss */
+.achievementUnlocked .icon {
+  height: 80px;
+  width: 80px;
+  border-radius: 80px;
+  background-size: contain;
+  background-position: 50% 50%;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../assets/achievements/goat.jpg);
+}
+/* line 59, _notifications.scss */
+.achievementUnlocked .icon .lock {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 22px;
+  box-sizing: border-box;
+  border-radius: 80px;
+  -webkit-animation: lockfade 10s linear forwards;
+  -moz-animation: lockfade 10s linear forwards;
+  animation: lockfade 10s linear forwards;
+}
+/* line 68, _notifications.scss */
+.achievementUnlocked .icon .lock .lockPart {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  background-position: 50% 50%;
+}
+/* line 78, _notifications.scss */
+.achievementUnlocked .icon .lock .locktop {
+  background-image: url(../assets/locktop.png);
+  background-position: 50% 50%;
+  -webkit-animation: lock 10s linear forwards;
+  -moz-animation: lock 10s linear forwards;
+  animation: lock 10s linear forwards;
+}
+/* line 83, _notifications.scss */
+.achievementUnlocked .icon .lock .lockBottom {
+  background-image: url(../assets/lockBottom.png);
+}
+
+@-webkit-keyframes notifyPop {
+  0% {
+    bottom: -7em;
+  }
+  2% {
+    bottom: 2em;
+  }
+  4% {
+    bottom: 0em;
+  }
+  96% {
+    bottom: 0em;
+  }
+  98% {
+    bottom: 2em;
+  }
+  100% {
+    bottom: -7em;
+  }
+}
+@-moz-keyframes notifyPop {
+  0% {
+    bottom: -7em;
+  }
+  2% {
+    bottom: 2em;
+  }
+  4% {
+    bottom: 0em;
+  }
+  96% {
+    bottom: 0em;
+  }
+  98% {
+    bottom: 2em;
+  }
+  100% {
+    bottom: -7em;
+  }
+}
+@keyframes notifyPop {
+  0% {
+    bottom: -7em;
+  }
+  2% {
+    bottom: 2em;
+  }
+  4% {
+    bottom: 0em;
+  }
+  96% {
+    bottom: 0em;
+  }
+  98% {
+    bottom: 2em;
+  }
+  100% {
+    bottom: -7em;
+  }
+}
+@-webkit-keyframes texti {
+  0% {
+    height: 58px;
+  }
+  8% {
+    height: 58px;
+  }
+  9% {
+    height: 80px;
+  }
+  91% {
+    height: 80px;
+  }
+  92% {
+    height: 58px;
+  }
+  100% {
+    height: 58px;
+  }
+}
+@-moz-keyframes texti {
+  0% {
+    height: 58px;
+  }
+  8% {
+    height: 58px;
+  }
+  9% {
+    height: 80px;
+  }
+  91% {
+    height: 80px;
+  }
+  92% {
+    height: 58px;
+  }
+  100% {
+    height: 58px;
+  }
+}
+@keyframes texti {
+  0% {
+    height: 58px;
+  }
+  8% {
+    height: 58px;
+  }
+  9% {
+    height: 80px;
+  }
+  91% {
+    height: 80px;
+  }
+  92% {
+    height: 58px;
+  }
+  100% {
+    height: 58px;
+  }
+}
+@-webkit-keyframes text1 {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 0;
+  }
+  9% {
+    opacity: 1;
+  }
+  91% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes text1 {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 0;
+  }
+  9% {
+    opacity: 1;
+  }
+  91% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes text1 {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 0;
+  }
+  9% {
+    opacity: 1;
+  }
+  91% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes lockfade {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes lockfade {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes lockfade {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes lock {
+  0% {
+    background-position: 50% 50%;
+  }
+  4% {
+    background-position: 50% 50%;
+  }
+  6% {
+    background-position: 50% 40%;
+  }
+  100% {
+    background-position: 50% 40%;
+  }
+}
+@-moz-keyframes lock {
+  0% {
+    background-position: 50% 50%;
+  }
+  4% {
+    background-position: 50% 50%;
+  }
+  6% {
+    background-position: 50% 40%;
+  }
+  100% {
+    background-position: 50% 40%;
+  }
+}
+@keyframes lock {
+  0% {
+    background-position: 50% 50%;
+  }
+  4% {
+    background-position: 50% 50%;
+  }
+  6% {
+    background-position: 50% 40%;
+  }
+  100% {
+    background-position: 50% 40%;
+  }
+}
 @media screen and (max-width: 1024px) {
-  /* line 24, style.scss */
+  /* line 25, style.scss */
   .mainBlock {
     width: 100%;
   }
 
-  /* line 27, style.scss */
+  /* line 28, style.scss */
   .sideBlock {
     display: none;
   }
 
-  /* line 30, style.scss */
+  /* line 31, style.scss */
   .sectionNavigation {
     width: 100%;
   }
 }
 @media screen and (max-width: 760px) {
-  /* line 40, style.scss */
+  /* line 41, style.scss */
   .headerBoard th {
     padding: 2%;
   }
 
-  /* line 43, style.scss */
+  /* line 44, style.scss */
   .boardAvatar, #headPro {
     display: none;
   }
 
-  /* line 46, style.scss */
+  /* line 47, style.scss */
   #headPos, #headAch, #headQuests, #headXP {
     text-align: center;
   }
 
-  /* line 49, style.scss */
+  /* line 50, style.scss */
   .boardEntry td.achievements, .boardEntry td.quests, .boardEntry td.xp {
     width: 10%;
     text-align: center;
   }
 
-  /* line 53, style.scss */
+  /* line 54, style.scss */
   .boardIcon {
     margin: 0 auto;
     float: none;

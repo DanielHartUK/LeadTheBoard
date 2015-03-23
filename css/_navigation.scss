@@ -37,6 +37,7 @@
 .user {
     color: #fff;
     line-height: $navHeight;
+    max-height: $navHeight;
     padding: 0 0.5%;
     cursor: pointer;
     white-space: nowrap;
@@ -138,6 +139,9 @@ ul.menu {
             &.currentPage {
                 border-bottom: 2px solid #16a085;
             }
+            &:hover {
+                border-bottom: 2px solid #16a085;
+            }
         }
     }
 }
@@ -178,9 +182,6 @@ ul.footerLinks {
         margin-bottom: 2%;
 
     }
-}
-.sectionNavigation ul li.current, .sectionNavigation ul li:hover {
-    border-bottom: 2px solid #16a085;
 }
 @include hidpi(2) {
     .notificationIcon {

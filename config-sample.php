@@ -28,6 +28,9 @@ $siteURL = 'http://localhost';
 //Support Email
 $supportEmail = 'example@example.com';
 
+// Enable Analytics? (Experimental)
+$analyticsEnabled = 0;
+
 // Consistent paths
 require_once('consistentPaths.php');
 ?>

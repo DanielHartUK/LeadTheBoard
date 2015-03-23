@@ -33,4 +33,6 @@ defined("ACCOUNT_PATH")
   
 defined("ACHIEVEMENTICONS_PATH")
     or define("ACHIEVEMENTICONS_PATH", realpath(dirname(__FILE__) . '/assets/achievements'));
- 
+
+defined("UPLOADS_PATH")
+    or define("UPLOADS_PATH", realpath(dirname(__FILE__) . '/assets/uploads'));

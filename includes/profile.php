@@ -134,6 +134,43 @@ while($count < $achievementsXCount) {
 	$count++;
 };
 
+// Possible Quest XP
+$selQuestPosX = "SELECT QuestProgress.UserID, Quests.XPValue, QuestProgress.QuestProgress          
+FROM `QuestProgress` 
+INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$profileUID';";
+$qXp = mysqli_query($conn, $selQuestPosX) or die(mysqli_error());
+$questsXpCount = $qXp->num_rows;
+$questsXp = array();
+
+while($row = mysqli_fetch_assoc($qXp)) {
+   $questsXp[] = $row;
+}
+$count = 0;
+$qpXP = 0;
+while($count < $questsXpCount) {
+   $qpXP = $qpXP + $questsXp[$count]['XPValue'];
+   $count++;
+};
+
+// Possible Achievements XP
+$selAchievementsPosX = "SELECT AchievementProgress.UserID, Achievements.XPValue, AchievementProgress.AchievementProgress          
+FROM `AchievementProgress` 
+INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.UserID='$profileUID';";
+$aXp = mysqli_query($conn, $selAchievementsPosX) or die(mysqli_error());
+$achievementsXpCount = $aXp->num_rows;
+$achievementsXp = array();
+
+while($row = mysqli_fetch_assoc($aXp)) {
+   $achievementsXp[] = $row;
+}
+$count = 0;
+$apXP = 0;
+while($count < $achievementsXpCount) {
+   $apXP = $apXP + $achievementsXp[$count]['XPValue'];
+   $count++;
+};
+
+
 // Awards XP
 $selXPAwards = "SELECT * FROM XPAwards WHERE UserID='$profileUID'";
 $xpA = mysqli_query($conn, $selXPAwards) or die(mysqli_error());
@@ -148,6 +185,8 @@ while($count < $XPAwardRowCount) {
 	$XPa = $XPa + $xpAwards[$count]['XP'];
 	$count++;
 };
+$ProfileXp = $qXP + $aXP + $XPa; 
+
 
 // Achievements unlocked
 $sql = "SELECT AchievementProgress.UserID, AchievementProgress.AchievementID, AchievementProgress.AchievementProgress, Achievements.Name, Achievements.Description, Achievements.XPValue, Achievements.Icon           
@@ -173,6 +212,10 @@ while($row = mysqli_fetch_assoc($questsFullaq)) {
    $questsFulla[] = $row;
 }
 
+
+
+
+
 mysqli_close($conn); // Close the connection 
 
 $ProfileFirstName = $users[0]['Name'];
@@ -186,7 +229,6 @@ if( empty( $clan[0]['Name'] ) ) {
 $ProfileClass = $classes[0]['Name'];
 $ProfileUnreadNotifications = 0;
 $ProfileProfilePic = '/assets/uploads/' . $users[0]['Avatar'];
-$ProfileXp = $qXP + $aXP + $XPa; 
 $ProfileUserPosition = $users[0]['Position']; // Leaderboard position
 $ProfileAchievementsUnlocked = $achievementPCRowCount; // Achievements completed
 $ProfileAchievementsUnlockable = $achievementPRowCount; // Achievements available
@@ -194,5 +236,6 @@ $ProfileQuestsComplete = $questsPCRowCount; // Quests Compelted
 $ProfileQuestsAvailable = $questsPRowCount; // Quests currently available
 $ProfileQuestsAvailableAccumulation = $questsPRowCount; // All Quests that were available for this class
 $ProfileUserColourScheme = $usersO[0]['ColourScheme'];
-
+$possibleXP = $qpXP + $apXP + $XPa; 
+$totalXP = $qXP + $aXP + $XPa; 
 

@@ -14,6 +14,7 @@ include_once(INCLUDES_PATH . "/demoVariables.php");
 	if($loggedIn == 1) { 
 	include(HUB_PATH . "/leaderboard.php");
 	} else { 
+	$noLogin = 1;
 	include(ACCOUNT_PATH . "/login.php");
 	}; 
 

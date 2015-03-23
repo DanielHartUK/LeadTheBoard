@@ -1,7 +1,9 @@
 <?php function browserDetails() {
+
+	// Get the user agent of the browser
 	$userAgent = $_SERVER['HTTP_USER_AGENT'];
 
-	// Find what the name of the browser is, in this order because the WebKit/Blink UA is anonoying in the way in which Opera has Chrome and Safari in it's UA too, and Chrome has Chrome and Safari in it's UA.
+	// Look for specific strings in the UA to identify the browser
 	if (preg_match('/OPR/i', $userAgent) or preg_match('/Opera/i', $userAgent))  { 
  		$name = 'Opera';
  		$creator = 'Opera';
@@ -23,6 +25,7 @@
 		$creator = 'Mozilla';
 	}
 
+	// Put the browser info into an array
 	return array(
 		'UA' => $userAgent,
 		'Browser' => $name,

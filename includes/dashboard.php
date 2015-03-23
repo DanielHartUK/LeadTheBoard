@@ -136,6 +136,7 @@ while($count < $XPAwardRowCount) {
 };
 
 
+
 mysqli_close($conn); // Close the connection 
 
 $possibleXP = $qpXP + $apXP + $XPa; 

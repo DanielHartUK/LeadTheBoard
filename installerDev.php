@@ -45,7 +45,16 @@ if(isset($_GET['step'])) {
 		(1, 'Hello World', 'Print ''Hello World''', 10, 'goat.jpg', 1421710773),
 		(2, 'Punctual!', 'Submit an assignment on time', 30, 'goat.jpg', 1421710773);
 		") or die('Could not create table: ' .mysqli_error($conn));
-		
+
+		mysqli_query($conn, "	
+		CREATE TABLE `Analytics` (
+		  `IP` text NOT NULL,
+		  `Incoming` text,
+		  `Page` text NOT NULL,
+		  `Time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+		") or die('Could not create table: ' .mysqli_error($conn));
+
 		mysqli_query($conn, "
 		CREATE TABLE `clanmembers` (
 		  `ClanID` int(32) NOT NULL,
@@ -97,6 +106,15 @@ if(isset($_GET['step'])) {
 		(1421710893, 0);
 		") or die('Could not create table: ' .mysqli_error($conn));
 		
+		mysqli_query($conn, "	
+		CREATE TABLE `LoginAttempts` (
+		  `Email` text NOT NULL,
+		  `IP` text NOT NULL,
+		  `Type` text,
+		  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+		) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+		") or die('Could not create table: ' .mysqli_error($conn));
+
 		mysqli_query($conn, "
 		CREATE TABLE `QuestProgress` (
 		  `UserID` BIGINT(255) unsigned NOT NULL,

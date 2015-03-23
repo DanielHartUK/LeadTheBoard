@@ -19,13 +19,14 @@ include_once(INCLUDES_PATH . "/logs.php");
 	<div class="content">
         <h1> Dashboard </h1>
 		<?php require_once(TEMPLATES_PATH . "/dashboardNav.php"); ?>
+		<div class="logStat"> <?php echo $logsCount; ?> Entries </div>
 		<a href="?clear=1"><div class="button blue clearLogs"><span title="Delete" class="flaticon-delete84 action"></span> Clear All </div></a>
-		<table class="dashboardTable ">
+		<table class="dashboardTable logs">
 			<thead>
 				<tr class="headerDash">
 					<th class="">Email</th>
 					<th class="">IP</th>
-					<th class="">Error</th>
+					<th class=""></th>
 					<th class="">Time</th>
 				</tr>
 			</thead>
@@ -34,7 +35,7 @@ include_once(INCLUDES_PATH . "/logs.php");
 					<tr>
 						<td class=""> <?php echo $log['Email']; ?> </td>
 						<td class=""> <?php echo $log['IP']; ?> </td>
-						<td class=""> <?php if ($log['Type'] == 1) { echo 'Incorrect/unregistered email'; } elseif($log['Type'] == 2) { echo 'Incorrect password'; } ?> </td>
+						<td class=""> <?php if ($log['Type'] == 1) { echo 'Incorrect/unregistered email'; } elseif($log['Type'] == 2) { echo 'Incorrect password'; }  ?> </td>
 						<td class=""> <?php echo $log['Timestamp']; ?> </td>
 					</tr>
 			<?php } ?>

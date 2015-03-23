@@ -44,7 +44,6 @@ function validEmail() {
 		checkEmpty() 
 	}
 };
-
 $(".login.register .loginPassword").blur(function() {
 	$(this).addClass("valFaile"); 
 	var pass = $('.loginPassword').val();
@@ -53,8 +52,9 @@ $(".login.register .loginPassword").blur(function() {
 		$('.loginPassword').prev().css('color', 'red');
 		$('.loginPassword').addClass("valFaile"); 
 	} else {
-		$('.loginPassword').prev().attr('style', function(i, style) { return style.replace(/color[^;]+;?/g, '');});
+		//$('.loginPassword').prev().attr('style', function(i, style) { return style.replace(/color[^;]+;?/g, '');});
 		$('.loginPassword').removeClass("valFaile"); 
+		checkEmpty() 
 	}
 
 

@@ -1,0 +1,177 @@
+.notificationPopupCont {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: #fff;
+	padding: 1em;
+	text-align: center;	
+	@include animation(notifyPop 10s linear forwards);
+
+	h3 {
+		padding: 0;
+		margin: 0;
+		text-align: left;
+
+	}
+	p {
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		opacity: 0;
+		overflow: hidden;
+		@include animation(text1 10s linear forwards);
+
+	}
+
+}
+.notificationPopup {
+	margin: 0 auto;
+	height: 80px;
+	box-sizing: border-box;
+	display: inline-block;
+	box-shadow: 0px 0px 10px #888;
+
+	.notificationInfo {
+		padding: 1em;
+		margin-right: 1em;
+		display: inline-block;
+		vertical-align: middle;
+		height: 58px;
+  		box-sizing: border-box;
+  		@include animation(texti 10s linear forwards);
+
+	}
+}
+.achievementUnlocked {
+	border-radius: 80px;
+
+	.icon {
+		height: 80px;
+		width: 80px;
+		border-radius: 80px;
+		background-size: contain;
+		background-position: 50% 50%;
+		display: inline-block;
+		vertical-align: middle;
+		background-image: url(../assets/achievements/goat.jpg);
+
+		.lock {
+			height: 100%;
+			width: 100%;
+			position: relative;
+			padding: 22px;
+  			box-sizing: border-box;
+  			border-radius: 80px;
+  			@include animation(lockfade 10s linear forwards);
+			
+			.lockPart {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				background-size: 35px 35px;
+				background-repeat: no-repeat;
+				top: 0;
+				left: 0;
+				background-position: 50% 50%;
+			}
+			.locktop {
+				background-image: url(../assets/locktop.png);
+				background-position: 50% 50%;
+				@include animation(lock 10s linear forwards);
+			}
+			.lockBottom {
+				background-image: url(../assets/lockBottom.png);
+			}
+		}
+	}
+}
+@include keyframes (notifyPop) {
+	0% {
+		bottom: -7em;
+	}
+	2% {
+		bottom: 2em;
+	}
+	4% {
+		bottom: 0em;
+	}
+	96% {
+		bottom: 0em;
+	}
+	98% {
+		bottom: 2em;
+	}
+	100% {
+		bottom: -7em;
+	}
+}
+@include keyframes (texti) {
+	0% {
+		height: 58px;
+	}
+	8% {
+		height: 58px;
+	}
+	9% {
+		height: 80px;
+	}
+	91% {
+		height: 80px;
+	}
+	92% {
+		height: 58px;
+	}
+	100% {
+		height: 58px;
+	}
+}
+@include keyframes (text1) {
+	0% {
+		opacity: 0;
+	}
+	8% {
+		opacity: 0;
+	}
+	9% {
+		opacity: 1;
+	}
+	91% {
+		opacity: 1;
+	}
+	92% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@include keyframes (lockfade) {
+	0% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 1;
+	}
+	15% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@include keyframes (lock) {
+	0% {
+		background-position: 50% 50%;
+	}
+	4% {
+		background-position: 50% 50%;
+	}
+	6% {
+		background-position: 50% 40%;
+	}
+	100% {
+		background-position: 50% 40%;
+	}
+
+}

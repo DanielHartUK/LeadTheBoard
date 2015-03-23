@@ -7,32 +7,16 @@ $conn = mysqli_connect($servername, $username, $password, $dbname); // Create th
 // $array[ROW NUMBER]['COLUMN NAME'] e.g. $quests[1]['Name'];
 
 // Get the classes
-$selClasses = "SELECT * FROM Classes WHERE AdminID='$id'";
-$clq = mysqli_query($conn, $selClasses) or die(mysqli_error());
-$classCount = $clq->num_rows;
+$sql = "SELECT * FROM Classes WHERE AdminID='$id'";
+$query = mysqli_query($conn, $sql) or die(mysqli_error());
+$classCount = $query->num_rows;
 $classes = array();
 
-while($row = mysqli_fetch_assoc($clq)) {
+while($row = mysqli_fetch_assoc($query)) {
    $classes[] = $row;
 }
-foreach($classes as $value){
-   $classID = $value['ClassID'];
-
-   // Get the class members
-   $selClassesM = "SELECT * FROM ClassMembers WHERE ClassID='$classID'";
-   $cmq = mysqli_query($conn, $selClassesM) or die(mysqli_error());
-   $classMCount = $cmq->num_rows;
-   
-
-   while($row = mysqli_fetch_assoc($cmq)) {
-      $classMembers[$classID][] = $row;
-      echo $classMembers[$classID]['UserID'];
-   }
 
 
-
-
-}
 
 mysqli_close($conn); // Close the connection 
 

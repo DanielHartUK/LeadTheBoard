@@ -1,15 +1,9 @@
 <?php 
 session_start();
-
 require_once('../config.php');
-
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-
-
 if(isset($_POST['email'])) {
 	$email = $_POST['email'];
-
 	$checkLogin = "SELECT * FROM Users WHERE Email='$email'";
 	$emq = mysqli_query($conn, $checkLogin) or die(mysqli_error());
 	$userRowCount = $emq->num_rows;
@@ -17,7 +11,6 @@ if(isset($_POST['email'])) {
 	while($row = mysqli_fetch_assoc($emq)) {
 	   $login[] = $row;
 	}
-
 if ($userRowCount == 0) {
 	$ip = $_SERVER['REMOTE_ADDR'];
 	$type = 1;
@@ -41,12 +34,10 @@ else {
 		$errorLog->bind_param("ssi", $email, $ip, $type);
 		$errorLog->execute();		
 		$errorLog->close();
-		$url = SITE_URL . '?error=2'; 
+		$url = SITE_URL . '?error=1'; 
 		header( "Location: $url" );
 		session_unset(); 
 		session_destroy();
 	}
 }
-
-
 }

@@ -1,28 +1,29 @@
+var siteURL = "http://localhost:8888";
 function space1() {
-	$('.space1').css('background-image', 'url(../assets/404/space_1.svg)');
+	$('.space1').css('background-image', 'url(' + siteURL + '/assets/404/space_1.svg)');
 	setTimeout(function() {
-		$('.space1').css('background-image', 'url(../assets/404/space_2.svg)');
+		$('.space1').css('background-image', 'url(' + siteURL + '/assets/404/space_2.svg)');
 	}, 1000);
 };
 
 function space2() {
-	$('.space2').css('background-image', 'url(../assets/404/space_3.svg)');
+	$('.space2').css('background-image', 'url(' + siteURL + '/assets/404/space_3.svg)');
 	setTimeout(function() {
-		$('.space2').css('background-image', 'url(../assets/404/space_4.svg)');
+		$('.space2').css('background-image', 'url(' + siteURL + '/assets/404/space_4.svg)');
 	}, 1000);
 };
 
 function space3() {
-	$('.space3').css('background-image', 'url(../assets/404/space_5.svg)');
+	$('.space3').css('background-image', 'url(' + siteURL + '/assets/404/space_5.svg)');
 	setTimeout(function() {
-		$('.space3').css('background-image', 'url(../assets/404/space_6.svg)');
+		$('.space3').css('background-image', 'url(' + siteURL + '/assets/404/space_6.svg)');
 	}, 1000);
 };
 
 function flutter() {
-	$('.player').css('background-image', 'url(../assets/404/space_9.svg)');
+	$('.player').css('background-image', 'url(' + siteURL + '/assets/404/space_9.svg)');
 	setTimeout(function() {
-		$('.player').css('background-image', 'url(../assets/404/space_10.svg)');
+		$('.player').css('background-image', 'url(' + siteURL + '/assets/404/space_10.svg)');
 	}, 100);
 };
 

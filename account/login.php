@@ -13,8 +13,8 @@ include_once(TEMPLATES_PATH . "/header.php");
 				echo '<div class="warningBanner blue">' .  $message  . '</div>'; 
 			} ?>
 			<?php if(isset($_GET['error'])) { 
-				if($_GET['error'] == 1) { $message = "Email not registered"; }
-				if($_GET['error'] == 2) { $message = "Incorrect password"; }
+				if($_GET['error'] == 1) { $message = "Email or password incorrect"; }
+				if($_GET['error'] == 3) { $message = "You must log in to see this"; }
 				echo '<div class="warningBanner blue">' .  $message  . '</div>'; 
 			} ?>
 			<form method="post"  style="overflow: auto;" action="<?php echo SITE_URL;?>/includes/login.php">

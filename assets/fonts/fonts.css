@@ -1,5 +1,17 @@
 
 @font-face {
+    font-family: 'Hussar';
+    src: url('HussarBold-webfont.eot');
+    src: url('HussarBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('HussarBold-webfont.woff2') format('woff2'),
+         url('HussarBold-webfont.woff') format('woff'),
+         url('HussarBold-webfont.ttf') format('truetype'),
+         url('HussarBold-webfont.svg#hussarbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
     font-family: 'eightMadness';
     src: url('8-bit Madness-webfont.eot');
     src: url('8-bit Madness-webfont.eot?#iefix') format('embedded-opentype'),

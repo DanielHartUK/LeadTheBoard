@@ -9,7 +9,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname); // Create th
 // Get the logs
 $sql = "SELECT * FROM LoginAttempts";
 $query = mysqli_query($conn, $sql) or die(mysqli_error());
-$logssCount = $query->num_rows;
+$logsCount = $query->num_rows;
 $logs = array();
 
 while($row = mysqli_fetch_assoc($query)) {

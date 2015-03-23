@@ -97,6 +97,15 @@ h2.sectionTitle {
 
 }
 
+.code {
+    font-family: consolas, "cabin", sans-serif;
+    padding: 1%;
+    background: #46404C;
+    color: #FF9A27;
+    border-radius: 4px;
+    margin-bottom: 1%;
+    font-size: 0.9em;
+}
 
 .button {
   background: rgba(0, 0, 0, 0.42);
@@ -106,6 +115,7 @@ h2.sectionTitle {
   border-radius: 5px;
   font-size: 1rem;
   border: 0;
+  vertical-align: top;
 
   &.hidden {
     display: none !important;
@@ -330,13 +340,13 @@ p.message {
 }   
 .gradient-rainbow { 
   background: -moz-linear-gradient(left, red, orange, yellow, green, 
-  blue, indigo, violet);
+  blue, indigo, violet) !important;
   background: -webkit-gradient(linear, left center, right center, from(red), 
   color-stop(14%, orange), color-stop(28%, yellow), color-stop(42%, green), 
-  color-stop(56%, blue), color-stop(70%, indigo), to(violet)); 
+  color-stop(56%, blue), color-stop(70%, indigo), to(violet)) !important; 
   background: -o-linear-gradient(left, red, orange, yellow, green, 
-  blue, indigo, violet);
+  blue, indigo, violet) !important;
   background: -ms-linear-gradient(left, red, orange, yellow, green, 
-  blue, indigo, violet);
+  blue, indigo, violet) !important;
 }
 

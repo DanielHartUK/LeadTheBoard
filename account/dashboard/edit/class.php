@@ -17,14 +17,12 @@ if ($admin == 0) {
 	<div class="content">
         <h1> Edit Class - <?php echo $classes[0]['Name']; ?></h1>
 		<?php require_once(TEMPLATES_PATH . "/dashboardNav.php"); ?>
-		<form> 
+		<form action="" > 
 		    <div class="formContainer">
     			<p class="detailLabel">Class Name</p>
       			<input type="text" name="className" value="<?php echo $classes[0]['Name']; ?>" class="inputField">
       		</div>
-		</form>
-		<h4 class="section"> Add/Remove Students  </h4>
-		<form> 
+			<h4 class="section"> Add/Remove Students  </h4>
 			<table class="studentsList">
 				<thead>
 					<tr>
@@ -40,7 +38,7 @@ if ($admin == 0) {
 							<td class="editCheck"><input type="checkbox" name="someID" class="inputCheck" <?php if (strpos($studentsInClass, $allStudents['UserID']) !== false) { echo "checked"; } ?> ></td>
 							<td class="editAvatar"><img src="/assets/uploads/<?php echo $allStudents['Avatar']; ?>"></td>
 							<td class="editName"><?php echo $allStudents['Name'] . " " . $allStudents['Surname']; ?></td>
-							<td class="editActions"> <a href="edit/student.php?student=<?php echo $allStudents['UserID'];;?>"><span title="Edit" class="flaticon-cogwheel25 action"></span></a> </td>
+							<td class="editActions"> <a href="student.php?student=<?php echo $allStudents['UserID'];;?>"><span title="Edit" class="flaticon-cogwheel25 action"></span></a> </td>
 						</tr>
 					<?php $i++; } ?>
 				</tbody>

@@ -12,6 +12,8 @@ if ($admin == 0) {
 		<?php require_once(TEMPLATES_PATH . "/dashboardNav.php"); ?>
 	</div>
 
+
+
 <?php 
 }; 
 include_once(TEMPLATES_PATH . "/footer.php"); 

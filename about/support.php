@@ -2,7 +2,7 @@
 $isAbout = 0;
 require_once("../config.php");
 include_once(TEMPLATES_PATH . "/header.php"); 
-require_once(INCLUDES_PATH . "/resolution.php");
+require_once(INCLUDES_PATH . "/browserInfo.php");
 ?>
 
 	<div class="content <?php if($admin == 1): echo 'admin'; endif; ?>">
