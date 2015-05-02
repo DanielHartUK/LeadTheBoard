@@ -7,8 +7,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname); // Create th
 // $array[ROW NUMBER]['COLUMN NAME'] e.g. $quests[1]['Name'];
 
 // Achievements Available 
-$selAchievementP = "SELECT * FROM AchievementProgress ";
-$acP = mysqli_query($conn, $selAchievementP) or die(mysqli_error());
+$selAchievementP = "SELECT * FROM AchievementProgress WHERE ClassID='$selectedClass'";
+$acP = mysqli_query($conn, $selAchievementP) or die(mysqli_error($conn));
 $achievementsAvailable = $acP->num_rows;
 $achievementP = array();
 
@@ -17,8 +17,8 @@ while($row = mysqli_fetch_assoc($acP)) {
 }
 
 // Acheivements Completed
-$selAchievementPC = "SELECT * FROM AchievementProgress WHERE AchievementProgress='1'";
-$acPC = mysqli_query($conn, $selAchievementPC) or die(mysqli_error());
+$selAchievementPC = "SELECT * FROM AchievementProgress WHERE AchievementProgress='1' AND ClassID='$selectedClass'";
+$acPC = mysqli_query($conn, $selAchievementPC) or die(mysqli_error($conn));
 $achievementsUnlocked = $acPC->num_rows;
 $achievementPC = array();
 
@@ -27,8 +27,8 @@ while($row = mysqli_fetch_assoc($acPC)) {
 }
 
 // Quests Available
-$selQuestsP = "SELECT * FROM QuestProgress ";
-$qP = mysqli_query($conn, $selQuestsP) or die(mysqli_error());
+$selQuestsP = "SELECT * FROM QuestProgress WHERE  ClassID='$selectedClass'";
+$qP = mysqli_query($conn, $selQuestsP) or die(mysqli_error($conn));
 $questsAvailable = $qP->num_rows;
 $questsP = array();
 
@@ -37,8 +37,8 @@ while($row = mysqli_fetch_assoc($qP)) {
 }
 
 // Quests Completed 
-$selQuestsPC = "SELECT * FROM QuestProgress WHERE QuestProgress='1'";
-$qPC = mysqli_query($conn, $selQuestsPC) or die(mysqli_error());
+$selQuestsPC = "SELECT * FROM QuestProgress WHERE QuestProgress='1' AND ClassID='$selectedClass'";
+$qPC = mysqli_query($conn, $selQuestsPC) or die(mysqli_error($conn));
 $questsComplete = $qPC->num_rows;
 $questsPC = array();
 
@@ -48,10 +48,10 @@ while($row = mysqli_fetch_assoc($qPC)) {
 
 // Calculating XP
 // Quest XP
-$selQuestX = "SELECT QuestProgress.UserID, Quests.XPValue, QuestProgress.QuestProgress          
+$selQuestX = "SELECT QuestProgress.UserID, Quests.XPValue, QuestProgress.QuestProgress, QuestProgress.ClassID          
 FROM `QuestProgress` 
-INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.QuestProgress='1';";
-$qX = mysqli_query($conn, $selQuestX) or die(mysqli_error());
+INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.QuestProgress='1' AND QuestProgress.ClassID='$selectedClass';";
+$qX = mysqli_query($conn, $selQuestX) or die(mysqli_error($conn));
 $questsXCount = $qX->num_rows;
 $questsX = array();
 
@@ -65,10 +65,10 @@ while($count < $questsXCount) {
 	$count++;
 };
 // Possible Quest XP
-$selQuestPosX = "SELECT QuestProgress.UserID, Quests.XPValue, QuestProgress.QuestProgress          
+$selQuestPosX = "SELECT QuestProgress.UserID, Quests.XPValue, QuestProgress.QuestProgress, QuestProgress.ClassID          
 FROM `QuestProgress` 
-INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID;";
-$qXp = mysqli_query($conn, $selQuestPosX) or die(mysqli_error());
+INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.ClassID='$selectedClass';";
+$qXp = mysqli_query($conn, $selQuestPosX) or die(mysqli_error($conn));
 $questsXpCount = $qXp->num_rows;
 $questsXp = array();
 
@@ -84,10 +84,10 @@ while($count < $questsXpCount) {
 
 
 // Achievements XP
-$selAchievementsX = "SELECT AchievementProgress.UserID, Achievements.XPValue, AchievementProgress.AchievementProgress          
+$selAchievementsX = "SELECT AchievementProgress.UserID, Achievements.XPValue, AchievementProgress.AchievementProgress, AchievementProgress.ClassID        
 FROM `AchievementProgress` 
-INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.AchievementProgress='1';";
-$aX = mysqli_query($conn, $selAchievementsX) or die(mysqli_error());
+INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.AchievementProgress='1' AND AchievementProgress.ClassID='$selectedClass';";
+$aX = mysqli_query($conn, $selAchievementsX) or die(mysqli_error($conn));
 $achievementsXCount = $aX->num_rows;
 $achievementsX = array();
 
@@ -102,10 +102,10 @@ while($count < $achievementsXCount) {
 };
 
 // Possible Achievements XP
-$selAchievementsPosX = "SELECT AchievementProgress.UserID, Achievements.XPValue, AchievementProgress.AchievementProgress          
+$selAchievementsPosX = "SELECT AchievementProgress.UserID, Achievements.XPValue, AchievementProgress.AchievementProgress, AchievementProgress.ClassID          
 FROM `AchievementProgress` 
-INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID;";
-$aXp = mysqli_query($conn, $selAchievementsPosX) or die(mysqli_error());
+INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.ClassID='$selectedClass';";
+$aXp = mysqli_query($conn, $selAchievementsPosX) or die(mysqli_error($conn));
 $achievementsXpCount = $aXp->num_rows;
 $achievementsXp = array();
 
@@ -120,8 +120,8 @@ while($count < $achievementsXpCount) {
 };
 
 // Awards XP
-$selXPAwards = "SELECT * FROM XPAwards ";
-$xpA = mysqli_query($conn, $selXPAwards) or die(mysqli_error());
+$selXPAwards = "SELECT * FROM XPAwards WHERE ClassID='$selectedClass'";
+$xpA = mysqli_query($conn, $selXPAwards) or die(mysqli_error($conn));
 $XPAwardRowCount = $xpA->num_rows;
 $XPAwards = array();
 while($row = mysqli_fetch_assoc($xpA)) {

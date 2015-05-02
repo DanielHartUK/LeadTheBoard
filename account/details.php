@@ -13,8 +13,8 @@ if(isset($_POST["submit1"])) {
   $timeZone = $_POST['timeZone'];
 
   $personalUpdateQuery = "UPDATE `$dbname`.`users` SET `Name`='$firstName',`Surname`='$surname',`Email`='$email' WHERE `users`.`UserID` = '$id'"; 
-  mysqli_query($conn, $personalUpdateQuery) or die(mysqli_error());
-  mysqli_query($conn, "UPDATE `$dbname`.`useroptions` SET `TimeZone`='$timeZone' WHERE `UserOptions`.`UserID`='$id'") or die(mysqli_error());
+  mysqli_query($conn, $personalUpdateQuery) or die(mysqli_error($conn));
+  mysqli_query($conn, "UPDATE `$dbname`.`useroptions` SET `TimeZone`='$timeZone' WHERE `UserOptions`.`UserID`='$id'") or die(mysqli_error($conn));
   date_default_timezone_set($timeZone);
 }
 mysqli_close($conn); // Close the connection 

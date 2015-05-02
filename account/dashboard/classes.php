@@ -29,7 +29,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname); // Create th
 			<?php foreach ($classes as $class) {
 				$classID = $class['ClassID'];
 				$sql = "SELECT ClassID, Count(*) AS 'Members' FROM ClassMembers WHERE ClassID='$classID' GROUP BY ClassID";
-				$query = mysqli_query($conn, $sql) or die(mysqli_error());
+				$query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 				$classes = array();
 				$studentCount = $query->num_rows;
 				while($row = mysqli_fetch_assoc($query)) {
@@ -37,11 +37,11 @@ $conn = mysqli_connect($servername, $username, $password, $dbname); // Create th
 				}
 
 				$sql = "SELECT ClassMembers.UserID, AchievementProgress.UserID,  AchievementProgress.AchievementProgress FROM `AchievementProgress` INNER JOIN `ClassMembers` on AchievementProgress.UserID = ClassMembers.UserID WHERE AchievementProgress.AchievementProgress='1' AND ClassMembers.ClassID='$classID';";
-				$query = mysqli_query($conn, $sql) or die(mysqli_error());
+				$query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 				$AchievementsCompleteRowCount = $query->num_rows;
 
 				$sql = "SELECT ClassMembers.UserID, QuestProgress.UserID,  QuestProgress.QuestProgress FROM `QuestProgress` INNER JOIN `ClassMembers` on QuestProgress.UserID = ClassMembers.UserID WHERE QuestProgress.QuestProgress='1' AND ClassMembers.ClassID='$classID';";
-				$query = mysqli_query($conn, $sql) or die(mysqli_error());
+				$query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 				$QuestsCompleteRowCount = $query->num_rows;
 
 			?>

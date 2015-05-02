@@ -5,7 +5,7 @@ if($loggedIn == 0 and !isset($login)) {
 		$url = SITE_URL . '?error=3'; 
 		header( "Location: $url" );
  } 
-include_once(INCLUDES_PATH . "/refreshsql.php"); 
+// include_once(INCLUDES_PATH . "/refreshsql.php"); 
 include_once(INCLUDES_PATH . "/userSQL.php");
 include_once(INCLUDES_PATH . "/customisation.php"); 
 include_once(INCLUDES_PATH . "/analyticsScript.php"); 
@@ -93,13 +93,20 @@ if(isset($_GET['setAdmin'])) {
 	</div>
 	<div class="contentContainer">
 		<?php if ($loggedIn) : ?>
-			<?php // Keep drawer open on account
-			if ($admin == 0 AND pageURLContains($x = 'account')) { ?>
+			<?php // Keep drawer open on account or about
+			if ($admin == 0 AND pageURLContains($x = 'account') OR $admin == 0 AND pageURLContains($x = 'about')) { ?>
 				<div class="drawer" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;">
 					<div class="user" id="loggedIn" style="background-color: <?php echo $userColourSecondary[$userColourScheme] ?>;"><img src="<?php echo $profilePic ?>" class="profilePicSmall" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar"> <?php echo $firstName. " " .$surname; ?> </div>
+					<h6> Change Class </h6>
+					<form method="post" class="classSelect" action="<?php echo SITE_URL;?>/includes/changeClass.php">
+						<select name="classChange" onchange="this.form.submit()">
+							<?php foreach($classM as $classList) { ?>
+								<option value="<?php echo $classList['ClassID']; ?>" <?php if($classList['ClassID'] == $selectedClass) { echo 'selected="selected"'; } ?>><?php echo $classList['Name']; ?></option>
+							<?php } ?>
+						</select>
+					</form>
 					<ul class="menu"> <h6> Menu </h6>
 						<a href="<?php echo SITE_URL; ?>/"><li class="Home"><span class="flaticon-home153 sideIcon"></span> Home </li></a>
-	 					<a href="<?php echo SITE_URL; ?>/account/classes.php"><li class="classes"><span class="flaticon-multiple25 sideIcon"></span> Classes </li></a>
 						<a href="<?php echo SITE_URL; ?>/profile.php?user=<?php echo $id; ?>"><li class="profile"><span class="flaticon-profile8 sideIcon"></span> Profile </li></a>
 						<a href="<?php echo SITE_URL; ?>/account/"><li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li></a>
 						<a href="<?php echo SITE_URL; ?>?logOut=1"><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
@@ -108,9 +115,16 @@ if(isset($_GET['setAdmin'])) {
 			elseif ($admin == 0) { ?>
 				<div class="drawer closed" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;">
 					<div class="user" id="loggedIn" onClick="closeDrawer()" style="background-color: <?php echo $userColourSecondary[$userColourScheme] ?>;"><img src="<?php echo $profilePic ?>" class="profilePicSmall" alt="<?php echo $firstName. ' ' .$surname; ?> Avatar"> <?php echo $firstName. " " .$surname; ?> <span class="close">&#215;</span></div>
+					<h6> Change Class </h6>
+					<form method="post" class="classSelect" action="<?php echo SITE_URL;?>/includes/changeClass.php">
+						<select name="classChange" onchange="this.form.submit()">
+							<?php foreach($classM as $classList) { ?>
+								<option value="<?php echo $classList['ClassID']; ?>" <?php if($classList['ClassID'] == $selectedClass) { echo 'selected="selected"'; } ?>><?php echo $classList['Name']; ?></option>
+							<?php } ?>
+						</select>
+					</form>
 					<ul class="menu"> <h6> Menu </h6>
 						<a href="<?php echo SITE_URL; ?>/"><li class="Home"><span class="flaticon-home153 sideIcon"></span> Home </li></a>
-	 					<a href="<?php echo SITE_URL; ?>/account/classes.php"><li class="classes"><span class="flaticon-multiple25 sideIcon"></span> Classes </li></a>
 						<a href="<?php echo SITE_URL; ?>/profile.php?user=<?php echo $id; ?>"><li class="profile"><span class="flaticon-profile8 sideIcon"></span> Profile </li></a>
 						<a href="<?php echo SITE_URL; ?>/account/"><li class="Account"><span class="flaticon-settings21 sideIcon"></span> Account </li></a>
 						<a href="<?php echo SITE_URL; ?>?logOut=1"><li class="logOut"><span class="flaticon-key162 sideIcon"></span> Log Out </li></a>
@@ -118,6 +132,14 @@ if(isset($_GET['setAdmin'])) {
 			<?php } else { ?>
 				<div class="drawer" style="background-color: <?php echo $userColourPrimary[$userColourScheme] ?>;"  >
 					<div class="user" id="loggedIn" <?php if (!pageURLContains($x = 'profile')) { ?> style="background-color: <?php echo $userColourSecondary[$userColourScheme] ?>;"<?php  }?>><img src="<?php echo $profilePic ?>" class="profilePicSmall"> <?php echo $firstName. " " .$surname; ?> </div>
+					<h6> Change Class </h6>
+					<form method="post" class="classSelect" action="<?php echo SITE_URL;?>/includes/changeClass.php">
+						<select name="classChange" onchange="this.form.submit()">
+							<?php foreach($classM as $classList) { ?>
+								<option value="<?php echo $classList['ClassID']; ?>" <?php if($classList['ClassID'] == $selectedClass) { echo 'selected="selected"'; } ?>><?php echo $classList['Name']; ?></option>
+							<?php } ?>
+						</select>
+					</form>
 					<ul class="menu"> <h6> Admin </h6>
 						<a href="<?php echo SITE_URL; ?>/"><li class="Home"><span class="flaticon-home153 sideIcon"></span> Home </li></a>
 	 					<a href="<?php echo SITE_URL; ?>/account/dashboard/"><li class="Dashboard"><span class="flaticon-speed13 sideIcon"></span> Dashboard </li></a>
@@ -140,7 +162,7 @@ if(isset($_GET['setAdmin'])) {
 			</div>
 		<?php endif; ?>
 	<?php endif; ?>
-	<div class="drawerMove <?php if(pageURLContains($x = 'account')) { if(isset($login)) { } else { echo 'adminCont'; } } else if (isset($admin)) { if ($admin == 1) { echo 'adminCont'; } } else { } ?>"> 
+	<div class="drawerMove <?php if(pageURLContains($x = 'account') OR pageURLContains($x = 'about')) { if(isset($login)) { } else { echo 'adminCont'; } } else if (isset($admin)) { if ($admin == 1) { echo 'adminCont'; } } else { } ?>"> 
 
 
 

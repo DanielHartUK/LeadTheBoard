@@ -4,7 +4,7 @@ require_once("../../config.php");
 if (isset($_GET['clear'])) {
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	$sql = "DELETE FROM LoginAttempts";
-	$query = mysqli_query($conn, $sql) or die(mysqli_error());
+	$query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 	mysqli_close($conn); 
 	Header('Location: '.$_SERVER['PHP_SELF']);
 }

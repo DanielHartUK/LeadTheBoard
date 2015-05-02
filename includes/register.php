@@ -25,7 +25,7 @@ if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,255}$/', $_POST['pass
 	} else {
 		// Check if email is already registered 
 		$checkEmail = "SELECT * FROM Users WHERE Email='$email'";
-		$emq = mysqli_query($conn, $checkEmail) or die(mysqli_error());
+		$emq = mysqli_query($conn, $checkEmail) or die(mysqli_error($conn));
 		$userRowCount = $emq->num_rows;
 		
 		if ($userRowCount != 0) {

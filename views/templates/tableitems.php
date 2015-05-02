@@ -3,7 +3,7 @@
 	<?php 
 		$conn = mysqli_connect($servername, $username, $password, $dbname); // 	
 		$a = "SELECT * FROM Users WHERE Admin='0' ORDER BY Position";
-		$b =  mysqli_query($conn, $a) or die(mysqli_error());
+		$b =  mysqli_query($conn, $a) or die(mysqli_error($conn));
 		$usersLCount = $b->num_rows;
 		$d = array();
 		while($row = mysqli_fetch_assoc($b)) {
@@ -24,7 +24,7 @@
 					<?php
 					$conn = mysqli_connect($servername, $username, $password, $dbname); // 	
 					$a = "SELECT * FROM AchievementProgress WHERE UserID='$idOfUser' AND AchievementProgress='1'";
-					$b =  mysqli_query($conn, $a) or die(mysqli_error());
+					$b =  mysqli_query($conn, $a) or die(mysqli_error($conn));
 					$c = $b->num_rows;
 					mysqli_close($conn); // Close the connection 
 					echo $c;
@@ -34,7 +34,7 @@
 					<?php
 					$conn = mysqli_connect($servername, $username, $password, $dbname); // 	
 					$a = "SELECT * FROM QuestProgress WHERE UserID='$idOfUser' AND QuestProgress='1'";
-					$b =  mysqli_query($conn, $a) or die(mysqli_error());
+					$b =  mysqli_query($conn, $a) or die(mysqli_error($conn));
 					$c = $b->num_rows;
 					mysqli_close($conn); // Close the connection 
 					echo $c;

@@ -5,7 +5,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if(isset($_POST['email'])) {
 	$email = $_POST['email'];
 	$checkLogin = "SELECT * FROM Users WHERE Email='$email'";
-	$emq = mysqli_query($conn, $checkLogin) or die(mysqli_error());
+	$emq = mysqli_query($conn, $checkLogin) or die(mysqli_error($conn));
 	$userRowCount = $emq->num_rows;
 	$login = array();
 	while($row = mysqli_fetch_assoc($emq)) {

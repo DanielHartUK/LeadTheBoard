@@ -10,7 +10,7 @@ if ($admin == 0) {
 
 $conn = mysqli_connect($servername, $username, $password, $dbname); // Create the connection
 
-$SQL = "SELECT UserID, Count(*) AS `AchNum` FROM AchievementProgress WHERE AchievementProgress='1' GROUP BY UserID ORDER BY AchNum DESC" ;
+$SQL = "SELECT UserID, Count(*) AS `AchNum` FROM AchievementProgress WHERE AchievementProgress='1' AND ClassID='$selectedClass' GROUP BY UserID ORDER BY AchNum DESC" ;
 $query = mysqli_query($conn, $SQL) or die(mysqli_error($conn));
 $topachRowCount = $query->num_rows;
 if ($topachRowCount >= 5) {
@@ -23,7 +23,7 @@ while($row = mysqli_fetch_assoc($query)) {
    $topach[] = $row;
 } 
 
-$SQL = "SELECT UserID, Count(*) AS `QueNum` FROM QuestProgress WHERE QuestProgress='1' GROUP BY UserID ORDER BY QueNum DESC" ;
+$SQL = "SELECT UserID, Count(*) AS `QueNum` FROM QuestProgress WHERE QuestProgress='1' AND ClassID='$selectedClass' GROUP BY UserID ORDER BY QueNum DESC" ;
 $query = mysqli_query($conn, $SQL) or die(mysqli_error($conn));
 $topqueRowCount = $query->num_rows;
 if ($topqueRowCount >= 5) {
@@ -36,8 +36,10 @@ while($row = mysqli_fetch_assoc($query)) {
    $topque[] = $row;
 } 
 
-$sql = "SELECT * FROM Users ORDER BY XP DESC";
-$query = mysqli_query($conn, $sql) or die(mysqli_error());
+$sql = "SELECT Users.Name, Users.Surname, Users.Avatar, Users.Admin, UserStats.*       
+FROM `Users`
+INNER JOIN `UserStats` on Users.UserID = UserStats.UserID WHERE UserStats.ClassID = '$selectedClass' ORDER BY XP DESC ";
+$query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 $topxpRowCount = $query->num_rows;
 if ($topxpRowCount >= 5) {
     $xpWhileCount = 5;
@@ -75,7 +77,7 @@ while($row = mysqli_fetch_assoc($query)) {
                         while($s < $achWhileCount) {  
                             $stuUID = $topach[$s]['UserID'];
                             $selUsers = "SELECT * FROM Users WHERE UserID='$stuUID'";
-                            $ur = mysqli_query($conn, $selUsers) or die(mysqli_error());
+                            $ur = mysqli_query($conn, $selUsers) or die(mysqli_error($conn));
                             $users = array();
 
                             while($row = mysqli_fetch_assoc($ur)) {
@@ -113,7 +115,7 @@ while($row = mysqli_fetch_assoc($query)) {
                         while($s < $queWhileCount) {  
                             $stuUID = $topque[$s]['UserID'];
                             $selUsers = "SELECT * FROM Users WHERE UserID='$stuUID'";
-                            $ur = mysqli_query($conn, $selUsers) or die(mysqli_error());
+                            $ur = mysqli_query($conn, $selUsers) or die(mysqli_error($conn));
                             $users = array();
 
                             while($row = mysqli_fetch_assoc($ur)) {

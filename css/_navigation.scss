@@ -79,6 +79,7 @@
     top: 0;
     z-index: 9999;
     left: 0;
+    color: #FFF;
     @include transition($drawerSlide);
 
     .user {
@@ -88,6 +89,14 @@
 
     &.closed {
         left: -346px;
+    }
+}
+.classSelect {
+    padding: 4%;
+    margin: 2%;
+
+    select {
+        width: 100%;
     }
 }
 ul.menu {

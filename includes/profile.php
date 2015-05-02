@@ -8,7 +8,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname); // Create th
 
 // Get the user's info into an array
 $selUsers = "SELECT * FROM Users WHERE UserID='$profileUID'";
-$ur = mysqli_query($conn, $selUsers) or die(mysqli_error());
+$ur = mysqli_query($conn, $selUsers) or die(mysqli_error($conn));
 $userRowCount = $ur->num_rows;
 $users = array();
 
@@ -18,7 +18,7 @@ while($row = mysqli_fetch_assoc($ur)) {
 
 // Get the user's options into an array
 $selUsersO = "SELECT * FROM UserOptions WHERE UserID='$profileUID'";
-$urO = mysqli_query($conn, $selUsersO) or die(mysqli_error());
+$urO = mysqli_query($conn, $selUsersO) or die(mysqli_error($conn));
 $userORowCount = $urO->num_rows;
 $usersO = array();
 
@@ -29,7 +29,7 @@ while($row = mysqli_fetch_assoc($urO)) {
 $selClan = "SELECT clanmembers.ClanID, clanmembers.UserID, clans.ClanID, clans.Name
 FROM clanmembers
 INNER JOIN clans on clanmembers.ClanID = clans.ClanID WHERE UserID='$profileUID'";
-$clanq = mysqli_query($conn, $selClan) or die(mysqli_error());
+$clanq = mysqli_query($conn, $selClan) or die(mysqli_error($conn));
 $clanRowCount = $clanq->num_rows;
 $clan = array();
 
@@ -39,7 +39,7 @@ while($row = mysqli_fetch_assoc($clanq)) {
 
 // Get the class info into an array
 $selClasses = "SELECT * FROM Classes";
-$cl = mysqli_query($conn, $selClasses) or die(mysqli_error());
+$cl = mysqli_query($conn, $selClasses) or die(mysqli_error($conn));
 $classesRowCount = $cl->num_rows;
 $classes = array();
 
@@ -49,7 +49,7 @@ while($row = mysqli_fetch_assoc($cl)) {
 
 // Get the user's classes into an array
 $selClassM = "SELECT * FROM ClassMemebers WHERE UserID='$profileUID'";
-$clM = mysqli_query($conn, $selClasses) or die(mysqli_error());
+$clM = mysqli_query($conn, $selClasses) or die(mysqli_error($conn));
 $classMRowCount = $clM->num_rows;
 $classM = array();
 
@@ -59,7 +59,7 @@ while($row = mysqli_fetch_assoc($clM)) {
 
 // Achievements available to the user
 $selAchievementP = "SELECT * FROM AchievementProgress WHERE UserID='$profileUID' ";
-$acP = mysqli_query($conn, $selAchievementP) or die(mysqli_error());
+$acP = mysqli_query($conn, $selAchievementP) or die(mysqli_error($conn));
 $achievementPRowCount = $acP->num_rows;
 $achievementP = array();
 
@@ -69,7 +69,7 @@ while($row = mysqli_fetch_assoc($acP)) {
 
 // Acheivements completed by the user
 $selAchievementPC = "SELECT * FROM AchievementProgress WHERE UserID='$profileUID' AND AchievementProgress='1'";
-$acPC = mysqli_query($conn, $selAchievementPC) or die(mysqli_error());
+$acPC = mysqli_query($conn, $selAchievementPC) or die(mysqli_error($conn));
 $achievementPCRowCount = $acPC->num_rows;
 $achievementPC = array();
 
@@ -79,7 +79,7 @@ while($row = mysqli_fetch_assoc($acPC)) {
 
 // Quests available to the user
 $selQuestsP = "SELECT * FROM QuestProgress WHERE UserID='$profileUID' ";
-$qP = mysqli_query($conn, $selQuestsP) or die(mysqli_error());
+$qP = mysqli_query($conn, $selQuestsP) or die(mysqli_error($conn));
 $questsPRowCount = $qP->num_rows;
 $questsP = array();
 
@@ -89,7 +89,7 @@ while($row = mysqli_fetch_assoc($qP)) {
 
 // Quests completed by the user
 $selQuestsPC = "SELECT * FROM QuestProgress WHERE UserID='$profileUID' AND QuestProgress='1'";
-$qPC = mysqli_query($conn, $selQuestsPC) or die(mysqli_error());
+$qPC = mysqli_query($conn, $selQuestsPC) or die(mysqli_error($conn));
 $questsPCRowCount = $qPC->num_rows;
 $questsPC = array();
 
@@ -102,7 +102,7 @@ while($row = mysqli_fetch_assoc($qPC)) {
 $selQuestX = "SELECT QuestProgress.UserID, Quests.XPValue, QuestProgress.QuestProgress          
 FROM `QuestProgress` 
 INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$profileUID' and QuestProgress.QuestProgress='1';";
-$qX = mysqli_query($conn, $selQuestX) or die(mysqli_error());
+$qX = mysqli_query($conn, $selQuestX) or die(mysqli_error($conn));
 $questsXCount = $qX->num_rows;
 $questsX = array();
 
@@ -120,7 +120,7 @@ while($count < $questsXCount) {
 $selAchievementsX = "SELECT AchievementProgress.UserID, Achievements.XPValue, AchievementProgress.AchievementProgress          
 FROM `AchievementProgress` 
 INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.UserID='$profileUID' and AchievementProgress.AchievementProgress='1';";
-$aX = mysqli_query($conn, $selAchievementsX) or die(mysqli_error());
+$aX = mysqli_query($conn, $selAchievementsX) or die(mysqli_error($conn));
 $achievementsXCount = $aX->num_rows;
 $achievementsX = array();
 
@@ -138,7 +138,7 @@ while($count < $achievementsXCount) {
 $selQuestPosX = "SELECT QuestProgress.UserID, Quests.XPValue, QuestProgress.QuestProgress          
 FROM `QuestProgress` 
 INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$profileUID';";
-$qXp = mysqli_query($conn, $selQuestPosX) or die(mysqli_error());
+$qXp = mysqli_query($conn, $selQuestPosX) or die(mysqli_error($conn));
 $questsXpCount = $qXp->num_rows;
 $questsXp = array();
 
@@ -156,7 +156,7 @@ while($count < $questsXpCount) {
 $selAchievementsPosX = "SELECT AchievementProgress.UserID, Achievements.XPValue, AchievementProgress.AchievementProgress          
 FROM `AchievementProgress` 
 INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.UserID='$profileUID';";
-$aXp = mysqli_query($conn, $selAchievementsPosX) or die(mysqli_error());
+$aXp = mysqli_query($conn, $selAchievementsPosX) or die(mysqli_error($conn));
 $achievementsXpCount = $aXp->num_rows;
 $achievementsXp = array();
 
@@ -173,7 +173,7 @@ while($count < $achievementsXpCount) {
 
 // Awards XP
 $selXPAwards = "SELECT * FROM XPAwards WHERE UserID='$profileUID'";
-$xpA = mysqli_query($conn, $selXPAwards) or die(mysqli_error());
+$xpA = mysqli_query($conn, $selXPAwards) or die(mysqli_error($conn));
 $XPAwardRowCount = $xpA->num_rows;
 $XPAwards = array();
 while($row = mysqli_fetch_assoc($xpA)) {
@@ -192,7 +192,7 @@ $ProfileXp = $qXP + $aXP + $XPa;
 $sql = "SELECT AchievementProgress.UserID, AchievementProgress.AchievementID, AchievementProgress.AchievementProgress, Achievements.Name, Achievements.Description, Achievements.XPValue, Achievements.Icon           
 FROM `AchievementProgress`
 INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.UserID='$profileUID' and AchievementProgress.AchievementProgress='1' ORDER BY AchievementProgress.Timestamp;";
-$achievementsFullaq = mysqli_query($conn, $sql) or die(mysqli_error());
+$achievementsFullaq = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 $achievementsFullaCount = $achievementsFullaq->num_rows;
 $achievementsFulla = array();
 
@@ -204,7 +204,7 @@ while($row = mysqli_fetch_assoc($achievementsFullaq)) {
 $sql = "SELECT QuestProgress.UserID,  QuestProgress.QuestID, QuestProgress.QuestProgress, Quests.Name, Quests.Description, Quests.XPValue, Quests.Icon           
 FROM `QuestProgress`
 INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$profileUID' and QuestProgress.QuestProgress='1' ORDER BY QuestProgress.Timestamp;";
-$questsFullaq = mysqli_query($conn, $sql) or die(mysqli_error());
+$questsFullaq = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 $questsFullaCount = $questsFullaq->num_rows;
 $questsFulla = array();
 

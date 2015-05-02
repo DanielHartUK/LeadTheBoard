@@ -1,61 +1,68 @@
 .studentsList {
-    width: 100%;
-    text-align: left;
-    border: 1px solid #758F9B;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #758F9B;
 
 	.editCheck {
 		width: 4%;
 		text-align: center;
+    position: relative;
+    z-index: 1;
+
+    input {
+      position: relative;
+      z-index: -1;
+    }
 	}
 	.editAvatar {
-		width: 50px;
+		width: 25px;
 	}	
 	.editActions {
 		width: 10%;
 	}
 	.flaticon-cogwheel25.action {
-        color: #F26E00;
+    color: #F26E00;
     }
     thead {
-        font-size: 1.1em;
-        box-sizing: border-box;
+      font-size: 1.1em;
+      box-sizing: border-box;
 
 		th {
-      		padding: 1%;
-      		color: #094764;
-      		border-left: 1px solid #758F9B;
-      		border-bottom: 1px solid #758F9B;
-      		border-top: 1px solid #758F9B;
-      		box-sizing: border-box;
-      		background: #96B8C8;
+      padding: 1%;
+      color: #094764;
+      border-left: 1px solid #758F9B;
+      border-bottom: 1px solid #758F9B;
+      border-top: 1px solid #758F9B;
+      box-sizing: border-box;
+      background: #96B8C8;
 
-      		&.editName {
-      			border-left: none;
-      		}
+      &.editName {
+      	border-left: none;
+      }
 		}
 	}
 	tbody {
-      	tr {
-      	  	border-bottom: 1px solid #758F9B;
-      	  	box-sizing: border-box;
-      	  	background: #FFF;
+    tr {
+      border-bottom: 1px solid #758F9B;
+      box-sizing: border-box;
+      background: #FFF;
 		
-      	  	&:nth-child(2n) {
-      	  	  background: #F9F9F9;
-      	  	}
-      	  	&:hover {
-      	  	  background: #FFFFC1;
-      	  	}
+      &:nth-child(2n) {
+        background: #F9F9F9;
+      }
+      &:hover {
+        background: #FFFFC1;
+      }
 
-      	  	td {
-      	  		padding: 1%;
-      	  		img {
-					width: 50px;
-					height: 50px;
-					margin: 1% 1% 1% 0;
-				}
-      	  	}
-      	}
+      td {
+      	padding: 1%;
+      	img {
+          width: 25px;
+          height: 25px;
+          margin: 1% 1% 1% 0;
+		    }
+     	}
+    }
 	}
 }
 

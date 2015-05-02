@@ -4,7 +4,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname); // Create th
 
 // $c = Number of non admin users 
 $usersNoSQL = "SELECT * FROM Users WHERE Admin='0'";
-$usersNoQ =  mysqli_query($conn, $usersNoSQL) or die(mysqli_error());
+$usersNoQ =  mysqli_query($conn, $usersNoSQL) or die(mysqli_error($conn));
 $usersNo = $usersNoQ->num_rows;
 $usersNoA = array();
 while($row = mysqli_fetch_assoc($usersNoQ)) {
@@ -19,7 +19,7 @@ while($ai < $usersNo) {
 	$selQuestX = "SELECT QuestProgress.UserID, Quests.XPValue, QuestProgress.QuestProgress          
 	FROM `QuestProgress` 
 	INNER JOIN `Quests` on QuestProgress.QuestID = Quests.QuestID WHERE QuestProgress.UserID='$idOfUserR' and QuestProgress.QuestProgress='1';";
-	$qX = mysqli_query($conn, $selQuestX) or die(mysqli_error());
+	$qX = mysqli_query($conn, $selQuestX) or die(mysqli_error($conn));
 	$questsXCount = $qX->num_rows;
 	$questsX = array();
 	
@@ -36,7 +36,7 @@ while($ai < $usersNo) {
 	$selAchievementsX = "SELECT AchievementProgress.UserID, Achievements.XPValue, AchievementProgress.AchievementProgress          
 	FROM `AchievementProgress` 
 	INNER JOIN `Achievements` on AchievementProgress.AchievementID = Achievements.AchievementID WHERE AchievementProgress.UserID='$idOfUserR' and AchievementProgress.AchievementProgress='1';";
-	$aX = mysqli_query($conn, $selAchievementsX) or die(mysqli_error());
+	$aX = mysqli_query($conn, $selAchievementsX) or die(mysqli_error($conn));
 	$achievementsXCount = $aX->num_rows;
 	$achievementsX = array();
 
@@ -51,7 +51,7 @@ while($ai < $usersNo) {
 	};
 
 	$selXPAwards = "SELECT * FROM XPAwards WHERE UserID='$idOfUserR'";
-	$xpA = mysqli_query($conn, $selXPAwards) or die(mysqli_error());
+	$xpA = mysqli_query($conn, $selXPAwards) or die(mysqli_error($conn));
 	$XPAwardRowCount = $xpA->num_rows;
 	$XPAwards = array();
 	while($row = mysqli_fetch_assoc($xpA)) {
@@ -67,13 +67,13 @@ while($ai < $usersNo) {
 	$xpTotal = $qXP + $aXP + $XPa;
 
 	$xpUpdateSQL = "UPDATE Users SET XP='$xpTotal' WHERE UserID='$idOfUserR'";
-	$xpUpdateSQLQ = mysqli_query($conn, $xpUpdateSQL) or die(mysqli_error());
+	$xpUpdateSQLQ = mysqli_query($conn, $xpUpdateSQL) or die(mysqli_error($conn));
 
 	$ai++;
 }
 
 $usersNoSQL = "SELECT * FROM Users WHERE Admin='0' ORDER BY XP DESC";
-$usersNoQ =  mysqli_query($conn, $usersNoSQL) or die(mysqli_error());
+$usersNoQ =  mysqli_query($conn, $usersNoSQL) or die(mysqli_error($conn));
 $usersNo = $usersNoQ->num_rows;
 $usersNoA = array();
 while($row = mysqli_fetch_assoc($usersNoQ)) {
@@ -86,7 +86,7 @@ while($ai < $usersNo) {
 	$idOfUserR = $usersNoA[$ai]['UserID'];
 	$pos = $ai + 1;
 	$posUpdateSQL = "UPDATE Users SET Position='$pos' WHERE UserID='$idOfUserR'";
-	$posUpdateSQLQ = mysqli_query($conn, $posUpdateSQL) or die(mysqli_error());
+	$posUpdateSQLQ = mysqli_query($conn, $posUpdateSQL) or die(mysqli_error($conn));
 	$ai++;
 }
 

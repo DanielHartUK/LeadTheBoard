@@ -64,7 +64,7 @@
   color: #555;
   width: 100%;
   box-sizing: border-box;
-  padding: 4% 4% 4% 8%;
+  padding: 4% 4% 4% 4%;
   margin-bottom: 2%;
   border-radius: 3px;
   background-size: 10px;
@@ -76,6 +76,8 @@
   }
 
   &:focus {
+    padding-left: 8%;
+    background-position-x: 9px;
     outline: none;
     border-color: #CA6158;
     background-image: url(../assets/arrow.png);

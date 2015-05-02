@@ -11,7 +11,7 @@ $email = $_POST['email'];
 
 // Check if email isn't registered 
 $checkEmail = "SELECT * FROM Users WHERE Email='$email'";
-$emq = mysqli_query($conn, $checkEmail) or die(mysqli_error());
+$emq = mysqli_query($conn, $checkEmail) or die(mysqli_error($conn));
 $userRowCount = $emq->num_rows;
 
 if ($userRowCount == 0) {
@@ -21,7 +21,7 @@ if ($userRowCount == 0) {
 	$token = bin2hex(mcrypt_create_iv(128, MCRYPT_DEV_RANDOM));
 
 	$sql = "SELECT * FROM Users WHERE Email='$email'";
-	$query = mysqli_query($conn, $sql) or die(mysqli_error());
+	$query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 	$queryRowCount = $query->num_rows;
 	$login = array();
 	while($row = mysqli_fetch_assoc($query)) {

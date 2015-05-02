@@ -21,7 +21,7 @@ if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,255}$/', $_POST['pass
 	} else {
 			$token = $_GET['token'];
 			$sql = "SELECT * FROM ResetPassword WHERE Token='$token'";
-			$query = mysqli_query($conn, $sql) or die(mysqli_error());
+			$query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 			$queryRowCount = $query->num_rows;
 			$getUID = array();
 			while($row = mysqli_fetch_assoc($query)) {
@@ -37,7 +37,7 @@ if(!preg_match('/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{8,255}$/', $_POST['pass
 			$reset->close();
 
 			$sql = "DELETE FROM ResetPassword WHERE Token='$token'";
-			$query = mysqli_query($conn, $sql) or die(mysqli_error());
+			$query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
 
 

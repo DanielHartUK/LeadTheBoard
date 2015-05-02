@@ -12,7 +12,7 @@ FROM Users
     JOIN Achievements
         ON Achievements.AchievementID = AchievementProgress.AchievementID
 WHERE AchievementProgress.AchievementProgress = 1 ORDER BY AchievementProgress.Timestamp;";
-$achievementsFullaq = mysqli_query($conn, $sql) or die(mysqli_error());
+$achievementsFullaq = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 $achievementsFullaCount = $achievementsFullaq->num_rows;
 $achievementsFulla = array();
 
@@ -30,7 +30,7 @@ FROM Users
     JOIN Quests
         ON Quests.QuestID = QuestProgress.QuestID
 WHERE QuestProgress.QuestProgress = 1  ORDER BY QuestProgress.Timestamp;";
-$questsFullaq = mysqli_query($conn, $sql) or die(mysqli_error());
+$questsFullaq = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 $questsFullaCount = $questsFullaq->num_rows;
 $questsFulla = array();
 
@@ -46,7 +46,7 @@ FROM Users
     JOIN UserOptions
         ON Users.UserID = UserOptions.UserID
 ORDER BY XPAwards.Timestamp;";
-$xpAFullaq = mysqli_query($conn, $sql) or die(mysqli_error());
+$xpAFullaq = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 $xpAFullaCount = $xpAFullaq->num_rows;
 $xpAFulla = array();
 

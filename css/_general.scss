@@ -9,9 +9,9 @@ html, body {
     color: #555555;
     /* min-width: 968px; */
 }
-.preload * {
-    @include transition(none !important);
-}
+  .preload * {
+      @include transition(none !important);
+  }
 h1 {
     margin: 0;
     font-size: 2.6em;
@@ -29,6 +29,7 @@ h6 {
     font-size: 1em;
     font-weight: 700;
     text-transform: uppercase;
+    
 }
 a {
     text-decoration: none;

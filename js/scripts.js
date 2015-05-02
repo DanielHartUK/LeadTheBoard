@@ -1,9 +1,9 @@
 $(".close.cookieBanner").click(function() {
   $(this).parent().css('display', 'none');
-    var d = new Date();
-    d.setTime(d.getTime() + (90*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = "cookieWarning" + "=" + 1 + "; " + expires;
+      var d = new Date();
+      d.setTime(d.getTime() + (90*24*60*60*1000));
+      var expires = "expires="+d.toUTCString();
+      document.cookie = "cookieWarning" + "=" + 1 + "; " + expires;
 });
 $(window).load(function() {
   $("body").removeClass("preload");

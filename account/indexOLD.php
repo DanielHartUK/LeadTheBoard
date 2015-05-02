@@ -26,7 +26,7 @@ so please reduce the file size and then upload.<BR>";
     echo "Failed to upload file. Contact Site admin to fix the problem";
     } else {
       $avatarUpdateQuery = "UPDATE `$dbname`.`users` SET `Avatar` = '$file_name' WHERE `users`.`UserID` = '$id'";
-      mysqli_query($conn, $avatarUpdateQuery) or die(mysqli_error());
+      mysqli_query($conn, $avatarUpdateQuery) or die(mysqli_error($conn));
       $profilePic = '/assets/uploads/' . $file_name;
       echo "<script> location.reload(); </script>";
     }
@@ -38,7 +38,7 @@ so please reduce the file size and then upload.<BR>";
     if($userColourScheme === 0){echo "true";};
     $userColourScheme = intval($_POST["colour_scheme"]);
     $colourSchemeUpdateQuery = /*"UPDATE `$dbname`.`useroptions` SET `ColourScheme` = $colour_scheme WHERE `useroptions`.`UserID` = $id;"*/ "UPDATE `$dbname`.`useroptions` SET `ColourScheme` = $userColourScheme WHERE `useroptions`.`UserID` = '$id'";
-    mysqli_query($conn, $colourSchemeUpdateQuery) or die(mysqli_error());
+    mysqli_query($conn, $colourSchemeUpdateQuery) or die(mysqli_error($conn));
     echo "<script> location.reload(); </script>";
   }
 }

@@ -5,8 +5,10 @@ require_once("config.php");
 require_once(TEMPLATES_PATH . "/mainTop.php"); 
 
 $conn = mysqli_connect($servername, $username, $password, $dbname); // 	
-$a = "SELECT * FROM Users WHERE Admin='0' ORDER BY Position";
-$b =  mysqli_query($conn, $a) or die(mysqli_error());
+$a = "SELECT Users.Name, Users.Surname, Users.Avatar, Users.Admin, UserStats.*       
+FROM `Users`
+INNER JOIN `UserStats` on Users.UserID = UserStats.UserID WHERE UserStats.ClassID = '$selectedClass'";
+$b =  mysqli_query($conn, $a) or die(mysqli_error($conn));
 $usersLCount = $b->num_rows;
 $d = array();
 while($row = mysqli_fetch_assoc($b)) {
@@ -16,6 +18,9 @@ mysqli_close($conn); // Close the connection
 
 ?>
 	<div class="leaderboard">
+	<?php if($usersLCount == 0) {
+    	echo "<a href='".SITE_URL."/account/dashboard/edit/class.php?class=".$selectedClass."'><div class='warningBanner blue'> No students are in this class yet. Click to add some.</div></a>";
+	} else { ?>
 	<table class="mainBoard ">
 		<thead>
 			<tr class="headerBoard">
@@ -41,7 +46,7 @@ mysqli_close($conn); // Close the connection
 							<?php
 							$conn = mysqli_connect($servername, $username, $password, $dbname); // 	
 							$a = "SELECT * FROM AchievementProgress WHERE UserID='$idOfUser' AND AchievementProgress='1'";
-							$b =  mysqli_query($conn, $a) or die(mysqli_error());
+							$b =  mysqli_query($conn, $a) or die(mysqli_error($conn));
 							$c = $b->num_rows;
 							mysqli_close($conn); // Close the connection 
 							echo $c;
@@ -51,7 +56,7 @@ mysqli_close($conn); // Close the connection
 							<?php
 							$conn = mysqli_connect($servername, $username, $password, $dbname); // 	
 							$a = "SELECT * FROM QuestProgress WHERE UserID='$idOfUser' AND QuestProgress='1'";
-							$b =  mysqli_query($conn, $a) or die(mysqli_error());
+							$b =  mysqli_query($conn, $a) or die(mysqli_error($conn));
 							$c = $b->num_rows;
 							mysqli_close($conn); // Close the connection 
 							echo $c;
@@ -68,7 +73,7 @@ mysqli_close($conn); // Close the connection
 		<tfoot>
 		</tfoot>		
 	</table>
-
+	<?php } ?>
 
 </div>
 <?php require_once(TEMPLATES_PATH . "/mainBottom.php"); ?>

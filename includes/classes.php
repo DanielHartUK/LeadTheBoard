@@ -8,7 +8,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname); // Create th
 
 // Get the classes
 $sql = "SELECT * FROM Classes WHERE AdminID='$id'";
-$query = mysqli_query($conn, $sql) or die(mysqli_error());
+$query = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 $classCount = $query->num_rows;
 $classes = array();
 
